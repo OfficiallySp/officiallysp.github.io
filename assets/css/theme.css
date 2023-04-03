@@ -63,7 +63,7 @@ body {
     font-size: 1rem;
     line-height: 1.5;
     color: var(--bs-body-color);
-    background-color: #344767;
+    background-color: #dfdfdf;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
