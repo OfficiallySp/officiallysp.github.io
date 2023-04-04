@@ -12,6 +12,34 @@
 	  <!-- Google Ads-->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
      crossorigin="anonymous"></script>
+<style>
+  /* Set the body to cover the full viewport */
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  /* Style the video element */
+  .video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  /* Fit the video to cover the entire screen */
+  .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
 </head>
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3">
         <div class="container">
@@ -296,17 +324,26 @@
       </div>
 </nav>
 <body class="g-sidenav-show">
+	<div class="video-background">
+  <video autoplay muted loop>
+    <source src="../assets/video/league.mp4" type="video/mp4">
+    <!-- Add other formats as fallback options if needed -->
+    <!-- <source src="your-video-file.webm" type="video/webm"> -->
+    <!-- <source src="your-video-file.ogg" type="video/ogg"> -->
+    Your browser does not support the video tag.
+  </video>
+</div>
     <section>
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-md-0 mb-4">
                     <h3 class="text-gradient text-warning mb-0">Summer Showdown<br></h3>
-                    <h3>Presented by BigCheeseGames<br></h3>
-                    <p class="lead mb-md-5 mb-4">Join us for a weekend to remember and compete for a cash prize in the Summer Showdown. Starting May 12th-14th<br></p>
-                    <p><span class="me-2">●</span> 5v5 Summoner's Rift<br></p>
-                    <p><span class="me-2">●</span> Double Elimination Tournament<br></p>
-                    <p><span class="me-2">●</span> Everyone Is Welcome</p>
-                    <p><span class="me-2">●</span> £500 Prize Pool</p>
+                    <h3 class="text-white">Presented by BigCheeseGames<br></h3>
+                    <p class="lead mb-md-5 mb-4 text-white">Join us for a weekend to remember and compete for a cash prize in the Summer Showdown. Starting May 12th-14th<br></p>
+                    <p class="text-white"><span class="me-2">●</span> 5v5 Summoner's Rift<br></p>
+                    <p class="text-white"><span class="me-2">●</span> Double Elimination Tournament<br></p>
+                    <p class="text-white"><span class="me-2">●</span> Everyone Is Welcome</p>
+                    <p class="text-white"><span class="me-2">●</span> £500 Prize Pool</p>
                 </div>
                 <div class="col-md-6">
                     <div class="blur-shadow-image text-center">
@@ -321,7 +358,7 @@ Your browser does not support the video tag.
     </section>
 	    <section class="pt-5 pb-0">
         <div class="container">
-		  <h1>Streamer's Included</h1>
+		  <h1 class="text-white">Streamer's Included</h1>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="card card-blog card-plain">
@@ -329,12 +366,11 @@ Your browser does not support the video tag.
                             <a class="d-block blur-shadow-image">
                                 <img src="../assets/img/CheeseLogo.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                             </a>
-                            <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/house.jpg&quot;);"></div>
                         </div>
                         <div class="card-body px-1 pt-3">
 
                             <a href="javascript:;">
-                                <h5>
+                                <h5 class="text-white">
                                     BigCheeseGames
                                 </h5>
                             </a>
@@ -351,12 +387,11 @@ Your browser does not support the video tag.
                             <a class="d-block blur-shadow-image">
                                 <img src="../assets/img/sensei.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                             </a>
-                            <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/pool.jpg&quot;);"></div>
                         </div>
                         <div class="card-body px-1 pt-3">
 
                             <a href="javascript:;">
-                                <h5>
+                                <h5 class="text-white">
                                     SenseiGreyson
                                 </h5>
                             </a>
@@ -372,12 +407,11 @@ Your browser does not support the video tag.
                             <a class="d-block blur-shadow-image">
                                 <img src="../assets/img/db.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg" title="" style="">
                             </a>
-                            <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/antalya.jpg&quot;);"></div>
                         </div>
                         <div class="card-body px-1 pt-3">
 
                             <a href="javascript:;">
-                                <h5>
+                                <h5 class="text-white">
                                   Defenceless_Baby
                               </h5>
                             </a>
@@ -394,12 +428,11 @@ Your browser does not support the video tag.
                             <a class="d-block blur-shadow-image">
                                 <img src="../assets/img/tara.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                             </a>
-                            <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/tiny-house.jpg&quot;);"></div>
                         </div>
                         <div class="card-body px-1 pt-3">
 
                             <a href="javascript:;">
-                                <h5>
+                                <h5 class="text-white">
                                     Tarawiel
                                 </h5>
                             </a>
@@ -416,12 +449,11 @@ Your browser does not support the video tag.
                             <a class="d-block blur-shadow-image">
                                 <img src="../assets/img/moose.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                             </a>
-                            <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/air-bnb.jpg&quot;);"></div>
                         </div>
                         <div class="card-body px-1 pt-3">
 
                             <a href="javascript:;">
-                                <h5>
+                                <h5 class="text-white">
                                     TheMooseyMan
                                 </h5>
                             </a>
@@ -438,11 +470,10 @@ Your browser does not support the video tag.
                             <a class="d-block blur-shadow-image">
                                 <img src="../assets/img/rift.png" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                             </a>
-                            <div class="colored-shadow" style="background-image: url(&quot;https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/palm-house.jpg&quot;);"></div>
                         </div>
                         <div class="card-body">
                             <a href="javascript:;">
-                                <h5>
+                                <h5 class="text-white">
                                     Stay Tuned For Other Special Guests, Shoutcasters, Interviewers and More.
                                 </h5>
                             </a>
