@@ -1,12 +1,17 @@
-[
-  {
-    "regionName": "Region 1",
-    "people": ["Person 1", "Person 2", "Person 3"],
-    "link": "http://example.com/region1"
-  },
-  {
-    "regionName": "Region 2",
-    "people": ["Person 4", "Person 5", "Person 6"],
-    "link": "http://example.com/region2"
-  },
-]
+{
+  "regions": [
+    {
+      "id": 0,
+      "name": "Region 1",
+      "people": ["Person A", "Person B"],
+      "moreInfoUrl": "http://example.com/region1"
+    },
+    {
+      "id": 1,
+      "name": "Region 2",
+      "people": ["Person C", "Person D"],
+      "moreInfoUrl": "http://example.com/region2"
+    }
+    // more regions...
+  ]
+}
