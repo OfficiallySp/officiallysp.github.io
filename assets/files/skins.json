@@ -1,17 +1,1691 @@
 {
   "regions": [
     {
-      "id": 0,
-      "name": "Region 1",
-      "people": ["Person A", "Person B"],
-      "moreInfoUrl": "http://example.com/region1"
+      "id": 1,
+      "name": "Bilgewater/Burning Tides",
+      "people": [
+        "Bilgewater Rumble",
+        "Bilgewater Katarina",
+        "Bilgewater Swain",
+        "Buccaneer Tristana",
+        "Captain Gangplank",
+        "Captain Miss Fortune",
+        "Corsair Quinn",
+        "Cutpurse Twisted Fate",
+        "Cutthroat Graves",
+        "Fiddle Me Timbers (Fiddlesticks)",
+        "Ironside Malphite",
+        "Kingpin Twitch",
+        "Pirate Ryze",
+        "Rogue Admiral Garen",
+        "Sea Hunter Aatrox"
+      ],
+      "moreInfoUrl": "http://example.com/bilgewater"
     },
     {
-      "id": 1,
-      "name": "Region 2",
-      "people": ["Person C", "Person D"],
-      "moreInfoUrl": "http://example.com/region2"
+      "id": 2,
+      "name": "Freljord",
+      "people": [
+        "Freljord Ashe",
+        "Freljord Rammus",
+        "Freljord Sylas",
+        "Freljord Taliyah",
+        "Frost Queen Janna",
+        "Frosted Ezreal",
+        "Tundra Hunter Warwick"
+      ],
+      "moreInfoUrl": "http://example.com/freljord"
+    },
+    {
+      "id": 3,
+      "name": "Otherroads",
+      "people": [
+        "Acolyte Lee Sin",
+        "Demonblade Tryndamere",
+        "Divine Soraka",
+        "Noxus Poppy",
+        "Prototype Viktor",
+        "Redeemed Riven",
+        "Rune Wars Renekton",
+        "Runeguard Volibear",
+        "Transcended Kayle",
+        "Tyrant Swain"
+      ],
+      "moreInfoUrl": "http://example.com/otherroads"
+    },
+    {
+      "id": 4,
+      "name": "Arcade: Battle Boss/Demacia Vice",
+      "people": [
+        "Battle Boss Bel'veth",
+        "Battle Boss Blitzcrank",
+        "Battle Boss Brand",
+        "Battle Boss Malzahar",
+        "Battle Boss Qiyana",
+        "Battle Boss Yasuo",
+        "Battle Boss Ziggs",
+        "Battle Boss Veigar",
+        "Demacia Vice Garen",
+        "Demacia Vice Lucian"
+      ],
+      "moreInfoUrl": "http://example.com/arcade-battleboss-demaciavice"
+    },
+    {
+      "id": 5,
+      "name": "Arcade: Heroes",
+      "people": [
+        "Arcade Ahri",
+        "Arcade Caitlyn",
+        "Arcade Hecarim",
+        "Arcade Corki",
+        "Arcade Ezreal",
+        "Arcade Kai'sa",
+        "Arcade Miss Fortune",
+        "Arcade Riven",
+        "Arcade Sona"
+      ],
+      "moreInfoUrl": "http://example.com/arcade-heroes"
+    },
+    {
+      "id": 6,
+      "name": "Arcana",
+      "people": [
+        "Arcana Ahri",
+        "Arcana Camille",
+        "Arcana Hecarim",
+        "Arcana Lucian",
+        "Arcana Rakan",
+        "Arcana Ryze",
+        "Arcana Tahm Kench",
+        "Arcana Xayah",
+        "Arcana Rakan"
+      ],
+      "moreInfoUrl": "http://example.com/arcana"
+    },
+    {
+      "id": 7,
+      "name": "Battlecast",
+      "people": [
+        "Battlecast Kog'Maw",
+        "Battlecast Nasus",
+        "Battlecast Urgot",
+        "Battlecast Vel'koz",
+        "Battlecast Xerath",
+        "Battlecast Zac",
+        "Battlecast Alpha Skarner",
+        "Battlecast Prime Cho'gath",
+        "Creator Viktor",
+        "Resistance Caitlyn",
+        "Resistance Illaoi",
+        "Resistance Jayce",
+        "Resistance Singed",
+        "Resistance Yorick"
+      ],
+      "moreInfoUrl": "http://example.com/battlecast"
+    },
+    {
+      "id": 8,
+      "name": "Be Mine",
+      "people": [
+        "Heartbreaker Vi",
+        "Heartpiercer Fiora",
+        "Heartseeker Ashe",
+        "Heartseeker Jinx",
+        "Heartseeker Lucian",
+        "Heartseeker Orianna",
+        "Heartseeker Quinn",
+        "Heartseeker Varus",
+        "Heartseeker Vayne",
+        "Heartseeker Yuumi",
+        "Sweetheart Annie",
+        "Sweetheart Rakan",
+        "Sweetheart Sona",
+        "Sweetheart Xayah"
+      ],
+      "moreInfoUrl": "http://example.com/be-mine"
+    },
+    {
+      "id": 9,
+      "name": "BEES!",
+      "people": [
+        "Bee'maw",
+        "Beekeeper Singed",
+        "Beemo",
+        "Beezahar",
+        "BZZZiggs",
+        "Heimerstinger",
+        "Nunu and Beelump",
+        "Orbeeanna",
+        "Yuubee"
+      ],
+      "moreInfoUrl": "http://example.com/bees"
+    },
+    {
+      "id": 10,
+      "name": "Crime City / Crime City Nightmare",
+      "people": [
+        "Crime City Braum",
+        "Crime City Graves",
+        "Crime City Jinx",
+        "Crime City Miss Fortune",
+        "Crime City Twitch",
+        "Gragas, Esq.",
+        "Knockout Lee Sin",
+        "Crime City Nightmares Akali",
+        "Crime City Nightmares Darius",
+        "Crime City Nightmares Shaco",
+        "Crime City Nightmares Twisted Fate",
+        "Crime City Nightmares Zyra"
+      ],
+      "moreInfoUrl": "http://example.com/crime-city"
+    },
+    {
+      "id": 11,
+      "name": "Culinary Masters",
+      "people": [
+        "Baker Pantheon",
+        "Barbecue Leona",
+        "Birdio",
+        "Butcher Olaf",
+        "Master Chef Tahm Kench",
+        "Pizza Delivery",
+        "Sashimi Akali",
+        "Sinful Succulence Morgana"
+      ],
+      "moreInfoUrl": "http://example.com/culinary-masters"
+    },
+    {
+      "id": 12,
+      "name": "Dragon World",
+      "people": [
+        "Dragon Guardian Galio",
+        "Dragon Knight Mordekaiser",
+        "Dragon Master Swain",
+        "Dragon Oracle Udyr",
+        "Dragon Sorceress Zyra",
+        "Dragon Trainer Heimerdinger",
+        "Dragon Trainer Lulu",
+        "Dragon Trainer Tristana",
+        "Dragonslayer Braum",
+        "Dragonslayer Diana",
+        "Dragonslayer Jarvan VI",
+        "Dragonslayer Kayle",
+        "Dragonslayer Olaf",
+        "Dragonslayer Pantheon",
+        "Dragonslayer Trundle",
+        "Dragonslayer Twitch",
+        "Dragonslayer Vayne",
+        "Dragonslayer Xin Zhao"
+      ],
+      "moreInfoUrl": "http://example.com/dragon-world"
+    },
+    {
+      "id": 13,
+      "name": "Elderwood",
+      "people": [
+        "Dryad Soraka",
+        "Elderwood Ahri",
+        "Elderwood Azir",
+        "Elderwood Bard",
+        "Elderwood Gnar",
+        "Elderwood Hecarim",
+        "Elderwood LeBlanc",
+        "Elderwood Ornn",
+        "Elderwood Rakan",
+        "Elderwood Rek'Sai",
+        "Elderwood Veigar",
+        "Elderwood Xayah",
+        "Emerald Taric",
+        "Elderwood Karthus",
+        "Elderwood Wukong"
+      ],
+      "moreInfoUrl": "http://example.com/elderwood"
+    },
+    {
+      "id": 14,
+      "name": "Cosmic",
+      "people": [
+        "Cosmic Lux",
+        "Cosmic Blade Master Yi",
+        "Cosmic Charger Hecarim",
+        "Cosmic Dawn Rakan",
+        "Cosmic Defender Xin Zhao",
+        "Cosmic Destiny Nami",
+        "Cosmic Devourer Vladimir",
+        "Cosmic Dusk Xayah",
+        "Cosmic Enchantress Lulu",
+        "Cosmic Flight Anivia",
+        "Cosmic Hunter Varus",
+        "Cosmic Huntress Nidalee",
+        "Cosmic Invoker Illaoi",
+        "Cosmic Queen Ashe",
+        "Cosmic Reaver Kassadin",
+        "Cosmic Skarner"
+      ],
+      "moreInfoUrl": "http://example.com/cosmic"
+    },
+    {
+      "id": 15,
+      "name": "Dark Cosmic",
+      "people": [
+        "Dark Cosmic Jhin",
+        "Dark Cosmic Lissandra",
+        "Dark Cosmic Lux",
+        "Dark Star Cho'Gath",
+        "Dark Star Jarvan VI",
+        "Dark Star Karma",
+        "Dark Star Kha'Zix",
+        "Dark Star Malphite",
+        "Dark Star Mordekaiser",
+        "Dark Star Orianna",
+        "Dark Star Shaco",
+        "Dark Star Thresh",
+        "Dark Star Varus",
+        "Dark Star Xerath"
+      ],
+      "moreInfoUrl": "http://example.com/dark-cosmic"
+    },
+    {
+      "id": 16,
+      "name": "Debonair",
+      "people": [
+        "Debonair Brand",
+        "Debonair Draven",
+        "Debonair Ezreal",
+        "Debonair Galio",
+        "Debonair Jayce",
+        "Debonair LeBlanc",
+        "Debonair Leona",
+        "Debonair Malzahar",
+        "Debonair Master Yi",
+        "Debonair Vi",
+        "Debonair Zed"
+      ],
+      "moreInfoUrl": "http://example.com/debonair"
+    },
+    {
+      "id": 17,
+      "name": "Crystal Rose/Withered Rose",
+      "people": [
+        "Crystal Rose Akshan",
+        "Crystal Rose Janna",
+        "Crystal Rose Swain",
+        "Crystal Rose Zyra",
+        "Withered Rose Elise",
+        "Withered Rose Syndra",
+        "Withered Rose Talon",
+        "Withered Rose Zeri"
+      ],
+      "moreInfoUrl": "http://example.com/crystal-rose-withered-rose"
+    },
+    {
+      "id": 18,
+      "name": "Coven",
+      "people": [
+        "Coven Ahri",
+        "Coven Ashe",
+        "Coven Camille",
+        "Coven Cassiopeia",
+        "Coven Evelynn",
+        "Coven LeBlanc",
+        "Coven Lissandra",
+        "Coven Morgana",
+        "Coven Zyra",
+        "Old God Ivern",
+        "Old God Malphite",
+        "Old God Nocturne",
+        "Old God Warwick",
+        "Thousand Pierced Bear"
+      ],
+      "moreInfoUrl": "http://example.com/coven"
+    },
+    {
+      "id": 19,
+      "name": "Dragonmancer",
+      "people": [
+        "Dream Dragon Yasuo",
+        "Duality Dragon Volibear",
+        "Eternal Dragon Brand",
+        "Fae Dragon Ashe",
+        "Lagoon Dragon Kai'Sa",
+        "Obsidian Dragon Sett",
+        "Steel Dragon Thresh",
+        "Storm Dragon Aurelion Sol",
+        "Storm Dragon Lee Sin",
+        "Tranquility Dragon Karma"
+      ],
+      "moreInfoUrl": "http://example.com/dragonmancer"
+    },
+    {
+      "id": 20,
+      "name": "Hextech",
+      "people": [
+        "Hextech Alistar",
+        "Hextech Amumu",
+        "Hextech Anivia",
+        "Hextech Annie",
+        "Hextech Galio",
+        "Hextech Janna",
+        "Hextech Jarvan IV",
+        "Hextech Kassadin",
+        "Hextech Kog'maw",
+        "Hextech Malzahar",
+        "Hextech Nocturne",
+        "Hextech Poppy",
+        "Hextech Rammus",
+        "Hextech Renekton",
+        "Hextech Sejuani",
+        "Hextech Singed",
+        "Hextech Sion",
+        "Hextech Swain",
+        "Hextech Tristana",
+        "Hextech Ziggs"
+      ],
+      "moreInfoUrl": "http://example.com/hextech"
+    },
+    {
+      "id": 21,
+      "name": "High Noon",
+      "people": [
+        "Bandito Fiddlesticks",
+        "Cowgirl Miss Fortune",
+        "Desperada Cassiopeia",
+        "High Noon Ashe",
+        "High Noon Darius",
+        "High Noon Hecarim",
+        "High Noon Irelia",
+        "High Noon Jhin",
+        "High Noon Katarina",
+        "High Noon Leona",
+        "High Noon Lucian",
+        "High Noon Mordekaiser",
+        "High Noon Samira",
+        "High Noon Senna",
+        "High Noon Sion",
+        "High Noon Tahm Kench",
+        "High Noon Talon",
+        "High Noon Thresh",
+        "High Noon Twisted Fate",
+        "High Noon Twitch",
+        "High Noon Urgot",
+        "High Noon Varus",
+        "High Noon Viktor",
+        "High Noon Yasuo",
+        "Sandscourge Skarner",
+        "Sheriff Caitlyn",
+        "Sonoran Kog'maw"
+      ],
+      "moreInfoUrl": "http://example.com/high-noon"
+    },
+    {
+      "id": 22,
+      "name": "Infernal",
+      "people": [
+        "Ashen Lord Aurelion Sol",
+        "Charred Maokai",
+        "Firefang Warwick",
+        "Foxfire Ahri",
+        "Infernal Akali",
+        "Infernal Alistar",
+        "Infernal Amumu",
+        "Infernal Diana",
+        "Infernal Galio",
+        "Infernal Karthus",
+        "Infernal Kennen",
+        "Infernal Mordekaiser",
+        "Infernal Nasus",
+        "Infernal Shen",
+        "Infernal Varus",
+        "Infernal Vel'koz",
+        "Molten Rammus",
+        "Obsidian Malphite",
+        "Scorched Earth Renekton",
+        "Scorched Earth Xerath",
+        "Shadowfire Kindred",
+        "Volcanic Wukong",
+        "Wildfire Zyra"
+      ],
+      "moreInfoUrl": "http://example.com/infernal"
+    },
+    {
+      "id": 23,
+      "name": "Blood Moon",
+      "people": [
+        "Blood Moon Aatrox",
+        "Blood Moon Akali",
+        "Blood Moon Diana",
+        "Blood Moon Elise",
+        "Blood Moon Evelynn",
+        "Blood Moon Jhin",
+        "Blood Moon Kalista",
+        "Blood Moon Katarina",
+        "Blood Moon Kennen",
+        "Blood Moon Master Yi",
+        "Blood Moon Pyke",
+        "Blood Moon Shen",
+        "Blood Moon Sivir",
+        "Blood Moon Talon",
+        "Blood Moon Thresh",
+        "Blood Moon Tryndamere",
+        "Blood Moon Twisted Fate",
+        "Blood Moon Yasuo",
+        "Blood Moon Zilean"
+      ],
+      "moreInfoUrl": "http://example.com/blood-moon"
+    },
+    {
+      "id": 24,
+      "name": "Marauder/Warden",
+      "people": [
+        "Marauder Alistar",
+        "Marauder Ashe",
+        "Marauder Kalista",
+        "Marauder Kled",
+        "Marauder Olaf",
+        "Marauder Warwick",
+        "Marauder Xin Zhao",
+        "Warden Gragas",
+        "Warden Jax",
+        "Warden Karma",
+        "Warden Nautilus",
+        "Warden Quinn",
+        "Warden Sivir"
+      ],
+      "moreInfoUrl": "http://example.com/marauder-warden"
+    },
+    {
+      "id": 25,
+      "name": "Lunar Beast/Lunar Revel",
+      "people": [
+        "Lunar Beast Alistar",
+        "Lunar Beast Annie",
+        "Lunar Beast Aphelios",
+        "Lunar Beast Darius",
+        "Lunar Beast Fiora",
+        "Lunar Beast Jarvan VI",
+        "Lunar Beast Viego",
+        "Coin Emperor Tahm Kench",
+        "Dragon Fist Lee Sin",
+        "Guqin Sona",
+        "Jade Dragon Wukong",
+        "Jade Fang Cassiopeia",
+        "Lunar Emperor Thresh",
+        "Lunar Empress Lux",
+        "Lunar Empress Ashe",
+        "Lunar Empress Qiyana",
+        "Lunar Goddess Diana",
+        "Lunar Guardian Nasus",
+        "Lunar Guardian Warwick",
+        "Lunar Guardian Kha'Zix",
+        "Lunar Guardian Malphite",
+        "Lunar Wraith Caitlyn",
+        "Lunar Wraith Morgana",
+        "Lunar Wraith Sylas",
+        "Radiant Wukong"
+      ],
+      "moreInfoUrl": "http://example.com/lunar-beast-lunar-revel"
+    },
+    {
+      "id": 26,
+      "name": "Lunar Revel: Firecracker",
+      "people": [
+        "Dragonwing Corki",
+        "Firecracker Diana",
+        "Firecracker Jinx",
+        "Firecracker Sejuani",
+        "Firecracker Sett",
+        "Firecracker Teemo",
+        "Firecracker Tristana",
+        "Firecracker Vayne",
+        "Firecracker Xin Zhao",
+        "Lion Dance Kog'Maw",
+        "Panda Annie"
+      ],
+      "moreInfoUrl": "http://example.com/lunar-revel-firecracker"
+    },
+    {
+      "id": 27,
+      "name": "Music Group",
+      "people": [
+        "K/DA Ahri",
+        "K/DA Akali / True Damage Akali",
+        "K/DA Evelynn",
+        "K/DA Kai'sa",
+        "K/DA All Out Seraphine",
+        "DJ Sona / Pentakill Sona",
+        "Pentakill Karthus",
+        "Pentakill Kayle",
+        "Pentakill Mordekaiser",
+        "Pentakill Olaf",
+        "Pentakill Yorick",
+        "True Damage Ekko",
+        "True Damage Qiyana",
+        "True Damage Senna",
+        "True Damage Yasuo"
+      ],
+      "moreInfoUrl": "http://example.com/music-group"
+    },
+    {
+      "id": 28,
+      "name": "PROJECT",
+      "people": [
+        "PROJECT: Akali",
+        "PROJECT: Ashe",
+        "PROJECT: Ekko",
+        "PROJECT: Fiora",
+        "PROJECT: Irelia",
+        "PROJECT: Jhin",
+        "PROJECT: Jinx",
+        "PROJECT: Katarina",
+        "PROJECT: Leona",
+        "PROJECT: Lucian",
+        "PROJECT: Mordekaiser",
+        "PROJECT: Pyke",
+        "PROJECT: Renekton",
+        "PROJECT: Sejuani",
+        "PROJECT: Senna",
+        "PROJECT: Sylas",
+        "PROJECT: Varus",
+        "PROJECT: Vayne",
+        "PROJECT: Vi",
+        "PROJECT: Warwick",
+        "PROJECT: Yasuo",
+        "PROJECT: Zed",
+        "PROJECT: Yi"
+      ],
+      "moreInfoUrl": "http://example.com/project"
+    },
+    {
+      "id": 29,
+      "name": "Psyops",
+      "people": [
+        "Arctic Ops Gragas",
+        "Arctic Ops Kennen",
+        "Arctic Ops Varus",
+        "Arctic Warfare Caitlyn",
+        "Northern Front Swain",
+        "Northern Storm Volibear",
+        "PsyOps Kayle",
+        "PsyOps Pyke",
+        "PsyOps Samira",
+        "PsyOps Viktor",
+        "PsyOps Zed",
+        "PsyOps Ezreal",
+        "PsyOps Master Yi",
+        "PsyOps Shen",
+        "PsyOps Sona",
+        "PsyOps Vi"
+      ],
+      "moreInfoUrl": "http://example.com/psyops"
+    },
+    {
+      "id": 30,
+      "name": "Snowdown Showdown",
+      "people": [
+        "Ambitious Elf Jinx",
+        "Bad Santa Veigar",
+        "Candy Cane Miss Fortune",
+        "Earnest Elf Tristina",
+        "Festive Maokai",
+        "Happy Elf Teemo",
+        "Mistletoe LeBlanc",
+        "Nutcracko",
+        "Old Saint Zilean",
+        "Re-Gifted Amumu",
+        "Reindeer Kog'Maw",
+        "Santa Braum",
+        "Santa Draven",
+        "Santa Gragas",
+        "Silent Night Sona",
+        "Slay Belle Katarina",
+        "Snow Bunny Nidalee",
+        "Snowmerdinger",
+        "Workshop Nunu & Willump"
+      ],
+      "moreInfoUrl": "http://example.com/snowdown-showdown"
+    },
+    {
+      "id": 31,
+      "name": "Winter Wonder/Snow Day",
+      "people": [
+        "Snow Day Bard",
+        "Snow Day Gnar",
+        "Snow Day Graves",
+        "Snow Day Malzahar",
+        "Snow Day Singed",
+        "Snow Day Syndra",
+        "Snow Day Ziggs",
+        "Dark Candy Fiddlesticks",
+        "Frostblade Irelia",
+        "Frostfire Annie",
+        "Frozen Prince Mundo",
+        "Ice King Twitch",
+        "Poro Rider Sejuani",
+        "Snow Fawn Poppy",
+        "Snow Man Yi",
+        "Snowstorm Sivir",
+        "Winter Wonder Karma",
+        "Winter Wonder Lulu",
+        "Winter Wonder Neeko",
+        "Winter Wonder Orianna",
+        "Winter Wonder Soraka"
+      ],
+      "moreInfoUrl": "http://example.com/winter-wonder-snow-day"
+    },
+    {
+      "id": 32,
+      "name": "Rift Quest",
+      "people": [
+        "Barbarian Sion",
+        "Bard Bard",
+        "Braum Lionheart",
+        "Demolisher Nunu & Willump",
+        "Gragas Caskbreaker",
+        "Jayce Brighthammer",
+        "Karthus Lightsbane",
+        "Lord Mordekaiser",
+        "Rageborn Mundo",
+        "Rugged Garen",
+        "Ryze Whitebeard",
+        "Sejuani Dawnchaser",
+        "Talon Blackwood",
+        "Taric Luminshield",
+        "Twitch Shadowfoot",
+        "Varus Swiftbolt",
+        "Veigar Greybeard"
+      ],
+      "moreInfoUrl": "http://example.com/rift-quest"
+    },
+    {
+      "id": 33,
+      "name": "Spirit Blossom/Spirit Guard",
+      "people": [
+        "Spirit Blossom Ahri",
+        "Spirit Blossom Aphelios",
+        "Spirit Blossom Cassiopeia",
+        "Spirit Blossom Darius",
+        "Spirit Blossom Evelynn",
+        "Spirit Blossom Kindred",
+        "Spirit Blossom Lillia",
+        "Spirit Blossom Master Yi",
+        "Spirit Blossom Riven",
+        "Spirit Blossom Sett",
+        "Spirit Blossom Soraka",
+        "Spirit Blossom Syndra",
+        "Spirit Blossom Teemo",
+        "Spirit Blossom Thresh",
+        "Spirit Blossom Tristana",
+        "Spirit Blossom Vayne",
+        "Spirit Blossom Yasuo",
+        "Spirit Blossom Yone",
+        "Spirit Blossom Yorick",
+        "Spirit Guard Udyr"
+      ],
+      "moreInfoUrl": "http://example.com/spirit-blossom-spirit-guard"
+    },
+    {
+      "id": 34,
+      "name": "Astronauts/Space Invaders",
+      "people": [
+        "Astronaut Bard",
+        "Astronaut Corki",
+        "Astronaut Gnar",
+        "Astronaut Maokai",
+        "Astronaut Poppy",
+        "Astronaut Rammus",
+        "Astronaut Teemo",
+        "Astronaut Veigar",
+        "AstroNautilus",
+        "Alien Invader Heimerdinger",
+        "UFO Corki",
+        "Astronaut Kennen",
+        "Astronaut Ivern",
+        "Astronaut Fizz",
+        "Astronaut Singed",
+        "Astronaut Xerath"
+      ],
+      "moreInfoUrl": "http://example.com/astronauts-space-invaders"
+    },
+    {
+      "id": 35,
+      "name": "Pool Party",
+      "people": [
+        "Pool Party Braum",
+        "Pool Party Caitlyn",
+        "Pool Party Draven",
+        "Pool Party Fiora",
+        "Pool Party Gangplank",
+        "Pool Party Graves",
+        "Pool Party Heimerdinger",
+        "Pool Party Jarvan VI",
+        "Pool Party Lee Sin",
+        "Pool Party Leona",
+        "Pool Party Lulu",
+        "Pool Party Miss Fortune",
+        "Pool Party Orianna",
+        "Pool Party Rek'Sai",
+        "Pool Party Renekton",
+        "Pool Party Sett",
+        "Pool Party Syndra",
+        "Pool Party Taliyah",
+        "Pool Party Taric",
+        "Pool Party Zac",
+        "Pool Party Ziggs",
+        "Pool Party Zoe",
+        "Pool Party Mundo",
+        "Surfer Singed"
+      ],
+      "moreInfoUrl": "http://example.com/pool-party"
+    },
+    {
+      "id": 36,
+      "name": "Bewitching",
+      "people": [
+        "Bewitching Cassiopeia",
+        "Bewitching Elise",
+        "Bewitching Fiora",
+        "Bewitching Janna",
+        "Bewitching LeBlanc",
+        "Bewitching Miss Fortune",
+        "Bewitching Morgana",
+        "Bewitching Nami",
+        "Bewitching Neeko",
+        "Bewitching Nidalee",
+        "Bewitching Poppy",
+        "Bewitching Senna",
+        "Bewitching Syndra",
+        "Bewitching Tristana",
+        "Bewitching Yuumi",
+        "Bewitching Batnivia"
+      ],
+      "moreInfoUrl": "http://example.com/bewitching"
+    },
+    {
+      "id": 37,
+      "name": "Trick-Or-Treat",
+      "people": [
+        "Count Kassadin",
+        "Count Kledula",
+        "FrankenTibbers Annie",
+        "Haunted Maokai",
+        "Haunted Zyra",
+        "Hauntling Nocturne",
+        "Headless Hecarim",
+        "Kitty Cat Katarina",
+        "Mundo Mundo",
+        "Nosferatu Vladimir",
+        "Pumpkin Prince Amumu",
+        "Pumpkinhead Fiddlesticks",
+        "Ravenborn LeBlanc",
+        "Trick or Treat Ekko",
+        "Underworld Twisted Fate",
+        "Witch's Brew Blitzcrank"
+      ],
+      "moreInfoUrl": "http://example.com/trick-or-treat"
+    },
+    {
+      "id": 38,
+      "name": "Day Job",
+      "people": [
+        "Angler Jax",
+        "Black Belt Udyr",
+        "Boom Boom Blitzcrank",
+        "Corporate Mundo",
+        "Firefighter Tristana",
+        "Fisherman Fizz",
+        "Forecast Janna",
+        "Groovy Zilean",
+        "Hazmat Heimerdinger",
+        "Lil' Slugger Trundle",
+        "Lumberjack Sion",
+        "Matador Alistar",
+        "Prestigious LeBlanc",
+        "Primetime Draven",
+        "Sailor Gangplank"
+      ],
+      "moreInfoUrl": "http://example.com/day-job"
+    },
+    {
+      "id": 39,
+      "name": "Ruined/Sentinels of Light",
+      "people": [
+        "Gangplank the Betrayer",
+        "Ruined Draven",
+        "Ruined Karma",
+        "Ruined Miss Fortune",
+        "Ruined Pantheon",
+        "Ruined Shyvana",
+        "Sea Dog Yasuo",
+        "Unbound Thresh",
+        "Sentinel Diana",
+        "Sentinel Graves",
+        "Sentinel Irelia",
+        "Sentinel Olaf",
+        "Sentinel Pyke",
+        "Sentinel Rengar",
+        "Sentinel Riven",
+        "Sentinel Vayne"
+      ],
+      "moreInfoUrl": "http://example.com/ruined-sentinels-of-light"
+    },
+    {
+      "id": 40,
+      "name": "Victorious",
+      "people": [
+        "Victorious Aatrox",
+        "Victorious Blitzcrank",
+        "Victorious Elise",
+        "Victorious Graves",
+        "Victorious Janna",
+        "Victorious Jarvan IV",
+        "Victorious Lucian",
+        "Victorious Maokai",
+        "Victorious Morgana",
+        "Victorious Orianna",
+        "Victorious Sejuani",
+        "Victorious Sivir",
+        "Victorious Anivia"
+      ],
+      "moreInfoUrl": "http://example.com/victorious"
+    },
+    {
+      "id": 41,
+      "name": "Dawnbringer/Nightbringer",
+      "people": [
+        "Dawnbringer Karma",
+        "Dawnbringer Morgana",
+        "Dawnbringer Nidalee",
+        "Dawnbringer Riven",
+        "Dawnbringer Soraka",
+        "Dawnbringer Vex",
+        "Dawnbringer Yone",
+        "Nightbringer Aphelios",
+        "Nightbringer Kayn",
+        "Nightbringer Lillia",
+        "Nightbringer Soraka",
+        "Nightbringer Tryndamere",
+        "Nightbringer Vladimir",
+        "Nightbringer Yasuo",
+        "Dawnbringer Renekton",
+        "Dawnbringer Vayne",
+        "Nightbringer Jarvan",
+        "Nightbringer Lee Sin",
+        "Nightbringer Nasus"
+      ],
+      "moreInfoUrl": "http://example.com/dawnbringer-nightbringer"
+    },
+    {
+      "id": 42,
+      "name": "Arclight/Justicar",
+      "people": [
+        "Arclight Brand",
+        "Arclight Varus",
+        "Arclight Vayne",
+        "Arclight Yorick",
+        "Arclight Vel'Koz",
+        "Justicar Aatrox",
+        "Justicar Syndra"
+      ],
+      "moreInfoUrl": "http://example.com/arclight-justicar"
+    },
+    {
+      "id": 43,
+      "name": "Death Sworn",
+      "people": [
+        "Darkrider Sejuani",
+        "Death Sworn Katarina",
+        "Death Sworn Viktor",
+        "Death Sworn Zed",
+        "Gravelord Azir",
+        "Reaper Hecarim",
+        "Reaper Soraka",
+        "Shadow Evelynn",
+        "Soul Reaver Draven",
+        "Underworld Wukong"
+      ],
+      "moreInfoUrl": "http://example.com/death-sworn"
+    },
+    {
+      "id": 44,
+      "name": "Definitely not",
+      "people": [
+        "Definitely not Blitzcrank",
+        "Definitely not Udyr",
+        "Definitely not Vel'Koz",
+        "Draven Draven",
+        "Furyhorn Cosplay Veigar",
+        "Overlord Malzahar",
+        "Pajama Guardian Cosplay Urgot",
+        "Pengu Cosplay Tristana"
+      ],
+      "moreInfoUrl": "http://example.com/definitely-not"
+    },
+    {
+      "id": 45,
+      "name": "Omen of the Dark",
+      "people": [
+        "Black Scourge Singed",
+        "Blade Queen Lissandra",
+        "Cursed Revenant Nocturne",
+        "Executioner Mundo",
+        "Grey Warwick",
+        "Iron Inquisitor Kayle",
+        "Spectral Fiddlesticks",
+        "Undertaker Yorick"
+      ],
+      "moreInfoUrl": "http://example.com/omen-of-the-dark"
+    },
+    {
+      "id": 46,
+      "name": "Championship",
+      "people": [
+        "Championship Ashe",
+        "Championship Kalista",
+        "Championship Kha'Zix",
+        "Championship Le Blanc",
+        "Championship Riven",
+        "Championship Ryze",
+        "Championship Shyvana",
+        "Championship Thresh",
+        "Championship Zed",
+        "Worlds 2021 Jarvan IV",
+        "Worlds 2022 Azir"
+      ],
+      "moreInfoUrl": "http://example.com/championship"
+    },
+    {
+      "id": 47,
+      "name": "Fables",
+      "people": [
+        "Dark Valkyrie Diana",
+        "Djinn Malzahar",
+        "Ghost Bride Morgana",
+        "Leprechaun Veigar",
+        "Loch Ness Cho'Gath",
+        "Muse Sona",
+        "Musketeer Twisted Fate",
+        "Mythic Cassiopeia",
+        "Perseus Pantheon",
+        "River Spirit Nami",
+        "Royal Guard Fiora",
+        "Sasquatch Nunu and Willump",
+        "Valkyrie Leona"
+      ],
+      "moreInfoUrl": "http://example.com/fables"
+    },
+    {
+      "id": 48,
+      "name": "Forgotten Depths",
+      "people": [
+        "Abyssal Nautilus",
+        "Atlantean Fizz",
+        "Atlantean Syndra",
+        "Coral Reef Malphite",
+        "Deep One Kassadin",
+        "Deep Sea Kog'Maw",
+        "Deep Sea Nami",
+        "Deep Terror Thresh"
+      ],
+      "moreInfoUrl": "http://example.com/forgotten-depths"
+    },
+    {
+      "id": 49,
+      "name": "Battle Academia",
+      "people": [
+        "Battle Academia Lux",
+        "Battle Academia Ezreal",
+        "Battle Academia Katarina",
+        "Battle Academia Jayce",
+        "Battle Academia Caitlyn",
+        "Battle Academia Wukong",
+        "Battle Academia Yone",
+        "Battle Academia Leona",
+        "Battle Academia Garen",
+        "Battle Principal Yuumi",
+        "Battle Professor Graves"
+      ],
+      "moreInfoUrl": "http://example.com/battle-academia"
+    },
+    {
+      "id": 50,
+      "name": "Guardian of the Sands/Pharaoh",
+      "people": [
+        "Guardian of the Sands Janna",
+        "Guardian of the Sands Kha'Zix",
+        "Guardian of the Sands Skarner",
+        "Guardian of the Sands Rammus",
+        "Guardian of the Sands Ryze",
+        "Guardian of the Sands Rengar",
+        "Guardian of the Sands Xerath",
+        "Risen Fiddlesticks",
+        "Sand Wraith Pyke",
+        "Sandstorm Ekko",
+        "Sandstorm Katarina",
+        "Pharaoh Amumu",
+        "Pharaoh Nasus",
+        "Pharaoh Nidalee"
+      ],
+      "moreInfoUrl": "http://example.com/guardian-of-the-sands-pharaoh"
+    },
+    {
+      "id": 51,
+      "name": "Road Warrior/Vandal",
+      "people": [
+        "Apocalyptic Brand",
+        "Badlands Baron Rumble",
+        "Baron Von Veigar",
+        "Blast Zone Heimerdinger",
+        "Hyena Warwick",
+        "Junkyard Trundle",
+        "Road Warrior Miss Fortune",
+        "Ruthless Pantheon",
+        "Hired Gun Graves",
+        "Vandal Brand",
+        "Vandal Graves",
+        "Vandal Jax",
+        "Vandal Twitch",
+        "Vandal Vladimir"
+      ],
+      "moreInfoUrl": "http://example.com/road-warrior-vandal"
+    },
+    {
+      "id": 52,
+      "name": "Immortal Journey",
+      "people": [
+        "Divine Sword Irelia",
+        "Enduring Sword Talon",
+        "Eternal Sword Yi",
+        "God Fist Lee Sin",
+        "God Staff Jax",
+        "Majestic Empress Morgana",
+        "Sacred Sword Janna",
+        "Soaring Sword Fiora",
+        "Splendid Staff Nami",
+        "Valiant Sword Riven"
+      ],
+      "moreInfoUrl": "http://example.com/immortal-journey"
+    },
+    {
+      "id": 53,
+      "name": "Steel Valkyries",
+      "people": [
+        "Admiral Glasc",
+        "Aether Wing Kayle",
+        "Armored Titan Nasus",
+        "Blade Mistress Morgana",
+        "Bullet Angel Kai'Sa",
+        "Cyber Halo Janna",
+        "Gun Goddess Miss Fortune",
+        "Strike Commander Camille",
+        "Strike Paladin Lucian"
+      ],
+      "moreInfoUrl": "http://example.com/steel-valkyries"
+    },
+    {
+      "id": 54,
+      "name": "Mecha/Mecha Kingdom",
+      "people": [
+        "Mecha Aatrox",
+        "Mecha Aurelion Sol",
+        "Mecha Kha'Zix",
+        "Mecha Malphite",
+        "Mecha Rengar",
+        "Mecha Zero Sion",
+        "Giant Enemy Crabgot",
+        "Mecha Kingdoms Draven",
+        "Mecha Kingdoms Garen",
+        "Mecha Kingdoms Leona",
+        "Mecha Kingdoms Jax",
+        "Mecha Kingdoms Sett"
+      ],
+      "moreInfoUrl": "http://example.com/mecha-mecha-kingdom"
+    },
+    {
+      "id": 55,
+      "name": "Odyssey",
+      "people": [
+        "Galaxy Slayer Zed",
+        "Odyssey Aatrox",
+        "Odyssey Jinx",
+        "Odyssey Karma",
+        "Odyssey Kayn",
+        "Odyssey Kha'Zix",
+        "Odyssey Malphite",
+        "Odyssey Sivir",
+        "Odyssey Sona",
+        "Odyssey Twisted Fate",
+        "Odyssey Yasuo",
+        "Odyssey Ziggs"
+      ],
+      "moreInfoUrl": "http://example.com/odyssey"
+    },
+    {
+      "id": 56,
+      "name": "Prehistoric Hunters",
+      "people": [
+        "Beast Hunter Draven",
+        "Beast Hunter Sejuani",
+        "Beast Hunter Tryndamere",
+        "Boneclaw Shyvana",
+        "Huntress Sivir",
+        "Prehistoric Anivia",
+        "Prehistoric Cho'Gath",
+        "Prehistoric Renekton",
+        "Tribal Ryze"
+      ],
+      "moreInfoUrl": "http://example.com/prehistoric-hunters"
+    },
+    {
+      "id": 57,
+      "name": "Pulsefire",
+      "people": [
+        "Pulsefire Caitlyn",
+        "Pulsefire Ekko",
+        "Pulsefire Ezreal",
+        "Pulsefire Fiora",
+        "Pulsefire Lucian",
+        "Pulsefire Pantheon",
+        "Pulsefire Riven",
+        "Pulsefire Shen",
+        "Pulsefire Thresh",
+        "Pulsefire Twisted Fate"
+      ],
+      "moreInfoUrl": "http://example.com/pulsefire"
+    },
+    {
+      "id": 58,
+      "name": "Silver Age",
+      "people": [
+        "Augmented Singed",
+        "Bioforge Darius",
+        "Chemtech Tryndamere",
+        "Cryocore Brand",
+        "Deadly Kennen",
+        "Feral Warwick",
+        "Infiltrator Irelia",
+        "Phoenix Quinn",
+        "Ravager Nocturne",
+        "Rocket Girl Tristana",
+        "Super Teemo",
+        "Superb Villain Veigar",
+        "Toxic Dr. Mundo"
+      ],
+      "moreInfoUrl": "http://example.com/silver-age"
+    },
+    {
+      "id": 59,
+      "name": "Space Groove",
+      "people": [
+        "Space Groove Blitz and Crank",
+        "Space Groove Gragas",
+        "Space Groove Gwen",
+        "Space Groove Lissandra",
+        "Space Groove Lux",
+        "Space Groove Lulu",
+        "Space Groove Nami",
+        "Space Groove Nasus",
+        "Space Groove Nunu and Willump",
+        "Space Groove Ornn",
+        "Space Groove Rumble",
+        "Space Groove Samira",
+        "Space Groove Taric",
+        "Space Groove Teemo",
+        "Space Groove Twisted fate"
+      ],
+      "moreInfoUrl": "http://example.com/space-groove"
+    },
+    {
+      "id": 60,
+      "name": "Star Guardian",
+      "people": [
+        "Pajama Guardian Lulu",
+        "Star Guardian Lulu",
+        "Star Guardian Lux",
+        "Star Guardian Janna",
+        "Star Guardian Jinx",
+        "Star Guardian Poppy",
+        "Pajama Guardian Ezreal",
+        "Star Guardian Ezreal",
+        "Pajama Guardian Miss Fortune",
+        "Star Guardian Miss Fortune",
+        "Pajama Guardian Soraka",
+        "Star Guardian Soraka",
+        "Star Guardian Ahri",
+        "Star Guardian Syndra",
+        "Star Guardian Neeko",
+        "Star Guardian Rakan",
+        "Star Guardian Xayah",
+        "Star Guardian Zoe",
+        "Star Guardian Ekko",
+        "Star Guardian Kai'Sa",
+        "Star Guardian Nidalee",
+        "Star Guardian Quinn",
+        "Star Guardian Rell",
+        "Star Guardian Sona",
+        "Star Guardian Taliyah",
+        "Star Guardian Xerath",
+        "Star Guardian Yasuo",
+        "Star Guardian Zed",
+        "Star Guardian Ziggs"
+      ],
+      "moreInfoUrl": "http://example.com/star-guardian"
+    },
+    {
+      "id": 61,
+      "name": "Sugar Rush",
+      "people": [
+        "Bittersweet Lulu",
+        "Candy King Ivern",
+        "Dark Candy Fiddlesticks",
+        "Lollipoppy",
+        "Sugar Rush Braum",
+        "Sugar Rush Evelynn",
+        "Sugar Rush Ziggs",
+        "Sugar Rush Zilean"
+      ],
+      "moreInfoUrl": "http://example.com/sugar-rush"
+    },
+    {
+      "id": 62,
+      "name": "Super Galaxy",
+      "people": [
+        "Super Galaxy Annie",
+        "Super Galaxy Elise",
+        "Super Galaxy Fizz",
+        "Super Galaxy Gnar",
+        "Super Galaxy Kindred",
+        "Super Galaxy Nidalee",
+        "Super Galaxy Rumble",
+        "Super Galaxy Shyvana"
+      ],
+      "moreInfoUrl": "http://example.com/super-galaxy"
+    },
+    {
+      "id": 63,
+      "name": "Medieval/Albion",
+      "people": [
+        "Blackthorn Morgana",
+        "Nottingham Ezreal",
+        "Sherwood Forest Ashe",
+        "Viridian Kayle",
+        "Blacksmith Poppy",
+        "King Tryndamere",
+        "Little Knight Amumu",
+        "Medieval Twitch",
+        "Sir Kled",
+        "Sorceress Lux",
+        "White Mage Veigar"
+      ],
+      "moreInfoUrl": "http://example.com/medieval-albion"
+    },
+    {
+      "id": 64,
+      "name": "Cops and Robbers",
+      "people": [
+        "Captain Volibear",
+        "Constable Trundle",
+        "Officer Caitlyn",
+        "Officer Vi",
+        "Pickpocket Twitch",
+        "Safecracker Evelynn",
+        "Secret Agent Miss Fortune",
+        "Secret Agent Xin Zhao"
+      ],
+      "moreInfoUrl": "http://example.com/cops-and-robbers"
+    },
+    {
+      "id": 65,
+      "name": "High Society",
+      "people": [
+        "Archduke Nasus",
+        "Aristocrat Vayne",
+        "Gentleman Cho'Gath",
+        "Gentleman Gnar",
+        "Marquis Vladimir",
+        "Order of the Banana Soraka",
+        "Tango Evelynn",
+        "Tango Twisted Fate"
+      ],
+      "moreInfoUrl": "http://example.com/high-society"
+    },
+    {
+      "id": 66,
+      "name": "Soccer Cup",
+      "people": [
+        "All-Star Akali",
+        "Goalkeeper Blitzcrank",
+        "Goalkeeper Maokai",
+        "Playmaker Lee Sin",
+        "Red Card Katarina",
+        "Red Card Twisted Fate",
+        "Striker Ezreal",
+        "Striker Lucian",
+        "Superfan Gragas",
+        "Sweeper Alistar",
+        "Sweeper Rammus"
+      ],
+      "moreInfoUrl": "http://example.com/soccer-cup"
+    },
+    {
+      "id": 67,
+      "name": "Toy Box",
+      "people": [
+        "Dino Gnar",
+        "Grungy Nunu and Willump",
+        "Moo Cow Alistar",
+        "Pug'Maw",
+        "Ragdoll Poppy",
+        "Renektoy",
+        "Sewn Chaos Orianna",
+        "Toy Soldier Gangplank"
+      ],
+      "moreInfoUrl": "http://example.com/toy-box"
+    },
+    {
+      "id": 68,
+      "name": "Commando/Omega Squad",
+      "people": [
+        "Commando Galio",
+        "Commando Garen",
+        "Commando Jarvan IV",
+        "Commando Lux",
+        "Commando Xin Zhao",
+        "Guerrilla Tristana",
+        "Omega Squad Fizz",
+        "Omega Squad Teemo",
+        "Omega Squad Twitch",
+        "Omega Squad Veigar"
+      ],
+      "moreInfoUrl": "http://example.com/commando-omega-squad"
+    },
+    {
+      "id": 69,
+      "name": "Warring Kingdoms",
+      "people": [
+        "Dragonblade Riven",
+        "Dragonblade Talon",
+        "Warring Kingdoms Azir",
+        "Warring Kingdoms Garen",
+        "Warring Kingdoms Jarvan IV",
+        "Warring Kingdoms Katarina",
+        "Warring Kingdoms Nidalee",
+        "Warring Kingdoms Tryndamere",
+        "Warring Kingdoms Vi",
+        "Warring Kingdoms Xin Zhao"
+      ],
+      "moreInfoUrl": "http://example.com/warring-kingdoms"
+    },
+    {
+      "id": 70,
+      "name": "Winter Sports",
+      "people": [
+        "Curling Veigar",
+        "Festival Kassadin",
+        "Ice Toboggan Corki",
+        "Team Spirit Anivia",
+        "The Mighty Jax",
+        "Union Jack Fiddlesticks",
+        "Vancouver Amumu",
+        "Whistler Village Twitch"
+      ],
+      "moreInfoUrl": "http://example.com/winter-sports"
+    },
+    {
+      "id": 71,
+      "name": "Wonders of the World",
+      "people": [
+        "Bear Cavalry Sejuani",
+        "Bird of Prey Anivia",
+        "Dynasty Ahri",
+        "Festival Queen Anivia",
+        "Glaive Warrior Pantheon",
+        "Masked Shaco",
+        "Muay Thai Lee Sin",
+        "Oktoberfest Gragas",
+        "Outback Renekton",
+        "Panda Teemo",
+        "Shamrock Malphite",
+        "Statue of Karthus",
+        "Sultan Gangplank",
+        "Sultan Tryndamere",
+        "Uncle Ryze",
+        "Vizier Malzahar",
+        "Winged Hussar Xin Zhao"
+      ],
+      "moreInfoUrl": "http://example.com/wonders-of-the-world"
+    },
+    {
+      "id": 72,
+      "name": "Worldbreaker",
+      "people": [
+        "Spirit Fire Brand",
+        "Sun Goddess Karma",
+        "Worldbreaker Hecarim",
+        "Worldbreaker Malzahar",
+        "Worldbreaker Maokai",
+        "Worldbreaker Nasus",
+        "Worldbreaker Nautilus",
+        "Worldbreaker Sion",
+        "Worldbreaker Trundle"
+      ],
+      "moreInfoUrl": "http://example.com/worldbreaker"
+    },
+    {
+      "id": 73,
+      "name": "Blackfrost",
+      "people": [
+        "Blackfrost Alistar",
+        "Blackfrost Anivia",
+        "Blackfrost Rek'Sai",
+        "Blackfrost Renekton",
+        "Blackfrost Sion",
+        "Blackfrost Vel'Koz",
+        "Ice Drake Shyvana"
+      ],
+      "moreInfoUrl": "http://example.com/blackfrost"
+    },
+    {
+      "id": 74,
+      "name": "Bloodstone",
+      "people": [
+        "Blood Knight Hecarim",
+        "Blood Lord Vladimir",
+        "Bloodfury Renekton",
+        "Bloodstone Lissandra",
+        "Bloodstone Taric",
+        "Dark Crystal Ryze",
+        "Nightraven Fiora"
+      ],
+      "moreInfoUrl": "http://example.com/bloodstone"
+    },
+    {
+      "id": 75,
+      "name": "Cafe Cuties",
+      "people": [
+        "Cafe Cutie Annie",
+        "Cafe Cutie Bard",
+        "Cafe Cutie Gwen",
+        "Cafe Cutie Sivir",
+        "Cafe Cutie Soraka",
+        "Cafe Cutie Vladimir"
+      ],
+      "moreInfoUrl": "http://example.com/cafe-cuties"
+    },
+    {
+      "id": 76,
+      "name": "Cats vs Dogs",
+      "people": [
+        "Fuzz Fizz",
+        "Corgi Corki",
+        "Kibble Head Kled",
+        "Kittalee",
+        "Meowkai",
+        "Meowrick",
+        "Pretty Kitty Rengar",
+        "Shiba Yuumi",
+        "Woof and Lamb Kindred"
+      ],
+      "moreInfoUrl": "http://example.com/cats-vs-dogs"
+    },
+    {
+      "id": 77,
+      "name": "Eclipse",
+      "people": [
+        "Lunar Eclipse Aatrox",
+        "Lunar Eclipse Senna",
+        "Lunar/Solar Eclipse Leona",
+        "Solar Eclipse Sejuani",
+        "Solar Eclipse Sivir",
+        "Sun Eater Kayle"
+      ],
+      "moreInfoUrl": "http://example.com/eclipse"
+    },
+    {
+      "id": 78,
+      "name": "Ashen Knight",
+      "people": [
+        "Ashen Conqueror Pantheon",
+        "Ashen Graveknight Mordekaiser",
+        "Ashen Guardian Shen",
+        "Ashen Knight Pyke",
+        "Ashen Slayer Sylas"
+      ],
+      "moreInfoUrl": "http://example.com/ashen-knight"
+    },
+    {
+      "id": 79,
+      "name": "Broken Covenant",
+      "people": [
+        "Broken Covenant Cho'Gath",
+        "Broken Covenant Miss Fortune",
+        "Broken Covenant Nocturne",
+        "Broken Covenant Rakan",
+        "Broken Covenant Xayah",
+        "Broken Covenant Riven",
+        "Broken Covenant Vladimir"
+      ],
+      "moreInfoUrl": "http://example.com/broken-covenant"
+    },
+    {
+      "id": 80,
+      "name": "Inkshadow",
+      "people": [
+        "Inkshadow Aurelion Sol",
+        "Inkshadow Kai'Sa",
+        "Inkshadow Master Yi",
+        "Inkshadow Udyr",
+        "Inkshadow Volibear",
+        "Inkshadow Yasuo",
+        "Inkshadow Yone"
+      ],
+      "moreInfoUrl": "http://example.com/inkshadow"
+    },
+    {
+      "id": 81,
+      "name": "Snow Moon",
+      "people": [
+        "Snow Moon Ahri",
+        "Snow Moon Caitlyn",
+        "Snow Moon Illaoi",
+        "Snow Moon Kayn",
+        "Snow Moon Morgana",
+        "Snow Moon Varus"
+      ],
+      "moreInfoUrl": "http://example.com/snow-moon"
+    },
+    {
+      "id": 82,
+      "name": "Fright Night",
+      "people": [
+        "Fright Night Annie",
+        "Fright Night Draven",
+        "Fright Night Nautilus",
+        "Fright Night Renata",
+        "Fright Night Trundle",
+        "Fright Night Urgot"
+      ],
+      "moreInfoUrl": "http://example.com/fright-night"
+    },
+    {
+      "id": 83,
+      "name": "Empyrean",
+      "people": [
+        "Empyrean Jax",
+        "Empyrean Jhin",
+        "Empyrean K'Sante",
+        "Empyrean Lux",
+        "Empyrean Vex",
+        "Empyrean Pyke",
+        "Empyrean Zed",
+        "Empyrean Zac"
+      ],
+      "moreInfoUrl": "http://example.com/empyrean"
+    },
+    {
+      "id": 84,
+      "name": "Shan Hai Scrolls",
+      "people": [
+        "Shan Hai Scrolls Bard",
+        "Shan Hai Scrolls Cho'Gath",
+        "Shan Hai Scrolls Jhin",
+        "Shan Hai Scrolls Kog'Maw",
+        "Shan Hai Scrolls Lillia",
+        "Shan Hai Scrolls Nautilus",
+        "Shan Hai Scrolls Neeko",
+        "Shan Hai Scrolls Tahm Kench"
+      ],
+      "moreInfoUrl": "http://example.com/shan-hai-scrolls"
+    },
+    {
+      "id": 85,
+      "name": "Mythmaker",
+      "people": [
+        "Mythmaker Galio",
+        "Mythmaker Sivir",
+        "Mythmaker Zyra",
+        "Mythmaker Irelia",
+        "Mythmaker Garen"
+      ],
+      "moreInfoUrl": "http://example.com/mythmaker"
+    },
+    {
+      "id": 86,
+      "name": "Ocean Song",
+      "people": [
+        "Ocean Song Ashe",
+        "Ocean Song Nidalee",
+        "Ocean Song Seraphine",
+        "Ocean Song Yone",
+        "Ocean Song Zeri"
+      ],
+      "moreInfoUrl": "http://example.com/ocean-song"
+    },
+    {
+      "id": 87,
+      "name": "Winterblessed",
+      "people": [
+        "Winterblessed Diana",
+        "Winterblessed Shaco",
+        "Winterblessed Swain",
+        "Winterblessed Warwick",
+        "Winterblessed Zilean",
+        "Winterblessed Zoe"
+      ],
+      "moreInfoUrl": "http://example.com/winterblessed"
+    },
+    {
+      "id": 88,
+      "name": "Faerie Court",
+      "people": [
+        "Faerie Court Ezreal",
+        "Faerie Court Fiora",
+        "Faerie Court Kalista",
+        "Faerie Court Katarina",
+        "Faerie Court Milio",
+        "Faerie Court Seraphine",
+        "Faerie Queen Karma"
+      ],
+      "moreInfoUrl": "http://example.com/faerie-court"
     }
-    // more regions...
   ]
 }
