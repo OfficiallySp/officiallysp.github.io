@@ -1,5 +1,5 @@
 {
-  "regions": [
+  "skins": [
     {
       "id": 1,
       "name": "Bilgewater/Burning Tides",
@@ -20,7 +20,7 @@
         "Rogue Admiral Garen",
         "Sea Hunter Aatrox"
       ],
-      "moreInfoUrl": "http://example.com/bilgewater"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124707090267648173"
     },
     {
       "id": 2,
@@ -34,7 +34,7 @@
         "Frosted Ezreal",
         "Tundra Hunter Warwick"
       ],
-      "moreInfoUrl": "http://example.com/freljord"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124707224284049408"
     },
     {
       "id": 3,
@@ -51,7 +51,7 @@
         "Transcended Kayle",
         "Tyrant Swain"
       ],
-      "moreInfoUrl": "http://example.com/otherroads"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709095803461703"
     },
     {
       "id": 4,
@@ -68,7 +68,7 @@
         "Demacia Vice Garen",
         "Demacia Vice Lucian"
       ],
-      "moreInfoUrl": "http://example.com/arcade-battleboss-demaciavice"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709180117368983"
     },
     {
       "id": 5,
@@ -84,7 +84,7 @@
         "Arcade Riven",
         "Arcade Sona"
       ],
-      "moreInfoUrl": "http://example.com/arcade-heroes"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709242117562428"
     },
     {
       "id": 6,
@@ -100,7 +100,7 @@
         "Arcana Xayah",
         "Arcana Rakan"
       ],
-      "moreInfoUrl": "http://example.com/arcana"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709307418693672"
     },
     {
       "id": 7,
@@ -121,7 +121,7 @@
         "Resistance Singed",
         "Resistance Yorick"
       ],
-      "moreInfoUrl": "http://example.com/battlecast"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709403287896155"
     },
     {
       "id": 8,
@@ -142,7 +142,7 @@
         "Sweetheart Sona",
         "Sweetheart Xayah"
       ],
-      "moreInfoUrl": "http://example.com/be-mine"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709500801253448"
     },
     {
       "id": 9,
@@ -158,7 +158,7 @@
         "Orbeeanna",
         "Yuubee"
       ],
-      "moreInfoUrl": "http://example.com/bees"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709609588916235"
     },
     {
       "id": 10,
@@ -177,7 +177,7 @@
         "Crime City Nightmares Twisted Fate",
         "Crime City Nightmares Zyra"
       ],
-      "moreInfoUrl": "http://example.com/crime-city"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709657764700210"
     },
     {
       "id": 11,
@@ -192,7 +192,7 @@
         "Sashimi Akali",
         "Sinful Succulence Morgana"
       ],
-      "moreInfoUrl": "http://example.com/culinary-masters"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709702140428410"
     },
     {
       "id": 12,
@@ -217,7 +217,7 @@
         "Dragonslayer Vayne",
         "Dragonslayer Xin Zhao"
       ],
-      "moreInfoUrl": "http://example.com/dragon-world"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124710985391935551"
     },
     {
       "id": 13,
@@ -239,7 +239,7 @@
         "Elderwood Karthus",
         "Elderwood Wukong"
       ],
-      "moreInfoUrl": "http://example.com/elderwood"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124711080363556904"
     },
     {
       "id": 14,
@@ -262,7 +262,7 @@
         "Cosmic Reaver Kassadin",
         "Cosmic Skarner"
       ],
-      "moreInfoUrl": "http://example.com/cosmic"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124711121199308949"
     },
     {
       "id": 15,
@@ -283,7 +283,7 @@
         "Dark Star Varus",
         "Dark Star Xerath"
       ],
-      "moreInfoUrl": "http://example.com/dark-cosmic"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124711166359388190"
     },
     {
       "id": 16,
@@ -301,7 +301,7 @@
         "Debonair Vi",
         "Debonair Zed"
       ],
-      "moreInfoUrl": "http://example.com/debonair"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124711943815565312"
     },
     {
       "id": 17,
@@ -316,7 +316,7 @@
         "Withered Rose Talon",
         "Withered Rose Zeri"
       ],
-      "moreInfoUrl": "http://example.com/crystal-rose-withered-rose"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712017790509217"
     },
     {
       "id": 18,
@@ -337,7 +337,7 @@
         "Old God Warwick",
         "Thousand Pierced Bear"
       ],
-      "moreInfoUrl": "http://example.com/coven"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712048828362884"
     },
     {
       "id": 19,
@@ -354,7 +354,7 @@
         "Storm Dragon Lee Sin",
         "Tranquility Dragon Karma"
       ],
-      "moreInfoUrl": "http://example.com/dragonmancer"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712088149954693"
     },
     {
       "id": 20,
@@ -381,7 +381,7 @@
         "Hextech Tristana",
         "Hextech Ziggs"
       ],
-      "moreInfoUrl": "http://example.com/hextech"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712137617592360"
     },
     {
       "id": 21,
@@ -415,7 +415,7 @@
         "Sheriff Caitlyn",
         "Sonoran Kog'maw"
       ],
-      "moreInfoUrl": "http://example.com/high-noon"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712289929527316"
     },
     {
       "id": 22,
@@ -445,7 +445,7 @@
         "Volcanic Wukong",
         "Wildfire Zyra"
       ],
-      "moreInfoUrl": "http://example.com/infernal"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712328378728529"
     },
     {
       "id": 23,
@@ -471,7 +471,7 @@
         "Blood Moon Yasuo",
         "Blood Moon Zilean"
       ],
-      "moreInfoUrl": "http://example.com/blood-moon"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712379553431653"
     },
     {
       "id": 24,
@@ -491,7 +491,7 @@
         "Warden Quinn",
         "Warden Sivir"
       ],
-      "moreInfoUrl": "http://example.com/marauder-warden"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712411514011740"
     },
     {
       "id": 25,
@@ -523,7 +523,7 @@
         "Lunar Wraith Sylas",
         "Radiant Wukong"
       ],
-      "moreInfoUrl": "http://example.com/lunar-beast-lunar-revel"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712481995096175"
     },
     {
       "id": 26,
@@ -541,7 +541,7 @@
         "Lion Dance Kog'Maw",
         "Panda Annie"
       ],
-      "moreInfoUrl": "http://example.com/lunar-revel-firecracker"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712529554309130"
     },
     {
       "id": 27,
@@ -563,7 +563,7 @@
         "True Damage Senna",
         "True Damage Yasuo"
       ],
-      "moreInfoUrl": "http://example.com/music-group"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712575234486363"
     },
     {
       "id": 28,
@@ -593,7 +593,7 @@
         "PROJECT: Zed",
         "PROJECT: Yi"
       ],
-      "moreInfoUrl": "http://example.com/project"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712625020862487"
     },
     {
       "id": 29,
@@ -616,7 +616,7 @@
         "PsyOps Sona",
         "PsyOps Vi"
       ],
-      "moreInfoUrl": "http://example.com/psyops"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712667152654397"
     },
     {
       "id": 30,
@@ -642,7 +642,7 @@
         "Snowmerdinger",
         "Workshop Nunu & Willump"
       ],
-      "moreInfoUrl": "http://example.com/snowdown-showdown"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712712635687025"
     },
     {
       "id": 31,
@@ -670,7 +670,7 @@
         "Winter Wonder Orianna",
         "Winter Wonder Soraka"
       ],
-      "moreInfoUrl": "http://example.com/winter-wonder-snow-day"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712770055721032"
     },
     {
       "id": 32,
@@ -694,7 +694,7 @@
         "Varus Swiftbolt",
         "Veigar Greybeard"
       ],
-      "moreInfoUrl": "http://example.com/rift-quest"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712805199794277"
     },
     {
       "id": 33,
@@ -721,7 +721,7 @@
         "Spirit Blossom Yorick",
         "Spirit Guard Udyr"
       ],
-      "moreInfoUrl": "http://example.com/spirit-blossom-spirit-guard"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712871239094495"
     },
     {
       "id": 34,
@@ -744,7 +744,7 @@
         "Astronaut Singed",
         "Astronaut Xerath"
       ],
-      "moreInfoUrl": "http://example.com/astronauts-space-invaders"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712908836847636"
     },
     {
       "id": 35,
@@ -775,7 +775,7 @@
         "Pool Party Mundo",
         "Surfer Singed"
       ],
-      "moreInfoUrl": "http://example.com/pool-party"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712951341928498"
     },
     {
       "id": 36,
@@ -798,7 +798,7 @@
         "Bewitching Yuumi",
         "Bewitching Batnivia"
       ],
-      "moreInfoUrl": "http://example.com/bewitching"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712991733063771"
     },
     {
       "id": 37,
@@ -821,7 +821,7 @@
         "Underworld Twisted Fate",
         "Witch's Brew Blitzcrank"
       ],
-      "moreInfoUrl": "http://example.com/trick-or-treat"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713025052622848"
     },
     {
       "id": 38,
@@ -843,7 +843,7 @@
         "Primetime Draven",
         "Sailor Gangplank"
       ],
-      "moreInfoUrl": "http://example.com/day-job"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713056279207947"
     },
     {
       "id": 39,
@@ -866,7 +866,7 @@
         "Sentinel Riven",
         "Sentinel Vayne"
       ],
-      "moreInfoUrl": "http://example.com/ruined-sentinels-of-light"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713089321930804"
     },
     {
       "id": 40,
@@ -886,7 +886,7 @@
         "Victorious Sivir",
         "Victorious Anivia"
       ],
-      "moreInfoUrl": "http://example.com/victorious"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713122406604840"
     },
     {
       "id": 41,
@@ -912,7 +912,7 @@
         "Nightbringer Lee Sin",
         "Nightbringer Nasus"
       ],
-      "moreInfoUrl": "http://example.com/dawnbringer-nightbringer"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713154035847170"
     },
     {
       "id": 42,
@@ -926,7 +926,7 @@
         "Justicar Aatrox",
         "Justicar Syndra"
       ],
-      "moreInfoUrl": "http://example.com/arclight-justicar"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713218804306010"
     },
     {
       "id": 43,
@@ -943,7 +943,7 @@
         "Soul Reaver Draven",
         "Underworld Wukong"
       ],
-      "moreInfoUrl": "http://example.com/death-sworn"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713247099060234"
     },
     {
       "id": 44,
@@ -958,7 +958,7 @@
         "Pajama Guardian Cosplay Urgot",
         "Pengu Cosplay Tristana"
       ],
-      "moreInfoUrl": "http://example.com/definitely-not"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713299456577566"
     },
     {
       "id": 45,
@@ -973,7 +973,7 @@
         "Spectral Fiddlesticks",
         "Undertaker Yorick"
       ],
-      "moreInfoUrl": "http://example.com/omen-of-the-dark"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713354842353696"
     },
     {
       "id": 46,
@@ -991,7 +991,7 @@
         "Worlds 2021 Jarvan IV",
         "Worlds 2022 Azir"
       ],
-      "moreInfoUrl": "http://example.com/championship"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713396735062028"
     },
     {
       "id": 47,
@@ -1011,7 +1011,7 @@
         "Sasquatch Nunu and Willump",
         "Valkyrie Leona"
       ],
-      "moreInfoUrl": "http://example.com/fables"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713426057433128"
     },
     {
       "id": 48,
@@ -1026,7 +1026,7 @@
         "Deep Sea Nami",
         "Deep Terror Thresh"
       ],
-      "moreInfoUrl": "http://example.com/forgotten-depths"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713460274581625"
     },
     {
       "id": 49,
@@ -1044,7 +1044,7 @@
         "Battle Principal Yuumi",
         "Battle Professor Graves"
       ],
-      "moreInfoUrl": "http://example.com/battle-academia"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713494307151962"
     },
     {
       "id": 50,
@@ -1065,7 +1065,7 @@
         "Pharaoh Nasus",
         "Pharaoh Nidalee"
       ],
-      "moreInfoUrl": "http://example.com/guardian-of-the-sands-pharaoh"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713529623203870"
     },
     {
       "id": 51,
@@ -1086,7 +1086,7 @@
         "Vandal Twitch",
         "Vandal Vladimir"
       ],
-      "moreInfoUrl": "http://example.com/road-warrior-vandal"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713559100760124"
     },
     {
       "id": 52,
@@ -1103,7 +1103,7 @@
         "Splendid Staff Nami",
         "Valiant Sword Riven"
       ],
-      "moreInfoUrl": "http://example.com/immortal-journey"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713589962457108"
     },
     {
       "id": 53,
@@ -1119,7 +1119,7 @@
         "Strike Commander Camille",
         "Strike Paladin Lucian"
       ],
-      "moreInfoUrl": "http://example.com/steel-valkyries"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713622963232858"
     },
     {
       "id": 54,
@@ -1138,7 +1138,7 @@
         "Mecha Kingdoms Jax",
         "Mecha Kingdoms Sett"
       ],
-      "moreInfoUrl": "http://example.com/mecha-mecha-kingdom"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713651878772786"
     },
     {
       "id": 55,
@@ -1157,7 +1157,7 @@
         "Odyssey Yasuo",
         "Odyssey Ziggs"
       ],
-      "moreInfoUrl": "http://example.com/odyssey"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124713685206716447"
     },
     {
       "id": 56,
@@ -1173,7 +1173,7 @@
         "Prehistoric Renekton",
         "Tribal Ryze"
       ],
-      "moreInfoUrl": "http://example.com/prehistoric-hunters"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714166473740388"
     },
     {
       "id": 57,
@@ -1190,7 +1190,7 @@
         "Pulsefire Thresh",
         "Pulsefire Twisted Fate"
       ],
-      "moreInfoUrl": "http://example.com/pulsefire"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714197683535952"
     },
     {
       "id": 58,
@@ -1210,7 +1210,7 @@
         "Superb Villain Veigar",
         "Toxic Dr. Mundo"
       ],
-      "moreInfoUrl": "http://example.com/silver-age"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714226552950856"
     },
     {
       "id": 59,
@@ -1232,7 +1232,7 @@
         "Space Groove Teemo",
         "Space Groove Twisted fate"
       ],
-      "moreInfoUrl": "http://example.com/space-groove"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714259314647070"
     },
     {
       "id": 60,
@@ -1271,7 +1271,7 @@
         "Star Guardian Orianna",
         "Star Guardian Senna"
       ],
-      "moreInfoUrl": "http://example.com/star-guardian"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714290180522004"
     },
     {
       "id": 61,
@@ -1286,7 +1286,7 @@
         "Sugar Rush Ziggs",
         "Sugar Rush Zilean"
       ],
-      "moreInfoUrl": "http://example.com/sugar-rush"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714377996681298"
     },
     {
       "id": 62,
@@ -1301,7 +1301,7 @@
         "Super Galaxy Rumble",
         "Super Galaxy Shyvana"
       ],
-      "moreInfoUrl": "http://example.com/super-galaxy"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714410204725429"
     },
     {
       "id": 63,
@@ -1319,7 +1319,7 @@
         "Sorceress Lux",
         "White Mage Veigar"
       ],
-      "moreInfoUrl": "http://example.com/medieval-albion"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714450306470038"
     },
     {
       "id": 64,
@@ -1334,7 +1334,7 @@
         "Secret Agent Miss Fortune",
         "Secret Agent Xin Zhao"
       ],
-      "moreInfoUrl": "http://example.com/cops-and-robbers"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714481944117389"
     },
     {
       "id": 65,
@@ -1349,7 +1349,7 @@
         "Tango Evelynn",
         "Tango Twisted Fate"
       ],
-      "moreInfoUrl": "http://example.com/high-society"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714518770106408"
     },
     {
       "id": 66,
@@ -1367,7 +1367,7 @@
         "Sweeper Alistar",
         "Sweeper Rammus"
       ],
-      "moreInfoUrl": "http://example.com/soccer-cup"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714556141359246"
     },
     {
       "id": 67,
@@ -1382,7 +1382,7 @@
         "Sewn Chaos Orianna",
         "Toy Soldier Gangplank"
       ],
-      "moreInfoUrl": "http://example.com/toy-box"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714587435040778"
     },
     {
       "id": 68,
@@ -1399,7 +1399,7 @@
         "Omega Squad Twitch",
         "Omega Squad Veigar"
       ],
-      "moreInfoUrl": "http://example.com/commando-omega-squad"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714623522840586"
     },
     {
       "id": 69,
@@ -1416,7 +1416,7 @@
         "Warring Kingdoms Vi",
         "Warring Kingdoms Xin Zhao"
       ],
-      "moreInfoUrl": "http://example.com/warring-kingdoms"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714654640382124"
     },
     {
       "id": 70,
@@ -1431,7 +1431,7 @@
         "Vancouver Amumu",
         "Whistler Village Twitch"
       ],
-      "moreInfoUrl": "http://example.com/winter-sports"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714691818688612"
     },
     {
       "id": 71,
@@ -1455,7 +1455,7 @@
         "Vizier Malzahar",
         "Winged Hussar Xin Zhao"
       ],
-      "moreInfoUrl": "http://example.com/wonders-of-the-world"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714725553487943"
     },
     {
       "id": 72,
@@ -1471,7 +1471,7 @@
         "Worldbreaker Sion",
         "Worldbreaker Trundle"
       ],
-      "moreInfoUrl": "http://example.com/worldbreaker"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714765743308903"
     },
     {
       "id": 73,
@@ -1485,7 +1485,7 @@
         "Blackfrost Vel'Koz",
         "Ice Drake Shyvana"
       ],
-      "moreInfoUrl": "http://example.com/blackfrost"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714808013488250"
     },
     {
       "id": 74,
@@ -1499,7 +1499,7 @@
         "Dark Crystal Ryze",
         "Nightraven Fiora"
       ],
-      "moreInfoUrl": "http://example.com/bloodstone"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714837306515497"
     },
     {
       "id": 75,
@@ -1512,7 +1512,7 @@
         "Cafe Cutie Soraka",
         "Cafe Cutie Vladimir"
       ],
-      "moreInfoUrl": "http://example.com/cafe-cuties"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714870252769300"
     },
     {
       "id": 76,
@@ -1528,7 +1528,7 @@
         "Shiba Yuumi",
         "Woof and Lamb Kindred"
       ],
-      "moreInfoUrl": "http://example.com/cats-vs-dogs"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714906235719731"
     },
     {
       "id": 77,
@@ -1541,7 +1541,7 @@
         "Solar Eclipse Sivir",
         "Sun Eater Kayle"
       ],
-      "moreInfoUrl": "http://example.com/eclipse"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714933221871658"
     },
     {
       "id": 78,
@@ -1553,7 +1553,7 @@
         "Ashen Knight Pyke",
         "Ashen Slayer Sylas"
       ],
-      "moreInfoUrl": "http://example.com/ashen-knight"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714957666254859"
     },
     {
       "id": 79,
@@ -1567,7 +1567,7 @@
         "Broken Covenant Riven",
         "Broken Covenant Vladimir"
       ],
-      "moreInfoUrl": "http://example.com/broken-covenant"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714985709371493"
     },
     {
       "id": 80,
@@ -1581,7 +1581,7 @@
         "Inkshadow Yasuo",
         "Inkshadow Yone"
       ],
-      "moreInfoUrl": "http://example.com/inkshadow"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715012087361546"
     },
     {
       "id": 81,
@@ -1594,7 +1594,7 @@
         "Snow Moon Morgana",
         "Snow Moon Varus"
       ],
-      "moreInfoUrl": "http://example.com/snow-moon"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715037873934366"
     },
     {
       "id": 82,
@@ -1607,7 +1607,7 @@
         "Fright Night Trundle",
         "Fright Night Urgot"
       ],
-      "moreInfoUrl": "http://example.com/fright-night"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715064155451432"
     },
     {
       "id": 83,
@@ -1622,7 +1622,7 @@
         "Empyrean Zed",
         "Empyrean Zac"
       ],
-      "moreInfoUrl": "http://example.com/empyrean"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715101698658324"
     },
     {
       "id": 84,
@@ -1637,7 +1637,7 @@
         "Shan Hai Scrolls Neeko",
         "Shan Hai Scrolls Tahm Kench"
       ],
-      "moreInfoUrl": "http://example.com/shan-hai-scrolls"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715132136730768"
     },
     {
       "id": 85,
@@ -1649,7 +1649,7 @@
         "Mythmaker Irelia",
         "Mythmaker Garen"
       ],
-      "moreInfoUrl": "http://example.com/mythmaker"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715157071859892"
     },
     {
       "id": 86,
@@ -1661,7 +1661,7 @@
         "Ocean Song Yone",
         "Ocean Song Zeri"
       ],
-      "moreInfoUrl": "http://example.com/ocean-song"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715183084929116"
     },
     {
       "id": 87,
@@ -1674,7 +1674,7 @@
         "Winterblessed Zilean",
         "Winterblessed Zoe"
       ],
-      "moreInfoUrl": "http://example.com/winterblessed"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715205419606096"
     },
     {
       "id": 88,
@@ -1688,7 +1688,7 @@
         "Faerie Court Seraphine",
         "Faerie Queen Karma"
       ],
-      "moreInfoUrl": "http://example.com/faerie-court"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715233676627968"
     }
   ]
 }
