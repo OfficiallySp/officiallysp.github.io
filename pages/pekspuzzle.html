@@ -2,25 +2,67 @@
 <html>
 <body>
 
-<h2>Caesar Cipher Puzzle</h2>
+<h2>Cipher Puzzle</h2>
 
 <p>Here is a Caesar Cipher that has been shifted 8 places down the alphabet: "LIPPSASV". Decrypt it and enter the resulting word below:</p>
 
-<input id="cipherSolution" type="text">
+<input id="caesarCipherSolution" type="text">
 
-<button onclick="checkSolution()">Submit</button>
+<button onclick="checkCaesarSolution()">Submit</button>
 
-<p id="result"></p>
+<p id="caesarResult"></p>
+
+<p>Here is a Vigenère Cipher using the answer to the first puzzle as the keyword: "KPNGZ". Decrypt it and enter the resulting word below:</p>
+
+<input id="vigenereCipherSolution" type="text">
+
+<button onclick="checkVigenereSolution()">Submit</button>
+
+<p id="vigenereResult"></p>
+
+<p>Here is a riddle: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"</p>
+
+<input id="riddleSolution" type="text">
+
+<button onclick="checkRiddleSolution()">Submit</button>
+
+<p id="riddleResult"></p>
 
 <script>
-function checkSolution() {
-  let input = document.getElementById("cipherSolution").value.toUpperCase();
-  let result = document.getElementById("result");
+function checkCaesarSolution() {
+  let input = document.getElementById("caesarCipherSolution").value.toUpperCase();
+  let result = document.getElementById("caesarResult");
   let correctAnswer = "DISCOVER";
   
   if(input === correctAnswer) {
-    let numbers = input.split('').map(letter => letter.charCodeAt(0) - 64);
+    let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
     result.textContent = "Correct! Your 8 numbers are: " + numbers.join(', ');
+  } else {
+    result.textContent = "Sorry, that's not correct. Try again!";
+  }
+}
+
+function checkVigenereSolution() {
+  let input = document.getElementById("vigenereCipherSolution").value.toUpperCase();
+  let result = document.getElementById("vigenereResult");
+  let correctAnswer = "EIGHT";
+  
+  if(input === correctAnswer) {
+    let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
+    result.textContent = "Correct! Your 5 numbers are: " + numbers.join(', ');
+  } else {
+    result.textContent = "Sorry, that's not correct. Try again!";
+  }
+}
+
+function checkRiddleSolution() {
+  let input = document.getElementById("riddleSolution").value.toUpperCase();
+  let result = document.getElementById("riddleResult");
+  let correctAnswer = "ECHO";
+  
+  if(input === correctAnswer) {
+    let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
+    result.textContent = "Correct! Your 4 numbers are: " + numbers.join(', ');
   } else {
     result.textContent = "Sorry, that's not correct. Try again!";
   }
