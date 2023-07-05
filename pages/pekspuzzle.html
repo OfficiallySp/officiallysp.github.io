@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Caesar Cipher Puzzle</h2>
+
+<p>Here is a Caesar Cipher that has been shifted 8 places down the alphabet: "LIPPSASV". Decrypt it and enter the resulting word below:</p>
+
+<input id="cipherSolution" type="text">
+
+<button onclick="checkSolution()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkSolution() {
+  let input = document.getElementById("cipherSolution").value.toUpperCase();
+  let result = document.getElementById("result");
+  let correctAnswer = "DISCOVER";
+  
+  if(input === correctAnswer) {
+    let numbers = input.split('').map(letter => letter.charCodeAt(0) - 64);
+    result.textContent = "Correct! Your 8 numbers are: " + numbers.join(', ');
+  } else {
+    result.textContent = "Sorry, that's not correct. Try again!";
+  }
+}
+</script>
+
+</body>
+</html>
