@@ -50,8 +50,8 @@ button:hover {
 </head>
 <body>
 
-<h2>Peks Puzzle</h2>
-
+<h1>Peks Puzzle</h1>
+<h2>Part 1: Rugo Riddles</h2>
 <p id="vigenereResult"></p>
 
 <p>Here is a riddle: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"</p>
@@ -68,7 +68,9 @@ button:hover {
 
 <button onclick="checkVigenereSolution()">Submit</button>
 
-<p>Here is a Caesar Cipher that has been shifted 8 places down the alphabet: "LIPPSASV". Decrypt it and enter the resulting word below:</p>
+<h2>Cipher Puzzle</h2>
+
+<p>Here is a Caesar Cipher that has been shifted 8 places down the alphabet: "SBZBFO". Decrypt it and enter the resulting word below:</p>
 
 <input id="caesarCipherSolution" type="text">
 
@@ -80,11 +82,11 @@ button:hover {
 function checkCaesarSolution() {
   let input = document.getElementById("caesarCipherSolution").value.toUpperCase();
   let result = document.getElementById("caesarResult");
-  let correctAnswer = "DISCOVER";
+  let correctAnswer = "MURPHY";
   
   if(input === correctAnswer) {
     let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! Your 8 numbers are: " + numbers.join(', ');
+    result.textContent = "Correct! Your 6 numbers are: " + numbers.join(', ');
   } else {
     result.textContent = "Sorry, that's not correct. Try again!";
   }
