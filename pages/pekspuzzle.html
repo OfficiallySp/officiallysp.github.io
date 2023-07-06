@@ -62,7 +62,7 @@ button:hover {
 
 <h2>Part Two: Une Baguette</h2>
 
-<p>Here is a Vigenère Cipher using the answer to the first puzzle as the keyword: "KPNGZ". Decrypt it and enter the resulting word below:</p>
+<p>Here is a Vigenère Cipher using the answer to the first puzzle as the keyword: "GCMLN". Decrypt it and enter the resulting word below:</p>
 
 <input id="vigenereCipherSolution" type="text">
 
@@ -97,12 +97,12 @@ function checkCaesarSolution() {
 function checkVigenereSolution() {
   let input = document.getElementById("vigenereCipherSolution").value.toUpperCase();
   let result = document.getElementById("vigenereResult");
-  let correctAnswer = "EIGHT";
+  let correctAnswer = "GAREN";
   
   if(input === correctAnswer) {
     let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
     result.textContent = "Correct! Your 5 numbers are: " + numbers.join(', ');
-} else {
+  } else {
     result.textContent = "Sorry, that's not correct. Try again!";
   }
 }
