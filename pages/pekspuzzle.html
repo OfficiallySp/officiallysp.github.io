@@ -88,7 +88,7 @@ function checkCaesarSolution() {
   
   if(input === correctAnswer) {
     let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! Your 8 numbers are: " + numbers.join(', ');
+    result.textContent = "Correct! See what's under the plaque and get out of there. Your 8 numbers are: " + numbers.join(', ');
   } else {
     result.textContent = "Sorry, that's not correct. Try again!";
   }
@@ -101,7 +101,7 @@ function checkVigenereSolution() {
   
   if(input === correctAnswer) {
     let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! Your 5 numbers are: " + numbers.join(', ');
+    result.textContent = "Correct! Enter the cave and venture forth till the end. Your 5 numbers are: " + numbers.join(', ');
   } else {
     result.textContent = "Sorry, that's not correct. Try again!";
   }
@@ -114,7 +114,7 @@ function checkRiddleSolution() {
   
   if(input === correctAnswer) {
     let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! Your 4 numbers are: " + numbers.join(', ');
+    result.textContent = "Correct! Enter the door and get the treasure inside and return to rugo. Your 4 numbers are: " + numbers.join(', ');
   } else {
     result.textContent = "Sorry, that's not correct. Try again!";
   }
