@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pyramid Guessing Game</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			background: #333;
+			color: #eee;
+		}
+
+		h1 {
+			color: #eee;
+		}
+
+		.pyramid {
+			margin: 50px auto;
+		}
+
+		.row {
+			display: flex;
+			justify-content: center;
+		}
+
+		.number {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			border: 1px solid #555;
+			background-color: #222;
+			font-size: 20px;
+			margin: 5px;
+		}
+
+		.guess {
+			background: #074;
+		}
+
+		.guess-input {
+			margin: 20px;
+		}
+
+		.guess-button {
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: #111;
+			border: none;
+			cursor: pointer;
+		}
+
+		.result {
+			margin: 20px;
+			font-weight: bold;
+		}
+
+		.end-result {
+			font-size: 50px;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.start-screen {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.start-screen h2 {
+			margin-bottom: 20px;
+		}
+
+		.start-button {
+			padding: 10px 20px;
+			font-size: 16px;
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="start-screen">
+		<h2>Welcome to the Pyramid Guessing Game!</h2>
+		<p>In this game, you need to guess the number in the green section of each pyramid.</p>
+		<p>Click the Start button to begin.</p>
+		<button class="start-button" onclick="startGame()">Start</button>
+	</div>
+
+	<div class="pyramid hidden" id="pyramid1">
+		<div class="row">
+			<div class="number guess">＊</div>
+		</div>
+		<div class="row">
+			<div class="number">9</div>
+			<div class="number">12</div>
+		</div>
+		<div class="row">
+			<div class="number">4</div>
+			<div class="number">5</div>
+			<div class="number">7</div>
+		</div>
+		<div class="row">
+			<div class="number">2</div>
+			<div class="number">2</div>
+			<div class="number">3</div>
+			<div class="number">4</div>
+		</div>
+	</div>
+
+	<div class="pyramid hidden" id="pyramid2">
+		<div class="row">
+			<div class="number">85</div>
+		</div>
+		<div class="row">
+			<div class="number"></div>
+			<div class="number">45</div>
+		</div>
+		<div class="row">
+			<div class="number">15</div>
+			<div class="number"></div>
+			<div class="number"></div>
+		</div>
+		<div class="row">
+			<div class="number">10</div>
+			<div class="number"></div>
+			<div class="number guess">＊</div>
+			<div class="number"></div>
+		</div>
+	</div>
+
+	<div class="pyramid hidden" id="pyramid3">
+		<div class="row">
+			<div class="number">100</div>
+		</div>
+		<div class="row">
+			<div class="number"></div>
+			<div class="number"></div>
+		</div>
+		<div class="row">
+			<div class="number"></div>
+			<div class="number guess">＊</div>
+			<div class="number"></div>
+		</div>
+		<div class="row">
+			<div class="number">9</div>
+			<div class="number"></div>
+			<div class="number"></div>
+			<div class="number">10</div>
+		</div>
+	</div>
+
+	<div id="guess-input" class="guess-input">
+		<label for="guess">Enter your guess:</label>
+		<input type="number" id="guess" min="1" max="100">
+		<button class="guess-button" onclick="checkGuess()">Guess</button>
+	</div>
+
+	<div class="result" id="result"></div>
+	<div class="timer" id="timer"></div>
+
+	<script>
+		var currentPyramid = 1;
+		var middleNumbers = [21, 20, 27]; // Middle numbers for each pyramid
+		var gameStarted = false;
+		var countdownInterval;
+
+		function startGame() {
+			var startScreen = document.querySelector('.start-screen');
+			startScreen.style.display = 'none';
+
+			var currentPyramidDiv = document.getElementById('pyramid1');
+			currentPyramidDiv.classList.remove('hidden');
+
+			gameStarted = true;
+		}
+
+		function checkGuess() {
+			if (!gameStarted) {
+				return;
+			}
+
+			var guessInput = document.getElementById('guess');
+			var guess = parseInt(guessInput.value);
+
+			var middleNumber = middleNumbers[currentPyramid - 1];
+
+			var resultDiv = document.getElementById('result');
+
+			if (guess === middleNumber) {
+				resultDiv.textContent = 'Congratulations! Your guess is correct!';
+				resultDiv.style.color = 'green';
+
+				var currentPyramidDiv = document.getElementById('pyramid' + currentPyramid);
+				currentPyramidDiv.classList.add('hidden');
+
+				currentPyramid++;
+				if (currentPyramid <= 3) {
+					var nextPyramidDiv = document.getElementById('pyramid' + currentPyramid);
+					nextPyramidDiv.classList.remove('hidden');
+				} else {
+					resultDiv.classList.add('end-result');
+					resultDiv.innerHTML = '<p>Congratulations!</p><p>You\'re Winner!</p><p>Code: 1210</p>';
+					resultDiv.style.color = '#494';
+					guessInput.disabled = true;
+					document.getElementById('guess-input').remove();
+				}
+			} else {
+				resultDiv.textContent = 'Sorry, your guess is incorrect. Please try again.';
+				resultDiv.style.color = 'red';
+				guessInput.disabled = true;
+				var timeLeft = 10;
+				var timerDiv = document.getElementById('timer');
+				timerDiv.textContent = 'Time Left: ' + timeLeft;
+
+				countdownInterval = setInterval(function () {
+					timeLeft--;
+					timerDiv.textContent = 'Time Left: ' + timeLeft;
+
+					if (timeLeft === 0) {
+						clearInterval(countdownInterval);
+						timerDiv.textContent = '';
+						// handleTimeout();
+					}
+				}, 1000);
+
+				setTimeout(function () {
+					resultDiv.textContent = '';
+					resultDiv.style.color = '';
+
+					guessInput.disabled = false;
+					guessInput.value = '';
+				}, 10000);
+			}
+
+			guessInput.value = '';
+		}
+	</script>
+</body>
+
+</html>
