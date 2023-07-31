@@ -1,0 +1,285 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Runeterra",
+      "people": [
+        "Aatrox",
+        "Alistar",
+        "Annie",
+        "Aurelion",
+        "Sol",
+        "Bard",
+        "Brand",
+        "Evelynn",
+        "Fiddlesticks",
+        "Jax",
+        "Kindred",
+        "Nami",
+        "Nocturne",
+        "Ryze",
+        "Shaco",
+        "Tahm",
+        "Kench",
+        "Varus",
+        "Veigar",
+        "Zilean"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135613783763595434"
+    },
+    {
+      "id": 2,
+      "name": "Void",
+      "people": [
+        "Bel'Veth",
+        "Cho'Gath",
+        "Kai'Sa",
+        "Kassadin",
+        "Kha'Zix",
+        "Kog'Maw",
+        "Malzahar",
+        "Rek'Sai",
+        "Vel'Koz"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135613861605670912"
+    },
+    {
+      "id": 3,
+      "name": "Shadow Isles",
+      "people": [
+        "Elise",
+        "Gwen",
+        "Hecarim",
+        "Kalista",
+        "Karthus",
+        "Lucian",
+        "Maokai",
+        "Senna",
+        "Thresh",
+        "Vex",
+        "Viego",
+        "Yorick"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135613939116421250"
+    },
+    {
+      "id": 4,
+      "name": "Freljord",
+      "people": [
+        "Anivia",
+        "Ashe",
+        "Braum",
+        "Gnar",
+        "Gragas",
+        "Lissandra",
+        "Nunu",
+        "Olaf",
+        "Ornn",
+        "Sejuani",
+        "Sylas",
+        "Trundle",
+        "Tryndamere",
+        "Udyr",
+        "Volibear"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614019269562419"
+    },
+    {
+      "id": 5,
+      "name": "Targon",
+      "people": [
+        "Aphelios",
+        "Aurelion",
+        "Sol",
+        "Diana",
+        "Kayle",
+        "Leona",
+        "Morgana",
+        "Pantheon",
+        "Soraka",
+        "Taric",
+        "Zoe"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614075724902510"
+    },
+    {
+      "id": 6,
+      "name": "Zaun",
+      "people": [
+        "Blitzcrank",
+        "Dr.",
+        "Mundo",
+        "Ekko",
+        "Janna",
+        "Jinx",
+        "Renata",
+        "Glasc",
+        "Seraphine",
+        "Singed",
+        "Twitch",
+        "Urgot",
+        "Viktor",
+        "Warwick",
+        "Zac",
+        "Zeri",
+        "Ziggs"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614129856585739"
+    },
+    {
+      "id": 7,
+      "name": "Piltover",
+      "people": [
+        "Caitlyn",
+        "Camille",
+        "Ezreal",
+        "Heimerdinger",
+        "Jayce",
+        "Orianna",
+        "Serpahine",
+        "Vi"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614182591578305"
+    },
+    {
+      "id": 8,
+      "name": "Noxus",
+      "people": [
+        "Cassiopeia",
+        "Darius",
+        "Draven",
+        "Elise",
+        "Katarina",
+        "Kled",
+        "LeBlanc",
+        "Mordekaiser",
+        "Rell",
+        "Riven",
+        "Samira",
+        "Sion",
+        "Swain",
+        "Talon",
+        "Urgot",
+        "Vladimir"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614227340591175"
+    },
+    {
+      "id": 9,
+      "name": "Shurima / Ixtal",
+      "people": [
+        "Akshan",
+        "Amumu",
+        "Azir",
+        "K'Sante",
+        "Malphite (Ixtal)",
+        "Nasus",
+        "Neeko (Ixtal)",
+        "Nidalee (Ixtal)",
+        "Qiyana (Ixtal)",
+        "Rammus",
+        "Renekton",
+        "Rengar (Ixtal)",
+        "Samira",
+        "Sivir",
+        "Skarner",
+        "Taliyah",
+        "Xerath",
+        "Zyra (Ixtal)"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614314162696333"
+    },
+    {
+      "id": 10,
+      "name": "Ionia",
+      "people": [
+        "Ahri",
+        "Akali",
+        "Irelia",
+        "Ivern",
+        "Jhin",
+        "Karma",
+        "Kayn",
+        "Kennen",
+        "Lee",
+        "Sin",
+        "Lillia",
+        "Master",
+        "Yi",
+        "Rakan",
+        "Riven",
+        "Sett",
+        "Shen",
+        "Soraka",
+        "Syndra",
+        "Udyr",
+        "Wukong",
+        "Xayah",
+        "Xin",
+        "Zhao",
+        "Yasuo",
+        "Yone",
+        "Zed"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614393468592140"
+    },
+    {
+      "id": 11,
+      "name": "Demacia",
+      "people": [
+        "Fiora",
+        "Galio",
+        "Garen",
+        "Jarvan",
+        "Kayle",
+        "Lucian",
+        "Lux",
+        "Morgana",
+        "Poppy",
+        "Quinn",
+        "Shyvana",
+        "Sona",
+        "Sylas",
+        "Vayne",
+        "Xin",
+        "Zhao"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614444433584239"
+    },
+    {
+      "id": 12,
+      "name": "Bilgewater",
+      "people": [
+        "Fizz",
+        "Gankplank",
+        "Graves",
+        "Illaoi",
+        "Miss",
+        "Fortune",
+        "Nautilus",
+        "Nilah",
+        "Pyke",
+        "Tahm",
+        "Kench",
+        "Twisted",
+        "Fate"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614499177648238"
+    },
+    {
+      "id": 13,
+      "name": "Bandle City",
+      "people": [
+        "Corki",
+        "Lulu",
+        "Rumble",
+        "Teemo",
+        "Tristana",
+        "Veigar",
+        "Vex",
+        "Yuumi"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135614581000114286"
+    }
+  ]
+}
