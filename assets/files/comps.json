@@ -1,0 +1,674 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Fear Me",
+      "people": [
+        "Hecarim",
+        "Nocturne",
+        "Shaco",
+        "Urgot",
+        "Vex",
+        "Warwick",
+        "Fiddlesticks",
+        "Samira"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135377551284514838"
+    },
+    {
+      "id": 2,
+      "name": "Let Me Troll You",
+      "people": [
+        "Trundle",
+        "Bard",
+        "Anivia",
+        "Ornn",
+        "Taliyah",
+        "Jarvan",
+        "Mordekaiser",
+        "Yone",
+        "Blitzcrank",
+        "Thresh",
+        "Syndra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135377659896004718"
+    },
+    {
+      "id": 3,
+      "name": "Be Bamboozled",
+      "people": [
+        "Wukong",
+        "Neeko",
+        "Leblanc",
+        "Fiddlesticks",
+        "Shaco",
+        "Zed",
+        "Ivern",
+        "Ekko"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135377818205818942"
+    },
+    {
+      "id": 4,
+      "name": "Locked On",
+      "people": [
+        "Akshan",
+        "Rek'Sai",
+        "Syndra",
+        "Caitlyn",
+        "Veigar",
+        "Malzahar",
+        "Vi",
+        "Karthus",
+        "Morgana",
+        "Mordekaiser"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135377918042837022"
+    },
+    {
+      "id": 5,
+      "name": "Artillery",
+      "people": [
+        "Corki",
+        "Jhin",
+        "Xerath",
+        "Jayce",
+        "Lux",
+        "Varus",
+        "Vel'Koz",
+        "Ziggs",
+        "Zoe",
+        "Ezreal",
+        "Janna",
+        "Nidalee"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135577902080065596"
+    },
+    {
+      "id": 6,
+      "name": "Dots",
+      "people": [
+        "Teemo",
+        "Cassiopeia",
+        "Singed",
+        "Twitch",
+        "Brand",
+        "Darius",
+        "Fizz",
+        "Lillia",
+        "Malzahar",
+        "Maokai",
+        "Nidalee",
+        "Talon"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135577973907538054"
+    },
+    {
+      "id": 7,
+      "name": "I Need No Mana",
+      "people": [
+        "Aatrox",
+        "Garen",
+        "Gnar",
+        "Katarina",
+        "Kled",
+        "Rek'Sai",
+        "Riven",
+        "Rumble",
+        "Shyvanna",
+        "Viego",
+        "Yasuo",
+        "Yone"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578038424318005"
+    },
+    {
+      "id": 8,
+      "name": "Bzz Bzz",
+      "people": [
+        "Viktor",
+        "Xerath",
+        "Zeri",
+        "Volibear",
+        "Blitzcrank",
+        "Jayce",
+        "Kennen"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578282578952222"
+    },
+    {
+      "id": 9,
+      "name": "Death Is Beginning",
+      "people": [
+        "Viktor",
+        "Xerath",
+        "Zeri",
+        "Karthus",
+        "Lissandra",
+        "Kog'Maw",
+        "Akshan",
+        "Sion",
+        "Pyke",
+        "Vex",
+        "Annie",
+        "Viego",
+        "Yorick",
+        "Blitzcrank",
+        "Jayce",
+        "Kennen"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578505443291218"
+    },
+    {
+      "id": 10,
+      "name": "Adventure Time",
+      "people": [
+        "Bard",
+        "K'sante",
+        "Sett",
+        "Rell",
+        "Skarner",
+        "Mordekaiser",
+        "Taliyah",
+        "Talon",
+        "Zeri",
+        "Akshan"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578579489542235"
+    },
+    {
+      "id": 11,
+      "name": "Late Is Ours",
+      "people": [
+        "Thresh",
+        "Senna",
+        "Veigar",
+        "Bel'Veth",
+        "Cho'Gath",
+        "Nasus",
+        "Syndra",
+        "Gankplank",
+        "Ryze",
+        "Kayle",
+        "Kindred"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578681515986974"
+    },
+    {
+      "id": 12,
+      "name": "Shields",
+      "people": [
+        "Janna",
+        "Ivern",
+        "Lulu",
+        "Karma",
+        "Lee",
+        "Sin",
+        "Lux",
+        "Nilah",
+        "Morgana",
+        "Orianna",
+        "Renata",
+        "Glasc",
+        "Senna",
+        "Seraphine",
+        "Sona",
+        "Taric",
+        "Thresh",
+        "Shen",
+        "Rakan"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578765624365056"
+    },
+    {
+      "id": 13,
+      "name": "I Have Friends",
+      "people": [
+        "Annie",
+        "Ivern",
+        "Elise",
+        "Heimerdinger",
+        "Azir",
+        "Malzahar",
+        "Yorick",
+        "Zyra",
+        "Illaoi"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578838873673728"
+    },
+    {
+      "id": 14,
+      "name": "Its a Trap",
+      "people": [
+        "Jhin",
+        "Nidalee",
+        "Caitlyn",
+        "Teemo",
+        "Shaco",
+        "Maokai",
+        "Heimerdinger",
+        "Zyra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135578956226117662"
+    },
+    {
+      "id": 15,
+      "name": "Cant Touch This",
+      "people": [
+        "Olaf",
+        "Sivir",
+        "Morgana",
+        "Nilah",
+        "Gwen",
+        "Fiora",
+        "Malzahar",
+        "Dr",
+        "Mundo",
+        "Ornn",
+        "Jax"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579067010265199"
+    },
+    {
+      "id": 16,
+      "name": "Heroes Never Die",
+      "people": [
+        "Kindred",
+        "Zilean",
+        "Renata",
+        "Glasc",
+        "Bard",
+        "Kayle",
+        "Taric",
+        "Tryndamere",
+        "Anivia",
+        "Zac",
+        "Akshan"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579202289143819"
+    },
+    {
+      "id": 17,
+      "name": "Mind Tells Me No",
+      "people": [
+        "Lee",
+        "Sin",
+        "Kayn",
+        "Yone",
+        "Yasuo",
+        "Vayne",
+        "Draven",
+        "Camille",
+        "Diana",
+        "Irelia",
+        "Pantheon",
+        "Warwick",
+        "Leona",
+        "Amumu"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579288310128791"
+    },
+    {
+      "id": 18,
+      "name": "ShapeShifters",
+      "people": [
+        "Elise",
+        "Shyvanna",
+        "Gnar",
+        "Nidalee",
+        "Jayce",
+        "Viego",
+        "Kayn",
+        "Kled",
+        "Neeko"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579429482008587"
+    },
+    {
+      "id": 19,
+      "name": "Roots",
+      "people": [
+        "Zyra",
+        "Morgana",
+        "Lux",
+        "Neeko",
+        "LeBlanc",
+        "Karma",
+        "Ivern",
+        "Seraphine",
+        "Varus",
+        "Jhin",
+        "Jinx",
+        "Renata",
+        "Glasc",
+        "Xayah",
+        "Zac",
+        "Lissandra",
+        "Aphelios",
+        "Caitlyn"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579502790062162"
+    },
+    {
+      "id": 20,
+      "name": "Stacking Hits",
+      "people": [
+        "Ekko",
+        "Vayne",
+        "Tahm",
+        "Kench",
+        "Gnar",
+        "Vi",
+        "Kindred",
+        "Vel'Koz",
+        "Darius",
+        "Kennen",
+        "Twitch",
+        "Pantheon",
+        "Kai'Sa"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579600563482725"
+    },
+    {
+      "id": 21,
+      "name": "Only Supports",
+      "people": [
+        "Alistar",
+        "Amumu",
+        "Bard",
+        "Blitzcrank",
+        "Brand",
+        "Braum",
+        "Janna",
+        "Karma",
+        "Leona",
+        "Lulu",
+        "Lux",
+        "Morgana",
+        "Senna",
+        "Serphine",
+        "Sona",
+        "Soraka",
+        "Rakan",
+        "Taric",
+        "Thresh",
+        "Vel'Koz",
+        "Yuumi",
+        "Zilean",
+        "Zyra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579695157608478"
+    },
+    {
+      "id": 22,
+      "name": "Only Mages",
+      "people": [
+        "Lux",
+        "Vel'Koz",
+        "Xerath",
+        "Ziggs",
+        "Anivia",
+        "Aurelion",
+        "Sol",
+        "Cassiopeia",
+        "Karthus",
+        "Malzahar",
+        "Ryze",
+        "Taliyah",
+        "Viktor",
+        "Vladimir",
+        "Ahri",
+        "Annie",
+        "Brand",
+        "Lissandra",
+        "Neeko",
+        "Orianna",
+        "Sylas",
+        "Syndra",
+        "Twisted",
+        "Fate",
+        "Veigar",
+        "Vex",
+        "Zoe"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579784731185185"
+    },
+    {
+      "id": 23,
+      "name": "Only Assasins",
+      "people": [
+        "Akali",
+        "Ekko",
+        "Diana",
+        "Evelynn",
+        "Fizz",
+        "Kassadin",
+        "Katarina",
+        "Kha'Zix",
+        "Le",
+        "Blanc",
+        "Rengar",
+        "Shaco",
+        "Talon",
+        "Zed",
+        "Quiyana",
+        "Nocturne",
+        "Pyke"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579857129066609"
+    },
+    {
+      "id": 24,
+      "name": "Only Tanks",
+      "people": [
+        "Alistar",
+        "Amumu",
+        "Gragas",
+        "Leona",
+        "Malphite",
+        "Maokai",
+        "Nautilus",
+        "Nunu",
+        "Ornn",
+        "Rammus",
+        "Rell",
+        "Sejuani",
+        "Sion",
+        "Zac",
+        "Braum",
+        "Galio",
+        "K'Sante",
+        "Poppy",
+        "Shen",
+        "Tahm",
+        "Kench",
+        "Taric"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135579914041577492"
+    },
+    {
+      "id": 25,
+      "name": "Only ADC",
+      "people": [
+        "Aphelios",
+        "Ashe",
+        "Caitlyn",
+        "Corki",
+        "Draven",
+        "Ezreal",
+        "Graves",
+        "Jhin",
+        "Jinx",
+        "Kai'Sa",
+        "Kalista",
+        "Kindred",
+        "Kog'Maw",
+        "Lucian",
+        "Miss",
+        "Fortune",
+        "Nilah",
+        "Samira",
+        "Senna",
+        "Quinn",
+        "Sivir",
+        "Tristana",
+        "Twitch",
+        "Varus",
+        "Vayne",
+        "Xayah",
+        "Zeri"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580064394772491"
+    },
+    {
+      "id": 26,
+      "name": "Shut Up",
+      "people": [
+        "Soraka",
+        "Malzahar",
+        "Kassadin",
+        "Cho'Gath",
+        "Blitzcrank",
+        "Garen",
+        "Fiddlesticks",
+        "Draven"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580134418694174"
+    },
+    {
+      "id": 27,
+      "name": "Death Wave",
+      "people": [
+        "Nami",
+        "Seraphine",
+        "Sona",
+        "Miss",
+        "Fortune",
+        "Yuumi",
+        "Renata",
+        "Glasc",
+        "Xayah",
+        "Ornn",
+        "Gwen",
+        "Graves"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580197056430100"
+    },
+    {
+      "id": 28,
+      "name": "Wombo Combo",
+      "people": [
+        "YASUO",
+        "(!)",
+        "Malphite",
+        "Kalista",
+        "Orianna",
+        "Wukong",
+        "Amumu",
+        "Kennen",
+        "Lulu",
+        "Blitzcrank",
+        "Nautilus",
+        "Rell",
+        "Zac"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580399146377290"
+    },
+    {
+      "id": 29,
+      "name": "Sneaky Sneaky",
+      "people": [
+        "Akshan",
+        "Evelynn",
+        "Pyke",
+        "Rengar",
+        "Twitch",
+        "Viego",
+        "Teemo",
+        "Shaco",
+        "Wukong",
+        "Akali",
+        "Kai'Sa",
+        "Vayne",
+        "Quiyana",
+        "Talon"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580467798745129"
+    },
+    {
+      "id": 30,
+      "name": "Hook City",
+      "people": [
+        "Thresh",
+        "Pyke",
+        "Blitz",
+        "Nautilus",
+        "Swain",
+        "Mordekaiser",
+        "Darius",
+        "Renata",
+        "Glasc",
+        "Kled",
+        "Amumu"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580521951399948"
+    },
+    {
+      "id": 31,
+      "name": "Global Ults",
+      "people": [
+        "Karthus",
+        "Soraka",
+        "Gankplank",
+        "Shen",
+        "Twisted",
+        "Fate",
+        "Ashe",
+        "Ezreal",
+        "Senna",
+        "Draven",
+        "Jinx"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580581820907530"
+    },
+    {
+      "id": 32,
+      "name": "Speedy Bois",
+      "people": [
+        "Hecarim",
+        "Rammus",
+        "Quinn",
+        "Udyr",
+        "Kled",
+        "Sion",
+        "Sivir",
+        "Lulu",
+        "Nunu",
+        "Zilean",
+        "Orianna",
+        "Kayle",
+        "Teemo"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580653577060402"
+    },
+    {
+      "id": 33,
+      "name": "Execution",
+      "people": [
+        "Urgot",
+        "Cho'Gath",
+        "Darius",
+        "Garen",
+        "Nunu",
+        "Pyke",
+        "Riven",
+        "Jhin",
+        "Jinx",
+        "Kai'Sa",
+        "Kindred",
+        "Syndra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135580718249037845"
+    }
+  ]
+}
