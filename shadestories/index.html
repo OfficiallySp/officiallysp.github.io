@@ -9,12 +9,20 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Story.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Story" startnode="1" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="EB19FDD5-6913-43E1-A0FA-4FCAAE3C5426" options="" tags="" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="3150,225" size="100,100">Some stories are about adventure , strife or glory , some stories make you cry while others make you ponder the meaning of the universe. This …. Is not a story. Not exactly. It’s a biography of sorts. And it’s all about you. About your life and those close to you and fate that can be changed if you follow the right path. But how does it turn out? Well let’s just say your luck may decide that. 
+<tw-storydata name="Story" startnode="1" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="EB19FDD5-6913-43E1-A0FA-4FCAAE3C5426" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="3150,225" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[Some stories are about adventure , strife or glory , some stories make you cry while others make you ponder the meaning of the universe. This …. Is not a story. Not exactly. It’s a biography of sorts. And it’s all about you. About your life and those close to you and fate that can be changed if you follow the right path. But how does it turn out? Well let’s just say your luck may decide that. ]
 
-So let’s start in the beginning. Who are you?
+I am the Narrator and I will guide you through your advanture.
+(text-colour:red)[//And I am the Storyteller, the one who made all this and the Narrator&#39;s boss//]
+Yes, Shade is the Storyteller and she might want to sometimes give some um encouraging inputs here and there.
+(text-colour:red)[//Like , &#39;oh look this cliff looks very jumpable&#39;//]
+Yes, You&#39;ve been warned
+
+(text-colour:cyan)[Also text in this colour is a bonus you unlocked by picking certain combinations. Have fun discovering them.]
+
+So let’s start in the beginning. What is your name?
 
 
-[[1-&gt;Name1]]
+(if:visits is 1)[(text-colour:green)[[[1-&gt;Name1]]
 [[2-&gt;Name2]]
 [[3-&gt;Name3]]
 [[4-&gt;Name4]]
@@ -23,9 +31,10 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Name7]]
 [[8-&gt;Name8]]
 [[9-&gt;Name9]]
-[[10-&gt;Name10]]
+[[10-&gt;Name10]]]
+]
 
-</tw-passagedata><tw-passagedata pid="2" name="Name1" tags="" position="2700,375" size="100,100">Your Name is Nicholas Cage. 
+</tw-passagedata><tw-passagedata pid="2" name="Name1" tags="" position="2700,375" size="100,100">Your Name is Nicholas Cage.  Let&#39;s see if your looks match the name...
 
 
 [[1-&gt;General Look1]]
@@ -39,7 +48,9 @@ So let’s start in the beginning. Who are you?
 [[9-&gt;General Look9]]
 [[10-&gt;General Look10]]
 
-</tw-passagedata><tw-passagedata pid="3" name="General Look1" tags="" position="2700,575" size="100,100">Your general look can be described as looking disturbingly similar to a sausage.
+</tw-passagedata><tw-passagedata pid="3" name="General Look1" tags="" position="2700,575" size="100,100">Your general look can be described as looking disturbingly similar to a sausage. How does that work? Have you never seen a sausage? Just paste your face on it , done, that&#39;s you.
+
+You identify yourself as...
 
 [[1-&gt;Identity1]]
 [[2-&gt;Identity2]]
@@ -51,8 +62,9 @@ So let’s start in the beginning. Who are you?
 [[8-&gt;Identity8]]
 [[9-&gt;Identity9]]
 [[10-&gt;Identity10]]
-</tw-passagedata><tw-passagedata pid="4" name="Identity1" tags="" position="2700,775" size="100,100">You identify yourself as a helicopter.
+</tw-passagedata><tw-passagedata pid="4" name="Identity1" tags="" position="2700,775" size="100,100">You um  identify yourself as a helicopter. You like to spread your arms and spin in circles randomly. You also sometimes ask people to hang on to you while you do it. You didn&#39;t try flying up from a rooftop. Yet.
 
+Your hobby is...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -62,8 +74,11 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="5" name="Hobby1" tags="" position="2700,975" size="100,100">You have a very unique hobby which is going into people’s homes to put a Bible under their pillow.
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="5" name="Hobby1" tags="" position="2700,975" size="100,100">You have a very unique hobby which is going into people’s homes to put a Bible under their pillow. 
+Do we just ignore the fact that it&#39;s breaking and entering?
+(text-colour:red)[//Hey I never said having  hobbies is good thing//]
 
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -74,7 +89,10 @@ So let’s start in the beginning. Who are you?
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
 [[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="6" name="Favourite Food1" tags="" position="2700,1175" size="100,100"> You have refined taste as your favourite food is two weeks old unrefrigerated brains.
+(text-colour:red)[// Yum//]
+ No comment
  
+ Your parents occupation is...
  [[1-&gt;Parents occupation1]]
  [[2-&gt;Parents occupation2]]
  [[3-&gt;Parents occupation3]]
@@ -85,8 +103,9 @@ So let’s start in the beginning. Who are you?
  [[8-&gt;Parents occupation8]]
  [[9-&gt;Parents occupation9]]
  [[10-&gt;Parents occupation10]]
- </tw-passagedata><tw-passagedata pid="7" name="Parents occupation1" tags="" position="2700,1375" size="100,100">Your loving parents work as very accomplished Olympian Gods.
+ </tw-passagedata><tw-passagedata pid="7" name="Parents occupation1" tags="" position="2700,1375" size="100,100">Your loving parents work as very accomplished Olympian Gods. The can call lightning down but not you for dinner and you have probably 4 billion siblings because gods be like that.
 
+Your special talent is...
 [[1-&gt;Special Talent1]]
 [[2-&gt;Special Talent2]]
 [[3-&gt;Special Talent3]]
@@ -96,8 +115,15 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Special Talent7]]
 [[8-&gt;Special Talent8]]
 [[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="8" name="Special Talent1" tags="" position="2700,1575" size="100,100">You were gifted with a special talent , magic.
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="8" name="Special Talent1" tags="" position="2700,1575" size="100,100">You were gifted with a special talent , magic. (text-colour:cyan)[(if:$Voldemort is &quot;name&quot;)[As you rightfully should be. You&#39;ll be the greatest wizard of all time.]]
+Wait what kind of magic?
+(text-colour:red)[//Just magic//]
+But specifically?
+(text-colour:red)[//Specifically ALL MAGIC//]
+You&#39;re just being lazy aren&#39;t you
+(text-colour:red)[//The storyteller is offended and will not answer futher questions//]
 
+Your pet is...
 [[1-&gt;Pet1]]
 [[2-&gt;Pet2]]
 [[3-&gt;Pet3]]
@@ -107,9 +133,14 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Pet7]]
 [[8-&gt;Pet8]]
 [[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="9" name="Pet1" tags="" position="2700,1775" size="100,100">And your wonderful pet companion is an anaconda.
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="9" name="Pet1" tags="" position="2700,1775" size="100,100">And your wonderful pet companion is an anaconda. It likes to hang out in the toilet. It&#39;s also like 20 meters long, and 1 meter wide just saying.
 
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="10" name="Childhood" tags="" position="3075,1975" size="100,100">Your childhood was quite peaceful. Your parents loved you dearly and gave you anything you could need including a pet to take care of and build up your character. When you manifested your special talent they made sure to look after you. You took to your pet immediately and became the best of friends. After some time of developing your talents and starting to get around the society however something horrible happened. Your parents died because of : 
+Wait if it&#39;s so big how does it &#39;hang out&#39; in the toilet?
+(text-colour:red)[//It&#39;s not my problem//]
+...
+
+Now let&#39;s see how your childhood goes.
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="10" name="Childhood" tags="" position="3075,1975" size="100,100">Your childhood was quite peaceful. Your parents loved you dearly and gave you anything you could need including a pet to take care of and build up your character. When you manifested your special talent they made sure to look after you. You took to your pet immediately and became the best of friends. After some time of developing your talents and starting to get around the society however something horrible happened. Your parents died because of .... (text-colour:cyan)[(if:$necromancy is &quot;talent&quot;)[And before you ask , just because you are talented in necromancy doesn&#39;t mean you can make your parents into zombies. That&#39;d just be cheating.]]
 
 [[1-&gt;Death1]]
 [[2-&gt;Death2]]
@@ -120,7 +151,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Death7]]
 [[8-&gt;Death8]]
 [[9-&gt;Death9]]
-[[10-&gt;Death10]]</tw-passagedata><tw-passagedata pid="11" name="Name2" tags="" position="2800,375" size="100,100">Santa Claus
+[[10-&gt;Death10]]</tw-passagedata><tw-passagedata pid="11" name="Name2" tags="" position="2800,375" size="100,100">Your name is ...Santa Claus. 
+(text-colour:red)[//Ah there&#39;s the person I can blame for my last Christmas//]
+And you look like...
 
 [[1-&gt;General Look1]]
 [[2-&gt;General Look2]]
@@ -131,158 +164,112 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;General Look7]]
 [[8-&gt;General Look8]]
 [[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="12" name="Name3" tags="" position="2900,375" size="100,100">KidPuncher4000
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="13" name="Name4" tags="" position="3000,375" size="100,100">Diablo The Cheater
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="14" name="Name5" tags="" position="3100,375" size="100,100">Beezow Doo-Doo Zopittybop-Bop-Bop 
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="15" name="Name6" tags="" position="3200,375" size="100,100">Voldemort
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="16" name="Name7" tags="" position="3300,375" size="100,100">Hakuna Matata
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="17" name="Name8" tags="" position="3400,375" size="100,100">SnakeInMyPants
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="18" name="Name9" tags="" position="3500,375" size="100,100">PeePeePooPoo420BlazeIt
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="19" name="Name10" tags="" position="3600,375" size="100,100">Spaghettini 
-[[1-&gt;General Look1]]
-[[2-&gt;General Look2]]
-[[3-&gt;General Look3]]
-[[4-&gt;General Look4]]
-[[5-&gt;General Look5]]
-[[6-&gt;General Look6]]
-[[7-&gt;General Look7]]
-[[8-&gt;General Look8]]
-[[9-&gt;General Look9]]
-[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="20" name="General Look2" tags="" position="2800,575" size="100,100">Spooky Scary Skeleton
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="21" name="General Look3" tags="" position="2900,575" size="100,100">Practically Invisible
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="22" name="General Look4" tags="" position="3000,575" size="100,100">Has a fish tail for some reason?
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="23" name="General Look5" tags="" position="3100,575" size="100,100">Looks like a bitch
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="24" name="General Look6" tags="" position="3200,575" size="100,100">Wears a long black cloak with a hood covering their clearly evil face
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="25" name="General Look7" tags="" position="3300,575" size="100,100">Has a peg leg, an eyepatch and a parrot on the shoulder
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="26" name="General Look8" tags="" position="3400,575" size="100,100">Looks like someone who can punch a child and be happy about it
-[[1-&gt;Identity1]]
-[[2-&gt;Identity2]]
-[[3-&gt;Identity3]]
-[[4-&gt;Identity4]]
-[[5-&gt;Identity5]]
-[[6-&gt;Identity6]]
-[[7-&gt;Identity7]]
-[[8-&gt;Identity8]]
-[[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="27" name="General Look9" tags="" position="3500,575" size="100,100">Prince Charming too good to be true
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="12" name="Name3" tags="" position="2900,375" size="100,100">Your name is KidPuncher4000. Let&#39;s see what you look like.
 
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="13" name="Name4" tags="" position="3000,375" size="100,100">Your glorious name is Diablo The Cheater and you&#39;re totally not an arrogant prick.
+When it comes to your looks ...(set: $Diablo to &quot;name&quot;)
+
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="14" name="Name5" tags="" position="3100,375" size="100,100">Your name is Beezow Doo-Doo Zopittybop-Bop-Bop.
+(text-colour:red)[//What even is that!?//]
+*cough* And you look like...
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="15" name="Name6" tags="" position="3200,375" size="100,100">Your name is Voldemort. You may or may not have a nose complex and an army of idiots at your beck and call in the future.
+(set: $voldemort to &quot;name&quot;)
+When it comes to your looks...
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="16" name="Name7" tags="" position="3300,375" size="100,100">Your name is Hakuna Matata because it means &#39;no worries&#39; and that&#39;s what your parents said when they learned your mom is pregnant. 
+
+When it comes to your looks...
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="17" name="Name8" tags="" position="3400,375" size="100,100">Your name is SnakeInMyPants. It may or may not be inspired by a very disturbing song. 
+
+(text-colour:red)[//Don&#39;t look it up.//]
+
+When it comes to your looks...
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="18" name="Name9" tags="" position="3500,375" size="100,100">Your name is PeePeePooPoo420BlazeIt.
+
+(text-colour:red)[//Very mature//]
+I did not choose it , you did.
+
+When it comes to your looks...
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="19" name="Name10" tags="" position="3600,375" size="100,100">Your name is Spaghettini Carboniero. It&#39;s a very prestigious italian name of a noble family famous for inventing pasta. 
+(set: $spaghetti to &quot;name&quot;)
+(text-colour:red)[//Bullshit.//]
+Shh , they don&#39;t have to know.
+
+Anyway, when it comes to your looks...
+[[1-&gt;General Look1]]
+[[2-&gt;General Look2]]
+[[3-&gt;General Look3]]
+[[4-&gt;General Look4]]
+[[5-&gt;General Look5]]
+[[6-&gt;General Look6]]
+[[7-&gt;General Look7]]
+[[8-&gt;General Look8]]
+[[9-&gt;General Look9]]
+[[10-&gt;General Look10]]</tw-passagedata><tw-passagedata pid="20" name="General Look2" tags="" position="2800,575" size="100,100">Your general look can be described as a Spooky Scary Skeleton. Seriously , do you even eat!?
+
+You identify yourself as...
 [[1-&gt;Identity1]]
 [[2-&gt;Identity2]]
 [[3-&gt;Identity3]]
@@ -292,7 +279,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Identity7]]
 [[8-&gt;Identity8]]
 [[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="28" name="General Look10" tags="" position="3600,575" size="100,100">Pretty average , like an average dog poo
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="21" name="General Look3" tags="" position="2900,575" size="100,100">Your general look can be descibed as &#39;Practically Invisible&#39;. You might want to think it&#39;s a super power , it&#39;s not.
+
+You identify yourself as...
 [[1-&gt;Identity1]]
 [[2-&gt;Identity2]]
 [[3-&gt;Identity3]]
@@ -302,7 +291,115 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Identity7]]
 [[8-&gt;Identity8]]
 [[9-&gt;Identity9]]
-[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="29" name="Identity2" tags="" position="2800,775" size="100,100">A female cat.
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="22" name="General Look4" tags="" position="3000,575" size="100,100">You have fins and a fish tail for some reason?
+(text-colour:red)[//I like fish//]
+You know they still need to be human right?
+(text-colour:red)[//I don&#39;t care, fish!//]
+The narrator lets out a deep sigh at the storyteller&#39;s antics.
+
+You identify yourself as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="23" name="General Look5" tags="" position="3100,575" size="100,100">You have the unfortunatel fate of looking like a bitch. Hey , put down your fists , I&#39;m not saying you are one. You just look like one , you&#39;ll have to deal with it or choose a different option.
+
+You identify yourself as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="24" name="General Look6" tags="" position="3200,575" size="100,100">Not much is known about your look but you wear a long black cloak with a hood covering your clearly evil face. The red eyes and pointy teeth  are a giveaway sorry. (text-colour:cyan)[(if:$Voldemort is &quot;name&quot;)[Ah yes, you the big bad evil that will surely try to destroy the world.](if:$Diablo is &quot;name&quot;)[Ah yes, you the big bad evil that will surely try to destroy the world.]
+]
+You identify yourself as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="25" name="General Look7" tags="" position="3300,575" size="100,100">You wear a very stylish coat and hat , you have a peg leg, an eyepatch and a parrot on the shoulder.
+(text-colour:red)[//Arr//]
+Are they born like this!?
+(text-colour:red)[//Why not?//]
+Why n... because it&#39;s a toddler !?
+(text-colour:red)[//I don&#39;t see a problem , go back to the story.//]
+
+You identify yourself as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]
+
+(set: $pirate to &quot;look&quot;)</tw-passagedata><tw-passagedata pid="26" name="General Look8" tags="" position="3400,575" size="100,100">You looks like someone who can punch a child and be happy about it. Too vague? Ok , you have black long hair , black eyes , black clothes and a black soul, happy?
+(text-colour:red)[//You&#39;re so mean//]
+You&#39;re one to talk!
+(text-colour:red)[//I didn&#39;t say I dislike it//]
+Narrator is not blushing , you are.
+
+Also you identify as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="27" name="General Look9" tags="" position="3500,575" size="100,100">You look like a Prince Charming too good to be true. Anyway could fall for that face. 
+
+Wait , what if it&#39;s a girl?
+(text-colour:red)[//Then they&#39;re Princess Charming?//]
+There&#39;s no such thing.
+(text-colour:red)[//There is now//]
+
+You identify yourself as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="28" name="General Look10" tags="" position="3600,575" size="100,100">You look pretty average , like an average dog poo. Like a completely skippable sandwich with just butter. Like a wall your cat stares at all day only because he doesn&#39;t want to look at you. You get the picture.
+
+You identify as...
+[[1-&gt;Identity1]]
+[[2-&gt;Identity2]]
+[[3-&gt;Identity3]]
+[[4-&gt;Identity4]]
+[[5-&gt;Identity5]]
+[[6-&gt;Identity6]]
+[[7-&gt;Identity7]]
+[[8-&gt;Identity8]]
+[[9-&gt;Identity9]]
+[[10-&gt;Identity10]]</tw-passagedata><tw-passagedata pid="29" name="Identity2" tags="" position="2800,775" size="100,100">You identify yourself as a female cat. You like meowing , scratching furniture, peeing on a floor and you&#39;re convinced your parents are your subordinates. 
+(text-colour:red)[//That just sounds like a normal kid//]
+True
+
+Your hobby is ...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -312,7 +409,15 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="30" name="Identity3" tags="" position="2900,775" size="100,100">Trash Can
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="30" name="Identity3" tags="" position="2900,775" size="100,100">You identify yourself as trash can. You eat trash , every day. You wear trash, every day. You are tra.... Who wrote this!?
+(text-colour:red)[//whistles//]
+Why do I even work for you?
+(text-colour:red)[//I pay you//]
+In what
+(text-colour:red)[//Emotional Damage//]
+....
+
+Your hobby is...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -322,7 +427,10 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="31" name="Identity4" tags="" position="3000,775" size="100,100">Dark Lord
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="31" name="Identity4" tags="" position="3000,775" size="100,100">You identify yourself as a scary and powerful Dark Lord. You keep trying to bend spoons with your mind and give out onion rings that you believe will control people. You also have an unhealthy obsession with murdering other toddlers because of some prophecies.
+(text-colour:cyan)[(if:$voldemort is &quot;name&quot;)[Well that&#39;s quite fitting isn&#39;t it, Voldemort?]]
+
+Your hobby is....
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -332,7 +440,12 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="32" name="Identity5" tags="" position="3100,775" size="100,100">Xbox360
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="32" name="Identity5" tags="" position="3100,775" size="100,100">You identify yourself as an Xbox360. How does that even work!?
+(text-colour:red)[//I&#39;m sure they&#39;ll figure it out//]
+Do they eat game CD&#39;s?
+(text-colour:red)[//...Maybe//]
+
+Your hobby is...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -342,7 +455,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="33" name="Identity6" tags="" position="3200,775" size="100,100">Minecraft Dirt Block
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="33" name="Identity6" tags="" position="3200,775" size="100,100">You identify yourself as a Minecraft dirt block. You just sit there and let people walk all over you. Also it doesn&#39;t matter how many times you take a bath , you&#39;re always full of dirt a moment later.
+
+Your hobby is....
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -352,7 +467,13 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="34" name="Identity7" tags="" position="3300,775" size="100,100">A banana
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="34" name="Identity7" tags="" position="3300,775" size="100,100">You identify yourself as an evil weapon of mass destruction , a banana. No one stands a chance when you peel off your skin and make people slip on it. 
+(text-colour:red)[//Fun//]
+That&#39;s just...disturbing.
+(text-colour:red)[//Eh, you&#39;re overreacting, could be worse.//]
+How... wait , I don&#39;t wanna know.
+
+Your hobby is...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -362,7 +483,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="35" name="Identity8" tags="" position="3400,775" size="100,100">Lady Baroness Vilhellmina von Quack The Great 
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="35" name="Identity8" tags="" position="3400,775" size="100,100">You identify yourself as a narcissistic egocentric megalomaniac with a god complex Lady Baroness Vilhellmina von Quack The Great. 
+
+Your hobby is...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -372,7 +495,13 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="36" name="Identity9" tags="" position="3500,775" size="100,100">Yourself? (Idk what you expected)
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="36" name="Identity9" tags="" position="3500,775" size="100,100">You identify as ... yourself? 
+That&#39;s awfully normal.
+(text-colour:red)[//What did you expect?//]
+I mean I know what the other options are.
+(text-colour:red)[//Shh no spoilers//]
+
+Your hobby is ...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -382,7 +511,12 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="37" name="Identity10" tags="" position="3600,775" size="100,100">Harry Potter
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="37" name="Identity10" tags="" position="3600,775" size="100,100">You identify yourself as Harry Potter. You often pretend you have no parents, working eyesight nor self preservation. (text-colour:cyan)[(if:$Voldemort is &quot;name&quot;)[Sounds like an existential crisis for someone named Voldemort...]]
+(text-colour:red)[//Hahaha, inside joke//]
+It is slightly funny
+(text-colour:red)[//Imagine when they find out//]
+
+Your hobby is...
 [[1-&gt;Hobby1]]
 [[2-&gt;Hobby2]]
 [[3-&gt;Hobby3]]
@@ -392,7 +526,12 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Hobby7]]
 [[8-&gt;Hobby8]]
 [[9-&gt;Hobby9]]
-[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="38" name="Hobby2" tags="" position="2800,975" size="100,100">Throwing cats
+[[10-&gt;Hobby10]]</tw-passagedata><tw-passagedata pid="38" name="Hobby2" tags="" position="2800,975" size="100,100">Your hobby is throwing cats. You see a basket? You throw a cat in there. You see a washing machine? Cat throw. Pool? Cat throw. Meat grinder? Cat thr... nooo you&#39;re not that evil right?
+(text-colour:red)[//I&#39;m not they are by choosing this//]
+But you made this !
+(text-colour:red)[//They can leave//]
+
+Fine , well if you&#39;re fine with throwing cats in questionable places you can now decide on your favorite food:
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -402,7 +541,11 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="39" name="Hobby3" tags="" position="2900,975" size="100,100">Giving others nightmares
+[[10-&gt;Favourite Food10]]
+
+(set: $throwing to &quot;hobby&quot;)</tw-passagedata><tw-passagedata pid="39" name="Hobby3" tags="" position="2900,975" size="100,100">Your hobby is giving other people nightmares. And you&#39;re very good at that. 
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -412,7 +555,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="40" name="Hobby4" tags="" position="3000,975" size="100,100">Crossdressing
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="40" name="Hobby4" tags="" position="3000,975" size="100,100">Your hobby is crossdressing. Hey I don&#39;t judge, whatever makes you happy and not destroying the world.
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -422,7 +567,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="41" name="Hobby5" tags="" position="3100,975" size="100,100">Watching movies with naked people , like a cultured person
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="41" name="Hobby5" tags="" position="3100,975" size="100,100">Your hobby is watching movies with naked people , like a cultured person. If the naked people are in the movie or watching with you is a subject of preference though please keep in mind for a while you will be age restricted. Let&#39;s just say until 18 you had no hobby at all. And you were definitely not indulging in anything regarding your hobby without your parents knowing. Yup, let&#39;s stick to that.
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -432,7 +579,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="42" name="Hobby6" tags="" position="3200,975" size="100,100">Waving a stick around and saying silly words
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="42" name="Hobby6" tags="" position="3200,975" size="100,100">Your hobby is waving a stick around and saying silly words. Occasionaly that might have caused a sudden pipeline failure or spontanous oven combustion. But if anyone asks your parents it was all just natural occurances. After all their lil baby would never strive to be an arsonist.
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -442,7 +591,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="43" name="Hobby7" tags="" position="3300,975" size="100,100">Going to haunted houses in search of a date
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="43" name="Hobby7" tags="" position="3300,975" size="100,100">Your hobby is going to haunted houses in search of a date. Even young you already were a huge romantic. And ghosts love a good forbidden romance iwith a mortal. So what that you can&#39;t even hold hands, it&#39;s kind of like a relationship over distance kinda deal. 
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -452,7 +603,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="44" name="Hobby8" tags="" position="3400,975" size="100,100">Licking Floors
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="44" name="Hobby8" tags="" position="3400,975" size="100,100">Your hobby is licking floors. You&#39;re more efficient than a Roomba so your parents just let you do it, saves on electricity.(set: $licking to &quot;hobby&quot;)
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -462,7 +615,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="45" name="Hobby9" tags="" position="3500,975" size="100,100">Collecting trash cans.
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="45" name="Hobby9" tags="" position="3500,975" size="100,100">Your hobby is collecting trash cans. Big , small, round , square , open or closed no trash can is safe from your greedy hands. The only limit is the sky seeing as you started stacking them on top of each other.
+(set: $trash to &quot;hobby&quot;)
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -472,7 +627,9 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="46" name="Hobby10" tags="" position="3600,975" size="100,100">Installing Skyrim on new &quot;consoles&quot;
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="46" name="Hobby10" tags="" position="3600,975" size="100,100">Your hobby is Installing Skyrim on new &quot;consoles&quot;. Your latest addition is having skyrim run on your toilet. Nothing is as exhilirating for you as hearing &#39;Khajit has new wares if you have coin&#39; every time you flush.
+
+Your favorite food is...
 [[1-&gt;Favourite Food1]]
 [[2-&gt;Favourite Food2 ]]
 [[3-&gt;Favourite Food3]]
@@ -482,7 +639,15 @@ So let’s start in the beginning. Who are you?
 [[7-&gt;Favourite Food7]]
 [[8-&gt;Favourite Food8]]
 [[9-&gt;Favourite Food9]]
-[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="47" name="Favourite Food2 " tags="" position="2800,1175" size="100,100"> Whatever lies on the floor
+[[10-&gt;Favourite Food10]]</tw-passagedata><tw-passagedata pid="47" name="Favourite Food2 " tags="" position="2800,1175" size="100,100"> Your favorite food is whatever lies on the floor. (text-colour:cyan)[(if:$licking is &quot;hobby&quot;)[I mean since you lick everything that&#39;s on the floor you might as well eat it no?]]
+ Wait but that&#39;s just ... what if it&#39;s hair?
+(text-colour:red)[// It says , whatever lies on the floor//]
+ But... shoes?
+(text-colour:red)[// Whatever lies on the floor//]
+ Nails!?
+(text-colour:red)[// I will not repeat myself//]
+
+Your parents occupations is...
  [[1-&gt;Parents occupation1]]
  [[2-&gt;Parents occupation2]]
  [[3-&gt;Parents occupation3]]
@@ -493,78 +658,33 @@ So let’s start in the beginning. Who are you?
  [[8-&gt;Parents occupation8]]
  [[9-&gt;Parents occupation9]]
  [[10-&gt;Parents occupation10]]
- </tw-passagedata><tw-passagedata pid="48" name="Favourite Food3" tags="" position="2900,1175" size="100,100"> Cucumber ice cream
- [[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="49" name="Favourite Food4" tags="" position="3000,1175" size="100,100"> Blood and tears of your enemies
- [[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="50" name="Favourite Food5" tags="" position="3100,1175" size="100,100">Cat food
-[[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="51" name="Favourite Food6" tags="" position="3200,1175" size="100,100">Pancakes with live ants
-[[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="52" name="Favourite Food7" tags="" position="3300,1175" size="100,100">Feet
-[[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="53" name="Favourite Food8" tags="" position="3400,1175" size="100,100">Spaghetti Bolognese without the Spaghetti… actually just the Meat with Sauce
-[[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="54" name="Favourite Food9" tags="" position="3500,1175" size="100,100"> Nothing you prefer starving
- [[1-&gt;Parents occupation1]]
- [[2-&gt;Parents occupation2]]
- [[3-&gt;Parents occupation3]]
- [[4-&gt;Parents occupation4]]
- [[5-&gt;Parents occupation5]]
- [[6-&gt;Parents occupation6]]
- [[7-&gt;Parents occupation7]]
- [[8-&gt;Parents occupation8]]
- [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="55" name="Favourite Food10" tags="" position="3600,1175" size="100,100">Pizza Hawaii without cheese and ham and with extra Pineapple
+ </tw-passagedata><tw-passagedata pid="48" name="Favourite Food3" tags="" position="2900,1175" size="100,100">Your favorite food is cucumber ice cream. I mean it&#39;s a bit weird but could have been worse.
 
+Your parents occupation is...
+ [[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="49" name="Favourite Food4" tags="" position="3000,1175" size="100,100">Your favorite food are  blood and tears of your enemies. You&#39;re either a vampire or an edge lord. Maybe both?
+
+Your parents occupation is...
+ [[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="50" name="Favourite Food5" tags="" position="3100,1175" size="100,100">Your favorite food is cat food. There&#39;s only one question... where were your parents when this happened!?
+(text-colour:red)[//In the next section//]
+Oh , right ... and your parents occupation is...
 [[1-&gt;Parents occupation1]]
  [[2-&gt;Parents occupation2]]
  [[3-&gt;Parents occupation3]]
@@ -574,198 +694,371 @@ So let’s start in the beginning. Who are you?
  [[7-&gt;Parents occupation7]]
  [[8-&gt;Parents occupation8]]
  [[9-&gt;Parents occupation9]]
- [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="56" name="Parents occupation2" tags="" position="2800,1375" size="100,100">Snipers
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="57" name="Parents occupation3" tags="" position="2900,1375" size="100,100">League of Legends Esport Stars
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="58" name="Parents occupation4" tags="" position="3000,1375" size="100,100">Garbage Divers
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="59" name="Parents occupation6" tags="" position="3200,1375" size="100,100">Serial Killers
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="60" name="Parents occupation7" tags="" position="3300,1375" size="100,100">Lawyers
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="61" name="Parents occupation8" tags="" position="3400,1375" size="100,100">Hot Tub Streamers
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="62" name="Parents occupation9" tags="" position="3500,1375" size="100,100">
-Sewer Cleaners
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="63" name="Parents occupation10" tags="" position="3600,1375" size="100,100">Swashbuckling Cowboy Pirates
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="64" name="Parents occupation5" tags="" position="3100,1375" size="100,100">Kindergarden teachers with a degree in kid punching
-[[1-&gt;Special Talent1]]
-[[2-&gt;Special Talent2]]
-[[3-&gt;Special Talent3]]
-[[4-&gt;Special Talent4]]
-[[5-&gt;Special Talent5]]
-[[6-&gt;Special Talent6]]
-[[7-&gt;Special Talent7]]
-[[8-&gt;Special Talent8]]
-[[9-&gt;Special Talent9]]
-[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="65" name="Special Talent2" tags="" position="2800,1575" size="100,100">Necromancy
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="66" name="Special Talent3" tags="" position="2900,1575" size="100,100">Delicate and Subtle art of murder
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="67" name="Special Talent4" tags="" position="3000,1575" size="100,100">Blood Sucking
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="68" name="Special Talent5" tags="" position="3100,1575" size="100,100">Becoming a pizza
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="69" name="Special Talent6" tags="" position="3200,1575" size="100,100">Advanced Mathematics
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="70" name="Special Talent7" tags="" position="3300,1575" size="100,100">Being a moron
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="71" name="Special Talent8" tags="" position="3400,1575" size="100,100">Disappearing at inconvenient moments
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="72" name="Special Talent9" tags="" position="3500,1575" size="100,100">Shooting lasers out of your eyes
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="73" name="Special Talent10" tags="" position="3600,1575" size="100,100">Meowing like a cat
-[[1-&gt;Pet1]]
-[[2-&gt;Pet2]]
-[[3-&gt;Pet3]]
-[[4-&gt;Pet4]]
-[[5-&gt;Pet5]]
-[[6-&gt;Pet6]]
-[[7-&gt;Pet7]]
-[[8-&gt;Pet8]]
-[[9-&gt;Pet9]]
-[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="74" name="Pet2" tags="" position="2800,1775" size="100,100">A human slave
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="75" name="Pet3" tags="" position="2900,1775" size="100,100">An ant
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="76" name="Pet4" tags="" position="3000,1775" size="100,100">A T-Rex
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="77" name="Pet5" tags="" position="3100,1775" size="100,100">A world-devouring hamster
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="78" name="Pet6" tags="" position="3200,1775" size="100,100">A cat girl
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="79" name="Pet7" tags="" position="3300,1775" size="100,100">A giraffe
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="80" name="Pet8" tags="" position="3400,1775" size="100,100">A zombie
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="81" name="Pet9" tags="" position="3500,1775" size="100,100">A whale
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="82" name="Pet10" tags="" position="3600,1775" size="100,100">An archdemon
-[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="83" name="Death1" tags="" position="2700,2175" size="100,100">Too much trash ingesting
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="51" name="Favourite Food6" tags="" position="3200,1175" size="100,100">Your favorite food is pancakes with live ants. You like the way they crawl out of your mouth when you eat. It also helps with first impressions.
+Wait, helps?
+(text-colour:red)[//Helps with bad first impressions//]
+Oh
 
+Your parents occupation is...
+[[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="52" name="Favourite Food7" tags="" position="3300,1175" size="100,100">Your favorite food are feet. ...Did I read that right? Feet? Why even ...who eats feet!?
+(text-colour:red)[//Well this character now does//]
+Isn&#39;t that cannibalism?
+(text-colour:red)[//It can be animal feet too//]
+
+Your parents occupation is...
+[[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="53" name="Favourite Food8" tags="" position="3400,1175" size="100,100">Your favorite food is spaghetti bolognese without the spaghetti… or meat .... actually you just like the sauce. (text-colour:cyan)[(if:$spaghetti is &quot;name&quot;)[You are letting your family name down.]]
+
+Your parents occupation is...
+[[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="54" name="Favourite Food9" tags="" position="3500,1175" size="100,100"> Your favorite food is...nothing, you prefer starving. It&#39;s difficult times , sometimes you gotta do what you gotta do to save money for the new body pillow.
+ 
+ Your parents occupation is...
+ [[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="55" name="Favourite Food10" tags="" position="3600,1175" size="100,100">Your favorite food is pizza with only pineapple as a topping. A whole pineapple, skin and all.
+Barbarian
+(text-colour:red)[//Wait we made classes?//]
+...
+
+Your parents occupation is...
+[[1-&gt;Parents occupation1]]
+ [[2-&gt;Parents occupation2]]
+ [[3-&gt;Parents occupation3]]
+ [[4-&gt;Parents occupation4]]
+ [[5-&gt;Parents occupation5]]
+ [[6-&gt;Parents occupation6]]
+ [[7-&gt;Parents occupation7]]
+ [[8-&gt;Parents occupation8]]
+ [[9-&gt;Parents occupation9]]
+ [[10-&gt;Parents occupation10]]</tw-passagedata><tw-passagedata pid="56" name="Parents occupation2" tags="" position="2800,1375" size="100,100">Your parents work as very accomplished snipers. They snipe presidents, kings, you on your first date... there&#39;s no one and nothing that&#39;s out of their sight except maybe one thing.
+It doesn&#39;t say what thing
+(text-colour:red)[//It doesn&#39;t//]
+But I wanna know
+(text-colour:red)[//It&#39;s a secret//]
+Can&#39;t you tell me?
+(text-colour:red)[//Then it won&#39;t be a secret//]
+Damn
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="57" name="Parents occupation3" tags="" position="2900,1375" size="100,100">Your parents are very accomplished League of Legends Esport Stars. They won world championship 3 times in a row as the best duo that ever existed. They are loved and admired around the world.
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="58" name="Parents occupation4" tags="" position="3000,1375" size="100,100">Your parents are quite successful Garbage Divers.(text-colour:cyan)[ (if:$trash is &quot;hobby&quot;)[It helps with your collection.]]They dive in trash so you don&#39;t have to. And they find trash so you can find treasure.
+
+You know that sounded kinda cool
+(text-colour:red)[//I know, I wrote it//]
+Modest much
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]
+
+(set: $trash to &quot;parents&quot;)</tw-passagedata><tw-passagedata pid="59" name="Parents occupation6" tags="" position="3200,1375" size="100,100">Your parents work as serial killers. They kill weekly and are known under a nickname Splatters. We&#39;ll leave it your imagination why.
+
+Can this even be counted as work?
+(text-colour:red)[//It&#39;s an extensive and tiring physical activity requiring planning and cunning
+In some ways it&#39;s more than just a job, it&#39;s a life//]
+You sound awfully passionate about it...
+(text-colour:red)[//I can show you my collection of...//]
+No!
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]
+(set: $murder to &quot;parents&quot;)</tw-passagedata><tw-passagedata pid="60" name="Parents occupation7" tags="" position="3300,1375" size="100,100">Your parents work as lawyers. They often shout &#39;Objection!&#39; and for some reason they&#39;re always right.
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="61" name="Parents occupation8" tags="" position="3400,1375" size="100,100">Your parents work as extremely popular Hot Tub Streamers. They have 2 million followers and a great amount of subscribers. They&#39;re also the only couple ever to do hot tub streaming together. That&#39;s a legacy to live up to all right.
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="62" name="Parents occupation9" tags="" position="3500,1375" size="100,100">Your parents work as Sewer Cleaners. Often times it seems like you live in the sewers as well with all the smells they bring back home. And over the years it&#39;s clear that the sewers really aren&#39;t getting any cleaner.
+
+Your special talent is...
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="63" name="Parents occupation10" tags="" position="3600,1375" size="100,100">Your parents work as Swashbuckling Cowboy Pirates. They plunder and pillage , kidnap women and children and they can lasso any cow or horse in their sight. (text-colour:cyan)[(if:$pirate is &quot;look&quot;)[They often take you on their raids so you can practice your &#39;Arrrr&#39;.]]They also love singing songs ...a lot of songs. 
+
+Your special talent is....
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="64" name="Parents occupation5" tags="" position="3100,1375" size="100,100">Your parents work as Kindergarden teachers with a degree in kid punching. Some may wonder why you always had blue spots on your face. Some may think you&#39;re half Smurf. But others know.
+(set: $abuse to &quot;parents&quot;)
+That is mildly depressing.
+(text-colour:red)[//Hey at least they have parents//]
+...
+
+Your special talent is....
+[[1-&gt;Special Talent1]]
+[[2-&gt;Special Talent2]]
+[[3-&gt;Special Talent3]]
+[[4-&gt;Special Talent4]]
+[[5-&gt;Special Talent5]]
+[[6-&gt;Special Talent6]]
+[[7-&gt;Special Talent7]]
+[[8-&gt;Special Talent8]]
+[[9-&gt;Special Talent9]]
+[[10-&gt;Special Talent10]]</tw-passagedata><tw-passagedata pid="65" name="Special Talent2" tags="" position="2800,1575" size="100,100">You have a very unique talent....necromancy. You brought back to life a rodent or two, it&#39;s unsure if you&#39;re capable of more... but it sure makes for interesting candle lit dinners.
+(set: $necromancy to &quot;talent&quot;)
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="66" name="Special Talent3" tags="" position="2900,1575" size="100,100">Your special talent is the delicate and subtle art of murder. You&#39;re truly a perfectionist in it and can always deliver a truly magnificent performance to any audience of your art.
+(text-colour:cyan)[(if:$murder is &quot;parents&quot;)[Your parents are proud of you.]]
+We&#39;re still talking about murder here?
+(text-colour:red)[//Oh yes, beautiful , beautiful mur...//]
+I&#39;ve heard enough
+
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="67" name="Special Talent4" tags="" position="3000,1575" size="100,100">Your special talent is blood sucking. You can suck someone dry like a mosquito with the downside that you can&#39;t fly away afterwards. It doesn&#39;t even make you stronger or anything, you can just suck... that&#39;s it.
+
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="68" name="Special Talent5" tags="" position="3100,1575" size="100,100">Your special talent is transforming into italian food. I mean nothing captures a lady&#39;s heart like a steaming portion of spaghetti does it. The world is yours for the taking and together wth it all the italian food loving ladies. (text-colour:cyan)[(if:$spaghetti is &quot;name&quot;)[You have unlocked your family&#39;s secret bloodline ability.]]
+
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="69" name="Special Talent6" tags="" position="3200,1575" size="100,100">Your especially talented in advanced mathematics. 2+2 ? Easy ! 3-2? Solved ! Some even believe you&#39;re capable of an exceptional feat of counting to more than just 4. Truly a one in a lifetime genius.
+
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="70" name="Special Talent7" tags="" position="3300,1575" size="100,100">You&#39;re especially talented in being a moron. (text-colour:cyan)[(if:$abuse is &quot;parents&quot;)[It may be because of your parents great &quot;care&quot; towards you so at least you have someone to blame.]]Waking into windows, forgetting to tie your shoes, confusing left with right.. these are all the amazig feats you are capable of. Truly a source of envy.
+
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="71" name="Special Talent8" tags="" position="3400,1575" size="100,100">Your special talent is disappearing at inconvenient moments. Your mom just caught you stealing cookies? Poof. Your teacher just found a cookie jar under your table? Poof. Your neighbour is looking for you to help him maw the garden while you&#39;re there sitting and eating cookies? Poof ! Extremely convenient!
+
+That&#39;s a lot of cookies though.
+(text-colour:red)[//Everyone loves cookies//]
+I don&#39;t know , I&#39;m not a fan
+(text-colour:red)[//Everyone.Loves.Cookies//]
+...Yes, Ma&#39;am
+
+
+Your pet is....
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="72" name="Special Talent9" tags="" position="3500,1575" size="100,100">Your special talent is shooting lasers out of your eyes. You can only do it when they&#39;re open and they&#39;re more like light lasers than the cool metal cutting ones. Sorry. We ran out of funds for special talents.
+(text-colour:red)[//You&#39;re not supposed to say that!//]
+Oops.
+
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="73" name="Special Talent10" tags="" position="3600,1575" size="100,100">Your special talent is meowing like a cat. It also means you can communicate with any cat you can meow to. Enjoy listening to the string of curses they&#39;ll answer you with. Or the complaints that the mice they catch are not fat enough. You&#39;re welcome.
+(set: $meowing to &quot;talent&quot;)
+Your pet is...
+[[1-&gt;Pet1]]
+[[2-&gt;Pet2]]
+[[3-&gt;Pet3]]
+[[4-&gt;Pet4]]
+[[5-&gt;Pet5]]
+[[6-&gt;Pet6]]
+[[7-&gt;Pet7]]
+[[8-&gt;Pet8]]
+[[9-&gt;Pet9]]
+[[10-&gt;Pet10]]</tw-passagedata><tw-passagedata pid="74" name="Pet2" tags="" position="2800,1775" size="100,100">Your wonderful pet is a human slave. You use it to get you stuff , beat up people you don&#39;t like and wash dishes for you. Probably one of the best pets if you&#39;re looking for utility. One of the worst if you look at loyalty though.
+
+(text-colour:red)[//Have you heard of Stockholm Syndrome?//]
+Don&#39;t even go there
+(text-colour:red)[//Just saying , it works//]
+
+Aaaanyway let&#39;s see how your childhood goes....
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="75" name="Pet3" tags="" position="2900,1775" size="100,100">Your wonderful pet is an ant. It&#39;s tiny and often time you feel like it looks a bit different than last time but it&#39;s surely not because you keep murdering ants walking through your room. You&#39;d surely recognize the one which is your pet. Surely.
+
+Now let&#39;s see how your childhood goes...
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="76" name="Pet4" tags="" position="3000,1775" size="100,100">Your wonderful pet is a T-Rex. A real , breathing , huge , not a toy , T-Rex. How&#39;d you even get it to listen to you I don&#39;t know but for some reason it loves you and cuddles with you every night.
+
+Now let&#39;s see how your childhood goes...
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="77" name="Pet5" tags="" position="3100,1775" size="100,100">Your pet is a world-devouring hamster who is apparently one of the four Devas of Destruction...whatever that means. It&#39;s probably dangerous. Maybe.
+
+Now let&#39;s see how your childhood goes...
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="78" name="Pet6" tags="" position="3200,1775" size="100,100">Your wonderful pet is a sweet kind cat girl. She doesn&#39;t talk and only meows. (text-colour:cyan)[(if:$meowing is &quot;talent&quot;)[You can sort of communicate with her just with meowing, she usually just asks for more tuna though.]]She has the cat ears and tail and wears fluffy cat paws. She also weights around 140 kg and can probably crush you just by looking at you. You have been warned. (text-colour:cyan)[(if:$throwing is &quot;hobby&quot;)[And no you can&#39;t throw her into containers.]]
+
+Now let&#39;s see how your childhood goes.
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="79" name="Pet7" tags="" position="3300,1775" size="100,100">Your wonderful pet is a  giraffe that got rejected by her own kind because she has a very short neck , no stubs on the head and doesn&#39;t even have the spots other giraffes do. 
+
+Wait doesn&#39;t that just make it a horse?
+(text-colour:red)[//It&#39;s a poor rejected by society giraffe , how dare you//]
+Right...
+
+Now let&#39;s see how your childhood goes...
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="80" name="Pet8" tags="" position="3400,1775" size="100,100">Your wonderful pet is a zombie. It doesn&#39;t talk much but it likes brains and heavy metal. How do you know? Well when heavy metal is playing it doesn&#39;t try to eat you.
+(text-colour:cyan)[(if:$necromancy is &quot;talent&quot;)[As a necromancer you have a bit better grip on it&#39;s appetite so it doesn&#39;t bite your neighbours if you ask it not to. Or it does when you do.]]
+Now let&#39;s see how your childhood goes...
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="81" name="Pet9" tags="" position="3500,1775" size="100,100">Your wonderful pet is a whale. You can&#39;t really keep it in your house but it&#39;s okay because you have a pool in the garden.
+
+How do you fit a whale in a pool?
+(text-colour:red)[//It&#39;s a big pool?//]
+You mean like an ocean kinda big pool?
+(text-colour:red)[//Oh! Ocean! That&#39;s what it&#39;s called ...right//]
+...
+
+Now let&#39;s see how your childhood goes...
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="82" name="Pet10" tags="" position="3600,1775" size="100,100">Your wonderful pet is an archdemon who was promised your soul if it babysits you for a while. Specifically until you&#39;re dead. It may or may not explain why you fell down the stairs so many times since acquiring it...
+
+Now let&#39;s see how your childhood goes..
+[[Childhood-&gt;Childhood]]</tw-passagedata><tw-passagedata pid="83" name="Death1" tags="" position="2700,2175" size="100,100">(text-colour:cyan)[(if:$trash is &quot;parents&quot;)[It seems finally your parents work caught up with them.]]They died from too much trash ingesting
 It had a huge impact on your life. You were left all alone , not even an adult yet with only your pet as company. It became the lowest point of your life. With nowhere to turn to you ran away and got into: 
 
 [[1-&gt;Coping1]]
