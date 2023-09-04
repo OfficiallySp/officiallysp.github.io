@@ -55,7 +55,7 @@
     },
     {
       "id": 4,
-      "name": "Arcade: Battle Boss/Demacia Vice",
+      "name": "Arcade:Battle Boss/Demacia Vice",
       "people": [
         "Battle Boss Bel'veth",
         "Battle Boss Blitzcrank",
@@ -72,7 +72,7 @@
     },
     {
       "id": 5,
-      "name": "Arcade: Heroes",
+      "name": "Arcade:Heroes",
       "people": [
         "Arcade Ahri",
         "Arcade Caitlyn",
@@ -1749,6 +1749,36 @@
         "Prestige True Damage Yasuo",
         "Prestige Arcanist Zoe",
         "Prestige Coven Zyra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 91,
+      "name": "Challenger/Conqueror",
+      "people": [
+        "Challenger Ahri",
+        "Challenger Nidalee",
+        "Conqueror Karma",
+        "Conqueror Varus",
+        "Conqueror Alistar",
+        "Conqueror Nautilus",
+        "Conqueror Jax"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 92,
+      "name": "Riot Squad/IRL Conventions",
+      "people": [
+        "Riot Squad Singed",
+        "Riot K-9 Nasus",
+        "Riot Graves",
+        "Riot Blitzcrank",
+        "Riot Kayle",
+        "PAX Jax",
+        "PAX Sivir",
+        "Neo PAX Sivir",
+        "PAX Twisted Fate"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
     }
