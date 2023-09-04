@@ -1781,6 +1781,93 @@
         "PAX Twisted Fate"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 93,
+      "name": "Esports Part 1",
+      "people": [
+        "EDG Aphelios",
+        "EDG Graves",
+        "EDG Viego",
+        "EDG Yuumi",
+        "EDG Zoe",
+        "DWG Jhin",
+        "DWG Kennen",
+        "DWG Leona",
+        "DWG Nidalee",
+        "DWG Twisted Fate",
+        "FPX Gangplank",
+        "FPX Lee Sin",
+        "FPX Malphite",
+        "FPX Thresh",
+        "FPX Vayne",
+        "iG Camille",
+        "iG Fiora",
+        "iG Irelia",
+        "iG Kai'Sa",
+        "iG LeBlanc",
+        "iG Rakan",
+        "SSG Ezreal",
+        "SSG Gnar",
+        "SSG Jarvan IV",
+        "SSG Rakan",
+        "SSG Taliyah",
+        "SSG Xayah"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 94,
+      "name": "Esports Part 2",
+      "people": [
+        "SKT T1 Ekko",
+        "SKT T1 Jhin",
+        "SKT T1 Nami",
+        "SKT T1 Olaf",
+        "SKT T1 Syndra",
+        "SKT T1 Zac",
+        "SKT T1 Alistar",
+        "SKT T1 Azir",
+        "SKT T1 Elise",
+        "SKT T1 Ryze",
+        "SKT T1 Renekton",
+        "SKT T1 Kalista",
+        "SSW Rengar",
+        "SSW Singed",
+        "SSW Talon",
+        "SSW Thresh",
+        "SSW Twitch",
+        "SKT T1 Jax",
+        "SKT T1 Lee Sin",
+        "SKT T1 Vayne",
+        "SKT T1 Zed",
+        "SKT T1 Zyra",
+        "TPA Mundo",
+        "TPA Ezreal",
+        "TPA Nunu",
+        "TPA Orianna",
+        "TPA Shen",
+        "Fnatic Corki",
+        "Fnatic Gragas",
+        "Fnatic Janna",
+        "Fnatic Jarvan IV",
+        "Fnatic Karthus"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 95,
+      "name": "Street Demons (PBE)",
+      "people": [
+        "Street Demons Brand",
+        "Street Demons Briar",
+        "Street Demons Dr. Mundo",
+        "Street Demons Neeko",
+        "Street Demons Rengar",
+        "Crystalis Motus Taliyah",
+        "Street Demons Zyra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
     }
   ]
 }
