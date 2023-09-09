@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin-bottom: 1em;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    margin-bottom: 0;
+    margin-right: 1em;
+  }
+}
