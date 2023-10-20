@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ihaspeks Stream Stats</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab">
+    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: url('https://github.com/OfficiallySp/officiallysp.github.io/blob/761efd8038eb975cf014196f30078b8eaf79594b/assets/img/bg.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+		}
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 1px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            margin-right: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar a,
+        .dropdown-content a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #bbdefb;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004225;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 10px;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #003015;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .icons a {
+            color: #f8c471;
+            margin-left: 10px;
+            color: #f8c471;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        body {
+            line-height: 1.25;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto Slab', serif;
+            color: #ffab40;
+            padding-left: 15px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 1600px;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        ol,
+        p {
+            padding-left: 15px;
+            margin: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        em {
+            font-style: italic;
+            color: #e74c3c;
+        }
+
+        footer {
+            background-color: #6200ea;
+            padding: 2px;
+            text-align: center;
+            font-size: 14px;
+            color: #f8c471;
+            position: static;
+            width: 100%;
+            bottom: 0;
+        }
+
+        a:hover {
+            color: #f0e68c;
+        }
+
+        a:active {
+            color: #ff6347;
+        }
+
+        #timer {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        #timer p:first-child {
+            margin-right: 10px;
+            color: #f8c471;
+        }
+
+        .time-unit {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .time-unit span {
+            font-size: 24px;
+            color: #f8c471;
+        }
+
+        .time-label {
+            font-size: 14px;
+            color: #fff;
+        }
+    </style>
+</head>
+<script>
+    /* ... (Keep the existing timer script) ... */
+</script>
+
+<body>
+    <div class="header">
+        <h1>ihaspeks Stream Stats (2nd - 3rd October 2023)</h1>
+        <div class="navbar">
+            <div class="dropdown">
+                <a href="/stats/index.html">Latest</a>
+            </div>
+            <div class="dropdown">
+                <a href="#archive">Archives</a>
+                <div class="dropdown-content">
+                    <a href="november_2023.html">November 2023</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#special-events">Special Events</a>
+                <div class="dropdown-content">
+                    <a href="os2023.html">October Special 2023</a>
+                </div>
+            </div>
+            <div class="icons">
+                <a href="https://twitch.tv/ihaspeks" target="_blank" title="ihaspeks on Twitch">
+                    <i class="fa-brands fa-twitch fa-2x"></i>
+                </a>
+                <a href="https://instagram.com/ihaspeks" target="_blank" title="ihaspeks on Instagram">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <div id="timer">
+            <!-- ... (Keep the timer content) ... -->
+        </div>
+    </div>
+    <img src="../assets/ihaspekschat.png" alt="Chart Unavailable" />
+    <p>Chart showing first 50 users. Additional users are counted but displayed below in detail.</p>
+    <h2>Detailed chat stats</h2>
+    <p>Channel Mods are marked as <strong>bold</strong>. Bots are <em>italicised</em></p>
+    <ol>
+        <!-- Sample list (replace with actual data) -->
+        <li>username1: 500 messages</li>
+        <li><strong>modusername1</strong>: 450 messages</li>
+        <li><em>botname1</em>: 400 messages</li>
+        <!-- ... Add more list items ... -->
+    </ol>
+    <footer>
+        <p><a href="https://www.twitch.tv/ihaspeks">follow IHasPeks on Twitch</a></p>
+        <p>Statpage made with ❤️ by [YourName] ©️ 2023</p>
+    </footer>
+</body>
+
+</html>
