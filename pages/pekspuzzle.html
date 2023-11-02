@@ -1,125 +1,129 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-body {
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
-}
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
 
-h2 {
-  color: #333;
-}
+        h2 {
+            color: #333;
+        }
 
-p {
-  color: #666;
-}
+        p {
+            color: #666;
+        }
 
-input[type="text"] {
-  width: 200px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #555;
-  border-radius: 4px;
-}
+        input[type="text"] {
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #555;
+            border-radius: 4px;
+        }
 
-button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
-button:hover {
-  background-color: #45a049;
-}
+        button:hover {
+            background-color: #45a049;
+        }
 
-#caesarResult, #vigenereResult, #riddleResult {
-  margin-top: 10px;
-  font-weight: bold;
-}
-</style>
+        #caesarResult,
+        #vigenereResult,
+        #riddleResult {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Wugy's Worthwhile Puzzles
-<h2>Part One: Rugo Riddle</h2>
+    <h1>Wugy's Worthwhile Puzzles</h1>
+    <h2>Part One: Rugo Riddle</h2>
 
-<p>Here is a riddle: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"</p>
+    <p>Here is a riddle: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"</p>
 
-<input id="riddleSolution" type="text">
+    <input id="riddleSolution" type="text">
 
-<button onclick="checkRiddleSolution()">Submit</button>
+    <button onclick="checkRiddleSolution()">Submit</button>
 
-<p id="riddleResult"></p>
+    <p id="riddleResult"></p>
 
-<h2>Part Two: Une Baguette</h2>
+    <h2>Part Two: Une Baguette</h2>
 
-<p>Here is a Vigenère Cipher using the answer to the first puzzle as the keyword: "GCMLN". Decrypt it and enter the resulting word below:</p>
+    <p>Here is a Vigenère Cipher using the answer to the first puzzle as the keyword: "GCMLN". Decrypt it and enter the resulting word below:</p>
 
-<input id="vigenereCipherSolution" type="text">
+    <input id="vigenereCipherSolution" type="text">
 
-<button onclick="checkVigenereSolution()">Submit</button>
+    <button onclick="checkVigenereSolution()">Submit</button>
 
-<p id="vigenereResult"></p>
+    <p id="vigenereResult"></p>
 
-<h2>Part Three: Caesar Salad</h2>
+    <h2>Part Three: Caesar Salad</h2>
 
-<p>Here is a Caesar Cipher that has been shifted 8 places down the alphabet: "SABZXISP". Decrypt it and enter the resulting word below:</p>
+    <p>Here is a Caesar Cipher that has been shifted 8 places down the alphabet: "SABZXISP". Decrypt it and enter the resulting word below:</p>
 
-<input id="caesarCipherSolution" type="text">
+    <input id="caesarCipherSolution" type="text">
 
-<button onclick="checkCaesarSolution()">Submit</button>
+    <button onclick="checkCaesarSolution()">Submit</button>
 
-<p id="caesarResult"></p>
+    <p id="caesarResult"></p>
 
-<script>
-function checkCaesarSolution() {
-  let input = document.getElementById("caesarCipherSolution").value.toUpperCase();
-  let result = document.getElementById("caesarResult");
-  let correctAnswer = "MURPHYAI";
-  
-  if(input === correctAnswer) {
-    let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! See what's under the plaque and get out of there. Your 8 numbers are: " + numbers.join(', ');
-  } else {
-    result.textContent = "Sorry, that's not correct. Try again!";
-  }
-}
+    <script>
+        function checkCaesarSolution() {
+            let input = document.getElementById("caesarCipherSolution").value.toUpperCase();
+            let result = document.getElementById("caesarResult");
+            let correctAnswer = "MURPHYAI";
 
-function checkVigenereSolution() {
-  let input = document.getElementById("vigenereCipherSolution").value.toUpperCase();
-  let result = document.getElementById("vigenereResult");
-  let correctAnswer = "GAREN";
-  
-  if(input === correctAnswer) {
-    let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! Enter the cave and venture forth till the end. Your 5 numbers are: " + numbers.join(', ');
-  } else {
-    result.textContent = "Sorry, that's not correct. Try again!";
-  }
-}
+            if (input === correctAnswer) {
+                let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
+                result.textContent = "Correct! See what's under the plaque and get out of there. Your 8 numbers are: " + numbers.join(', ');
+            } else {
+                result.textContent = "Sorry, that's not correct. Try again!";
+            }
+        }
 
-function checkRiddleSolution() {
-  let input = document.getElementById("riddleSolution").value.toUpperCase();
-  let result = document.getElementById("riddleResult");
-  let correctAnswer = "ECHO";
-  
-  if(input === correctAnswer) {
-    let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
-    result.textContent = "Correct! Enter the door and get the treasure inside and return to rugo. Your 4 numbers are: " + numbers.join(', ');
-  } else {
-    result.textContent = "Sorry, that's not correct. Try again!";
-  }
-}
-</script>
+        function checkVigenereSolution() {
+            let input = document.getElementById("vigenereCipherSolution").value.toUpperCase();
+            let result = document.getElementById("vigenereResult");
+            let correctAnswer = "GAREN";
 
+            if (input === correctAnswer) {
+                let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
+                result.textContent = "Correct! Enter the cave and venture forth till the end. Your 5 numbers are: " + numbers.join(', ');
+            } else {
+                result.textContent = "Sorry, that's not correct. Try again!";
+            }
+        }
+
+        function checkRiddleSolution() {
+            let input = document.getElementById("riddleSolution").value.toUpperCase();
+            let result = document.getElementById("riddleResult");
+            let correctAnswer = "ECHO";
+
+            if (input === correctAnswer) {
+                let numbers = input.split('').map(letter => (letter.charCodeAt(0) - 64) % 10);
+                result.textContent = "Correct! Enter the door and get the treasure inside and return to rugo. Your 4 numbers are: " + numbers.join(', ');
+            } else {
+                result.textContent = "Sorry, that's not correct. Try again!";
+            }
+        }
+    </script>
 </body>
+
 </html>
