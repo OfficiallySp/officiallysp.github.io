@@ -1,9 +1,13 @@
-remote_theme: pages-themes/midnight@v0.2.0
 title: Pokeymoley Server Wiki
 description: A wiki for custom content found in the pokeymoley server
-show_downloads: false
-logo: /assets/img/pokey.png
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+remote_theme: carlosperate/jekyll-theme-rtd
 
-
+# Theme settings:
+site_author: Officiallysp
+repo_url: "https://github.com/carlosperate/jekyll-theme-rtd"
+edit_on_github: false
+github_docs_folder: true
+sticky_navigation: true
+prev_next_buttons_location: bottom
+search_enabled: true
+hljs_style: github-gist
