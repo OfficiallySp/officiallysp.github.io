@@ -33,5 +33,4 @@ This is a repo of information about custom elements found on the pokeymoley serv
 - [](link-to-category-page)
 - [](link-to-category-page)
 
-## Footer
-©️ Shane Pepperell 2023
+## ©️ Shane Pepperell 2023
