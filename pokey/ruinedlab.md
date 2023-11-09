@@ -10,4 +10,4 @@ The Ruined lab is a circle-shaped structure with a glass dome roof inhabited by 
 Structure generates in the [Withered Forest](witherforest)
 
 **Loot:**
-- [Piglin slayer](pigslayer)
+- [Piglin slayer](piglinslayer)

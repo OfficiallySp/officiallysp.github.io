@@ -15,4 +15,4 @@ Structure generates in the [Basalt Deltas](basaltdeltas), [Infernal Dunes](infer
 - 
 **Loot:**
 - [Torch of lunacy](torchoflunacy)
-- [Netherite Upgrade](netheriteup)
+- [Netherite Upgrade](netheriteupgrade)

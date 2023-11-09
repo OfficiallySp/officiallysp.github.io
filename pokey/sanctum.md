@@ -10,17 +10,17 @@ The Sanctum is a structure that lies within the Quartz flats biome. Resembling a
 Structure generates in the [Quartz Flats](quartzflats)
 
 **Mobs:**
-- [Sanctum cultist](sanctcult)
-- [Sanctum ritualist](sanctritual)
-- [Sanctum inquisitor](sanctinquisitor)
-- [Sanctum illusionist](sanctillusion)
-- [Sanctum apostle](sanctapostle)
-- [Sanctum ravager](sanctravage)
-- [Sanctum guardian](sanctguard)
+- [Sanctum cultist](sanctumcultist)
+- [Sanctum ritualist](sanctumritualist)
+- [Sanctum inquisitor](sanctuminquisitor)
+- [Sanctum illusionist](sanctumillusionist)
+- [Sanctum apostle](sanctumapostle)
+- [Sanctum ravager](sanctumravager)
+- [Sanctum guardian](sanctumguardian)
 
 **Loot:**
 - [Holy wrath](holywrath)
 - [Daybreaker](daybreaker)
 - [Ragnarok](ragnarok)
-- [Scroll of returning](scrollofreturn)
-- [Netherite Upgrade](netheriteup) 
+- [Scroll of returning](scrollofreturning)
+- [Netherite Upgrade](netheriteupgrade) 

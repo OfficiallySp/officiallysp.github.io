@@ -9,14 +9,14 @@ This is a repo of information about custom elements found on the pokeymoley serv
 ## Categories
 
 ### Custom Nether
+8 all-new biomes, and 9 new structures. and 10 times the fun
 - [Structures](netherstructures)
 - [Items](netheritems)
 - [Mobs](nethermobs)
+- [Biomes](netherbiomes)
 
 ### Raids
-- [Locations](raids)
-- [Bosses](raidboss)
-- [Loot](raidloot)
+- [Frosthold Abyss](frostraid)
 
 ### Tweaks
 - [Basic tweaks](tweaks)

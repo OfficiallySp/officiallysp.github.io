@@ -13,4 +13,4 @@ Structure generates in the [Basalt deltas](basaltdeltas), [Toxic Heap](toxicheap
 - [Ghast Sentry](ghastsentry)
 
 **Loot:**
-- [Radiation Shield](radshield)
+- [Radiation Shield](radiationshield)

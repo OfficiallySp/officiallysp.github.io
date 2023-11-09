@@ -10,5 +10,5 @@ The Quartz kitchen is a restaurant run by Torte and his crew of Skeleton brother
 Structure generates in the [Quartz Flats](quartzflats)
 
 **Mobs:**
-- [Skeleton Brother](skeletonbro)
+- [Skeleton Brother](skeletonbrother)
 - [Torte](torte)
