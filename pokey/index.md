@@ -11,7 +11,7 @@ This is a repo of information about custom elements found on the pokeymoley serv
 ### Custom Nether
 - [Structures](netherstructures)
 - [Items](netheritems)
-- [Mobs](nethermobs.md)
+- [Mobs](nethermobs)
 
 ### Raids
 - [Locations](link-to-category-page)
