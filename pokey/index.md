@@ -9,9 +9,9 @@ This is a repo of information about custom elements found on the pokeymoley serv
 ## Categories
 
 ### Custom Nether
-- [Structures](link-to-category-page)
-- [Items](link-to-category-page)
-- [Mobs](link-to-category-page)
+- [Structures](netherstructures)
+- [Items](netheritems)
+- [Mobs](nethermobs.md)
 
 ### Raids
 - [Locations](link-to-category-page)
