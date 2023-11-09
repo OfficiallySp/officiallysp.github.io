@@ -1,6 +1,9 @@
 remote_theme: pages-themes/midnight@v0.2.0
+title: Pokeymoley Server Wiki
+description: A wiki for custom content found in the pokeymoley server
+show_downloads: false
+logo: /assets/img/pokey.png
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-title: [Pokeymoley Server Wiki]
-description: [A wiki for custom content found in the pokeymoley server]
-show_downloads: [false]
+
+
