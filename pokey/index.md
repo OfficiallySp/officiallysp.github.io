@@ -1,4 +1,4 @@
-﻿# Welcome to the [Pokey Server] Wiki!
+﻿# Welcome to the Pokey Server Wiki!
 
 ## Introduction
 This is a repo of information about custom elements found on the pokeymoley server
@@ -14,24 +14,24 @@ This is a repo of information about custom elements found on the pokeymoley serv
 - [Mobs](nethermobs)
 
 ### Raids
-- [Locations](link-to-category-page)
-- [Bosses](link-to-category-page)
-- [Loot](link-to-category-page)
+- [Locations](raids)
+- [Bosses](raidboss)
+- [Loot](raidloot)
 
 ### Tweaks
-- [Basic Recipes](link-to-category-page)
-- [Advanced Crafting](link-to-category-page)
-- [Alchemy and Brewing](link-to-category-page)
+- [Basic tweaks](tweaks)
+- [Advanced Crafting](crafting)
+- [Misc](misc)
 
 ### Overworld
-- [Biomes](link-to-category-page)
-- [Structures and Buildings](link-to-category-page)
-- [Dungeons and Bosses](link-to-category-page)
+- [Biomes](biome)
+- [Structures and Buildings](structures)
+- [Changes for worldgen](generation)
 
-### End
-- [Player Leaderboards](link-to-category-page)
-- [Guilds and Teams](link-to-category-page)
-- [Events and Competitions](link-to-category-page)
+### End (coming soon
+- [](link-to-category-page)
+- [](link-to-category-page)
+- [](link-to-category-page)
 
 ## Footer
 ©️ Shane Pepperell 2023
