@@ -7,12 +7,12 @@ Below are a list of structures you can find
 If applicable, list any subcategories that fall under this main category.
 
 ### [Subcategory Name 1]
-- [Forbidden Castle](fcastle)
+- [Forbidden Castle](forbiddencastle)
 - [Sanctum](sanctum)
-- [Infernal altar](altar)
-- [Ruined Lab](lab)
-- [Nether Reactor](reactor)
-- [Abandoned Tower](tower)
-- [Quartz kitchen](kitchen)
-- [Piglin village](village)
-- [Pipeline](pipe)
+- [Infernal altar](infernalaltar)
+- [Ruined Lab](ruinedlab)
+- [Nether Reactor](netherreactor)
+- [Abandoned Tower](abandonedtower)
+- [Quartz kitchen](quartzkitchen)
+- [Piglin village](piglinvillage)
+- [Pipeline](pipeline)
