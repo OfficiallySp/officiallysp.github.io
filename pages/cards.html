@@ -313,7 +313,7 @@
                         const divElement = document.querySelector('.card-container');
                         const pElement = document.createElement('p');
                         pElement.classList.add('number');
-                        pElement.textContent = '<p>Congratulations!</p><p>You Win!</p><img class="img border-radius-lg w-100 position-relative z-index-2" src="../assets/img/start.png" alt="Logo"><p>Obliviosa Minecraft Server Returns 11/12/23</p>';
+                        pElement.resultDiv.innerHTML = 'https://officiallysp.net/pages/youwin.html';
                         divElement.replaceWith(pElement);
                     }
                     document.head.appendChild(style);
