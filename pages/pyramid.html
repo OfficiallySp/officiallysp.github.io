@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Pyramid Guessing Game</title>
     <style>
@@ -50,11 +51,6 @@
             color: #111;
             border: none;
             cursor: pointer;
-        }
-        
-        .guess-input {
-            display: none; /* Hide initially */
-            margin: 20px;
         }
 
         .result {
@@ -196,16 +192,13 @@
 
     <script>
         var currentPyramid = 1;
-        var encodedMiddleNumbers = [42, 40, 28, 54]; // Encoded answers for each pyramid
+        var middleNumbers = [21, 20, 14, 27]; // Middle numbers for each pyramid
         var gameStarted = false;
         var countdownInterval;
 
         function startGame() {
             var startScreen = document.querySelector('.start-screen');
             startScreen.style.display = 'none';
-
-            var guessInputDiv = document.querySelector('.guess-input');
-            guessInputDiv.style.display = 'block'; // Show guess input box
 
             var currentPyramidDiv = document.getElementById('pyramid1');
             currentPyramidDiv.classList.remove('hidden');
@@ -221,7 +214,7 @@
             var guessInput = document.getElementById('guess');
             var guess = parseInt(guessInput.value);
 
-            var middleNumber = encodedMiddleNumbers[currentPyramid - 1] * 2; // Decode logic
+            var middleNumber = middleNumbers[currentPyramid - 1];
 
             var resultDiv = document.getElementById('result');
 
