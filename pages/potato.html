@@ -1,31 +1,9 @@
 <!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>officiallysp.net</title>
-<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
-     crossorigin="anonymous"></script>
-</head>
-<body class="null">
-<div id="navbar-placeholder"></div>
-<script>
-  function loadNavbar() {
-    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        navbarPlaceholder.innerHTML = this.responseText;
-      }
-    };
-    xhr.open('GET', 'navbar.html', true);
-    xhr.send();
-  }
+<html lang="en">
 
-  window.onload = loadNavbar;
-</script>
-</body>
-    <title>How to Bake a Potato</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">itle>How to Bake a Potato</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -51,6 +29,7 @@
             height: auto;
         }
     </style>
+</head>
 
 <body>
 
@@ -67,4 +46,21 @@
         <li>Cut, squeeze, fluff, season and serve! Finally, slice the potato open lengthwise with a paring knife, give it a good squeeze to open it up, fluff the insides with a fork, add your favorite seasonings or toppings. Then a perfectly crispy-on-the-outside, soft-and-fluffy-on-the-inside, and oh-so-delicious baked potato will now be yours to enjoy!</li>
     </ol>
 
-</body>
+<div id="navbar-placeholder"></div>
+<script>
+  function loadNavbar() {
+    const navbarPlaceholder = document.getElementById('navbar-placeholder');
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        navbarPlaceholder.innerHTML = this.responseText;
+      }
+    };
+    xhr.open('GET', 'navbar.html', true);
+    xhr.send();
+  }
+
+  window.onload = loadNavbar;
+</script></body>
+
+</html>
