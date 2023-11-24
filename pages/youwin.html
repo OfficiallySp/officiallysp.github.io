@@ -1,6 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>officiallysp.net</title>
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
+     crossorigin="anonymous"></script>
+</head>
+<body class="null">
+<div id="navbar-placeholder"></div>
+<script>
+  function loadNavbar() {
+    const navbarPlaceholder = document.getElementById('navbar-placeholder');
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        navbarPlaceholder.innerHTML = this.responseText;
+      }
+    };
+    xhr.open('GET', 'navbar.html', true);
+    xhr.send();
+  }
 
+  window.onload = loadNavbar;
+</script>
+</body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +39,4 @@
         }
     </style>
 </head>
-<body>
     <h1>Congratulations!</h1><h2>You Win!</h2><img class="img border-radius-lg w-100 position-relative z-index-2" src="../assets/img/start.png" alt="Logo"><h3>Obliviosa Minecraft Server Returns 11/12/23</h3>
-</body>
