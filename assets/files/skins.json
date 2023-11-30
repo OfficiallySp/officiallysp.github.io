@@ -1857,7 +1857,7 @@
     },
     {
       "id": 95,
-      "name": "Street Demons (PBE)",
+      "name": "Street Demons",
       "people": [
         "Street Demons Brand",
         "Street Demons Briar",
@@ -1868,6 +1868,14 @@
         "Street Demons Zyra"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 96,
+      "name": "Myles bad",
+      "people": [
+        "Go again bois"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels"
     }
   ]
 }
