@@ -156,7 +156,11 @@
         "Heimerstinger",
         "Nunu and Beelump",
         "Orbeeanna",
-        "Yuubee"
+        "Yuubee",
+        "Bee'Koz",
+        "King",
+        "Beegar",
+        "Beecrank"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124709609588916235"
     },
@@ -340,7 +344,13 @@
         "Old God Malphite",
         "Old God Nocturne",
         "Old God Warwick",
-        "Thousand Pierced Bear"
+        "Thousand Pierced Bear",
+        "Coven Nami",
+        "Coven Nilah",
+        "Coven Elise",
+        "Coven Syndra",
+        "Coven Akali",
+        "Old God Mordekaiser"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712048828362884"
     },
@@ -566,7 +576,13 @@
         "True Damage Ekko",
         "True Damage Qiyana",
         "True Damage Senna",
-        "True Damage Yasuo"
+        "True Damage Yasuo",
+        "Heartsteel Ksante",
+        "Heartsteel Kayn",
+        "Heartsteel Sett",
+        "Heartsteel Aphelios",
+        "Heartsteel Ezreal",
+        "Heartsteel Yone"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124712575234486363"
     },
@@ -1521,7 +1537,11 @@
         "Cafe Cutie Gwen",
         "Cafe Cutie Sivir",
         "Cafe Cutie Soraka",
-        "Cafe Cutie Vladimir"
+        "Cafe Cutie Vladimir",
+        "Cafe Cutie Rumble",
+        "Cafe Cuties Jinx",
+        "Cafe Cuties Poppy",
+        "Cafe Cuties Lulu"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124714870252769300"
     },
@@ -1683,7 +1703,15 @@
         "Winterblessed Swain",
         "Winterblessed Warwick",
         "Winterblessed Zilean",
-        "Winterblessed Zoe"
+        "Winterblessed Zoe",
+        "Winterblessed Thresh",
+        "Winterblessed Sylas",
+        "Winterblessed Camille",
+        "Winterblessed Lucian",
+        "Winterblessed Hwei",
+        "Winterblessed Hecarim",
+        "Winterblessed Annie",
+        "Winterblessed Senna"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1124715205419606096"
     },
@@ -1871,6 +1899,19 @@
     },
     {
       "id": 96,
+      "name": "La Ilusion",
+      "people": [
+        "La Ilusion Renata",
+        "La Ilusion Gnar",
+        "La Ilusion Draven",
+        "La Ilusion Ziggs",
+        "La Ilusion Qiyana",
+        "La Ilusion Nidalee"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1136017962290130956"
+    },
+    {
+      "id": 97,
       "name": "Myles bad",
       "people": [
         "Go again bois"
