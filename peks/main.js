@@ -1,4 +1,3 @@
-// JavaScript Document
 // Navbar
 	function loadNavbar() {
 		const navbarPlaceholder = document.getElementById('navbar-placeholder');
@@ -8,7 +7,7 @@
 
 		// Determine the correct path to navbar.html based on the current URL
 		let navbarPath = 'navbar.html'; // Default path for stat page
-		if (window.location.pathname.includes('/stats/archive/') || window.location.pathname.includes('/stats/event/')) {
+		if (window.location.pathname.includes('/peks/archive/') || window.location.pathname.includes('/peks/event/')) {
 			navbarPath = '../navbar.html'; // Path for pages in archive and events directories
 		}
 
