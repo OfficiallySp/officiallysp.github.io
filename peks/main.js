@@ -24,7 +24,7 @@
 
 // Timer
     // Set the date and time for the countdown to end (e.g., "October 30, 2023 15:00:00")
-    var countDownDate = new Date("February 1, 2024 15:00:00").getTime();
+    var countDownDate = new Date("March 1, 2024 15:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -52,34 +52,45 @@
 
 // Styling
 // Predefined list of Mods to bold
-var usersToItalicize = ["AKIBA212", "AngleGabriel__", "Fossabot", "Livytaskbot", "Nightbot", "OSFrog", "Phantomspower", "PlayWithViewersBot", "Songlistbot", "StreamElements", "Streamlabs", "willzystreams", "Knight1y"];
+var usersToItalicize = ["blobin_wobin", "creatisbot", "firewraith4", "Flauenn", "muercielaga", "MurphyAI", "skgyorugo", "StreamElements", "StreamLabs", "voidross"];
 
 // Predefined list of VIP's to italicize
-var usersToBold = ["MaicoMolo", "BeholdBrooke", "LowLifePrincessx", "sammziee", "RD07x__", "OfficiallySp", "Sirjester2", "minoarno", "Tjorbjorn", "aribearree", "mikey98123", "MrXadion"];
+var usersToBold = ["princetemperr", "aniluhsum", "cooometoflegends", "poppinzed", "AniAkemi", "OfficiallySp", "shazanana", "iamtolboe", "xxxtemptiom", "suprize_gaming", "teiva3", "pskthresh"];
 
-// Function to update list styling
 function updateListStyling() {
     var listItems = document.querySelectorAll('li');
     listItems.forEach(function(item) {
-        // Extract username from the list item
-        var username = item.textContent.split(':')[0];
+        // Find usernames in the list item
+        var fullText = item.textContent;
+        var parts = fullText.split(/, | and /); // Split by ", " and " and " to handle multiple users
+        
+        // Iterate over each part to check for usernames and apply styles
+        parts = parts.map(part => {
+            var username = part.split(':')[0].trim();
+            var messageCount = part.split(':')[1];
+            
+            // Apply bold styling
+            if (usersToBold.includes(username)) {
+                username = `<strong>${username}</strong>`;
+            }
+            
+            // Apply italic styling
+            if (usersToItalicize.includes(username)) {
+                username = `<em>${username}</em>`;
+            }
 
-        // Check and apply bold styling
-        if (usersToBold.includes(username)) {
-            item.innerHTML = '<strong>' + item.innerHTML + '</strong>';
-        }
-
-        // Check and apply italic styling
-        if (usersToItalicize.includes(username)) {
-            item.innerHTML = '<em>' + item.innerHTML + '</em>';
-        }
+            return username + (messageCount ? ': ' + messageCount : '');
+        });
+        
+        // Reconstruct the item's innerHTML with styled usernames
+        var updatedText = parts.join(', ').replace(/, ([^,]*)$/, ' and $1'); // Re-adding the 'and' for the last item
+        item.innerHTML = updatedText;
     });
 }
+
 
 // Run the function to update styling
 window.onload = function() {
     loadNavbar();
     updateListStyling();
 };
-
-
