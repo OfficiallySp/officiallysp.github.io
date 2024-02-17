@@ -215,7 +215,7 @@
     },
     {
       "id": 9,
-      "name": "Season 10-12 (2019-2023)",
+      "name": "Season 10-12 (2019-2022)",
       "people": [
         "Aphelios (PreS10)",
         "Lilia (S10)",
@@ -238,15 +238,15 @@
     },
     {
       "id": 10,
-      "name": "Season 13+ (2023-202X)",
+      "name": "Season 13+ (2022-202X)",
       "people": [
         "Milio (S13)",
         "Naafiri (S13)",
         "Briar (S13)",
         "Hwei (PreS14)",
-        "Smolder (S14)
+        "Smolder (S14)"
   ],
-    "moreInfoUrl": "discord:"
+    "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208420545989976104"
     }
   ]
 }
