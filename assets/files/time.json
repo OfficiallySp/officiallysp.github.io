@@ -24,7 +24,7 @@
         "Fate",
         "Warwick"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135630911019438100"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208415625299623987"
     },
     {
       "id": 2,
@@ -55,7 +55,7 @@
         "Veigar",
         "Zilean"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135631381611941928"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208416067714547752"
     },
     {
       "id": 3,
@@ -76,7 +76,7 @@
         "Shen",
         "Udyr"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135632827006853251"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208416402021548052"
     },
     {
       "id": 4,
@@ -116,7 +116,7 @@
         "Zhao",
         "Yorick"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135633372287344772"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208417012255166514"
     },
     {
       "id": 5,
@@ -151,7 +151,7 @@
         "Ziggs",
         "Zyra"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135634203787145297"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208417564250742814"
     },
     {
       "id": 6,
@@ -172,7 +172,7 @@
         "Vel'Koz (S4)",
         "Yasuo (PreS4)"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135635454880907355"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208418144314589275"
     },
     {
       "id": 7,
@@ -191,7 +191,7 @@
         "Tahn Kench (S5)",
         "Taliyah (S6)"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135636572088307772"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208418535542624257"
     },
     {
       "id": 8,
@@ -211,7 +211,7 @@
         "Sylas (S9)",
         "Yuumi (S9)"
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135638178347372687"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208418904557486090"
     },
     {
       "id": 9,
@@ -231,15 +231,15 @@
         "Bel'Veth (S12)",
         "Nilah (S12)",
         "Renata Glasc (S12)",
-        "Zeri (S12)"
+        "Zeri (S12)",
+        "K'Sante (PreS13)",
       ],
-      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135640579280212020"
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1208420039863312404"
     },
     {
       "id": 10,
       "name": "Season 13+ (2023-202X)",
       "people": [
-        "K'Sante (PreS13)",
         "Milio (S13)",
         "Naafiri (S13)",
         "Briar (S13)",
