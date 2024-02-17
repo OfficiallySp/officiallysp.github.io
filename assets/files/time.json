@@ -215,7 +215,7 @@
     },
     {
       "id": 9,
-      "name": "Season 10-13 Split 1 (2019-2023)",
+      "name": "Season 10-12 (2019-2023)",
       "people": [
         "Aphelios (PreS10)",
         "Lilia (S10)",
@@ -229,14 +229,23 @@
         "Vex (S11)",
         "Viego (S11)",
         "Bel'Veth (S12)",
-        "K'Sante (PreS13)",
-        "Milio (S13)",
-        "Naafiri (S13)",
         "Nilah (S12)",
         "Renata Glasc (S12)",
         "Zeri (S12)"
       ],
       "moreInfoUrl": "discord://discord.com/channels/716795283911999510/1135640579280212020"
+    },
+    {
+      "id": 10,
+      "name": "Season 13+ (2023-202X)",
+      "people": [
+        "K'Sante (PreS13)",
+        "Milio (S13)",
+        "Naafiri (S13)",
+        "Briar (S13)",
+        "Hwei (PreS14)",
+        "Smolder (S14)
+  ],
+    "moreInfoUrl": "discord:"
     }
-  ]
 }
