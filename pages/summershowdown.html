@@ -38,10 +38,58 @@
                 <div class="text-center">
 					<img src="../assets/img/sslogo.png" width="750px" alt=""/>
 					<br>
-                    <h2 class="text-white">Summer Showdown 24<br>
+                    <h1 class="text-white">Summer Showdown 24<br>
+                    </h1>
+                    <h2 class="mb-5 text-white">June 7th - June 9th<br>
                     </h2>
-                    <h3 class="mb-5 text-white">June 7th - June 9th<br>
-                    </h3>
+					<h3 class="mb-0 text-white">SIGNUPS OPEN:</h3>
+					<script>
+						// Timer
+    // Set the date and time for the countdown to end (e.g., "October 30, 2023 15:00:00")
+    var countDownDate = new Date("March 16, 2023 15:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        // Time calculations
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        // If the countdown is finished, display some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "TESTING";
+        }
+    }, 1000);
+</script>
+    <div id="timer">
+        <div class="time-unit">
+            <span id="days"></span>
+            <p class="time-label">Days</p>
+        </div>
+        <div class="time-unit">
+            <span id="hours"></span>
+            <p class="time-label">Hours</p>
+        </div>
+        <div class="time-unit">
+            <span id="minutes"></span>
+            <p class="time-label">Minutes</p>
+        </div>
+        <div class="time-unit">
+            <span id="seconds"></span>
+            <p class="time-label">Seconds</p>
+        </div>
+    </div>
                 </div>
             </div>
         </div>
@@ -71,6 +119,36 @@
         height: 100%;
         object-fit: cover;
     }
+        #timer {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            background-color: rgba(255, 255, 255, 0.45);
+            border-radius: 15px;
+			font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
+        }
+
+        #timer p:first-child {
+            color: #FFFFF;
+			font-size: 64px
+        }
+
+        .time-unit {
+            display: block;
+            flex-direction: column;
+            align-items: center;
+			padding: 10px
+        }
+
+        .time-unit span {
+            font-size: 48px;
+            color: #FFFFF;
+        }
+
+        .time-label {
+            font-size: 24px;
+            color: #FFFFF;
+        }
 </style>
     <div class="video-background">
         <video autoplay muted loop>
