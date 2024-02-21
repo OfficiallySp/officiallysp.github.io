@@ -1,99 +1,98 @@
-<!DOCTYPE html><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>officiallysp.net</title>
-<link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-icons.css">
-<link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-svg.css">
-<link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/soft-ui-dashboard.min.css?v=1.0.2">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-<link rel="stylesheet" href="../assets/css/theme.css">
-<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
-     crossorigin="anonymous"></script>
-<script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
-></script>
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>officiallysp.net</title>
+    <link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-icons.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/nucleo-svg.css">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/soft-ui-dashboard.min.css?v=1.0.2">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
 </head>
+
 <body class="null">
-<div id="navbar-placeholder"></div>
-<script>
-  function loadNavbar() {
-    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        navbarPlaceholder.innerHTML = this.responseText;
-      }
-    };
-    xhr.open('GET', '../navbar.html', true);
-    xhr.send();
-  }
-
-  window.onload = loadNavbar;
-</script>
-</body>
-        <div class="container position-relative z-index-2">
-            <div class="row">
-                <div class="text-center">
-					<img src="../assets/img/sslogo.png" width="750px" alt=""/>
-					<br>
-                    <h1 class="text-white">Summer Showdown 24<br>
-                    </h1>
-                    <h2 class="mb-5 text-white">June 7th - June 9th<br>
-                    </h2>
-					<h3 class="mb-0 text-white">SIGNUPS OPEN:</h3>
-					<script>
-						// Timer
-    // Set the date and time for the countdown to end (e.g., "October 30, 2023 15:00:00")
-    var countDownDate = new Date("March 16, 2023 15:00:00").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-
-        // Time calculations
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-
-        // If the countdown is finished, display some text
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("timer").innerHTML = "TESTING";
+    <div id="navbar-placeholder"></div>
+    <script>
+        function loadNavbar() {
+            const navbarPlaceholder = document.getElementById('navbar-placeholder');
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    navbarPlaceholder.innerHTML = this.responseText;
+                }
+            };
+            xhr.open('GET', '../navbar.html', true);
+            xhr.send();
         }
-    }, 1000);
-</script>
-    <div id="timer">
-        <div class="time-unit">
-            <span id="days"></span>
-            <p class="time-label">Days</p>
-        </div>
-        <div class="time-unit">
-            <span id="hours"></span>
-            <p class="time-label">Hours</p>
-        </div>
-        <div class="time-unit">
-            <span id="minutes"></span>
-            <p class="time-label">Minutes</p>
-        </div>
-        <div class="time-unit">
-            <span id="seconds"></span>
-            <p class="time-label">Seconds</p>
-        </div>
-    </div>
+
+        window.onload = loadNavbar;
+    </script>
+</body>
+<div class="container position-relative z-index-2">
+    <div class="row">
+        <div class="text-center">
+            <img src="../assets/img/sslogo.png" width="750px" alt="" />
+            <br>
+            <h1 class="text-white">Summer Showdown 24<br>
+            </h1>
+            <h2 class="mb-5 text-white">June 7th - June 9th<br>
+            </h2>
+            <h3 class="mb-0 text-white">SIGNUPS OPEN:</h3>
+            <script>
+                // Timer
+                // Set the date and time for the countdown to end (e.g., "October 30, 2023 15:00:00")
+                var countDownDate = new Date("May 10, 2024 15:00:00").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+                    var now = new Date().getTime();
+                    var distance = countDownDate - now;
+
+                    // Time calculations
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Output the result
+                    document.getElementById("days").innerHTML = days;
+                    document.getElementById("hours").innerHTML = hours;
+                    document.getElementById("minutes").innerHTML = minutes;
+                    document.getElementById("seconds").innerHTML = seconds;
+
+                    // If the countdown is finished, display some text
+                    if (distance < 0) {
+                        clearInterval(x);
+                        document.getElementById("timer").innerHTML = "TESTING";
+                    }
+                }, 1000);
+            </script>
+            <div id="timer">
+                <div class="time-unit">
+                    <span id="days"></span>
+                    <p class="time-label">Days</p>
+                </div>
+                <div class="time-unit">
+                    <span id="hours"></span>
+                    <p class="time-label">Hours</p>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes"></span>
+                    <p class="time-label">Minutes</p>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds"></span>
+                    <p class="time-label">Seconds</p>
                 </div>
             </div>
+            <h4 class="mb-0 text-white">May 10:</h4>
         </div>
-
+    </div>
+</div>
 <style>
     body,
     html {
@@ -108,7 +107,7 @@
         left: 0;
         overflow: hidden;
         z-index: -1;
-		opacity: 0.75;
+        opacity: 0.75;
     }
 
     .video-background video {
@@ -119,55 +118,56 @@
         height: 100%;
         object-fit: cover;
     }
-        #timer {
-            display: inline-flex;
-            align-items: center;
-            flex-direction: row;
-            background-color: rgba(255, 255, 255, 0.45);
-            border-radius: 15px;
-			font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
-        }
 
-        #timer p:first-child {
-            color: #FFFFF;
-			font-size: 64px
-        }
+    #timer {
+        display: inline-flex;
+        align-items: center;
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 0.45);
+        border-radius: 15px;
+        font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"
+    }
 
-        .time-unit {
-            display: block;
-            flex-direction: column;
-            align-items: center;
-			padding: 10px
-        }
+    #timer p:first-child {
+        color: #FFFFF;
+        font-size: 64px
+    }
 
-        .time-unit span {
-            font-size: 48px;
-            color: #FFFFF;
-        }
+    .time-unit {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px
+    }
 
-        .time-label {
-            font-size: 24px;
-            color: #FFFFF;
-        }
+    .time-unit span {
+        font-size: 48px;
+        color: #FFFFF;
+    }
+
+    .time-label {
+        font-size: 24px;
+        color: #FFFFF;
+    }
 </style>
-    <div class="video-background">
-        <video autoplay muted loop>
-            <source src="../assets/video/ss.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+<div class="video-background">
+    <video autoplay muted loop>
+        <source src="../assets/video/ss.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 <footer>
-        <div class="container position-static">
-            <div class="row">
-                <div class="col-lg-4 me-auto my-auto text-lg-start text-center">
-                    <h6 class="text-white font-weight-bolder text-uppercase mb-2">OfficiallySp.net</h6>
-                    <p class="text-white">© 2022-2024 Shane Pepperell</p>
-                </div>
-                <div class="col-lg-2 col-sm-4 col-12 ms-md-auto text-lg-start text-center mb-sm-0 mb-4">
-                    <ul class="flex-column ms-lg-n3 nav">
-                        <li class="nav-item"> <a href="https://youtube.com/officiallysp"><i class="fab fa-youtube fa-2x me-3 text-danger" aria-hidden="true"></i></a> <a href="https://twitch.tv/officiallysp"><i class="fab fa-twitch fa-2x text-primary me-3" aria-hidden="true"></i></a> <a href="https://twitter.com/officiallysp777"><i class="fab fa-twitter fa-2x me-3 text-info" aria-hidden="true"></i></a> <a href="https://github.com/OfficiallySp"><i class="fab fa-github fa-2x me-3 text-dark" aria-hidden="true"></i></a> </li>
-                    </ul>
-                </div>
+    <div class="container position-static">
+        <div class="row">
+            <div class="col-lg-4 me-auto my-auto text-lg-start text-center">
+                <h6 class="text-white font-weight-bolder text-uppercase mb-2">OfficiallySp.net</h6>
+                <p class="text-white">© 2022-2024 Shane Pepperell</p>
+            </div>
+            <div class="col-lg-2 col-sm-4 col-12 ms-md-auto text-lg-start text-center mb-sm-0 mb-4">
+                <ul class="flex-column ms-lg-n3 nav">
+                    <li class="nav-item"> <a href="https://youtube.com/officiallysp"><i class="fab fa-youtube fa-2x me-3 text-danger" aria-hidden="true"></i></a> <a href="https://twitch.tv/officiallysp"><i class="fab fa-twitch fa-2x text-primary me-3" aria-hidden="true"></i></a> <a href="https://twitter.com/officiallysp777"><i class="fab fa-twitter fa-2x me-3 text-info" aria-hidden="true"></i></a> <a href="https://github.com/OfficiallySp"><i class="fab fa-github fa-2x me-3 text-dark" aria-hidden="true"></i></a> </li>
+                </ul>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
