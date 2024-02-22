@@ -49,5 +49,30 @@ function handleFormSubmit(event) {
   const formData = new FormData(event.target);
   const pickedTeamId = formData.get('pickem');
   alert(`You picked team ID: ${pickedTeamId}`);
-  // Here you would typically send the pick to the server for storage or further processing
+  // Instead of sending the pick to the server, display it on the webpage
+  function displayPickedTeamInfo(pickedTeamId, teams) {
+    const pickedTeam = teams.find(team => team.id === pickedTeamId);
+    const displayArea = document.getElementById('pickedTeamDisplay');
+    if (!displayArea) {
+      console.error('Display area for picked team not found');
+      return;
+    }
+    let displayHTML = `
+      <h4>You picked:</h4>
+      <div class="picked-team-info">
+        <img src="${pickedTeam.logo}" alt="${pickedTeam.name} logo" style="width: 100px; height: auto;">
+        <p>${pickedTeam.name}</p>
+      </div>
+    `;
+    displayArea.innerHTML = displayHTML;
+  }
+
+  // Modify the handleFormSubmit function to use displayPickedTeamInfo
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const pickedTeamId = formData.get('pickem');
+    // Assuming 'teams' is accessible here, otherwise, you might need to store it globally or fetch again
+    displayPickedTeamInfo(pickedTeamId, teams); // Pass 'teams' array to the function
+  }
 }
