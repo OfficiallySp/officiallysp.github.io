@@ -1,0 +1,83 @@
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0e0e10;
+  color: #ffffff;
+}
+
+// Navbar styles
+#navbar {
+  background-color: #202225;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+// Main content styles
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+// Tournament bracket styles
+#tournament-bracket {
+  background-color: #2f3136;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+// Pick form styles
+#pick-form {
+  background-color: #2f3136;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+// Form elements
+input[type="text"], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #tournament-bracket, #pick-form {
+    width: 90%;
+  }
+}
