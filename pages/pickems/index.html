@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends Tournament Pick'ems</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the League of Legends Tournament Pick'ems</h1>
+    </header>
+    <main>
+        <section id="tournament-info">
+            <h2>Tournament Information</h2>
+            <p>Here you will find information about the current tournament, teams, and match-ups. Make your picks and see if you can predict the outcomes!</p>
+        </section>
+        <section id="user-picks">
+            <h2>Your Picks</h2>
+            <form id="pickem-form">
+                <!-- Dynamic content will be loaded here based on tournamentModel.js and pickModel.js -->
+                <p>Make your picks for each match-up. Remember, you can update your picks until the tournament starts!</p>
+                <!-- Example of dynamic content (to be generated and manipulated by pickem.js) -->
+                <!-- <div class="match-up">
+                    <label for="team1-vs-team2">Team 1 vs Team 2:</label>
+                    <select name="team1-vs-team2" id="team1-vs-team2">
+                        <option value="team1">Team 1</option>
+                        <option value="team2">Team 2</option>
+                    </select>
+                </div> -->
+                <button type="submit">Submit Picks</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 League of Legends Tournament Pick'ems</p>
+    </footer>
+    <script src="pickem.js"></script>
+</body>
+</html>
