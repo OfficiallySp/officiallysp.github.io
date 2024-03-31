@@ -23,7 +23,7 @@
 
 // Timer
     // Set the date and time for the countdown to end (e.g., "October 30, 2023 15:00:00")
-    var countDownDate = new Date("April 1, 2024 15:00:00").getTime();
+    var countDownDate = new Date("May 1, 2024 15:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
