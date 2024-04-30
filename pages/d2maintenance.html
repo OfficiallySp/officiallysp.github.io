@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destiny 2 Maintenance Schedule</title>
+    <style>
+        /* Basic reset */
+        body, h1, div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General body styles */
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #121212;
+            color: #c7c7c7;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        /* Main header style */
+        h1, h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        /* Event box styling */
+        .event {
+            margin-bottom: 15px;
+            padding: 15px;
+            background-color: #1c1c1c;
+            border-left: 5px solid #0057b8;
+            border-radius: 5px;
+        }
+
+        /* Time display */
+        strong {
+            color: #49fb35; /* Neon green for time, to give it a futuristic look */
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data-10-year-range.min.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
+		 crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>D2 Maintenance Schedule</h1>
+	<h2>Converted to your timezone</h2>
+    <div id="schedule">
+	  <h3>Update 7.3.6.3 is scheduled for release on April 30:</h3>
+        <!-- Manually update these entries as needed -->
+        <div class="event">
+        <strong id="time1"></strong> - Destiny 2 will undergo background maintenance. </div>
+        <div class="event">
+            <strong id="time2"></strong> - Destiny 2 will be brought offline.
+        </div>
+        <div class="event">
+        <strong id="time3"></strong> - Update Released. Destiny 2 will come back online&nbsp;&nbsp; </div>
+        <div class="event">
+        <strong id="time4"></strong> - Destiny 2 background maintenance is expected to conclude. </div>
+</div>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const times = [
+                "6:00 AM",
+                "6:45 AM",
+                "10:00 AM",
+                "12:00 PM"
+            ];
+            const timezone = "America/Los_Angeles"; // PDT timezone
+
+            times.forEach((time, index) => {
+                const dateTime = moment.tz(`${moment().format("YYYY-MM-DD")} ${time}`, "YYYY-MM-DD h:mm A", timezone);
+                const localTime = dateTime.clone().tz(moment.tz.guess()).format('h:mm A z');
+                
+                document.getElementById(`time${index + 1}`).textContent = localTime;
+            });
+        });
+    </script>
+</body>
+</html>
