@@ -1,5 +1,6 @@
 // script.js
 const options = [];
+const results = {};
 const wheelCanvas = document.getElementById('wheel-canvas');
 const ctx = wheelCanvas.getContext('2d');
 const wheelRadius = 150;
@@ -28,31 +29,25 @@ function addOption() {
     }
 }
 
-function spinWheel() {
-    const spinAngleStart = Math.random() * 360;
-    let spinTime = 0;
-    const spinTimeTotal = Math.random() * 3000 + 2000;
-
-    function rotateWheel() {
-        spinTime += 30;
-        if(spinTime >= spinTimeTotal) {
-            const degrees = spinAngleStart + 90 * spinTimeTotal / 1000;
-            const chosenOptionIndex = Math.floor((degrees % 360) / (360 / options.length));
-            document.getElementById('result').textContent = "Result: " + options[chosenOptionIndex];
-            return;
-        }
-        const spinAngle = spinAngleStart + (spinTime / spinTimeTotal) * 360;
-        ctx.clearRect(0, 0, wheelCanvas.width, wheelCanvas.height);
-        ctx.save();
-        ctx.translate(150, 150);
-        ctx.rotate(spinAngle * Math.PI / 180);
-        ctx.translate(-150, -150);
-        drawWheel();
-        ctx.restore();
-        requestAnimationFrame(rotateWheel);
+function spinWheelMultipleTimes() {
+    const numSpins = parseInt(document.getElementById('num-spins').value) || 1;
+    for (let i = 0; i < numSpins; i++) {
+        const spinAngleStart = Math.random() * 360;
+        const degrees = spinAngleStart + 90 * (Math.random() * 3000 + 2000) / 1000;
+        const chosenOptionIndex = Math.floor((degrees % 360) / (360 / options.length));
+        const chosenOption = options[chosenOptionIndex];
+        results[chosenOption] = (results[chosenOption] || 0) + 1;
     }
+    displayResults();
+}
 
-    rotateWheel();
+function displayResults() {
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = '';
+    Object.keys(results).forEach(option => {
+        const count = results[option];
+        resultElement.innerHTML += `<div>${option} ${count > 1 ? 'x' + count : ''}</div>`;
+    });
 }
 
 drawWheel();
