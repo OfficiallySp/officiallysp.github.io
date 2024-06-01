@@ -91,5 +91,7 @@ function updateListStyling() {
 // Run the function to update styling
 window.onload = function() {
     loadNavbar();
-    updateListStyling();
+    if (!document.body.dataset.disableStyling) {
+        updateListStyling();
+    }
 };
