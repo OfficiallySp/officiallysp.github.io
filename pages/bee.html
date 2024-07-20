@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('../assets/img/background.jpg');
+            background-image: url('../assets/img/bee.jpg');
             background-size: cover;
             margin: 0;
         }
@@ -114,6 +114,7 @@
 <body>
     <div class="game-container">
         <h1>Bee Swarm Simulator Wordle</h1>
+        <img id="bee-image" src="" alt="Bee Image" style="width: 100px; height: 100px; display: none;">
         <div id="guess-grid" class="guess-grid">
             <!-- Guess rows will be dynamically generated here -->
         </div>
@@ -202,7 +203,7 @@
                 endGame();
                 showBeeImage();
             } else if (attempts === Math.floor(maxAttempts / 2)) {
-                document.getElementById('hint').innerText = 'Hint: This is a hint!';
+                document.getElementById('hint').innerText = 'Hint: Think of the most common bees!';
             }
         }
 
@@ -222,9 +223,16 @@
             document.getElementById('bee-image').style.display = 'none';
         }
 
+        function showBeeImage() {
+            const beeImage = document.getElementById('bee-image');
+            beeImage.style.display = 'block';
+            // Change the image source based on the answer
+            beeImage.src = `/assets/img/bees/${answer.replace(/ /g, '_')}.png`;
+        }
+
         // Add sound effects
-        const correctSound = new Audio('/assets/sound/correct-sound.mp3');
-        const incorrectSound = new Audio('/assets/sound/incorrect-sound.mp3');
+        const correctSound = new Audio('../assets/sound/correct-sound.mp3');
+        const incorrectSound = new Audio('../assets/sound/incorrect-sound.mp3');
 
         function playSound(isCorrect) {
             if (isCorrect) {
