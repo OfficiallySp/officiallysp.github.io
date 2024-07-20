@@ -1,0 +1,99 @@
+// rolls.json
+[
+  {
+    "frame": "Caster",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Arc"
+  },
+  {
+    "frame": "Caster",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Solar"
+  },
+  {
+    "frame": "Caster",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Void"
+  },
+  {
+    "frame": "Vortex",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Arc"
+  },
+  {
+    "frame": "Vortex",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Solar"
+  },
+  {
+    "frame": "Vortex",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Void"
+  },
+  {
+    "frame": "Wave Frame",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Arc"
+  },
+  {
+    "frame": "Wave Frame",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Solar"
+  },
+  {
+    "frame": "Wave Frame",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Void"
+  },
+  {
+    "frame": "Aggressive",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Arc"
+  },
+  {
+    "frame": "Aggressive",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Solar"
+  },
+  {
+    "frame": "Aggressive",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Void"
+  },
+  {
+    "frame": "Lightweight",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Arc"
+  },
+  {
+    "frame": "Lightweight",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Solar"
+  },
+  {
+    "frame": "Lightweight",
+    "intrinsicTrait": "Wolfpack Rounds",
+    "element": "Void"
+  },
+  {
+    "frame": "Wave Frame",
+    "intrinsicTrait": "Arc Conductor",
+    "element": "Arc"
+  },
+  {
+    "frame": "Vortex",
+    "intrinsicTrait": "Arc Conductor",
+    "element": "Arc"
+  },
+  {
+    "frame": "Caster",
+    "intrinsicTrait": "Arc Conductor",
+    "element": "Arc"
+  },
+  {
+    "frame": "Vortex",
+    "intrinsicTrait": "Tempered Edge",
+    "element": "Solar"
+  }
+  // Add all possible rolls here
+]

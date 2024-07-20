@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Swarm Simulator Wordle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .game-container {
+            text-align: center;
+        }
+
+        .guess-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .guess-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .guess-box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        .correct {
+            background-color: green;
+            color: white;
+        }
+
+        .present {
+            background-color: yellow;
+            color: black;
+        }
+
+        .absent {
+            background-color: lightgray;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Bee Swarm Simulator Wordle</h1>
+        <div id="guess-grid" class="guess-grid">
+            <!-- Guess rows will be dynamically generated here -->
+        </div>
+        <input type="text" id="guess-input" maxlength="10" placeholder="Enter your guess">
+        <button id="guess-button">Submit Guess</button>
+    </div>
+    <script>
+        const bees = [
+            "Basic Bee", "Bomber Bee", "Brave Bee", "Bumble Bee", "Cool Bee",
+            "Hasty Bee", "Looker Bee", "Rad Bee", "Rascal Bee", "Stubborn Bee", "Bubble Bee", "Bucko Bee", "Commander Bee", "Demo Bee", "Exhausted Bee", "Fire Bee", "Frosty Bee", "Honey Bee", "Rage Bee", "Riley Bee", "Shocked Bee", "Baby Bee", "Carpenter Bee", "Demon Bee", "Diamond Bee", "Lion Bee", "Music Bee", "Ninja Bee", "Shy Bee", "Buoyant Bee", "Fuzzy Bee", "Precise Bee", "Spicy Bee", "Tadpole Bee", "Vector Bee", "Bear Bee", "Cobalt Bee", "Crimson Bee", "Digital Bee", "Festive Bee", "Gummy Bee", "Photon Bee", "Puppy Bee", "Tabby Bee", "Vicious Bee", "Windy Bee"
+            // Add all the bee names here
+        ];
+
+        const answer = bees[Math.floor(Math.random() * bees.length)].toLowerCase();
+        let attempts = 6;
+
+        document.getElementById('guess-button').addEventListener('click', () => {
+            const guess = document.getElementById('guess-input').value.toLowerCase();
+            if (guess.length > 0 && bees.map(b => b.toLowerCase()).includes(guess)) {
+                checkGuess(guess);
+                document.getElementById('guess-input').value = '';
+            } else {
+                alert('Invalid guess!');
+            }
+        });
+
+        function checkGuess(guess) {
+            const guessRow = document.createElement('div');
+            guessRow.className = 'guess-row';
+            const guessArray = guess.split('');
+            const answerArray = answer.split('');
+            guessArray.forEach((letter, index) => {
+                const guessBox = document.createElement('div');
+                guessBox.className = 'guess-box';
+                guessBox.innerText = letter;
+                if (answerArray[index] === letter) {
+                    guessBox.classList.add('correct');
+                } else if (answerArray.includes(letter)) {
+                    guessBox.classList.add('present');
+                } else {
+                    guessBox.classList.add('absent');
+                }
+                guessRow.appendChild(guessBox);
+            });
+            document.getElementById('guess-grid').appendChild(guessRow);
+            attempts--;
+            if (guess === answer) {
+                setTimeout(() => alert('Congratulations! You guessed the bee!'), 100);
+            } else if (attempts === 0) {
+                setTimeout(() => alert(`Game Over! The bee was ${answer}`), 100);
+            }
+        }
+    </script>
+</body>
+</html>
