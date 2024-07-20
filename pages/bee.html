@@ -149,6 +149,7 @@ window.__h82AlnkH6D91__("WyJwdWItMTU0ODkwMzMzNDkzNzk2MSIsW251bGwsbnVsbCxudWxsLCJ
         <h1>Beedle</h1>
 		<h5>The Bee Swarm Simulator Wordle</h5>
 		<h3>Guess the bee in six attempts or less</h3>
+		<div id="countdown">Time until next bee: <span id="timer"></span></div>
         <div id="guess-grid" class="guess-grid">
             <!-- Guess rows will be dynamically generated here -->
         </div>
@@ -263,8 +264,8 @@ window.__h82AlnkH6D91__("WyJwdWItMTU0ODkwMzMzNDkzNzk2MSIsW251bGwsbnVsbCxudWxsLCJ
         }
 
         // Add sound effects
-        const correctSound = new Audio('correct.mp3');
-        const incorrectSound = new Audio('incorrect.mp3');
+        const correctSound = new Audio('../assets/sound/correct.mp3');
+        const incorrectSound = new Audio('../assets/sound/incorrect.mp3');
 
         function playSound(isCorrect) {
             if (isCorrect) {
@@ -273,6 +274,25 @@ window.__h82AlnkH6D91__("WyJwdWItMTU0ODkwMzMzNDkzNzk2MSIsW251bGwsbnVsbCxudWxsLCJ
                 incorrectSound.play();
             }
         }
+		
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+            const timeRemaining = nextMidnight - now;
+
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById('timer').innerText = `${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initialize countdown
+        updateCountdown();
     </script>
 </body>
 </html>
