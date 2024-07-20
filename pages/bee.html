@@ -113,7 +113,9 @@
 </head>
 <body>
     <div class="game-container">
-        <h1>Bee Swarm Simulator Wordle</h1>
+        <h1>Beedle</h1>
+		<h5>The Bee Swarm Simulator Wordle</h5>
+		<h3>Guess the bee in six attempts or less</h3>
         <img id="bee-image" src="" alt="Bee Image" style="width: 100px; height: 100px; display: none;">
         <div id="guess-grid" class="guess-grid">
             <!-- Guess rows will be dynamically generated here -->
@@ -231,8 +233,8 @@
         }
 
         // Add sound effects
-        const correctSound = new Audio('../assets/sound/correct-sound.mp3');
-        const incorrectSound = new Audio('../assets/sound/incorrect-sound.mp3');
+        const correctSound = new Audio('../assets/sound/correct.mp3');
+        const incorrectSound = new Audio('../assets/sound/incorrect.mp3');
 
         function playSound(isCorrect) {
             if (isCorrect) {
