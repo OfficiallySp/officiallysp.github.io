@@ -120,7 +120,7 @@
             <!-- Guess rows will be dynamically generated here -->
         </div>
 		<img id="bee-image" src="" alt="Bee Image" style="width: 200px; height: 150px; display: none;">
-        <input type="text" id="guess-input" maxlength="20" placeholder="Enter your guess">
+        <input type="text" id="guess-input" maxlength="20" placeholder="Enter your guess"> Bee
         <button id="guess-button" disabled>Submit Guess</button>
         <div id="remaining-attempts">Attempts left: 6</div>
         <div id="hint"></div>
@@ -145,16 +145,10 @@
 
         // Function to get the daily bee
         function getDailyBee() {
-            const start = new Date(2024, 20, 7); // Start date (e.g., January 1, 2024)
+            const start = new Date(2024, 0, 1); // Start date (e.g., January 1, 2024)
             const now = new Date();
             const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-            let beeIndex = diff % bees.length;
-            if (beeIndex === previousBeeIndex) {
-                beeIndex = (beeIndex + 1) % bees.length;
-            }
-            previousBeeIndex = beeIndex;
-            return bees[beeIndex].toLowerCase();
-        }
+            return bees[diff % bees.length].toLowerCase();
 
         let answer = getDailyBee();
         let attempts = 6;
