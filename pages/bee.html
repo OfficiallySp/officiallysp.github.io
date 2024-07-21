@@ -141,12 +141,19 @@
         ];
 
 
+        let previousBeeIndex = null;
+
         // Function to get the daily bee
         function getDailyBee() {
-            const start = new Date(2024, 0, 1); // Start date (e.g., January 1, 2024)
+            const start = new Date(2024, 20, 7); // Start date (e.g., January 1, 2024)
             const now = new Date();
             const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24));
-            return bees[diff % bees.length].toLowerCase();
+            let beeIndex = diff % bees.length;
+            if (beeIndex === previousBeeIndex) {
+                beeIndex = (beeIndex + 1) % bees.length;
+            }
+            previousBeeIndex = beeIndex;
+            return bees[beeIndex].toLowerCase();
         }
 
         let answer = getDailyBee();
@@ -205,7 +212,7 @@
                 endGame();
                 showBeeImage();
             } else if (attempts === Math.floor(maxAttempts / 2)) {
-                document.getElementById('hint').innerText = 'Hint: Think of the most common bees!';
+                document.getElementById('hint').innerText = 'Hint: This is a hint!';
             }
         }
 
