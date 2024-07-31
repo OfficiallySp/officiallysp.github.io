@@ -8,10 +8,37 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab">
 	<link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
+    <style>
+        .floating-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffcccc;
+            color: #cc0000;
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .floating-header button {
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <script type="text/javascript" src="main.js"></script>
 <body>
-	<div id="navbar-placeholder"></div>
+    <div class="floating-header">
+        <strong>Deprecation Warning:</strong> Chat stats will be moved to a new location soon.
+        <p>After 31st August 2024, please use this link to view chat stats: <a href="https://ihaspeks.github.io/stats">https://ihaspeks.github.io/stats</a></p>
+        <button onclick="window.location.href='https://ihaspeks.github.io/stats'">Go to New Location</button>
+    </div>
+
+    <div id="navbar-placeholder"></div>
 	<h1>July 2024</h1>
 <a href="archive/june24.html"><strong>See Stats for June 2024 here</strong></a>
 <img src="assets/july24.png" alt="Chart Unavailable"/>
