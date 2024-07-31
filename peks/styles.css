@@ -139,32 +139,3 @@
         a:active {
             color: #ff6347;
         }
-
-        #timer {
-            display: inline-flex;
-            align-items: center;
-            flex-direction: row;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-
-        #timer p:first-child {
-            margin-right: 10px;
-            color: #f8c471;
-        }
-
-        .time-unit {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .time-unit span {
-            font-size: 24px;
-            color: #f8c471;
-        }
-
-        .time-label {
-            font-size: 14px;
-            color: #fff;
-        }
