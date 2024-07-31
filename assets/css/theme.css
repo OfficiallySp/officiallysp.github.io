@@ -3784,7 +3784,6 @@ fieldset:disabled .btn {
     margin-right: 1.625rem;
 }
 .dropstart .dropdown-toggle:after {
-    display: inline-block;
     margin-left: 0.255em;
     vertical-align: 0.255em;
     content: "";
@@ -18384,7 +18383,6 @@ p {
     font-weight: 700;
 }
 .flatpickr-calendar {
-    background: transparent;
     opacity: 0;
     display: none;
     text-align: center;
@@ -18650,7 +18648,6 @@ p {
 }
 .flatpickr-current-month {
     font-size: 135%;
-    line-height: inherit;
     font-weight: 300;
     color: inherit;
     position: absolute;
@@ -18975,13 +18972,11 @@ span.flatpickr-weekday {
 .flatpickr-time {
     text-align: center;
     outline: 0;
-    display: block;
     height: 0;
     line-height: 40px;
     max-height: 40px;
     box-sizing: border-box;
     overflow: hidden;
-    display: -ms-flexbox;
     display: flex;
 }
 .flatpickr-time:after {
