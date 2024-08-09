@@ -106,6 +106,7 @@
         .sum-container .sum {
             font-size: 24px;
             font-weight: bold;
+            color: #333;
         }
 
         .pile {
@@ -307,16 +308,16 @@
                         pElement.classList.add('number');
                         pElement.textContent = "You Lose. ";
                         if (gottenTwo) {
-                            pElement.textContent += "You need more points."
+                            pElement.textContent += "You need more points. Refresh the page to try again."
                         } else {
-                            pElement.textContent += "You need the number 2."
+                            pElement.textContent += "You need the number 2. Refresh the page to try again."
                         }
                         divElement.replaceWith(pElement);
                     } else {
                         const divElement = document.querySelector('.card-container');
                         const pElement = document.createElement('p');
                         pElement.classList.add('number');
-                        pElement.textContent = 'https://officiallysp.net/pages/youwin.html';
+                        pElement.textContent = 'Congratulations! You won!';
                         divElement.replaceWith(pElement);
                     }
                     document.head.appendChild(style);
@@ -359,21 +360,7 @@
             }
         }
     </script>
-		<div id="navbar-placeholder"></div>
-		<script>
-		  function loadNavbar() {
-			const navbarPlaceholder = document.getElementById('navbar-placeholder');
-			const xhr = new XMLHttpRequest();
-			xhr.onreadystatechange = function() {
-			  if (this.readyState == 4 && this.status == 200) {
-				navbarPlaceholder.innerHTML = this.responseText;
-			  }
-			};
-			xhr.open('GET', '../navbar.html', true);
-			xhr.send();
-		  }
-
-		  window.onload = loadNavbar;
-		</script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/footer.js"></script>
 	</body>
 </html>

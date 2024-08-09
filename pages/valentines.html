@@ -32,22 +32,6 @@
     </style>
 </head>
 <body>
-    <div id="navbar-placeholder"></div>
-        <script>
-          function loadNavbar() {
-            const navbarPlaceholder = document.getElementById('navbar-placeholder');
-            const xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-              if (this.readyState == 4 && this.status == 200) {
-                navbarPlaceholder.innerHTML = this.responseText;
-              }
-            };
-            xhr.open('GET', '../navbar.html', true);
-            xhr.send();
-          }
-
-          window.onload = loadNavbar;
-        </script>
     <div class="flex flex-col items-center justify-center h-screen mt-16" id="app">
         <!-- Dynamic content will be inserted here -->
     </div>
@@ -99,5 +83,7 @@
         // Initial UI setup
         updateUI();
     </script>
+        <script src="../assets/js/navbar.js"></script>
+        <script src="../assets/js/footer.js"></script>
 </body>
 </html>

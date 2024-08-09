@@ -235,7 +235,7 @@
                     nextPyramidDiv.classList.remove('hidden');
                 } else {
                     resultDiv.classList.add('end-result');
-                    resultDiv.innerHTML = '<p>Congratulations!</p><p>You Win!</p><img class="img border-radius-lg w-100 position-relative z-index-2" src="../assets/img/start.png" alt="Logo"><p>Obliviosa Minecraft Server Returns 11/12/23</p>';
+                    resultDiv.innerHTML = '<p>Congratulations!</p><p>You Win!</p>';
                     resultDiv.style.color = '#494';
                     guessInput.disabled = true;
                     document.getElementById('guess-input').remove();
@@ -271,22 +271,8 @@
             guessInput.value = '';
         }
     </script>
-<div id="navbar-placeholder"></div>
-<script>
-  function loadNavbar() {
-    const navbarPlaceholder = document.getElementById('navbar-placeholder');
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        navbarPlaceholder.innerHTML = this.responseText;
-      }
-    };
-    xhr.open('GET', '../navbar.html', true);
-    xhr.send();
-  }
-
-  window.onload = loadNavbar;
-</script>
+    <script src="../assets/js/navbar.js"></script>
+    <script src="../assets/js/footer.js"></script>
 </body>
 
 </html>
