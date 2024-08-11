@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
-></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>officiallysp.net</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../assets/css/theme.css">
+        <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
+    ></script>
+    </head>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -308,9 +315,9 @@
                         pElement.classList.add('number');
                         pElement.textContent = "You Lose. ";
                         if (gottenTwo) {
-                            pElement.textContent += "You need more points. Refresh the page to try again."
+                            pElement.textContent += "You need more points. Refresh to retry."
                         } else {
-                            pElement.textContent += "You need the number 2. Refresh the page to try again."
+                            pElement.textContent += "You need the number 2. Refresh to retry."
                         }
                         divElement.replaceWith(pElement);
                     } else {
