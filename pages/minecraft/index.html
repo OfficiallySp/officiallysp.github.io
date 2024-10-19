@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Minecraft Server Maps | officiallysp.net</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../assets/css/theme.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <style>
+        .minecraft-maps {
+            padding: 4rem 0;
+            background-color: var(--bs-gray-100);
+        }
+        .minecraft-maps h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--bs-primary);
+            font-weight: 600;
+        }
+        .server-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .server-card {
+            background-color: var(--bs-white);
+            border-radius: 1rem;
+            box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            width: calc(25% - 1.125rem); /* 25% width with gap consideration */
+            min-width: 250px; /* Minimum width for smaller screens */
+            transition: all 0.3s ease;
+        }
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.15);
+        }
+        .server-card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--bs-dark);
+        }
+        .server-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .server-card p {
+            font-size: 0.875rem;
+            color: var(--bs-secondary);
+            margin-bottom: 1rem;
+        }
+        .server-card .btn {
+            width: 100%;
+        }
+        @media (max-width: 1200px) {
+            .server-card {
+                width: calc(33.333% - 1rem); /* 3 cards per row on medium screens */
+            }
+        }
+        @media (max-width: 992px) {
+            .server-card {
+                width: calc(50% - 0.75rem); /* 2 cards per row on smaller screens */
+            }
+        }
+        @media (max-width: 576px) {
+            .server-card {
+                width: 100%; /* 1 card per row on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="minecraft-maps">
+        <div class="container">
+            <h1 class="display-4">BigCheesegames Server Archive</h1>
+            <div class="server-list">
+                <div class="server-card">
+                    <h1>Vanilla Survival Server</h1>
+                    <h2>Version 1.19.3 (Jul 22)</h2>
+                    <img src="/assets/img/vanilla.png" alt="Survival World Map">
+                    <p>The First Server to be made. included three phases of content. included an updated end, custom enchants and more.</p>
+                    <a href="/pages/minecraft/vanilla/main/index.html" class="btn btn-primary">View Map</a>
+                </div>
+                <div class="server-card">
+                    <h1>Vanilla Build Server</h1>
+                    <h2>Version 1.19.3 (Jul 22)</h2>
+                    <img src="/assets/img/build.png" alt="Survival World Map">
+                    <p>Creative build server linked with the vanilla server. included a build competition. and a recreation of scarlet monastery from world of warcraft.</p>
+                    <a href="/pages/minecraft/vanilla/build/index.html" class="btn btn-primary">View Map</a>
+                </div>
+                <div class="server-card">
+                    <h1>Pixelmon Classic Survival Server</h1>
+                    <h2>Version 1.12.2 (Nov 22)</h2>
+                    <p>Pixelmon Classic Survival server. built against the classic version of the pixelmon mod. included basic quests.</p>
+                    <a href="" class="btn btn-disabled">Map Unavailable</a>
+                    <h5>(This server is currently lost to time)</h5>
+                </div>
+                <div class="server-card">
+                    <h1>Pixelmon Classic Build Server</h1>
+                    <h2>Version 1.12.2 (Dec 22)</h2>
+                    <img src="/assets/img/pixelclassicbuild.png" alt="Pixelmon Classic Map">
+                    <p>Pixelmon Classic Build server. Ran alongside the pixelmon classic survival server. had a custom build competition with the winner's build being added to the main server.</p>
+                    <a href="/pages/minecraft/pixelclassic/build/index.html" class="btn btn-primary">View Map</a>
+                </div>
+                <div class="server-card">
+                    <h1>Pixelmon Survival Server</h1>
+                    <h2>Version 1.16.5 (Feb 23)</h2>
+                    <img src="/assets/img/pixelmon.png" alt="Pixelmon Survival Map">
+                    <p>Pixelmon Survival server. built against the latest version of the pixelmon mod. more advanced quests and custom gym battles across the world.</p>
+                    <a href="/pages/minecraft/pixelmon/index.html" class="btn btn-primary">View Map</a>
+                </div>
+                <div class="server-card">
+                    <h1>BigCheese Modded Server</h1>
+                    <h2>Version 1.20.1 (Feb 24)</h2>
+                    <img src="/assets/img/modded.png" alt="Modded Survival Map">
+                    <p>BigCheese Modded server. our first custom modpack built in collaboration with the community. included custom mobs, items, and more.</p>
+                    <a href="/pages/minecraft/modded/index.html" class="btn btn-primary">View Map</a>
+                </div>
+                <div class="server-card">
+                    <h1>OfficiallySp Presents Halloween Horror</h1>
+                    <h2>Version 1.19.2 (Oct 24)</h2>
+                    <img src="/assets/img/hallo.png" alt="Halloween Horror Map">
+                    <p>Custom Halloween Modpack. made as a fun project for Halloween 2024. including highly experimental features.</p>
+                    <a href="/pages/minecraft/hallo/index.html" class="btn btn-disabled ">Map Unavailable</a>
+                    <h5>(This server is currently ongoing. the archive will be updated when it is complete)</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../assets/js/navbar.js"></script>
+<script src="../../assets/js/footer.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js" type="text/javascript"></script>
+</html>
