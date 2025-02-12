@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
+></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .h-screen { height: 100vh; }
+        .mt-16 { margin-top: 4rem; }
+        .my-4 { margin: 1rem 0; }
+        .py-2 { padding: 0.5rem 0; }
+        .px-4 { padding: 0 1rem; }
+        .rounded { border-radius: 0.25rem; }
+        .font-bold { font-weight: bold; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .bg-green-500 { background-color: #48bb78; }
+        .bg-green-700 { background-color: #2f855a; }
+        .bg-red-500 { background-color: #f56565; }
+        .bg-red-700 { background-color: #c53030; }
+        .hover\:bg-green-700:hover { background-color: #2f855a; }
+        .hover\:bg-red-700:hover { background-color: #c53030; }
+        .text-white { color: #fff; }
+        .background { color: #eaecee}
+    </style>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center h-screen mt-16" id="app">
+        <!-- Dynamic content will be inserted here -->
+    </div>
+
+    <script>
+        let noCount = 0;
+        let yesPressed = false;
+
+        function updateUI() {
+            const app = document.getElementById('app');
+            app.innerHTML = ''; // Clear current content
+
+            if (yesPressed) {
+                app.innerHTML = '<img src="https://media1.tenor.com/m/0ks_QifP-5YAAAAd/ositos.gif" />' +
+                                '<div class="text-4xl font-bold my-4">Ok yay!!!</div>';
+            } else {
+                const yesButtonSize = noCount * 20 + 16;
+                app.innerHTML = '<img class="h-[200px]" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" />' +
+                                '<h1 class="text-4xl my-4">Will you be my Valentine?</h1>' +
+                                '<div>' +
+                                `<button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-4" style="font-size: ${yesButtonSize}px" onclick="setYesPressed()">Yes</button>` +
+                                `<button onclick="handleNoClick()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">${getNoButtonText()}</button>` +
+                                '</div>';
+            }
+        }
+
+        function handleNoClick() {
+            noCount += 1;
+            updateUI();
+        }
+
+        function getNoButtonText() {
+            const phrases = [
+                "No", "Are you sure?", "Really sure?", "Think again!", "Last chance!", "Surely not?",
+                "You might regret this!", "Give it another thought!", "Do you want to think it over?",
+                "Are you absolutely certain?", "Are you positive about this?", "Maybe sleep on it?",
+                "This could be a mistake!", "Have a heart!", "Don't be so cold!", "Are you letting emotions lead?",
+                "Change of heart?", "Take a moment, reflect.", "Could this be a mistake?",
+                "Wouldn't you reconsider?", "Is that your final answer?", "You're breaking my heart ;(",
+            ];
+            return phrases[Math.min(noCount, phrases.length - 1)];
+        }
+
+        function setYesPressed() {
+            yesPressed = true;
+            updateUI();
+        }
+
+        // Initial UI setup
+        updateUI();
+    </script>
+        <script src="../assets/js/navbar.js"></script>
+        <script src="../assets/js/footer.js"></script>
+</body>
+</html>

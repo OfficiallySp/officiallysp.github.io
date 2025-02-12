@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
+></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ff8fb1, #ff5d8f);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      overflow: hidden;
+    }
+    
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        0 0 100px rgba(255,255,255,0.2);
+      text-align: center;
+      position: relative;
+      width: 340px;
+      transform: translateY(0);
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 15px 30px rgba(0,0,0,0.15),
+        0 8px 8px rgba(0,0,0,0.1),
+        0 0 120px rgba(255,255,255,0.3);
+    }
+    
+    .heart {
+      font-size: 72px;
+      animation: pulse 1.5s infinite;
+      cursor: pointer;
+      user-select: none;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+    }
+    
+    .message {
+      margin: 24px 0;
+      font-size: 1.4rem;
+      color: #ff4b8d;
+      height: 60px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+    
+    .buttons {
+      display: none;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    
+    .btn {
+      padding: 12px 32px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    #yesBtn {
+      background: linear-gradient(45deg, #ff4b8d, #ff6b6b);
+      color: white;
+      border: 2px solid transparent;
+    }
+    
+    #yesBtn:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(255,75,141,0.4);
+    }
+    
+    #noBtn {
+      background: white;
+      color: #ff4b8d;
+      border: 2px solid #ff4b8d;
+    }
+    
+    #noBtn:hover {
+      transform: translateY(-2px) scale(1.05);
+      background: #fff5f8;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    
+    .floating-hearts {
+      position: fixed;
+      pointer-events: none;
+      z-index: 1000;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff8fb1, #ff5d8f, #ff8fb1);
+      background-size: 400% 400%;
+      animation: backgroundShift 15s ease infinite;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="heart" onclick="startValentine()">❤️</div>
+    <div class="message">Click the heart to find out something special!</div>
+    <div class="buttons">
+      <button id="yesBtn" onclick="handleResponse(true)">Yes!</button>
+      <button id="noBtn" onmouseover="moveButton(this)">No</button>
+    </div>
+  </div>
+
+  <script>
+    let clicked = false;
+    
+    function startValentine() {
+      if (!clicked) {
+        clicked = true;
+        document.querySelector('.message').innerHTML = "Will you be my Valentine? 🌹<br><span style='font-size: 0.8em; color: #ff6b6b;'>( choose wisely )</span>";
+        document.querySelector('.buttons').style.display = 'flex';
+        createFloatingHearts();
+      }
+    }
+    
+    function moveButton(btn) {
+      const card = document.querySelector('.card');
+      const cardRect = card.getBoundingClientRect();
+      
+      const maxX = cardRect.width - btn.offsetWidth - 40;
+      const maxY = cardRect.height - btn.offsetHeight - 40;
+      
+      let newX = Math.random() * maxX;
+      let newY = Math.random() * maxY;
+      
+      // Ensure button stays within card boundaries
+      newX = Math.max(20, Math.min(newX, maxX));
+      newY = Math.max(20, Math.min(newY, maxY));
+      
+      btn.style.position = 'absolute';
+      btn.style.left = `${newX}px`;
+      btn.style.top = `${newY}px`;
+    }
+    
+    function handleResponse(accepted) {
+      const message = document.querySelector('.message');
+      const buttons = document.querySelector('.buttons');
+      
+      if (accepted) {
+        message.innerHTML = "Yay! Can't wait! 💕<br><span style='font-size: 0.8em; color: #ff6b6b;'>You've made my day!</span>";
+        buttons.style.display = 'none';
+        celebrate();
+      }
+    }
+    
+    function createFloatingHearts() {
+      const colors = ['#ff6b6b', '#ff4b8d', '#ff8fb1'];
+      const emojis = ['❤️', '💖', '💝', '💗', '💓'];
+      
+      for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.className = 'floating-hearts';
+          heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          heart.style.left = Math.random() * window.innerWidth + 'px';
+          heart.style.position = 'fixed';
+          heart.style.top = '-50px';
+          heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+          heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+          heart.style.opacity = Math.random() * 0.5 + 0.5;
+          
+          document.body.appendChild(heart);
+          
+          const animation = heart.animate([
+            { 
+              transform: 'translateY(0) rotate(0deg)', 
+              opacity: heart.style.opacity 
+            },
+            { 
+              transform: `translateY(${window.innerHeight + 50}px) rotate(${Math.random() * 360}deg)`, 
+              opacity: 0 
+            }
+          ], {
+            duration: Math.random() * 3000 + 2000,
+            easing: 'cubic-bezier(0.37, 0, 0.63, 1)'
+          });
+          
+          animation.onfinish = () => heart.remove();
+        }, i * 200);
+      }
+    }
+    
+    function celebrate() {
+      createFloatingHearts();
+      setInterval(createFloatingHearts, 3000);
+    }
+  </script>
+</div>
+        <script src="../assets/js/navbar.js"></script>
+        <script src="../assets/js/footer.js"></script>
+</body>
+</html>
