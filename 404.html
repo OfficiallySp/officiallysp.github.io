@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>404 - Page Not Found | officiallysp.net</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/theme.css">
+    <!-- Load JavaScript asynchronously -->
+    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="null">
-    <div class="container min-vh-50 d-flex align-items-center justify-content-center">
+<body class="null d-flex flex-column min-vh-100">
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+
+    <div class="container min-vh-50 d-flex align-items-center justify-content-center flex-grow-1">
         <div class="text-center">
             <h1 class="display-1 fw-bold">404</h1>
             <h2 class="mb-4">Page Not Found</h2>
@@ -19,7 +23,36 @@
             <a href="/" class="btn btn-primary btn-lg">Go Back Home</a>
         </div>
     </div>
-    <script src="../assets/js/navbar.js"></script>
-    <script src="../assets/js/footer.js"></script>
+
+    <!-- Footer placeholder -->
+    <div id="footer-container"></div>
+
+    <!-- Load non-critical scripts after content is displayed -->
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
+
+    <script>
+        // Function to load HTML components
+        function loadComponent(url, targetId) {
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${url}: ${response.status} ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load ${url}. Please refresh the page.</div>`;
+                });
+        }
+
+        // Load navbar and footer immediately
+        loadComponent('navbar.html', 'navbar-container');
+        loadComponent('footer.html', 'footer-container');
+    </script>
 </body>
 </html>

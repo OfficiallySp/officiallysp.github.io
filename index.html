@@ -2,39 +2,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>officiallysp.net</title>
-
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" as="style">
-    <link rel="preload" href="./assets/css/theme.css" as="style">
-    <link rel="preload" href="assets/video/Background.mp4" as="video" type="video/mp4">
-
-    <!-- Load CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/theme.css">
-
     <!-- Load JavaScript asynchronously -->
-    <script defer src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
-    <script async type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="null">
+<body class="null d-flex flex-column min-vh-100">
     <!-- Navbar placeholder -->
     <div id="navbar-container"></div>
 
-    <header class="">
-        <div class="page-header min-vh-70 ">
-            <video autoplay loop muted playsinline class="position-absolute top-0 start-0 object-fit-cover nightowl-daylight">
+    <header class="flex-grow-1">
+        <div class="page-header min-vh-65">
+            <video autoplay loop muted playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover nightowl-daylight">
                 <source src="assets/video/Background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="container">
-                <div class="">
-                    <div class="col-lg-6 text-center mx-auto nightowl-daylight">
-                        <h1 class="text-white">Shane Pepperell
-                            - OfficiallySp</h1>
+                <div>
+                    <div class="col-lg-5 text-center mx-auto nightowl-daylight">
+                        <h1 class="text-white">Shane Pepperell</h1>
+                        <h1 class="text-white">OfficiallySp</h1>
                             <h1 class="text-white">I make <span class="text-gradient text-info" id="typed"></span></h1>
                             <div id="typed-strings">
                                <h1>Games</h1>
@@ -42,9 +31,9 @@
                                <h1>Websites</h1>
                                <h1>And more!</h1>
                             </div>
-                        <p class="lead text-white">Welcome to my website. This is a central repository where you can find all of my projects, including Apps, Games, Web-projects and more. Find everything using the navigation at the top, or see my socials and a breakdown of my portfolio below.</p>
+                        <p class="lead text-white">Welcome to my website. This is a central repository where you can find all of my projects, including apps, games, web projects and more. Find everything using the navigation at the top, or see my socials below.</p>
                         <p class="text-white h6 text-uppercase">Find me on these platforms</p>
-                        <div class="py-1">
+                        <div>
                             <a href="https://youtube.com/officiallysp"><i class="fab fa-2x me-5 fa-brands fa-youtube text-white"></i></a>
                             <a href="https://twitter.com/officiallysp777"><i class="fab fa-2x text-white me-5 fa-brands fa-twitter"></i></a>
                             <a href="https://twitch.tv/officiallysp"><i class="fab fa-2x text-white me-5 fa-brands fa-twitch"></i></a>
@@ -55,18 +44,33 @@
             </div>
         </div>
     </header>
-
-    <!-- Load footer HTML directly -->
+    <section class="py-3" id="count-stats">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-3">
+                  <h1 class="text-gradient text-info" id="state1" countto="4"></h1>
+                  <h5 class="">Games Created</h5>
+                  <p>I create games using the Unity Game Engine. I self taught myself how to use the editor in late 2017. Since then i have gone to create the Tankalot game series and Sonic Unite for example. </p>
+              </div>
+              <div class="col-md-3">
+                  <h1 class="text-gradient text-info" id="state2" countto="5"></h1>
+                  <h5 class="">Apps Coded</h5>
+                  <p>I have made apps in C# and Python to improve Quality of life and providing extra utility to others. For example, my launcher to access many of my projects is made in Electron.</p>
+              </div>
+              <div class="col-md-3">
+                  <h1 class="text-gradient text-info" id="state3" countto="6"></h1>
+                  <h5 class="">Extras Made</h5>
+                  <p>Extra little things that i have come up with that don't fit into any of the other categories. Like web based sites / apps and other cool experiments too. Here be dragons, Tread carefully.</p>
+              </div>
+          </div>
+      </div>
+  </section>
     <div id="footer-container"></div>
 
     <!-- Load non-critical scripts after content is displayed -->
-    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/flatpickr.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
 
-    <!-- Improved component loading script -->
     <script>
         // Function to load HTML components
         function loadComponent(url, targetId) {

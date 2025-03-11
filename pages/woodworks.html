@@ -2,20 +2,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>officiallysp.net</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/theme.css">
-    <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
-></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
-     crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="null">
+<body class="null d-flex flex-column min-vh-100">
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+
     <section class="">
         <div class="container py-5">
             <div class="row align-items-center">
@@ -39,7 +36,7 @@
         <div class="container">
             <div class="">
                 <div class="col-md-8 mx-auto text-center">
-                    <h2>Screenshots (Coming Soon)</h2>                    
+                    <h2>Screenshots (Coming Soon)</h2>
                 </div>
             </div>
             <div class="row mt-md-5 mt-4">
@@ -69,57 +66,29 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/flatpickr.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
+    <!-- Footer placeholder -->
+    <div id="footer-container"></div>
     <script>
-        if (document.getElementById("state1")) {
-                    const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
-                    if (!countUp.error) {
-                      countUp.start();
-                    } else {
-                      console.error(countUp.error);
+        // Function to load HTML components
+        function loadComponent(url, targetId) {
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${url}: ${response.status} ${response.statusText}`);
                     }
-                  }
-                  if (document.getElementById("state2")) {
-                    const countUp1 = new CountUp("state2", document.getElementById("state2").getAttribute("countTo"));
-                    if (!countUp1.error) {
-                      countUp1.start();
-                    } else {
-                      console.error(countUp1.error);
-                    }
-                  }
-                  if (document.getElementById("state3")) {
-                    const countUp2 = new CountUp("state3", document.getElementById("state3").getAttribute("countTo"));
-                    if (!countUp2.error) {
-                      countUp2.start();
-                    } else {
-                      console.error(countUp2.error);
-                    };
-                  }
-        
-         if (document.querySelector('.datepicker-1')) {
-              flatpickr('.datepicker-1', {
-              }); // flatpickr
-            } 
-        
-         if (document.querySelector('.datepicker-2')) {
-              flatpickr('.datepicker-2', {
-              }); // flatpickr
-            }
-        if (document.getElementById("typed")) {
-            var typed = new Typed("#typed", {
-              stringsElement: "#typed-strings",
-              typeSpeed: 70,
-              backSpeed: 50,
-              backDelay: 200,
-              startDelay: 500,
-              loop: true
-            });
-          }
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load ${url}. Please refresh the page.</div>`;
+                });
+        }
+
+        // Load navbar and footer immediately
+        loadComponent('../navbar.html', 'navbar-container');
+        loadComponent('../footer.html', 'footer-container');
     </script>
-    <script src="../assets/js/navbar.js"></script>
-    <script src="../assets/js/footer.js"></script>
 </body>
