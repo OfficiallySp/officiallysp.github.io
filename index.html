@@ -2,20 +2,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>officiallysp.net</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" as="style">
+    <link rel="preload" href="./assets/css/theme.css" as="style">
+    <link rel="preload" href="assets/video/Background.mp4" as="video" type="video/mp4">
+
+    <!-- Load CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/theme.css">
-    <script
-    type="module"
-    src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
-></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
-     crossorigin="anonymous"></script>
+
+    <!-- Load JavaScript asynchronously -->
+    <script defer src="https://kit.fontawesome.com/6824d55697.js" crossorigin="anonymous"></script>
+    <script async type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
 <body class="null">
+    <!-- Navbar placeholder -->
+    <div id="navbar-container"></div>
+
     <header class="">
         <div class="page-header min-vh-70 ">
             <video autoplay loop muted playsinline class="position-absolute top-0 start-0 object-fit-cover nightowl-daylight">
@@ -47,78 +55,77 @@
             </div>
         </div>
     </header>
-    <section class="py-3" id="count-stats">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-3">
-                    <h1 class="text-gradient text-info" id="state1" countto="4"></h1>
-                    <h5 class="">Games Created</h5>
-                    <p>I create games using the Unity Game Engine. I self taught myself how to use the editor in late 2017. Since then i have gone to create the Tankalot game series and Sonic Unite for example. </p>
-                </div>
-                <div class="col-md-3">
-                    <h1 class="text-gradient text-info" id="state2" countto="5"></h1>
-                    <h5 class="">Apps Coded</h5>
-                    <p>I have made apps in C# and Python to improve Quality of life and providing extra utility to others. For example, my launcher to access many of my projects is made in Electron.</p>
-                </div>
-                <div class="col-md-3">
-                    <h1 class="text-gradient text-info" id="state3" countto="6"></h1>
-                    <h5 class="">Extras Made</h5>
-                    <p>Extra little things that i have come up with that don't fit into any of the other categories. Like web based sites / apps and other cool experiments too. Here be dragons, Tread carefully.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/flatpickr.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
+
+    <!-- Load footer HTML directly -->
+    <div id="footer-container"></div>
+
+    <!-- Load non-critical scripts after content is displayed -->
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/flatpickr.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
+
+    <!-- Improved component loading script -->
     <script>
-        if (document.getElementById("state1")) {
-                    const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
-                    if (!countUp.error) {
-                      countUp.start();
-                    } else {
-                      console.error(countUp.error);
+        // Function to load HTML components
+        function loadComponent(url, targetId) {
+            return fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${url}: ${response.status} ${response.statusText}`);
                     }
-                  }
-                  if (document.getElementById("state2")) {
-                    const countUp1 = new CountUp("state2", document.getElementById("state2").getAttribute("countTo"));
-                    if (!countUp1.error) {
-                      countUp1.start();
-                    } else {
-                      console.error(countUp1.error);
-                    }
-                  }
-                  if (document.getElementById("state3")) {
-                    const countUp2 = new CountUp("state3", document.getElementById("state3").getAttribute("countTo"));
-                    if (!countUp2.error) {
-                      countUp2.start();
-                    } else {
-                      console.error(countUp2.error);
-                    };
-                  }
-        
-         if (document.querySelector('.datepicker-1')) {
-              flatpickr('.datepicker-1', {
-              }); // flatpickr
-            } 
-        
-         if (document.querySelector('.datepicker-2')) {
-              flatpickr('.datepicker-2', {
-              }); // flatpickr
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById(targetId).innerHTML = html;
+                })
+                .catch(error => {
+                    console.error(error);
+                    document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load ${url}. Please refresh the page.</div>`;
+                });
+        }
+
+        // Load navbar and footer immediately
+        loadComponent('navbar.html', 'navbar-container');
+        loadComponent('footer.html', 'footer-container');
+
+        // Initialize other scripts after DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.getElementById("state1")) {
+                const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
+                if (!countUp.error) {
+                    countUp.start();
+                } else {
+                    console.error(countUp.error);
+                }
             }
-        if (document.getElementById("typed")) {
-            var typed = new Typed("#typed", {
-              stringsElement: "#typed-strings",
-              typeSpeed: 70,
-              backSpeed: 50,
-              backDelay: 2000,
-              startDelay: 500,
-              loop: true
-            });
-          }
+            if (document.getElementById("state2")) {
+                const countUp1 = new CountUp("state2", document.getElementById("state2").getAttribute("countTo"));
+                if (!countUp1.error) {
+                    countUp1.start();
+                } else {
+                    console.error(countUp1.error);
+                }
+            }
+            if (document.getElementById("state3")) {
+                const countUp2 = new CountUp("state3", document.getElementById("state3").getAttribute("countTo"));
+                if (!countUp2.error) {
+                    countUp2.start();
+                } else {
+                    console.error(countUp2.error);
+                }
+            }
+            if (document.getElementById("typed")) {
+                var typed = new Typed("#typed", {
+                    stringsElement: "#typed-strings",
+                    typeSpeed: 70,
+                    backSpeed: 50,
+                    backDelay: 2000,
+                    startDelay: 500,
+                    loop: true
+                });
+            }
+        });
     </script>
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/footer.js"></script>
 </body>
