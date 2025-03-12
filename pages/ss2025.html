@@ -714,9 +714,15 @@
       }
 
       @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.05); }
-        100% { transform: scale(1); }
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
 
       .pulse {
@@ -1172,7 +1178,7 @@
           <li>Tournament officials have final decision-making authority on all rule interpretations. Ignorance of rules is not an acceptable defense.</li>
           <li>All players must be 18 years or older.</li>
         </ol>
-        <br>
+        <br />
         <h3>Prizes:</h3>
         <ul class="prize-list">
           <li><strong>Tournament Prizes:</strong></li>
@@ -1212,44 +1218,44 @@
       const userPredictions = document.getElementById("userPredictions");
 
       // Side Navigation Elements
-      const sideNav = document.querySelector('.side-nav');
-      const sideNavToggle = document.querySelector('.side-nav-toggle');
-      const backToTop = document.querySelector('.back-to-top');
-      const mainNav = document.querySelector('header');
+      const sideNav = document.querySelector(".side-nav");
+      const sideNavToggle = document.querySelector(".side-nav-toggle");
+      const backToTop = document.querySelector(".back-to-top");
+      const mainNav = document.querySelector("header");
 
       // Scroll event handler for side navigation
-      window.addEventListener('scroll', function() {
+      window.addEventListener("scroll", function () {
         const scrollPosition = window.scrollY;
         const headerHeight = mainNav.offsetHeight;
 
         // Show side navigation and toggle button when scrolled past header
         if (scrollPosition > headerHeight) {
-          sideNav.classList.add('visible');
-          sideNavToggle.classList.add('visible');
+          sideNav.classList.add("visible");
+          sideNavToggle.classList.add("visible");
 
           // Add pulse animation to back to top button when scrolled far
           if (scrollPosition > window.innerHeight) {
-            backToTop.classList.add('pulse');
+            backToTop.classList.add("pulse");
           } else {
-            backToTop.classList.remove('pulse');
+            backToTop.classList.remove("pulse");
           }
         } else {
-          sideNav.classList.remove('visible');
-          sideNavToggle.classList.remove('visible');
+          sideNav.classList.remove("visible");
+          sideNavToggle.classList.remove("visible");
         }
 
         // Set active link in side navigation based on scroll position
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
           const sectionTop = section.offsetTop - 100;
           const sectionHeight = section.offsetHeight;
-          const sectionId = section.getAttribute('id');
+          const sectionId = section.getAttribute("id");
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            document.querySelectorAll('.side-nav a').forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === `#${sectionId}`) {
-                link.classList.add('active');
+            document.querySelectorAll(".side-nav a").forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${sectionId}`) {
+                link.classList.add("active");
               }
             });
           }
@@ -1257,16 +1263,16 @@
       });
 
       // Toggle side navigation when button is clicked
-      sideNavToggle.addEventListener('click', function() {
-        sideNav.classList.toggle('visible');
+      sideNavToggle.addEventListener("click", function () {
+        sideNav.classList.toggle("visible");
       });
 
       // Back to top functionality
-      backToTop.addEventListener('click', function(e) {
+      backToTop.addEventListener("click", function (e) {
         e.preventDefault();
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       });
 
