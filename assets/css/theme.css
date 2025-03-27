@@ -2873,6 +2873,7 @@ a {
 .text-sm {
   line-height: 1.5;
   font-size: 0.875rem !important;
+  color: var(--bs-dark);
 }
 
 p,
