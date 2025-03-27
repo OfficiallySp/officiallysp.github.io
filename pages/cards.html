@@ -1,373 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>officiallysp.net</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet" />
-        <link rel="stylesheet" href="../assets/css/theme.css">
-        <script
-        type="module"
-        src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"
-    ></script>
-    </head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #333;
-            margin: 0;
-            padding: 0;
-            color: #eee;
-            font-size: 20px;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>officiallysp.net</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/theme.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #333;
+      margin: 0;
+      padding: 0;
+      color: #eee;
+      font-size: 20px;
+    }
 
-        .start-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+    .start-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        .start-button {
-            background-color: #eee;
-            padding: 10px 20px;
-            font-family: Arial, sans-serif;
-            font-size: 24px;
-            color: #333;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
+    .start-button {
+      background-color: #eee;
+      padding: 10px 20px;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      color: #333;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-        .start-button:hover {
-            background-color: green;
-            color: #eee;
-        }
+    .start-button:hover {
+      background-color: green;
+      color: #eee;
+    }
 
-        .hidden {
-            display: none;
-        }
+    .hidden {
+      display: none;
+    }
 
-        .card-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-        }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
 
-        .card-row {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 10px;
-        }
+    .card-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
 
-        .card {
-            width: 100px;
-            height: 150px;
-            background-color: #eee;
-            margin-right: 10px;
-            transition: background-color 0.3s, transform 0.3s;
-            position: relative;
-            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-            border-radius: 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            font-size: 3rem;
-            color: #333;
-        }
+    .card {
+      width: 100px;
+      height: 150px;
+      background-color: #eee;
+      margin-right: 10px;
+      transition: background-color 0.3s, transform 0.3s;
+      position: relative;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+      border-radius: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      font-size: 3rem;
+      color: #333;
+    }
 
-        .card:hover {
-            background-color: green;
-            transform: translateY(-10px);
-            z-index: 1;
-        }
+    .card:hover {
+      background-color: green;
+      transform: translateY(-10px);
+      z-index: 1;
+    }
 
-        .card.red {
-            background-color: red;
-        }
+    .card.red {
+      background-color: red;
+    }
 
-        .card.left {
-            background-color: blue;
-            color: white;
-            margin-right: 0;
-        }
+    .card.left {
+      background-color: blue;
+      color: white;
+      margin-right: 0;
+    }
 
-        .card-container .left {
-            margin-right: 10px;
-        }
+    .card-container .left {
+      margin-right: 10px;
+    }
 
-        .sum-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-            color: #eee;
-        }
+    .sum-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      color: #eee;
+    }
 
-        .sum-container .sum {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-        }
+    .sum-container .sum {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
 
-        .pile {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem;
-        }
+    .pile {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
 
-        .right-pile {
-            background: #ff9090;
-        }
+    .right-pile {
+      background: #ff9090;
+    }
 
-        .left-pile {
-            background: #90ff90;
-        }
+    .left-pile {
+      background: #90ff90;
+    }
 
-        .pile-card {
-            width: 100px;
-            height: 150px;
-            background-color: blue;
-            color: white;
-            margin-bottom: 10px;
-            position: relative;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            cursor: default;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            font-size: 20px;
-        }
+    .pile-card {
+      width: 100px;
+      height: 150px;
+      background-color: blue;
+      color: white;
+      margin-bottom: 10px;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+    }
 
-        .number {
-            font-size: 8rem;
-            font-weight: bold;
-            text-align: center;
-            padding: 10px;
-            margin: 10px;
-            background-color: #333;
-            color: #eee;
-        }
-    </style>
-</head>
+    .number {
+      font-size: 8rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+      background-color: #333;
+      color: #eee;
+    }
+  </style>
 
-<body>
+  <body>
     <div class="start-container">
-        <h2>Welcome to the Card Collector</h2>
-        <p>In this game, you start by choosing a card, I then take every card whose number can divide your
-            chosen card.</p>
-        <p>For example, if you take card number 16, I will take card number 1, 2, 4, and 8.</p>
-        <p>Since those are the only numbers that divide 16.</p>
-        <p>You may only take cards that have at least one other card that divides them.</p>
-        <p>If you have no moves, the game ends and I take every other card that you haven't taken.</p>
-        <p>Finally, we add the values of each card we have taken. You need more points than me to win.</p>
-        <p>To win this game, you also need the number 2!</p>
-        <p>Good Luck!</p>
-        <button class="start-button">Start Game</button>
+      <h2>Welcome to the Card Collector</h2>
+      <p>In this game, you start by choosing a card, I then take every card whose number can divide your chosen card.</p>
+      <p>For example, if you take card number 16, I will take card number 1, 2, 4, and 8.</p>
+      <p>Since those are the only numbers that divide 16.</p>
+      <p>You may only take cards that have at least one other card that divides them.</p>
+      <p>If you have no moves, the game ends and I take every other card that you haven't taken.</p>
+      <p>Finally, we add the values of each card we have taken. You need more points than me to win.</p>
+      <p>To win this game, you also need the number 2!</p>
+      <p>Good Luck!</p>
+      <button class="start-button">Start Game</button>
     </div>
     <div class="pile right-pile"></div>
     <div class="sum-container">
-        <div class="right sum">Opponent: 0</div>
+      <div class="right sum">Opponent: 0</div>
     </div>
     <div class="card-container hidden">
-        <div class="card-row">
-            <div class="card" data-number="1">1</div>
-            <div class="card" data-number="2">2</div>
-            <div class="card" data-number="3">3</div>
-            <div class="card" data-number="4">4</div>
-            <div class="card" data-number="5">5</div>
-            <div class="card" data-number="6">6</div>
-            <div class="card" data-number="7">7</div>
-            <div class="card" data-number="8">8</div>
-            <div class="card" data-number="9">9</div>
-            <div class="card" data-number="10">10</div>
-            <div class="card" data-number="11">11</div>
-        </div>
-        <div class="card-row">
-            <div class="card" data-number="12">12</div>
-            <div class="card" data-number="13">13</div>
-            <div class="card" data-number="14">14</div>
-            <div class="card" data-number="15">15</div>
-            <div class="card" data-number="16">16</div>
-            <div class="card" data-number="17">17</div>
-            <div class="card" data-number="18">18</div>
-            <div class="card" data-number="19">19</div>
-            <div class="card" data-number="20">20</div>
-            <div class="card" data-number="21">21</div>
-            <div class="card" data-number="22">22</div>
-        </div>
-        <div class="card-row">
-            <div class="card" data-number="23">23</div>
-        </div>
+      <div class="card-row">
+        <div class="card" data-number="1">1</div>
+        <div class="card" data-number="2">2</div>
+        <div class="card" data-number="3">3</div>
+        <div class="card" data-number="4">4</div>
+        <div class="card" data-number="5">5</div>
+        <div class="card" data-number="6">6</div>
+        <div class="card" data-number="7">7</div>
+        <div class="card" data-number="8">8</div>
+        <div class="card" data-number="9">9</div>
+        <div class="card" data-number="10">10</div>
+        <div class="card" data-number="11">11</div>
+      </div>
+      <div class="card-row">
+        <div class="card" data-number="12">12</div>
+        <div class="card" data-number="13">13</div>
+        <div class="card" data-number="14">14</div>
+        <div class="card" data-number="15">15</div>
+        <div class="card" data-number="16">16</div>
+        <div class="card" data-number="17">17</div>
+        <div class="card" data-number="18">18</div>
+        <div class="card" data-number="19">19</div>
+        <div class="card" data-number="20">20</div>
+        <div class="card" data-number="21">21</div>
+        <div class="card" data-number="22">22</div>
+      </div>
+      <div class="card-row">
+        <div class="card" data-number="23">23</div>
+      </div>
     </div>
 
     <div class="sum-container">
-        <div class="left sum">You: 0</div>
+      <div class="left sum">You: 0</div>
     </div>
 
     <div class="pile left-pile"></div>
 
-
     <script>
-        const startButton = document.querySelector('.start-button');
-        const startContainer = document.querySelector('.start-container');
-        const cardContainer = document.querySelector('.card-container');
+      const startButton = document.querySelector(".start-button");
+      const startContainer = document.querySelector(".start-container");
+      const cardContainer = document.querySelector(".card-container");
 
-        startButton.addEventListener('click', () => {
-            startContainer.classList.add('hidden');
-            cardContainer.classList.remove('hidden');
+      startButton.addEventListener("click", () => {
+        startContainer.classList.add("hidden");
+        cardContainer.classList.remove("hidden");
+      });
+
+      const allCards = document.querySelectorAll(".card");
+      let clickAllowedCards = Array.from(allCards); //Only these cards are clickable. Initialy all cards are in middle.
+      const leftContainer = document.querySelector(".left");
+      const rightContainer = document.querySelector(".right");
+      const leftPile = document.querySelector(".left-pile");
+      const rightPile = document.querySelector(".right-pile");
+      let leftSum = 0;
+      let rightSum = 0;
+      let gottenTwo = false;
+
+      allCards.forEach((card) => {
+        card.addEventListener("mouseover", () => {
+          if (!clickAllowedCards.includes(card)) return; //Prevent event for left/right pile cards
+          const number = parseInt(card.getAttribute("data-number"));
+          const hasDivisibleCard = checkHasDivisibleCard(number);
+          // Enable click event only if there is a divisible card
+          if (hasDivisibleCard) {
+            allCards.forEach((c) => {
+              const cNumber = parseInt(c.getAttribute("data-number"));
+              if (number !== cNumber && number % cNumber === 0) {
+                c.classList.add("red");
+              } else {
+                c.classList.remove("red");
+              }
+            });
+          }
         });
 
-        const allCards = document.querySelectorAll('.card');
-        let clickAllowedCards = Array.from(allCards); //Only these cards are clickable. Initialy all cards are in middle.
-        const leftContainer = document.querySelector('.left');
-        const rightContainer = document.querySelector('.right');
-        const leftPile = document.querySelector('.left-pile');
-        const rightPile = document.querySelector('.right-pile');
-        let leftSum = 0;
-        let rightSum = 0;
-        let gottenTwo = false;
-
-        allCards.forEach(card => {
-            card.addEventListener('mouseover', () => {
-                if (!clickAllowedCards.includes(card)) return; //Prevent event for left/right pile cards
-                const number = parseInt(card.getAttribute('data-number'));
-                const hasDivisibleCard = checkHasDivisibleCard(number);
-                // Enable click event only if there is a divisible card
-                if (hasDivisibleCard) {
-                    allCards.forEach(c => {
-                        const cNumber = parseInt(c.getAttribute('data-number'));
-                        if ((number !== cNumber) && (number % cNumber === 0)) {
-                            c.classList.add('red');
-                        } else {
-                            c.classList.remove('red');
-                        }
-                    });
-                }
-
-            });
-
-            card.addEventListener('mouseout', () => {
-                allCards.forEach(c => c.classList.remove('red'));
-            });
-
-            card.addEventListener('click', () => {
-                const number = parseInt(card.getAttribute('data-number'));
-                if (!clickAllowedCards.includes(card)) return; //Prevent clicking on left/right pile
-                const hasDivisibleCard = checkHasDivisibleCard(number);
-
-                // Only handle click event if there's a divisible card
-                if (hasDivisibleCard) {
-                    if (number === 2) {
-                        gottenTwo = true;
-                    }
-                    card.classList.add('left');
-                    leftPile.appendChild(card);
-                    leftSum += number;
-                    clickAllowedCards = clickAllowedCards.filter(c => c !== card); // Remove clicked card from clickable list
-
-                    leftContainer.textContent = `You: ${leftSum}`;
-                    clickAllowedCards.forEach(c => {
-                        const cNumber = parseInt(c.getAttribute('data-number'));
-                        if ((number !== cNumber) && (number % cNumber === 0)) {
-                            c.classList.add('left');
-                            rightPile.appendChild(c);
-                            console.log(cNumber);
-                            rightSum += cNumber;
-                            clickAllowedCards = clickAllowedCards.filter(d => d != c); // Remove moved card from clickable list
-                        }
-                    });
-                    rightContainer.textContent = `Opponent: ${rightSum}`;
-                }
-                end = true;
-                clickAllowedCards.forEach(cardToCheck => {
-                    const number = parseInt(cardToCheck.getAttribute('data-number'));
-                    clickAllowedCards.forEach(c => {
-                        const cNumber = parseInt(c.getAttribute('data-number'));
-                        if ((number !== cNumber) && (number % cNumber === 0)) {
-                            end = false;
-                        }
-                    })
-                })
-                if (end) {
-                    clickAllowedCards.forEach(c => {
-                        const cNumber = parseInt(c.getAttribute('data-number'));
-                        c.classList.add('left');
-                        rightPile.appendChild(c);
-                        rightSum += cNumber;
-                        clickAllowedCards = clickAllowedCards.filter(d => d != c); // Remove moved card from clickable list
-                        rightContainer.textContent = `Opponent: ${rightSum}`;
-                    })
-                    if ((leftSum <= rightSum) || (!gottenTwo)) {
-                        const divElement = document.querySelector('.card-container');
-                        const pElement = document.createElement('p');
-                        pElement.classList.add('number');
-                        pElement.textContent = "You Lose. ";
-                        if (gottenTwo) {
-                            pElement.textContent += "You need more points. Refresh to retry."
-                        } else {
-                            pElement.textContent += "You need the number 2. Refresh to retry."
-                        }
-                        divElement.replaceWith(pElement);
-                    } else {
-                        const divElement = document.querySelector('.card-container');
-                        const pElement = document.createElement('p');
-                        pElement.classList.add('number');
-                        pElement.textContent = 'Congratulations! You won!';
-                        divElement.replaceWith(pElement);
-                    }
-                    document.head.appendChild(style);
-                }
-            });
+        card.addEventListener("mouseout", () => {
+          allCards.forEach((c) => c.classList.remove("red"));
         });
 
-        function checkHasDivisibleCard(number) {
-            return clickAllowedCards.some(card => {
-                const cardNumber = parseInt(card.getAttribute('data-number'));
-                return (number !== cardNumber) && (number % cardNumber === 0);
-            })
-        }
-        const restartButton = document.getElementById('restart-button');
+        card.addEventListener("click", () => {
+          const number = parseInt(card.getAttribute("data-number"));
+          if (!clickAllowedCards.includes(card)) return; //Prevent clicking on left/right pile
+          const hasDivisibleCard = checkHasDivisibleCard(number);
 
-        restartButton.addEventListener('click', restartGame);
-
-        function restartGame() {
-            // Reset variables and states
-            leftSum = 0;
-            rightSum = 0;
-            leftContainer.textContent = 'You: 0';
-            rightContainer.textContent = 'Opponent: 0';
-
-            // Reset card piles
-            leftPile.innerHTML = '';
-            rightPile.innerHTML = '';
-
-            // Reset card clickability
-            clickAllowedCards = Array.from(allCards);
-            allCards.forEach(card => {
-                card.classList.remove('left');
-                card.classList.remove('red');
-            });
-
-            // Remove the end message
-            const endMessage = document.querySelector('.number');
-            if (endMessage) {
-                endMessage.remove();
+          // Only handle click event if there's a divisible card
+          if (hasDivisibleCard) {
+            if (number === 2) {
+              gottenTwo = true;
             }
+            card.classList.add("left");
+            leftPile.appendChild(card);
+            leftSum += number;
+            clickAllowedCards = clickAllowedCards.filter((c) => c !== card); // Remove clicked card from clickable list
+
+            leftContainer.textContent = `You: ${leftSum}`;
+            clickAllowedCards.forEach((c) => {
+              const cNumber = parseInt(c.getAttribute("data-number"));
+              if (number !== cNumber && number % cNumber === 0) {
+                c.classList.add("left");
+                rightPile.appendChild(c);
+                console.log(cNumber);
+                rightSum += cNumber;
+                clickAllowedCards = clickAllowedCards.filter((d) => d != c); // Remove moved card from clickable list
+              }
+            });
+            rightContainer.textContent = `Opponent: ${rightSum}`;
+          }
+          end = true;
+          clickAllowedCards.forEach((cardToCheck) => {
+            const number = parseInt(cardToCheck.getAttribute("data-number"));
+            clickAllowedCards.forEach((c) => {
+              const cNumber = parseInt(c.getAttribute("data-number"));
+              if (number !== cNumber && number % cNumber === 0) {
+                end = false;
+              }
+            });
+          });
+          if (end) {
+            clickAllowedCards.forEach((c) => {
+              const cNumber = parseInt(c.getAttribute("data-number"));
+              c.classList.add("left");
+              rightPile.appendChild(c);
+              rightSum += cNumber;
+              clickAllowedCards = clickAllowedCards.filter((d) => d != c); // Remove moved card from clickable list
+              rightContainer.textContent = `Opponent: ${rightSum}`;
+            });
+            if (leftSum <= rightSum || !gottenTwo) {
+              const divElement = document.querySelector(".card-container");
+              const pElement = document.createElement("p");
+              pElement.classList.add("number");
+              pElement.textContent = "You Lose. ";
+              if (gottenTwo) {
+                pElement.textContent += "You need more points. Refresh to retry.";
+              } else {
+                pElement.textContent += "You need the number 2. Refresh to retry.";
+              }
+              divElement.replaceWith(pElement);
+            } else {
+              const divElement = document.querySelector(".card-container");
+              const pElement = document.createElement("p");
+              pElement.classList.add("number");
+              pElement.textContent = "Congratulations! You won!";
+              divElement.replaceWith(pElement);
+            }
+            document.head.appendChild(style);
+          }
+        });
+      });
+
+      function checkHasDivisibleCard(number) {
+        return clickAllowedCards.some((card) => {
+          const cardNumber = parseInt(card.getAttribute("data-number"));
+          return number !== cardNumber && number % cardNumber === 0;
+        });
+      }
+      const restartButton = document.getElementById("restart-button");
+
+      restartButton.addEventListener("click", restartGame);
+
+      function restartGame() {
+        // Reset variables and states
+        leftSum = 0;
+        rightSum = 0;
+        leftContainer.textContent = "You: 0";
+        rightContainer.textContent = "Opponent: 0";
+
+        // Reset card piles
+        leftPile.innerHTML = "";
+        rightPile.innerHTML = "";
+
+        // Reset card clickability
+        clickAllowedCards = Array.from(allCards);
+        allCards.forEach((card) => {
+          card.classList.remove("left");
+          card.classList.remove("red");
+        });
+
+        // Remove the end message
+        const endMessage = document.querySelector(".number");
+        if (endMessage) {
+          endMessage.remove();
         }
+      }
     </script>
     <script src="../assets/js/navbar.js"></script>
     <script src="../assets/js/footer.js"></script>
-	</body>
+  </body>
 </html>
