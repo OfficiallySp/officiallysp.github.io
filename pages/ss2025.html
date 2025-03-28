@@ -1478,12 +1478,19 @@
                 const teamName = matchup.querySelector(`.team-name:has(+ .vs) ~ .vs ~ .team-name, .team-name:has(+ .team-right), .team-name`).textContent;
                 const matchDate = matchup.querySelector(".match-date").textContent;
 
-                predictionsHTML += `<li>Match #${matchId} (${matchDate}): You predicted <strong>${capitalizeFirstLetter(team)}</strong></li>`;
+                predictionsHTML += `<li>Match #${matchId} (${escapeHTML(matchDate)}): You predicted <strong>${escapeHTML(capitalizeFirstLetter(team))}</strong></li>`;
               }
             }
 
             predictionsHTML += "</ul>";
             userPredictions.innerHTML = predictionsHTML;
+          }
+
+          // Helper function to escape HTML special characters
+          function escapeHTML(string) {
+            const div = document.createElement('div');
+            div.appendChild(document.createTextNode(string));
+            return div.innerHTML;
           }
 
           // Helper function to capitalize first letter
