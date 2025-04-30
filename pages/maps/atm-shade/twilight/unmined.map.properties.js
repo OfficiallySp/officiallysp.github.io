@@ -1,1 +1,0 @@
-var UnminedMapProperties={minZoom:-2,maxZoom:2,defaultZoom:0,imageFormat:"webp",minRegionX:-17,minRegionZ:-24,maxRegionX:11,maxRegionZ:11,worldName:"world",background:"#404040",markers:new Array,enableGrid:!0,showGrid:!0,centerX:0,centerZ:0}
