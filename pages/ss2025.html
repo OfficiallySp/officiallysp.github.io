@@ -1361,29 +1361,43 @@
               return;
             }
 
-            // Use fetch with no-cors mode to submit the form data
-            fetch(googleFormUrl, {
-              method: "POST",
-              mode: "no-cors", // This is important for cross-origin requests without CORS
-              body: formData,
-            })
-              .then(() => {
-                // Since we're using no-cors, we won't get a useful response
-                // But we can assume it was successful if no error is thrown
-                document.getElementById("signupSuccess").style.display = "block";
-                document.getElementById("signupError").style.display = "none";
-                form.reset();
+            // Submit the form using a hidden iframe to avoid CORS issues with Google Forms
+            // This is a common workaround for Google Forms submissions
+            const iframe = document.createElement("iframe");
+            iframe.name = "hidden_iframe";
+            iframe.style.display = "none";
+            document.body.appendChild(iframe);
 
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                  document.getElementById("signupSuccess").style.display = "none";
-                }, 5000);
-              })
-              .catch((error) => {
-                console.error("Error submitting form:", error);
-                document.getElementById("signupError").style.display = "block";
+            // Set up the form for submission
+            form.action = googleFormUrl;
+            form.method = "post";
+            form.target = "hidden_iframe";
+
+            // Set up message display based on iframe load
+            iframe.onload = function () {
+              document.getElementById("signupSuccess").style.display = "block";
+              document.getElementById("signupError").style.display = "none";
+              form.reset();
+
+              // Hide success message after 5 seconds
+              setTimeout(() => {
                 document.getElementById("signupSuccess").style.display = "none";
-              });
+              }, 5000);
+            };
+
+            // Handle errors
+            iframe.onerror = function () {
+              document.getElementById("signupError").style.display = "block";
+              document.getElementById("signupSuccess").style.display = "none";
+            };
+
+            // Submit the form
+            form.submit();
+
+            // Remove iframe after submission to clean up
+            setTimeout(() => {
+              document.body.removeChild(iframe);
+            }, 5000);
           });
 
           // Prediction functionality
