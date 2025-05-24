@@ -1,0 +1,292 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Sword Masters",
+      "people": [
+        "Aatrox",
+        "Fiora",
+        "Gangplank",
+        "Garen",
+        "Irelia",
+        "Kayle",
+        "Master Yi",
+        "Riven",
+        "Shen",
+        "Tryndamere",
+        "Xin Zhao",
+        "Yasuo",
+        "Yone"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 2,
+      "name": "Dual Wielders",
+      "people": [
+        "Akali",
+        "Draven",
+        "Katarina",
+        "Samira",
+        "Varus",
+        "Wukong",
+        "Zed"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 3,
+      "name": "Spear and Polearm Users",
+      "people": [
+        "Jarvan IV",
+        "Kalista",
+        "Nidalee",
+        "Pantheon",
+        "Wukong",
+        "Xin Zhao",
+        "Rek'Sai"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 4,
+      "name": "Martial Artists",
+      "people": [
+        "Lee Sin",
+        "Sett",
+        "Udyr",
+        "Vi",
+        "Akali",
+        "Aphelios",
+        "Jax",
+        "K'Sante"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 5,
+      "name": "Bow and Crossbow",
+      "people": [
+        "Ashe",
+        "Caitlyn",
+        "Quinn",
+        "Varus",
+        "Vayne",
+        "Aphelios"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 6,
+      "name": "Gunners",
+      "people": [
+        "Graves",
+        "Jhin",
+        "Jinx",
+        "Lucian",
+        "Miss Fortune",
+        "Samira",
+        "Senna",
+        "Tristana",
+        "Corki",
+        "Aphelios"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 7,
+      "name": "Mages and Staff Wielders",
+      "people": [
+        "Ahri",
+        "Annie",
+        "Azir",
+        "Brand",
+        "Karma",
+        "Lissandra",
+        "Lux",
+        "Malzahar",
+        "Ryze",
+        "Swain",
+        "Syndra",
+        "Twisted Fate",
+        "Veigar",
+        "Vel'Koz",
+        "Viktor",
+        "Xerath",
+        "Zilean",
+        "Zoe",
+        "Hwei"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 8,
+      "name": "Hook and Chain Users",
+      "people": [
+        "Blitzcrank",
+        "Darius",
+        "Nautilus",
+        "Pyke",
+        "Thresh"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 9,
+      "name": "Hammer and Mace Wielders",
+      "people": [
+        "Jayce",
+        "Mordekaiser",
+        "Ornn",
+        "Poppy"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 10,
+      "name": "Natural Weapons (Claws/Teeth)",
+      "people": [
+        "Cho'Gath",
+        "Kha'Zix",
+        "Rek'Sai",
+        "Renekton",
+        "Rengar",
+        "Volibear",
+        "Warwick",
+        "Naafiri"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 11,
+      "name": "Musical Instruments",
+      "people": [
+        "Bard",
+        "Sona",
+        "Seraphine"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 12,
+      "name": "Scythe Wielders",
+      "people": [
+        "Fiddlesticks",
+        "Kayn",
+        "Karthus"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 13,
+      "name": "Whip and Flail Users",
+      "people": [
+        "Illaoi",
+        "Rell",
+        "Sylas",
+        "Thresh"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 14,
+      "name": "Shapeshifters",
+      "people": [
+        "Elise",
+        "Gnar",
+        "Jayce",
+        "Kayn",
+        "Nidalee",
+        "Shyvana"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 15,
+      "name": "Shield Bearers",
+      "people": [
+        "Braum",
+        "Leona",
+        "Pantheon",
+        "Poppy",
+        "Taric"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 16,
+      "name": "Poison and Chemical Weapons",
+      "people": [
+        "Cassiopeia",
+        "Singed",
+        "Teemo",
+        "Twitch"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 17,
+      "name": "Summoners and Commanders",
+      "people": [
+        "Annie",
+        "Azir",
+        "Heimerdinger",
+        "Illaoi",
+        "Ivern",
+        "Malzahar",
+        "Yorick",
+        "Zed"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 18,
+      "name": "Throwing Weapons",
+      "people": [
+        "Draven",
+        "Fizz",
+        "Kennen",
+        "Sivir",
+        "Talon",
+        "Twisted Fate",
+        "Ziggs"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 19,
+      "name": "Elemental Controllers",
+      "people": [
+        "Anivia",
+        "Aurelion Sol",
+        "Brand",
+        "Karma",
+        "Lissandra",
+        "Lux",
+        "Taliyah",
+        "Vel'Koz",
+        "Vladimir",
+        "Xerath",
+        "Zyra"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    },
+    {
+      "id": 20,
+      "name": "Unique/Exotic Weapons",
+      "people": [
+        "Diana (Moonblade)",
+        "Ekko (Time-Warp Device)",
+        "Gwen (Magical Scissors)",
+        "Heimerdinger (Turrets)",
+        "Orianna (Sentient Ball)",
+        "Rumble (Mech Suit)",
+        "Skarner (Crystal Exoskeleton)",
+        "Viktor (Hex Core)",
+        "Yuumi (Magical Book)",
+        "Zeri (Electric Rifle)"
+      ],
+      "moreInfoUrl": "discord://discord.com/channels/716795283911999510/weapons-category"
+    }
+  ]
+}
