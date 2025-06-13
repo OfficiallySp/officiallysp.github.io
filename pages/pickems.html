@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pickems - Summer Showdown Tournament</title>
+    <style>
+      :root {
+        --primary-color: #8b31a5;
+        --secondary-color: #d7f021;
+        --accent-color: #ff75c3;
+        --text-color: #1a1a2e;
+        --dark-accent: #5e1f6a;
+        --light-accent: #f5e84d;
+        --highlight: #ff3fa4;
+        --danger: #ff4242;
+        --light-text: #ffffff;
+        --gradient-bg: linear-gradient(to bottom, #d7f021, #f5e84d, #ffa8ba, #ff75c3, #8b31a5);
+        --gradient-accent: linear-gradient(45deg, #f5e84d, #ff75c3);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: var(--gradient-bg);
+        color: var(--text-color);
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10, 20, 40, 0.85);
+        z-index: -1;
+      }
+
+      header {
+        background-color: rgba(139, 49, 165, 0.8);
+        padding: 1rem 0;
+        position: relative;
+        border-bottom: 2px solid var(--light-accent);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      nav ul li {
+        margin-left: 2rem;
+      }
+
+      nav ul li a {
+        color: var(--light-text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+      }
+
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: var(--light-accent);
+        background-color: rgba(245, 232, 77, 0.2);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        margin-bottom: 3rem;
+        border: 2px solid var(--accent-color);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        color: var(--light-text);
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--light-text);
+        opacity: 0.9;
+      }
+
+      .pickems-container {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .pickems-section {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        padding: 2rem;
+        border: 2px solid var(--primary-color);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pickems-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-accent);
+      }
+
+      .pickems-section h2 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        border-bottom: 2px solid var(--dark-accent);
+        padding-bottom: 0.5rem;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .form-group label {
+        font-weight: 600;
+        color: var(--primary-color);
+        font-size: 1.1rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 0.8rem;
+        border: 2px solid var(--primary-color);
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--text-color);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px rgba(255, 117, 195, 0.3);
+        background-color: #ffffff;
+      }
+
+      .champion-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .role-section {
+        background-color: rgba(139, 49, 165, 0.1);
+        border-radius: 8px;
+        padding: 1.5rem;
+        border: 1px solid var(--primary-color);
+      }
+
+      .role-section h3 {
+        color: var(--primary-color);
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .submit-section {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        border: 2px solid var(--accent-color);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn {
+        display: inline-block;
+        background: var(--primary-color);
+        color: var(--light-text);
+        padding: 1rem 3rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .btn:hover {
+        background: var(--highlight);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .btn-secondary {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        margin-left: 1rem;
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--light-accent);
+      }
+
+      .success-message {
+        display: none;
+        background-color: rgba(215, 240, 33, 0.9);
+        border: 2px solid var(--secondary-color);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        color: var(--text-color);
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .error-message {
+        display: none;
+        background-color: rgba(255, 66, 66, 0.9);
+        border: 2px solid var(--danger);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 2rem;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .info-box {
+        background-color: rgba(245, 232, 77, 0.2);
+        border: 2px solid var(--light-accent);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+      }
+
+      .info-box h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .info-box ul {
+        margin-left: 1.5rem;
+      }
+
+      .info-box li {
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        background-color: rgba(10, 20, 40, 0.8);
+        padding: 2rem 0;
+        border-top: 2px solid var(--accent-color);
+        text-align: center;
+        margin-top: 4rem;
+        color: var(--light-text);
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+
+      .footer-links a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--light-accent);
+      }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          padding: 1rem;
+        }
+
+        nav ul {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav ul li {
+          margin: 0.5rem;
+        }
+
+        main {
+          padding: 0 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .champion-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .btn-secondary {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.6s ease-out forwards;
+      }
+
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+      .delay-4 { animation-delay: 0.4s; }
+      .delay-5 { animation-delay: 0.5s; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="logo">
+          <img src="../assets/img/sslogo.png" alt="Summer Showdown Logo" width="240" height="auto" style="filter: brightness(0) invert(1)" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="ss2025.html">Back to Main Tournament</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero fade-in" >
+        <h1>Tournament Pickems</h1>
+        <p>Make your predictions for the Summer Showdown tournament and compete for additional prizes!</p>
+      </div>
+
+      <div class="info-box fade-in delay-1" style="background-color: rgba(255, 255, 255, 0.726);">
+        <h3>📋 Pickems Information</h3>
+        <ul>
+          <li><strong>Deadline:</strong> All predictions must be submitted before the tournament starts</li>
+          <li><strong>Scoring:</strong> Points awarded for correct predictions in each category</li>
+          <li><strong>Prizes:</strong> £20 for most accurate, £10 for runner-up, £5 random draw</li>
+          <li><strong>Best KDA Categories:</strong> Only count starting from semifinals</li>
+          <li><strong>Champions:</strong> Enter the exact champion name (e.g., "Kai'Sa", "Jarvan IV")</li>
+        </ul>
+      </div>
+
+            <form id="pickemsForm" action="#" method="POST" class="pickems-container" data-netlify="true" netlify-honeypot="bot-field">
+
+        <!-- Hidden field for Netlify -->
+        <p style="display: none;">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
+
+        <!-- Personal Information -->
+        <div class="pickems-section fade-in delay-2">
+          <h2>👤 Your Information</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="participantName">Your Name/Username *</label>
+              <input type="text" id="participantName" name="participant_name" required>
+            </div>
+            <div class="form-group">
+              <label for="discordTag">Discord Tag (optional)</label>
+              <input type="text" id="discordTag" name="discord_tag" placeholder="username#1234">
+            </div>
+          </div>
+        </div>
+
+        <!-- Champion Statistics -->
+        <div class="pickems-section fade-in delay-4">
+          <h2>⚔️ Champion Predictions</h2>
+
+          <div class="champion-grid">
+            <div class="form-group">
+              <label for="mostPicked1">Most Picked Champion *</label>
+              <input type="text" id="mostPicked1" name="most_picked_1" placeholder="e.g., Jinx" required>
+            </div>
+            <div class="form-group">
+              <label for="mostPicked2">2nd Most Picked Champion *</label>
+              <input type="text" id="mostPicked2" name="most_picked_2" placeholder="e.g., Thresh" required>
+            </div>
+            <div class="form-group">
+              <label for="mostPicked3">3rd Most Picked Champion *</label>
+              <input type="text" id="mostPicked3" name="most_picked_3" placeholder="e.g., Lee Sin" required>
+            </div>
+          </div>
+
+          <div class="champion-grid">
+            <div class="form-group">
+              <label for="mostBanned1">Most Banned Champion *</label>
+              <input type="text" id="mostBanned1" name="most_banned_1" placeholder="e.g., Zed" required>
+            </div>
+            <div class="form-group">
+              <label for="mostBanned2">2nd Most Banned Champion *</label>
+              <input type="text" id="mostBanned2" name="most_banned_2" placeholder="e.g., Yasuo" required>
+            </div>
+            <div class="form-group">
+              <label for="mostBanned3">3rd Most Banned Champion *</label>
+              <input type="text" id="mostBanned3" name="most_banned_3" placeholder="e.g., Akali" required>
+            </div>
+          </div>
+
+          <div class="champion-grid">
+            <div class="form-group">
+              <label for="bestWinrate1">Highest Winrate Champion *</label>
+              <input type="text" id="bestWinrate1" name="best_winrate_1" placeholder="e.g., Azir" required>
+            </div>
+            <div class="form-group">
+              <label for="bestWinrate2">2nd Highest Winrate Champion *</label>
+              <input type="text" id="bestWinrate2" name="best_winrate_2" placeholder="e.g., Orianna" required>
+            </div>
+            <div class="form-group">
+              <label for="bestWinrate3">3rd Highest Winrate Champion *</label>
+              <input type="text" id="bestWinrate3" name="best_winrate_3" placeholder="e.g., Graves" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best KDA Players (Semifinals onwards) -->
+        <div class="pickems-section fade-in delay-5">
+          <h2>🏆 Best KDA Players</h2>
+          <p style="text-align: center; margin-bottom: 2rem; color: var(--primary-color); font-weight: bold;">
+            These predictions will close before the semifinals start
+          </p>
+
+          <div class="form-grid">
+            <div class="role-section">
+              <h3>🛡️ Top Lane</h3>
+              <div class="form-group">
+                <label for="bestTopKDA">Best KDA Top Laner *</label>
+                <input type="text" id="bestTopKDA" name="best_top_kda" placeholder="Player name" required>
+              </div>
+            </div>
+
+            <div class="role-section">
+              <h3>🌲 Jungle</h3>
+              <div class="form-group">
+                <label for="bestJungKDA">Best KDA Jungler *</label>
+                <input type="text" id="bestJungKDA" name="best_jungle_kda" placeholder="Player name" required>
+              </div>
+            </div>
+
+            <div class="role-section">
+              <h3>⚡ Mid Lane</h3>
+              <div class="form-group">
+                <label for="bestMidKDA">Best KDA Mid Laner *</label>
+                <input type="text" id="bestMidKDA" name="best_mid_kda" placeholder="Player name" required>
+              </div>
+            </div>
+
+            <div class="role-section">
+              <h3>🏹 ADC</h3>
+              <div class="form-group">
+                <label for="bestAdcKDA">Best KDA ADC *</label>
+                <input type="text" id="bestAdcKDA" name="best_adc_kda" placeholder="Player name" required>
+              </div>
+            </div>
+
+            <div class="role-section">
+              <h3>🛡️ Support</h3>
+              <div class="form-group">
+                <label for="bestSuppKDA">Best KDA Support *</label>
+                <input type="text" id="bestSuppKDA" name="best_support_kda" placeholder="Player name" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tournament Winner -->
+        <div class="pickems-section fade-in delay-4">
+          <h2>🏆 Tournament Predictions</h2>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="tournamentWinner">Tournament Winner *</label>
+              <input type="text" id="tournamentWinner" name="tournament_winner" placeholder="Team name" required>
+            </div>
+            <div class="form-group">
+              <label for="tournamentRunnerUp">Tournament Runner-up *</label>
+              <input type="text" id="tournamentRunnerUp" name="tournament_runner_up" placeholder="Team name" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-section fade-in delay-5">
+          <h2>Submit Your Pickems</h2>
+          <p style="margin-bottom: 2rem;">Double-check all your predictions before submitting. You cannot change them after submission!</p>
+          <button type="submit" class="btn">Submit Predictions</button>
+          <button type="button" id="downloadBtn" class="btn btn-secondary" style="margin-left: 1rem;">Download as Backup</button>
+          <a href="ss2025.html" class="btn btn-secondary">Back to Tournament</a>
+        </div>
+
+        <div class="success-message" id="successMessage">
+          <h3>🎉 Pickems Submitted Successfully!</h3>
+          <p>Your predictions have been recorded. Good luck in the tournament!</p>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+          <h3>❌ Submission Failed</h3>
+          <p>There was an error submitting your pickems. Please try again or contact an organizer.</p>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Summer Showdown. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://officiallysp.net">officiallysp.net</a>
+          <a href="ss2025.html">Back to Tournament</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Form submission handling
+              const form = document.getElementById('pickemsForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        // Function to get all form data as an object
+        function getFormData() {
+          const formData = new FormData(form);
+          const data = {
+            submission_date: new Date().toISOString(),
+            participant_name: formData.get('participant_name'),
+            discord_tag: formData.get('discord_tag'),
+            most_dragons: formData.get('most_dragons'),
+            total_dragons: formData.get('total_dragons'),
+            most_picked_champions: [
+              formData.get('most_picked_1'),
+              formData.get('most_picked_2'),
+              formData.get('most_picked_3')
+            ],
+            most_banned_champions: [
+              formData.get('most_banned_1'),
+              formData.get('most_banned_2'),
+              formData.get('most_banned_3')
+            ],
+            best_winrate_champions: [
+              formData.get('best_winrate_1'),
+              formData.get('best_winrate_2'),
+              formData.get('best_winrate_3')
+            ],
+            best_kda_players: {
+              top: formData.get('best_top_kda'),
+              jungle: formData.get('best_jungle_kda'),
+              mid: formData.get('best_mid_kda'),
+              adc: formData.get('best_adc_kda'),
+              support: formData.get('best_support_kda')
+            },
+            tournament_predictions: {
+              winner: formData.get('tournament_winner'),
+              runner_up: formData.get('tournament_runner_up')
+            }
+          };
+          return data;
+        }
+
+        // Download function
+        downloadBtn.addEventListener('click', function() {
+          const data = getFormData();
+          const dataStr = JSON.stringify(data, null, 2);
+          const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+
+          const exportFileDefaultName = `pickems_${data.participant_name || 'submission'}_${new Date().toISOString().split('T')[0]}.json`;
+
+          const linkElement = document.createElement('a');
+          linkElement.setAttribute('href', dataUri);
+          linkElement.setAttribute('download', exportFileDefaultName);
+          linkElement.click();
+
+          alert('Pickems data downloaded! You can send this file to tournament organizers as a backup.');
+        });
+
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+
+          // Get form data
+          const formData = new FormData(form);
+
+          // Validate that all required fields are filled
+          const requiredFields = form.querySelectorAll('[required]');
+          let allValid = true;
+
+          requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+              field.style.borderColor = '#ff4242';
+              allValid = false;
+            } else {
+              field.style.borderColor = '#8b31a5';
+            }
+          });
+
+          if (!allValid) {
+            alert('Please fill in all required fields (marked with *)');
+            return;
+          }
+
+          // Validate that champion names don't repeat in same categories
+          const champions = {
+            picked: [
+              formData.get('most_picked_1'),
+              formData.get('most_picked_2'),
+              formData.get('most_picked_3')
+            ],
+            banned: [
+              formData.get('most_banned_1'),
+              formData.get('most_banned_2'),
+              formData.get('most_banned_3')
+            ],
+            winrate: [
+              formData.get('best_winrate_1'),
+              formData.get('best_winrate_2'),
+              formData.get('best_winrate_3')
+            ]
+          };
+
+          // Check for duplicates in each category
+          for (const [category, champs] of Object.entries(champions)) {
+            const uniqueChamps = new Set(champs.map(c => c.toLowerCase().trim()));
+            if (uniqueChamps.size !== champs.length) {
+              alert(`You cannot select the same champion multiple times in the ${category} category. Please choose different champions.`);
+              return;
+            }
+          }
+
+          // Check that tournament winner and runner-up are different
+          const winner = formData.get('tournament_winner').toLowerCase().trim();
+          const runnerUp = formData.get('tournament_runner_up').toLowerCase().trim();
+          if (winner === runnerUp) {
+            alert('Tournament winner and runner-up must be different teams.');
+            return;
+          }
+
+          // Save data locally first
+          const submissionData = getFormData();
+          localStorage.setItem('pickemsData', JSON.stringify(submissionData));
+
+                    // Check if Netlify forms are available
+          if (window.location.hostname.includes('netlify.app') || window.location.hostname.includes('netlify.com')) {
+            // Let Netlify handle the form submission
+            form.submit();
+            return;
+          }
+
+          // Try alternative submission methods
+          try {
+            // Method 1: Try Formspree (if configured)
+            if (form.action.includes('formspree.io')) {
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  'Accept': 'application/json'
+                }
+              });
+
+              if (response.ok) {
+                showSuccess();
+                return;
+              }
+            }
+
+            // Method 2: Try EmailJS (if configured)
+            if (typeof emailjs !== 'undefined') {
+              // EmailJS submission would go here
+              // This requires EmailJS SDK to be loaded
+            }
+
+            // If no online method works, show backup option
+            throw new Error('No submission method available');
+
+          } catch (error) {
+            // Show error but also provide backup option
+            errorMessage.innerHTML = `
+              <h3>❌ Online Submission Not Available</h3>
+              <p>The form submission service is not configured yet.</p>
+              <p><strong>Your data has been saved locally.</strong></p>
+              <p><strong>Next steps:</strong> Click "Download as Backup" and send the file to tournament organizers via Discord or email.</p>
+              <button onclick="document.getElementById('downloadBtn').click()" class="btn" style="margin-top: 1rem; background-color: var(--secondary-color); color: var(--text-color);">📥 Download Backup Now</button>
+            `;
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+            console.error('Error:', error);
+          }
+        });
+
+        function showSuccess() {
+          successMessage.style.display = 'block';
+          errorMessage.style.display = 'none';
+          form.style.display = 'none';
+
+          // Scroll to success message
+          successMessage.scrollIntoView({ behavior: 'smooth' });
+
+          // Mark as submitted
+          localStorage.setItem('pickemsSubmitted', 'true');
+        }
+
+      // Check if user has already submitted pickems
+      document.addEventListener('DOMContentLoaded', function() {
+        if (localStorage.getItem('pickemsSubmitted') === 'true') {
+          const savedData = JSON.parse(localStorage.getItem('pickemsData') || '{}');
+
+          // Show success message and hide form
+          successMessage.style.display = 'block';
+          successMessage.innerHTML = `
+            <h3>🎉 Pickems Already Submitted!</h3>
+            <p>You have already submitted your predictions for this tournament.</p>
+            <p><strong>Participant:</strong> ${savedData.participant_name || 'Unknown'}</p>
+          `;
+          form.style.display = 'none';
+        }
+      });
+
+      // Function to clear previous submission (for testing/corrections)
+      function clearSubmission() {
+        localStorage.removeItem('pickemsSubmitted');
+        localStorage.removeItem('pickemsData');
+        location.reload();
+      }
+
+      // Smooth scroll for navigation
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Add fade-in animations on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('.pickems-section, .submit-section').forEach(section => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
