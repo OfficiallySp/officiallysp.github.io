@@ -737,10 +737,10 @@
         <nav>
           <ul>
             <li><a href="#signup">Sign Up</a></li>
-            <li><a href="#matchups">Matchups & Predictions</a></li>
-            <li><a href="pickems.html">Pickems</a></li>
+            <li><a href="#matchups">Matchups</a></li>
             <li><a href="#rules">Rules & Prizes</a></li>
             <li><a href="#Discord">Discord</a></li>
+            <li><a href="pickems.html">Go To Pickems</a></li>
           </ul>
         </nav>
       </div>
@@ -749,10 +749,10 @@
     <!-- Side Navigation -->
     <div class="side-nav">
       <a href="#signup"><span>Sign Up</span></a>
-      <a href="#matchups"><span>Matchups & Predictions</span></a>
-      <a href="pickems.html"><span>Pickems</span></a>
+      <a href="#matchups"><span>Matchups</span></a>
       <a href="#rules"><span>Rules & Prizes</span></a>
       <a href="#Discord"><span>Discord</span></a>
+      <a href="pickems.html"><span>Go To Pickems</span></a>
       <a href="#" class="back-to-top"><span>↑ Back to Top</span></a>
     </div>
 
@@ -763,6 +763,22 @@
       <div class="hero fade-in">
         <div class="hero-content">
           <img src="../assets/img/sslogo.png" alt="Summer Showdown Logo" width="600" height="auto" style="filter: brightness(0) invert(1)" />
+              <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed"></div>
+
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 1060,
+        height: 550,
+        channel: "summershowdown",
+        // Only needed if this page is going to be embedded on other websites
+        parent: ["officiallysp.net"]
+      });
+    </script>
           <div class="countdown">
             <div class="countdown-item" style="background-color: rgba(0, 0, 0, 0.7); border: 2px solid var(--accent-color)">
               <span class="countdown-value" id="days" style="color: var(--light-accent); font-size: 2.8rem; text-shadow: 0 0 10px var(--accent-color)">00</span>
@@ -781,7 +797,7 @@
               <span class="countdown-label" style="color: var(--light-text); font-weight: bold">Seconds</span>
             </div>
           </div>
-          <a href="#signup" class="btn">Sign Up Now</a>
+
           <a href="pickems.html" class="btn btn-secondary">Make Pickems</a>
           <a href="#matchups" class="btn btn-secondary">View Matchups</a>
         </div>
@@ -789,12 +805,7 @@
 
       <section id="signup" class="fade-in delay-2">
         <h2>Team Sign Up</h2>
-        <h1>SIGNUPS NOW OPEN.</h1>
-        <p>
-          <strong>Note:</strong> a * indicates a required field.
-        </p>
-<h1>PLEASE MESSAGE SHADE FOR INFO ON HOW TO SIGN UP</h1>
-
+        <h1>SIGNUPS ARE NOW CLOSED.</h1>
       </section>
 
         <section id="matchups" class="fade-in delay-3">
@@ -802,19 +813,16 @@
           <p>Matchups will be announced after the registration period ends. Stay tuned for exciting battles!</p>
 
           <div class="tabs">
-            <div class="tab active" data-tab="group-stage">Group Stage</div>
-            <div class="tab" data-tab="quarterfinals">Quarterfinals</div>
-            <div class="tab" data-tab="semifinals">Semifinals</div>
-            <div class="tab" data-tab="finals">Finals</div>
+            <div class="tab active" data-tab="Main Bracket">Main Bracket</div>
+            <div class="tab" data-tab="Lower Bracket">Lower Bracket</div>
+            <div class="tab" data-tab="Finals">Finals</div>
           </div>
 
-          <div class="tab-content active" id="group-stage">
+          <div class="tab-content active" id="Main Bracket">
             <div class="tournament-status">
-              <h1>Registration in Progress</h1>
-              <p>Teams are still being formed and registrations are open. Once the registration period ends, the matchups will be determined and displayed here.</p>
-              <p>Make sure to sign up above if you haven't already!</p>
+              <h1>Matchups are being determined. Stay tuned for the matchups!</h1>
+              <p>For now, here are some placeholder matchups.</p>
             </div>
-            <!--
             <div class="matchup">
                 <div class="team team-left">
                     <div class="team-logo">
@@ -830,12 +838,8 @@
                         <div class="team-name">Team Beta</div>
                     </div>
                     <div class="match-details">
-                        <span class="match-date">August 15, 2023 - 18:00 GMT</span>
-                        <span class="match-format">Best of 3</span>
-                    </div>
-                    <div class="prediction-controls">
-                        <button class="predict-btn" data-team="alpha" data-match="1">Predict Team Alpha</button>
-                        <button class="predict-btn" data-team="beta" data-match="1">Predict Team Beta</button>
+                        <span class="match-date">June 20, 2025 - 18:00 GMT</span>
+                        <span class="match-format">Best of 1</span>
                     </div>
                 </div>
 
@@ -854,12 +858,8 @@
                         <div class="team-name">Team Delta</div>
                     </div>
                     <div class="match-details">
-                        <span class="match-date">August 15, 2023 - 21:00 GMT</span>
-                        <span class="match-format">Best of 3</span>
-                    </div>
-                    <div class="prediction-controls">
-                        <button class="predict-btn" data-team="gamma" data-match="2">Predict Team Gamma</button>
-                        <button class="predict-btn" data-team="delta" data-match="2">Predict Team Delta</button>
+                        <span class="match-date">June 20, 2025 - 21:00 GMT</span>
+                        <span class="match-format">Best of 1</span>
                     </div>
                 </div>
 
@@ -873,36 +873,23 @@
                     <div class="vs">VS</div>
                     <div class="team team-right">
                         <div class="team-logo">
-                            <img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/profileicon/30.png" alt="Team Zeta">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/13.12.1/img/profileicon/28.png" alt="Team Zeta">
                         </div>
                         <div class="team-name">Team Zeta</div>
                     </div>
                     <div class="match-details">
-                        <span class="match-date">August 16, 2023 - 18:00 GMT</span>
-                        <span class="match-format">Best of 3</span>
-                    </div>
-                    <div class="prediction-controls">
-                        <button class="predict-btn" data-team="epsilon" data-match="3">Predict Team Epsilon</button>
-                        <button class="predict-btn" data-team="zeta" data-match="3">Predict Team Zeta</button>
+                        <span class="match-date">June 20, 2025 - 18:00 GMT</span>
+                        <span class="match-format">Best of 1</span>
                     </div>
                 </div>
           </div>
-          -->
-          <div class="tab-content" id="quarterfinals">
-            <p>Quarterfinals matchups will be determined after the group stage. Stay tuned!</p>
+
+          <div class="tab-content" id="Lower Bracket">
+            <p>The lower bracket will be determined after the main bracket</p>
           </div>
 
-          <div class="tab-content" id="semifinals">
-            <p>Semifinals matchups will be determined after the quarterfinals. Stay tuned!</p>
-          </div>
-
-          <div class="tab-content" id="finals">
+          <div class="tab-content" id="Finals">
             <p>The final match will be determined after the semifinals. Don't miss the epic conclusion!</p>
-          </div>
-          <h2>Your Predictions</h2>
-          <p>Track your predictions for the tournament and see how accurate you are!</p>
-          <div id="userPredictions">
-            <p>You haven't made any predictions yet. Go to the Matchups section to make your first prediction!</p>
           </div>
         </section>
 

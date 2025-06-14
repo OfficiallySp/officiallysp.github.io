@@ -497,7 +497,7 @@
         <div class="pickems-section fade-in delay-5">
           <h2>🏆 Best KDA Players</h2>
           <p style="text-align: center; margin-bottom: 2rem; color: var(--primary-color); font-weight: bold;">
-            These predictions will close before the semifinals start
+            These predictions will open before the semifinals start
           </p>
 
           <div class="form-grid">
@@ -505,7 +505,7 @@
               <h3>🛡️ Top Lane</h3>
               <div class="form-group">
                 <label for="bestTopKDA">Best KDA Top Laner *</label>
-                <input type="text" id="bestTopKDA" name="best_top_kda" placeholder="Player name" required>
+                <input type="text" id="bestTopKDA" name="best_top_kda" placeholder="Player name" disabled>
               </div>
             </div>
 
@@ -513,7 +513,7 @@
               <h3>🌲 Jungle</h3>
               <div class="form-group">
                 <label for="bestJungKDA">Best KDA Jungler *</label>
-                <input type="text" id="bestJungKDA" name="best_jungle_kda" placeholder="Player name" required>
+                <input type="text" id="bestJungKDA" name="best_jungle_kda" placeholder="Player name" disabled>
               </div>
             </div>
 
@@ -521,7 +521,7 @@
               <h3>⚡ Mid Lane</h3>
               <div class="form-group">
                 <label for="bestMidKDA">Best KDA Mid Laner *</label>
-                <input type="text" id="bestMidKDA" name="best_mid_kda" placeholder="Player name" required>
+                <input type="text" id="bestMidKDA" name="best_mid_kda" placeholder="Player name" disabled>
               </div>
             </div>
 
@@ -529,7 +529,7 @@
               <h3>🏹 ADC</h3>
               <div class="form-group">
                 <label for="bestAdcKDA">Best KDA ADC *</label>
-                <input type="text" id="bestAdcKDA" name="best_adc_kda" placeholder="Player name" required>
+                <input type="text" id="bestAdcKDA" name="best_adc_kda" placeholder="Player name" disabled>
               </div>
             </div>
 
@@ -537,7 +537,7 @@
               <h3>🛡️ Support</h3>
               <div class="form-group">
                 <label for="bestSuppKDA">Best KDA Support *</label>
-                <input type="text" id="bestSuppKDA" name="best_support_kda" placeholder="Player name" required>
+                <input type="text" id="bestSuppKDA" name="best_support_kda" placeholder="Player name" disabled>
               </div>
             </div>
           </div>
@@ -716,7 +716,7 @@
           localStorage.setItem('pickemsData', JSON.stringify(submissionData));
 
                     // Check if Netlify forms are available
-          if (window.location.hostname.includes('netlify.app') || window.location.hostname.includes('netlify.com')) {
+          if (window.location.hostname.includes('netlify.app') || window.location.hostname.includes('officiallysp.net')) {
             // Let Netlify handle the form submission
             form.submit();
             return;
