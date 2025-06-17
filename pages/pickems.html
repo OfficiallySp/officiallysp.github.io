@@ -10,7 +10,6 @@
         --secondary-color: #d7f021;
         --accent-color: #ff75c3;
         --text-color: #1a1a2e;
-        --dark-accent: #5e1f6a;
         --light-accent: #f5e84d;
         --highlight: #ff3fa4;
         --danger: #ff4242;
@@ -48,7 +47,6 @@
       header {
         background-color: rgba(139, 49, 165, 0.8);
         padding: 1rem 0;
-        position: relative;
         border-bottom: 2px solid var(--light-accent);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       }
@@ -80,8 +78,7 @@
         border-radius: 4px;
       }
 
-      nav ul li a:hover,
-      nav ul li a.active {
+      nav ul li a:hover {
         color: var(--light-accent);
         background-color: rgba(245, 232, 77, 0.2);
       }
@@ -115,11 +112,6 @@
         opacity: 0.9;
       }
 
-      .pickems-container {
-        display: grid;
-        gap: 2rem;
-      }
-
       .pickems-section {
         background-color: rgba(255, 255, 255, 0.95);
         border-radius: 12px;
@@ -128,6 +120,7 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         position: relative;
         overflow: hidden;
+        margin-bottom: 2rem;
       }
 
       .pickems-section::before {
@@ -145,7 +138,7 @@
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
         text-align: center;
-        border-bottom: 2px solid var(--dark-accent);
+        border-bottom: 2px solid var(--primary-color);
         padding-bottom: 0.5rem;
       }
 
@@ -169,8 +162,7 @@
       }
 
       .form-group input,
-      .form-group select,
-      .form-group textarea {
+      .form-group select {
         padding: 0.8rem;
         border: 2px solid var(--primary-color);
         border-radius: 6px;
@@ -181,8 +173,7 @@
       }
 
       .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
+      .form-group select:focus {
         outline: none;
         border-color: var(--accent-color);
         box-shadow: 0 0 0 3px rgba(255, 117, 195, 0.3);
@@ -252,32 +243,30 @@
         background-color: var(--light-accent);
       }
 
-      .success-message {
+      .success-message,
+      .error-message {
         display: none;
-        background-color: rgba(215, 240, 33, 0.9);
-        border: 2px solid var(--secondary-color);
         padding: 1.5rem;
         border-radius: 8px;
         margin-top: 2rem;
-        color: var(--text-color);
         font-weight: bold;
         text-align: center;
+      }
+
+      .success-message {
+        background-color: rgba(215, 240, 33, 0.9);
+        border: 2px solid var(--secondary-color);
+        color: var(--text-color);
       }
 
       .error-message {
-        display: none;
         background-color: rgba(255, 66, 66, 0.9);
         border: 2px solid var(--danger);
-        padding: 1.5rem;
-        border-radius: 8px;
-        margin-top: 2rem;
         color: white;
-        font-weight: bold;
-        text-align: center;
       }
 
       .info-box {
-        background-color: rgba(245, 232, 77, 0.2);
+        background-color: rgba(255, 255, 255, 0.726);
         border: 2px solid var(--light-accent);
         border-radius: 8px;
         padding: 1.5rem;
@@ -292,10 +281,6 @@
 
       .info-box ul {
         margin-left: 1.5rem;
-      }
-
-      .info-box li {
-        margin-bottom: 0.5rem;
       }
 
       footer {
@@ -367,27 +352,6 @@
           margin-top: 1rem;
         }
       }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .fade-in {
-        animation: fadeIn 0.6s ease-out forwards;
-      }
-
-      .delay-1 { animation-delay: 0.1s; }
-      .delay-2 { animation-delay: 0.2s; }
-      .delay-3 { animation-delay: 0.3s; }
-      .delay-4 { animation-delay: 0.4s; }
-      .delay-5 { animation-delay: 0.5s; }
     </style>
   </head>
   <body>
@@ -405,12 +369,12 @@
     </header>
 
     <main>
-      <div class="hero fade-in" >
+      <div class="hero">
         <h1>Tournament Pickems</h1>
         <p>Make your predictions for the Summer Showdown tournament and compete for additional prizes!</p>
       </div>
 
-      <div class="info-box fade-in delay-1" style="background-color: rgba(255, 255, 255, 0.726);">
+      <div class="info-box">
         <h3>📋 Pickems Information</h3>
         <ul>
           <li><strong>Deadline:</strong> All predictions must be submitted before the tournament starts</li>
@@ -421,15 +385,12 @@
         </ul>
       </div>
 
-            <form id="pickemsForm" action="#" method="POST" class="pickems-container" data-netlify="true" netlify-honeypot="bot-field">
-
-        <!-- Hidden field for Netlify -->
+      <form id="pickemsForm" action="#" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <p style="display: none;">
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
         </p>
 
-        <!-- Personal Information -->
-        <div class="pickems-section fade-in delay-2">
+        <div class="pickems-section">
           <h2>👤 Your Information</h2>
           <div class="form-grid">
             <div class="form-group">
@@ -443,10 +404,8 @@
           </div>
         </div>
 
-        <!-- Champion Statistics -->
-        <div class="pickems-section fade-in delay-4">
+        <div class="pickems-section">
           <h2>⚔️ Champion Predictions</h2>
-
           <div class="champion-grid">
             <div class="form-group">
               <label for="mostPicked1">Most Picked Champion *</label>
@@ -492,7 +451,8 @@
             </div>
           </div>
         </div>
-        <div class="pickems-section fade-in delay-4">
+
+        <div class="pickems-section">
           <h2>🐉 Dragon Predictions</h2>
           <div class="form-group">
             <label for="firstDragon">Most Killed Dragon *</label>
@@ -508,8 +468,7 @@
           </div>
         </div>
 
-        <!-- Best KDA Players (Semifinals onwards) -->
-        <div class="pickems-section fade-in delay-5">
+        <div class="pickems-section">
           <h2>🏆 Best KDA Players</h2>
           <p style="text-align: center; margin-bottom: 2rem; color: var(--primary-color); font-weight: bold;">
             These predictions will open before the semifinals start
@@ -558,8 +517,7 @@
           </div>
         </div>
 
-        <!-- Tournament Winner -->
-        <div class="pickems-section fade-in delay-4">
+        <div class="pickems-section">
           <h2>🏆 Tournament Predictions</h2>
           <div class="form-grid">
             <div class="form-group">
@@ -599,13 +557,12 @@
           </div>
         </div>
 
-        <!-- Submit Section -->
-        <div class="submit-section fade-in delay-5">
+        <div class="submit-section">
           <h2>Submit Your Pickems</h2>
           <p style="margin-bottom: 2rem;">Double-check all your predictions before submitting. You cannot change them after submission!</p>
           <p style="margin-bottom: 2rem;">After you submit, Be sure to come back during the semifinals to update your predictions for the best KDA players.</p>
           <button type="submit" class="btn">Submit Predictions</button>
-          <button type="button" id="downloadBtn" class="btn btn-secondary" style="margin-left: 1rem;">Download as Backup</button>
+          <button type="button" id="downloadBtn" class="btn btn-secondary">Download as Backup</button>
           <a href="ss2025.html" class="btn btn-secondary">Back to Tournament</a>
         </div>
 
@@ -632,243 +589,146 @@
     </footer>
 
     <script>
-      // Form submission handling
-              const form = document.getElementById('pickemsForm');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-        const downloadBtn = document.getElementById('downloadBtn');
+      const form = document.getElementById('pickemsForm');
+      const successMessage = document.getElementById('successMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      const downloadBtn = document.getElementById('downloadBtn');
 
-        // Function to get all form data as an object
-        function getFormData() {
-          const formData = new FormData(form);
-          const data = {
-            submission_date: new Date().toISOString(),
-            participant_name: formData.get('participant_name'),
-            discord_tag: formData.get('discord_tag'),
-            most_dragons: formData.get('most_dragons'),
-            total_dragons: formData.get('total_dragons'),
-            most_picked_champions: [
-              formData.get('most_picked_1'),
-              formData.get('most_picked_2'),
-              formData.get('most_picked_3')
-            ],
-            most_banned_champions: [
-              formData.get('most_banned_1'),
-              formData.get('most_banned_2'),
-              formData.get('most_banned_3')
-            ],
-            best_winrate_champions: [
-              formData.get('best_winrate_1'),
-              formData.get('best_winrate_2'),
-              formData.get('best_winrate_3')
-            ],
-            best_kda_players: {
-              top: formData.get('best_top_kda'),
-              jungle: formData.get('best_jungle_kda'),
-              mid: formData.get('best_mid_kda'),
-              adc: formData.get('best_adc_kda'),
-              support: formData.get('best_support_kda')
-            },
-            tournament_predictions: {
-              winner: formData.get('tournament_winner'),
-              runner_up: formData.get('tournament_runner_up')
-            }
-          };
-          return data;
-        }
+      function getFormData() {
+        const formData = new FormData(form);
+        return {
+          submission_date: new Date().toISOString(),
+          participant_name: formData.get('participant_name'),
+          discord_tag: formData.get('discord_tag'),
+          first_dragon: formData.get('first_dragon'),
+          most_picked_champions: [
+            formData.get('most_picked_1'),
+            formData.get('most_picked_2'),
+            formData.get('most_picked_3')
+          ],
+          most_banned_champions: [
+            formData.get('most_banned_1'),
+            formData.get('most_banned_2'),
+            formData.get('most_banned_3')
+          ],
+          best_winrate_champions: [
+            formData.get('best_winrate_1'),
+            formData.get('best_winrate_2'),
+            formData.get('best_winrate_3')
+          ],
+          best_kda_players: {
+            top: formData.get('best_top_kda'),
+            jungle: formData.get('best_jungle_kda'),
+            mid: formData.get('best_mid_kda'),
+            adc: formData.get('best_adc_kda'),
+            support: formData.get('best_support_kda')
+          },
+          tournament_predictions: {
+            winner: formData.get('tournament_winner'),
+            runner_up: formData.get('tournament_runner_up')
+          }
+        };
+      }
 
-        // Download function
-        downloadBtn.addEventListener('click', function() {
-          const data = getFormData();
-          const dataStr = JSON.stringify(data, null, 2);
-          const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+      downloadBtn.addEventListener('click', function() {
+        const data = getFormData();
+        const dataStr = JSON.stringify(data, null, 2);
+        const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+        const exportFileDefaultName = `pickems_${data.participant_name || 'submission'}_${new Date().toISOString().split('T')[0]}.json`;
 
-          const exportFileDefaultName = `pickems_${data.participant_name || 'submission'}_${new Date().toISOString().split('T')[0]}.json`;
+        const linkElement = document.createElement('a');
+        linkElement.setAttribute('href', dataUri);
+        linkElement.setAttribute('download', exportFileDefaultName);
+        linkElement.click();
 
-          const linkElement = document.createElement('a');
-          linkElement.setAttribute('href', dataUri);
-          linkElement.setAttribute('download', exportFileDefaultName);
-          linkElement.click();
+        alert('Pickems data downloaded! You can send this file to tournament organizers as a backup.');
+      });
 
-          alert('Pickems data downloaded! You can send this file to tournament organizers as a backup.');
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const requiredFields = form.querySelectorAll('[required]');
+        let allValid = true;
+
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            field.style.borderColor = '#ff4242';
+            allValid = false;
+          } else {
+            field.style.borderColor = '#8b31a5';
+          }
         });
 
-        form.addEventListener('submit', async function(e) {
-          e.preventDefault();
+        if (!allValid) {
+          alert('Please fill in all required fields (marked with *)');
+          return;
+        }
 
-          // Get form data
-          const formData = new FormData(form);
+        // Validate champion duplicates
+        const champions = {
+          picked: [formData.get('most_picked_1'), formData.get('most_picked_2'), formData.get('most_picked_3')],
+          banned: [formData.get('most_banned_1'), formData.get('most_banned_2'), formData.get('most_banned_3')],
+          winrate: [formData.get('best_winrate_1'), formData.get('best_winrate_2'), formData.get('best_winrate_3')]
+        };
 
-          // Validate that all required fields are filled
-          const requiredFields = form.querySelectorAll('[required]');
-          let allValid = true;
-
-          requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-              field.style.borderColor = '#ff4242';
-              allValid = false;
-            } else {
-              field.style.borderColor = '#8b31a5';
-            }
-          });
-
-          if (!allValid) {
-            alert('Please fill in all required fields (marked with *)');
+        for (const [category, champs] of Object.entries(champions)) {
+          const uniqueChamps = new Set(champs.map(c => c.toLowerCase().trim()));
+          if (uniqueChamps.size !== champs.length) {
+            alert(`You cannot select the same champion multiple times in the ${category} category.`);
             return;
           }
+        }
 
-          // Validate that champion names don't repeat in same categories
-          const champions = {
-            picked: [
-              formData.get('most_picked_1'),
-              formData.get('most_picked_2'),
-              formData.get('most_picked_3')
-            ],
-            banned: [
-              formData.get('most_banned_1'),
-              formData.get('most_banned_2'),
-              formData.get('most_banned_3')
-            ],
-            winrate: [
-              formData.get('best_winrate_1'),
-              formData.get('best_winrate_2'),
-              formData.get('best_winrate_3')
-            ]
-          };
+        // Validate tournament teams
+        const winner = formData.get('tournament_winner');
+        const runnerUp = formData.get('tournament_runner_up');
+        if (winner === runnerUp) {
+          alert('Tournament winner and runner-up must be different teams.');
+          return;
+        }
 
-          // Check for duplicates in each category
-          for (const [category, champs] of Object.entries(champions)) {
-            const uniqueChamps = new Set(champs.map(c => c.toLowerCase().trim()));
-            if (uniqueChamps.size !== champs.length) {
-              alert(`You cannot select the same champion multiple times in the ${category} category. Please choose different champions.`);
-              return;
-            }
-          }
+        // Save data locally
+        const submissionData = getFormData();
+        localStorage.setItem('pickemsData', JSON.stringify(submissionData));
 
-          // Check that tournament winner and runner-up are different
-          const winner = formData.get('tournament_winner').toLowerCase().trim();
-          const runnerUp = formData.get('tournament_runner_up').toLowerCase().trim();
-          if (winner === runnerUp) {
-            alert('Tournament winner and runner-up must be different teams.');
-            return;
-          }
-
-          // Save data locally first
-          const submissionData = getFormData();
-          localStorage.setItem('pickemsData', JSON.stringify(submissionData));
-
-                    // Check if Netlify forms are available
+        try {
+          // Let Netlify handle submission if available
           if (window.location.hostname.includes('netlify.app') || window.location.hostname.includes('officiallysp.net')) {
-            // Let Netlify handle the form submission
             form.submit();
             return;
           }
-
-          // Try alternative submission methods
-          try {
-            // Method 1: Try Formspree (if configured)
-            if (form.action.includes('formspree.io')) {
-              const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                  'Accept': 'application/json'
-                }
-              });
-
-              if (response.ok) {
-                showSuccess();
-                return;
-              }
-            }
-
-            // Method 2: Try EmailJS (if configured)
-            if (typeof emailjs !== 'undefined') {
-              // EmailJS submission would go here
-              // This requires EmailJS SDK to be loaded
-            }
-
-            // If no online method works, show backup option
-            throw new Error('No submission method available');
-
-          } catch (error) {
-            // Show error but also provide backup option
-            errorMessage.innerHTML = `
-              <h3>❌ Online Submission Not Available</h3>
-              <p>The form submission service is not configured yet.</p>
-              <p><strong>Your data has been saved locally.</strong></p>
-              <p><strong>Next steps:</strong> Click "Download as Backup" and send the file to tournament organizers via Discord or email.</p>
-              <button onclick="document.getElementById('downloadBtn').click()" class="btn" style="margin-top: 1rem; background-color: var(--secondary-color); color: var(--text-color);">📥 Download Backup Now</button>
-            `;
-            errorMessage.style.display = 'block';
-            successMessage.style.display = 'none';
-            console.error('Error:', error);
-          }
-        });
-
-        function showSuccess() {
-          successMessage.style.display = 'block';
-          errorMessage.style.display = 'none';
-          form.style.display = 'none';
-
-          // Scroll to success message
-          successMessage.scrollIntoView({ behavior: 'smooth' });
-
-          // Mark as submitted
-          localStorage.setItem('pickemsSubmitted', 'true');
+          throw new Error('No submission method available');
+        } catch (error) {
+          errorMessage.innerHTML = `
+            <h3>❌ Online Submission Not Available</h3>
+            <p>Your data has been saved locally. Click "Download as Backup" and send the file to tournament organizers.</p>
+            <button onclick="document.getElementById('downloadBtn').click()" class="btn" style="margin-top: 1rem; background-color: var(--secondary-color); color: var(--text-color);">📥 Download Backup Now</button>
+          `;
+          errorMessage.style.display = 'block';
         }
+      });
 
-      // Check if user has already submitted pickems
+      function showSuccess() {
+        successMessage.style.display = 'block';
+        errorMessage.style.display = 'none';
+        form.style.display = 'none';
+        successMessage.scrollIntoView({ behavior: 'smooth' });
+        localStorage.setItem('pickemsSubmitted', 'true');
+      }
+
+      // Check if already submitted
       document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem('pickemsSubmitted') === 'true') {
           const savedData = JSON.parse(localStorage.getItem('pickemsData') || '{}');
-
-          // Show success message and hide form
-          successMessage.style.display = 'block';
           successMessage.innerHTML = `
             <h3>🎉 Pickems Already Submitted!</h3>
             <p>You have already submitted your predictions for this tournament.</p>
             <p><strong>Participant:</strong> ${savedData.participant_name || 'Unknown'}</p>
           `;
+          successMessage.style.display = 'block';
           form.style.display = 'none';
         }
-      });
-
-      // Function to clear previous submission (for testing/corrections)
-      function clearSubmission() {
-        localStorage.removeItem('pickemsSubmitted');
-        localStorage.removeItem('pickemsData');
-        location.reload();
-      }
-
-      // Smooth scroll for navigation
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-
-      // Add fade-in animations on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-          }
-        });
-      }, observerOptions);
-
-      // Observe all sections
-      document.querySelectorAll('.pickems-section, .submit-section').forEach(section => {
-        observer.observe(section);
       });
     </script>
   </body>

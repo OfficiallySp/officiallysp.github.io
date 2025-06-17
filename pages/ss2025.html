@@ -6,17 +6,16 @@
     <title>Summer Showdown - League of Legends Tournament</title>
     <style>
       :root {
-        --primary-color: #8b31a5; /* Purple base */
-        --secondary-color: #d7f021; /* Yellow-green */
-        --accent-color: #ff75c3; /* Pink */
-        --text-color: #1a1a2e; /* Dark blue-black for text */
-        --dark-accent: #5e1f6a; /* Darker purple */
-        --light-accent: #f5e84d; /* Yellow */
-        --highlight: #ff3fa4; /* Brighter pink */
-        --danger: #ff4242; /* Red */
-        --light-text: #ffffff; /* White text for dark backgrounds */
-        --gradient-bg: linear-gradient(to bottom, #d7f021, #f5e84d, #ffa8ba, #ff75c3, #8b31a5); /* Main gradient */
-        --gradient-accent: linear-gradient(45deg, #f5e84d, #ff75c3); /* Accent gradient */
+        --primary-color: #8b31a5;
+        --secondary-color: #d7f021;
+        --accent-color: #ff75c3;
+        --text-color: #1a1a2e;
+        --dark-accent: #5e1f6a;
+        --light-accent: #f5e84d;
+        --highlight: #ff3fa4;
+        --light-text: #ffffff;
+        --gradient-bg: linear-gradient(to bottom, #d7f021, #f5e84d, #ffa8ba, #ff75c3, #8b31a5);
+        --gradient-accent: linear-gradient(45deg, #f5e84d, #ff75c3);
       }
 
       * {
@@ -46,7 +45,7 @@
       }
 
       header {
-        background-color: rgba(139, 49, 165, 0.8); /* Semi-transparent purple */
+        background-color: rgba(139, 49, 165, 0.8);
         padding: 1rem 0;
         position: relative;
         border-bottom: 2px solid var(--light-accent);
@@ -219,157 +218,6 @@
         background-color: rgba(200, 155, 60, 0.2);
       }
 
-      form {
-        display: grid;
-        gap: 1.5rem;
-      }
-
-      .form-group {
-        display: grid;
-        gap: 0.5rem;
-      }
-
-      label {
-        font-weight: 500;
-        color: var(--primary-color);
-      }
-
-      input,
-      textarea,
-      select {
-        padding: 0.8rem;
-        border-radius: 4px;
-        border: 1px solid var(--primary-color);
-        background-color: rgba(255, 255, 255, 0.8);
-        color: var(--text-color);
-        width: 100%;
-      }
-
-      input:focus,
-      textarea:focus,
-      select:focus {
-        outline: none;
-        border-color: var(--accent-color);
-        box-shadow: 0 0 0 2px rgba(200, 155, 60, 0.3);
-      }
-
-      .tabs {
-        display: flex;
-        margin-bottom: 2rem;
-        border-bottom: 2px solid var(--dark-accent);
-      }
-
-      .tab {
-        padding: 1rem 2rem;
-        cursor: pointer;
-        border-bottom: 2px solid transparent;
-        margin-bottom: -2px;
-        transition: all 0.3s ease;
-      }
-
-      .tab.active {
-        border-bottom: 2px solid var(--highlight);
-        color: var(--highlight);
-      }
-
-      .tab:hover {
-        color: var(--highlight);
-      }
-
-      .tab-content {
-        display: none;
-      }
-
-      .tab-content.active {
-        display: block;
-      }
-
-      .matchup {
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        gap: 1rem;
-        border: 1px solid var(--dark-accent);
-        transition: all 0.3s ease;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .matchup:hover {
-        border-color: var(--accent-color);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .team {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .team-left {
-        align-items: flex-end;
-      }
-
-      .team-right {
-        align-items: flex-start;
-      }
-
-      .team-name {
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .vs {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: var(--accent-color);
-      }
-
-      .prediction-controls {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
-      }
-
-      .predict-btn {
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-weight: bold;
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid var(--primary-color);
-        color: var(--primary-color);
-      }
-
-      .predict-btn:hover {
-        border-color: var(--accent-color);
-        color: var(--accent-color);
-      }
-
-      .predict-btn.selected {
-        background-color: var(--accent-color);
-        color: var(--primary-color);
-        border-color: var(--accent-color);
-      }
-
-      .match-details {
-        display: flex;
-        justify-content: center;
-        font-size: 0.9rem;
-        color: var(--primary-color);
-        margin-top: 0.5rem;
-      }
-
-      .match-date {
-        margin-right: 1rem;
-      }
-
       .countdown {
         display: flex;
         justify-content: center;
@@ -398,25 +246,6 @@
         font-size: 0.9rem;
         text-transform: uppercase;
         color: var(--primary-color);
-      }
-
-      .team-logo {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background-color: rgba(9, 20, 40, 0.8);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
-        overflow: hidden;
-        border: 2px solid var(--dark-accent);
-      }
-
-      .team-logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
       }
 
       footer {
@@ -451,183 +280,9 @@
         color: var(--light-accent);
       }
 
-      .success-message {
-        display: none;
-        background-color: rgba(215, 240, 33, 0.3);
-        border: 1px solid var(--light-accent);
-        padding: 1rem;
-        border-radius: 4px;
-        margin-top: 1rem;
-        color: var(--text-color);
-      }
-
-      .error-message {
-        display: none;
-        background-color: rgba(255, 66, 66, 0.3);
-        border: 1px solid var(--danger);
-        padding: 1rem;
-        border-radius: 4px;
-        margin-top: 1rem;
-        color: var(--text-color);
-      }
-
-      @media (max-width: 768px) {
-        .header-content {
-          flex-direction: column;
-          padding: 1rem;
-        }
-
-        nav ul {
-          margin-top: 1rem;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        nav ul li {
-          margin: 0.5rem;
-        }
-
-        main {
-          padding: 0 1rem;
-        }
-
-        .hero {
-          padding: 3rem 1rem;
-        }
-
-        .hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .matchup {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-
-        .vs {
-          margin: 1rem 0;
-        }
-
-        .team-left,
-        .team-right {
-          align-items: center;
-        }
-
-        .countdown-item {
-          margin: 0 0.5rem;
-        }
-
-        .countdown-value {
-          font-size: 1.8rem;
-        }
-      }
-
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .fade-in {
-        animation: fadeIn 0.5s ease-out forwards;
-      }
-
-      .delay-1 {
-        animation-delay: 0.1s;
-      }
-      .delay-2 {
-        animation-delay: 0.2s;
-      }
-      .delay-3 {
-        animation-delay: 0.3s;
-      }
-      .delay-4 {
-        animation-delay: 0.4s;
-      }
-      .delay-5 {
-        animation-delay: 0.5s;
-      }
-
-      /* Additional styles for the team signup form */
-      .form-section {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        border: 1px solid var(--dark-accent);
-      }
-
-      .form-section h3 {
-        color: var(--text-color);
-        margin-bottom: 1rem;
-        font-size: 1.3rem;
-      }
-
-      .checkbox-container {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        position: relative;
-        padding-left: 35px;
-        user-select: none;
-      }
-
-      .checkbox-container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-      }
-
-      .checkmark {
-        position: absolute;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: rgba(9, 20, 40, 0.6);
-        border: 1px solid var(--accent-color);
-        border-radius: 4px;
-      }
-
-      .checkbox-container:hover input ~ .checkmark {
-        background-color: rgba(139, 49, 165, 0.3);
-      }
-
-      .checkbox-container input:checked ~ .checkmark {
-        background-color: var(--accent-color);
-      }
-
-      .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-
-      .checkbox-container input:checked ~ .checkmark:after {
-        display: block;
-      }
-
-      .checkbox-container .checkmark:after {
-        left: 7px;
-        top: 3px;
-        width: 5px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-      }
-
-      /* Sidebar navigation styles */
       .side-nav {
         position: fixed;
-        right: -220px; /* Start off-screen */
+        right: -220px;
         top: 50%;
         transform: translateY(-50%);
         background-color: rgba(139, 49, 165, 0.9);
@@ -661,11 +316,6 @@
       .side-nav a.active {
         background-color: rgba(245, 232, 77, 0.2);
         color: var(--light-accent);
-      }
-
-      .side-nav a i {
-        margin-right: 0.5rem;
-        font-size: 1.2rem;
       }
 
       .side-nav-toggle {
@@ -714,19 +364,71 @@
       }
 
       @keyframes pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.05);
-        }
-        100% {
-          transform: scale(1);
-        }
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
       }
 
       .pulse {
         animation: pulse 2s infinite;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+
+      .delay-1 { animation-delay: 0.1s; }
+      .delay-2 { animation-delay: 0.2s; }
+      .delay-3 { animation-delay: 0.3s; }
+      .delay-4 { animation-delay: 0.4s; }
+      .delay-5 { animation-delay: 0.5s; }
+
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          padding: 1rem;
+        }
+
+        nav ul {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav ul li {
+          margin: 0.5rem;
+        }
+
+        main {
+          padding: 0 1rem;
+        }
+
+        .hero {
+          padding: 3rem 1rem;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .countdown-item {
+          margin: 0 0.5rem;
+        }
+
+        .countdown-value {
+          font-size: 1.8rem;
+        }
       }
     </style>
   </head>
@@ -746,7 +448,6 @@
       </div>
     </header>
 
-    <!-- Side Navigation -->
     <div class="side-nav">
       <a href="#signup"><span>Sign Up</span></a>
       <a href="#matchups"><span>Matchups</span></a>
@@ -756,29 +457,15 @@
       <a href="#" class="back-to-top"><span>↑ Back to Top</span></a>
     </div>
 
-    <!-- Side Nav Toggle Button -->
     <button class="side-nav-toggle">≡</button>
 
     <main>
       <div class="hero fade-in">
         <div class="hero-content">
           <img src="../assets/img/sslogo.png" alt="Summer Showdown Logo" width="600" height="auto" style="filter: brightness(0) invert(1)" />
-              <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
 
-    <!-- Load the Twitch embed JavaScript file -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+          <div id="twitch-embed"></div>
 
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 1060,
-        height: 550,
-        channel: "summershowdown",
-        // Only needed if this page is going to be embedded on other websites
-        parent: ["officiallysp.net"]
-      });
-    </script>
           <div class="countdown">
             <div class="countdown-item" style="background-color: rgba(0, 0, 0, 0.7); border: 2px solid var(--accent-color)">
               <span class="countdown-value" id="days" style="color: var(--light-accent); font-size: 2.8rem; text-shadow: 0 0 10px var(--accent-color)">00</span>
@@ -808,407 +495,162 @@
         <h1>SIGNUPS ARE NOW CLOSED.</h1>
       </section>
 
-        <section id="matchups" class="fade-in delay-3">
-          <h2>Matchups</h2>
-          <iframe src="https://brackethq.com/b/briqc/embed/" width="100%" height="900" frameborder="1"></iframe>
-        </section>
+      <section id="matchups" class="fade-in delay-3">
+        <h2>Matchups</h2>
+        <iframe src="https://brackethq.com/b/briqc/embed/" width="100%" height="900" frameborder="1"></iframe>
+      </section>
 
-        <section id="rules" class="fade-in delay-4">
-          <h2>Tournament Rules & Prizes</h2>
+      <section id="rules" class="fade-in delay-4">
+        <h2>Tournament Rules & Prizes</h2>
 
-          <div class="rules-container">
-            <div class="rules-header">
-              <h3>Rules:</h3>
-            </div>
-            <ol class="rules-list">
-              <li>Teams must consist of 5 main players and up to 2 optional substitutes. All roster changes must be submitted to tournament organizers at least 7 days before the tournament begins.</li>
-              <li>Substitutes may only play if a main roster player is unavailable, not for strategic advantage. Teams must notify organizers before making substitutions.</li>
-              <li>Players may only compete for one team throughout the entire tournament.</li>
-              <li>All participants must provide their summoner name & Tag and a valid op.gg/u.gg profile for verification.</li>
-              <li>Each team is limited to a maximum of two players ranked Master or higher (including those who were Master+ within the past 12 months).</li>
-              <li>Tournament matches may be streamed by participants with a mandatory minimum 90 second delay to prevent stream sniping. (<a href="../assets/img/stream delay.png" target="_blank" class="rule-link">Stream Delay Guide</a>)</li>
-              <li>All matches require full 5-player teams. Teams with fewer than 5 players at match time will forfeit regardless of match outcome.</li>
-              <li>Game pauses are permitted for technical issues only, with a maximum total pause time of 30 minutes per match. Both teams must agree to resume play.</li>
-              <li class="violation-rule">
-                <span class="violation-header">The following violations will result in immediate disqualification:</span>
-                <ul class="violation-list">
-                  <li>Use of third-party software, scripts, or any form of cheating</li>
-                  <li>Excessive toxicity, hate speech, or harassment beyond reasonable competitive banter</li>
-                  <li>Account sharing or playing under another player's credentials</li>
-                  <li>Intentionally losing or throwing matches</li>
-                  <li>Team names or logos that violate Riot Games' Terms of Service</li>
-                  <li>Harassment or inappropriate behavior toward other participants</li>
-                </ul>
-              </li>
-              <li>All disputes between teams must be directed to tournament officials and not resolved in-game or in public channels.</li>
-              <li>Tournament officials have final decision-making authority on all rule interpretations. Ignorance of rules is not an acceptable defense.</li>
-              <li>All players must be 18 years or older.</li>
-            </ol>
-          </div>
+        <h3>Rules:</h3>
+        <ol>
+          <li>Teams must consist of 5 main players and up to 2 optional substitutes. All roster changes must be submitted to tournament organizers at least 7 days before the tournament begins.</li>
+          <li>Substitutes may only play if a main roster player is unavailable, not for strategic advantage. Teams must notify organizers before making substitutions.</li>
+          <li>Players may only compete for one team throughout the entire tournament.</li>
+          <li>All participants must provide their summoner name & Tag and a valid op.gg/u.gg profile for verification.</li>
+          <li>Each team is limited to a maximum of two players ranked Master or higher (including those who were Master+ within the past 12 months).</li>
+          <li>Tournament matches may be streamed by participants with a mandatory minimum 90 second delay to prevent stream sniping. (<a href="../assets/img/stream delay.png" target="_blank">Stream Delay Guide</a>)</li>
+          <li>All matches require full 5-player teams. Teams with fewer than 5 players at match time will forfeit regardless of match outcome.</li>
+          <li>Game pauses are permitted for technical issues only, with a maximum total pause time of 30 minutes per match. Both teams must agree to resume play.</li>
+          <li>
+            <strong>The following violations will result in immediate disqualification:</strong>
+            <ul>
+              <li>Use of third-party software, scripts, or any form of cheating</li>
+              <li>Excessive toxicity, hate speech, or harassment beyond reasonable competitive banter</li>
+              <li>Account sharing or playing under another player's credentials</li>
+              <li>Intentionally losing or throwing matches</li>
+              <li>Team names or logos that violate Riot Games' Terms of Service</li>
+              <li>Harassment or inappropriate behavior toward other participants</li>
+            </ul>
+          </li>
+          <li>All disputes between teams must be directed to tournament officials and not resolved in-game or in public channels.</li>
+          <li>Tournament officials have final decision-making authority on all rule interpretations. Ignorance of rules is not an acceptable defense.</li>
+          <li>All players must be 18 years or older.</li>
+        </ol>
 
-          <div class="prizes-section">
-            <h3 class="prizes-header">Prizes:</h3>
-            <div class="prize-container">
-              <div class="prize-category">
-                <h4 class="prize-header">Tournament Prizes</h4>
-                <ul class="prize-list">
-                  <li class="prize-item first-place">
-                    <span class="prize-position">1st Place:</span>
-                    <span class="prize-amount">£250</span>
-                  </li>
-                  <li class="prize-item second-place">
-                    <span class="prize-position">2nd Place:</span>
-                    <span class="prize-amount">£150</span>
-                  </li>
-                  <li class="prize-item third-place">
-                    <span class="prize-position">3rd Place:</span>
-                    <span class="prize-amount">£100</span>
-                  </li>
-                </ul>
-              </div>
+        <h3>Prizes:</h3>
+        <div>
+          <h4>Tournament Prizes</h4>
+          <ul>
+            <li><strong>1st Place:</strong> £250</li>
+            <li><strong>2nd Place:</strong> £150</li>
+            <li><strong>3rd Place:</strong> £100</li>
+          </ul>
 
-              <div class="prize-category">
-                <h4 class="prize-header">Pickems Contest Prizes</h4>
-                <ul class="prize-list">
-                  <li class="prize-item">
-                    <span class="prize-position">Most Accurate Pickems:</span>
-                    <span class="prize-amount">£20</span>
-                  </li>
-                  <li class="prize-item">
-                    <span class="prize-position">Runner Up Pickems:</span>
-                    <span class="prize-amount">£10</span>
-                  </li>
-                  <li class="prize-item">
-                    <span class="prize-position">Random Draw Among All Participants:</span>
-                    <span class="prize-amount">£5</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="Discord" class="fade-in delay-5">
-          <h2>Join the Discord</h2>
-          <p>Join the Discord to stay up to date with the tournament and chat with other players!</p>
-          <iframe src="https://discord.com/widget?id=1142557439347134484&theme=dark" width="1075" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        </section>
+          <h4>Pickems Contest Prizes</h4>
+          <ul>
+            <li><strong>Most Accurate Pickems:</strong> £20</li>
+            <li><strong>Runner Up Pickems:</strong> £10</li>
+            <li><strong>Random Draw Among All Participants:</strong> £5</li>
+          </ul>
+        </div>
+      </section>
 
-        <footer>
-          <div class="footer-content">
-            <p>&copy; 2025 Summer Showdown. All rights reserved.</p>
-            <div class="footer-links">
-              <a href="https://officiallysp.net">officiallysp.net</a>
-            </div>
-          </div>
-        </footer>
-
-        <script>
-          // DOM Elements
-          const tabs = document.querySelectorAll(".tab");
-          const tabContents = document.querySelectorAll(".tab-content");
-          const signupForm = document.getElementById("signupForm");
-          const signupSuccess = document.getElementById("signupSuccess");
-          const signupError = document.getElementById("signupError");
-          const predictBtns = document.querySelectorAll(".predict-btn");
-          const userPredictions = document.getElementById("userPredictions");
-
-          // Side Navigation Elements
-          const sideNav = document.querySelector(".side-nav");
-          const sideNavToggle = document.querySelector(".side-nav-toggle");
-          const backToTop = document.querySelector(".back-to-top");
-          const mainNav = document.querySelector("header");
-
-          // Scroll event handler for side navigation
-          window.addEventListener("scroll", function () {
-            const scrollPosition = window.scrollY;
-            const headerHeight = mainNav.offsetHeight;
-
-            // Show side navigation and toggle button when scrolled past header
-            if (scrollPosition > headerHeight) {
-              sideNav.classList.add("visible");
-              sideNavToggle.classList.add("visible");
-
-              // Add pulse animation to back to top button when scrolled far
-              if (scrollPosition > window.innerHeight) {
-                backToTop.classList.add("pulse");
-              } else {
-                backToTop.classList.remove("pulse");
-              }
-            } else {
-              sideNav.classList.remove("visible");
-              sideNavToggle.classList.remove("visible");
-            }
-
-            // Set active link in side navigation based on scroll position
-            const sections = document.querySelectorAll("section");
-            sections.forEach((section) => {
-              const sectionTop = section.offsetTop - 100;
-              const sectionHeight = section.offsetHeight;
-              const sectionId = section.getAttribute("id");
-
-              if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                document.querySelectorAll(".side-nav a").forEach((link) => {
-                  link.classList.remove("active");
-                  if (link.getAttribute("href") === `#${sectionId}`) {
-                    link.classList.add("active");
-                  }
-                });
-              }
-            });
-          });
-
-          // Toggle side navigation when button is clicked
-          sideNavToggle.addEventListener("click", function () {
-            sideNav.classList.toggle("visible");
-          });
-
-          // Back to top functionality
-          backToTop.addEventListener("click", function (e) {
-            e.preventDefault();
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          });
-
-          // Set tournament date (3 months from now)
-          const tournamentDate = new Date();
-          tournamentDate.setFullYear(2025, 5, 20); // June 20th, 2025
-          tournamentDate.setHours(12, 0, 0); // 12pm BST
-
-          // Update countdown
-          function updateCountdown() {
-            const now = new Date();
-            const distance = tournamentDate - now;
-
-            // Time calculations
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display countdown
-            document.getElementById("days").textContent = days.toString().padStart(2, "0");
-            document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
-            document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
-            document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
-          }
-
-          // Initial countdown update
-          updateCountdown();
-
-          // Update countdown every second
-          setInterval(updateCountdown, 1000);
-
-          // Tab functionality
-          tabs.forEach((tab) => {
-            tab.addEventListener("click", () => {
-              // Remove active class from all tabs and contents
-              tabs.forEach((t) => t.classList.remove("active"));
-              tabContents.forEach((c) => c.classList.remove("active"));
-
-              // Add active class to clicked tab
-              tab.classList.add("active");
-
-              // Show corresponding content
-              const tabId = tab.getAttribute("data-tab");
-              document.getElementById(tabId).classList.add("active");
-            });
-          });
-
-          // Form submission
-          signupForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const formData = new FormData(form);
-
-            // Create URL for the Google Form submission
-            // You'll need to replace this with your actual Google Form URL
-            const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdr-d8doTzR68GKOWWa3PKZcjThNO-C5i4Cl8mfrBFxxLypQQ/formResponse";
-
-            // Check if all required roles are unique
-            const roles = [
-              formData.get("entry.1059580444"), // Player 1 role
-              formData.get("entry.1767228092"), // Player 2 role
-              formData.get("entry.2089693926"), // Player 3 role
-              formData.get("entry.1976985418"), // Player 4 role
-              formData.get("entry.1232698992"), // Player 5 role
-            ];
-
-            // Count occurrences of each role
-            const roleCounts = {};
-            roles.forEach((role) => {
-              roleCounts[role] = (roleCounts[role] || 0) + 1;
-            });
-
-            // Check if any role appears more than once
-            const hasDuplicateRoles = Object.values(roleCounts).some((count) => count > 1);
-
-            if (hasDuplicateRoles) {
-              alert("Each player must have a unique role. Please ensure no role is selected more than once.");
-              return;
-            }
-
-            // Count Master+ ranks to enforce the rule
-            const highRanks = [
-              formData.get("entry.838764361"), // Player 1 rank
-              formData.get("entry.821115686"), // Player 2 rank
-              formData.get("entry.1930696864"), // Player 3 rank
-              formData.get("entry.1010004304"), // Player 4 rank
-              formData.get("entry.1645192978"), // Player 5 rank
-            ].filter((rank) => ["Master", "Grandmaster", "Challenger"].includes(rank)).length;
-
-            if (highRanks > 2) {
-              alert("Teams are limited to a maximum of two players ranked Master or higher. Please adjust your team composition.");
-              return;
-            }
-
-            // Submit the form using a hidden iframe to avoid CORS issues with Google Forms
-            // This is a common workaround for Google Forms submissions
-            const iframe = document.createElement("iframe");
-            iframe.name = "hidden_iframe";
-            iframe.style.display = "none";
-            document.body.appendChild(iframe);
-
-            // Set up the form for submission
-            form.action = googleFormUrl;
-            form.method = "post";
-            form.target = "hidden_iframe";
-
-            // Set up message display based on iframe load
-            iframe.onload = function () {
-              document.getElementById("signupSuccess").style.display = "block";
-              document.getElementById("signupError").style.display = "none";
-              form.reset();
-
-              // Hide success message after 5 seconds
-              setTimeout(() => {
-                document.getElementById("signupSuccess").style.display = "none";
-              }, 5000);
-            };
-
-            // Handle errors
-            iframe.onerror = function () {
-              document.getElementById("signupError").style.display = "block";
-              document.getElementById("signupSuccess").style.display = "none";
-            };
-
-            // Submit the form
-            form.submit();
-
-            // Remove iframe after submission to clean up
-            setTimeout(() => {
-              document.body.removeChild(iframe);
-            }, 5000);
-          });
-
-          // Prediction functionality
-          predictBtns.forEach((btn) => {
-            btn.addEventListener("click", () => {
-              const matchId = btn.getAttribute("data-match");
-              const team = btn.getAttribute("data-team");
-
-              // Deselect all buttons for this match
-              document.querySelectorAll(`.predict-btn[data-match="${matchId}"]`).forEach((b) => {
-                b.classList.remove("selected");
-              });
-
-              // Select clicked button
-              btn.classList.add("selected");
-
-              // Save prediction to local storage
-              savePrediction(matchId, team);
-
-              // Update predictions display
-              updatePredictionsDisplay();
-            });
-          });
-
-          // Save prediction to local storage
-          function savePrediction(matchId, team) {
-            // Get existing predictions or create empty object
-            const predictions = JSON.parse(localStorage.getItem("summerShowdownPredictions")) || {};
-
-            // Update prediction for match
-            predictions[matchId] = team;
-
-            // Save to local storage
-            localStorage.setItem("summerShowdownPredictions", JSON.stringify(predictions));
-          }
-
-          // Load predictions from local storage and update UI
-          function loadPredictions() {
-            const predictions = JSON.parse(localStorage.getItem("summerShowdownPredictions")) || {};
-
-            // Update selected buttons
-            for (const [matchId, team] of Object.entries(predictions)) {
-              const btn = document.querySelector(`.predict-btn[data-match="${matchId}"][data-team="${team}"]`);
-              if (btn) {
-                btn.classList.add("selected");
-              }
-            }
-
-            // Update predictions display
-            updatePredictionsDisplay();
-          }
-
-          // Update predictions display
-          function updatePredictionsDisplay() {
-            const predictions = JSON.parse(localStorage.getItem("summerShowdownPredictions")) || {};
-
-            // If no predictions, show default message
-            if (Object.keys(predictions).length === 0) {
-              userPredictions.innerHTML = "<p>You haven't made any predictions yet. Go to the Matchups section to make your first prediction!</p>";
-              return;
-            }
-
-            // Build predictions HTML
-            let predictionsHTML = "<ul>";
-
-            for (const [matchId, team] of Object.entries(predictions)) {
-              const matchup = document.querySelector(`.matchup:has(.predict-btn[data-match="${matchId}"]`);
-              if (matchup) {
-                const teamName = matchup.querySelector(`.team-name:has(+ .vs) ~ .vs ~ .team-name, .team-name:has(+ .team-right), .team-name`).textContent;
-                const matchDate = matchup.querySelector(".match-date").textContent;
-
-                predictionsHTML += `<li>Match #${matchId} (${escapeHTML(matchDate)}): You predicted <strong>${escapeHTML(capitalizeFirstLetter(team))}</strong></li>`;
-              }
-            }
-
-            predictionsHTML += "</ul>";
-            userPredictions.innerHTML = predictionsHTML;
-          }
-
-          // Helper function to escape HTML special characters
-          function escapeHTML(string) {
-            const div = document.createElement('div');
-            div.appendChild(document.createTextNode(string));
-            return div.innerHTML;
-          }
-
-          // Helper function to capitalize first letter
-          function capitalizeFirstLetter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-          }
-
-          // Smooth scroll for navigation
-          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener("click", function (e) {
-              e.preventDefault();
-
-              document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth",
-              });
-            });
-          });
-
-          // Load predictions on page load
-          document.addEventListener("DOMContentLoaded", () => {
-            loadPredictions();
-          });
-        </script>
+      <section id="Discord" class="fade-in delay-5">
+        <h2>Join the Discord</h2>
+        <p>Join the Discord to stay up to date with the tournament and chat with other players!</p>
+        <iframe src="https://discord.com/widget?id=1142557439347134484&theme=dark" width="1075" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
       </section>
     </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Summer Showdown. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://officiallysp.net">officiallysp.net</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script>
+      new Twitch.Embed("twitch-embed", {
+        width: 1060,
+        height: 550,
+        channel: "summershowdown",
+        parent: ["officiallysp.net"]
+      });
+
+      const sideNav = document.querySelector(".side-nav");
+      const sideNavToggle = document.querySelector(".side-nav-toggle");
+      const backToTop = document.querySelector(".back-to-top");
+      const mainNav = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY;
+        const headerHeight = mainNav.offsetHeight;
+
+        if (scrollPosition > headerHeight) {
+          sideNav.classList.add("visible");
+          sideNavToggle.classList.add("visible");
+
+          if (scrollPosition > window.innerHeight) {
+            backToTop.classList.add("pulse");
+          } else {
+            backToTop.classList.remove("pulse");
+          }
+        } else {
+          sideNav.classList.remove("visible");
+          sideNavToggle.classList.remove("visible");
+        }
+
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute("id");
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            document.querySelectorAll(".side-nav a").forEach((link) => {
+              link.classList.remove("active");
+              if (link.getAttribute("href") === `#${sectionId}`) {
+                link.classList.add("active");
+              }
+            });
+          }
+        });
+      });
+
+      sideNavToggle.addEventListener("click", function () {
+        sideNav.classList.toggle("visible");
+      });
+
+      backToTop.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      const tournamentDate = new Date();
+      tournamentDate.setFullYear(2025, 5, 20);
+      tournamentDate.setHours(12, 0, 0);
+
+      function updateCountdown() {
+        const now = new Date();
+        const distance = tournamentDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days.toString().padStart(2, "0");
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
