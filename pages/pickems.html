@@ -664,25 +664,29 @@
           return;
         }
 
-        // Validate champion duplicates
+        // Validate champion duplicates (only if fields are enabled)
         const champions = {
           picked: [formData.get('most_picked_1'), formData.get('most_picked_2'), formData.get('most_picked_3')],
           banned: [formData.get('most_banned_1'), formData.get('most_banned_2'), formData.get('most_banned_3')],
           winrate: [formData.get('best_winrate_1'), formData.get('best_winrate_2'), formData.get('best_winrate_3')]
         };
 
+        // Only validate if champion fields are actually filled (not null)
         for (const [category, champs] of Object.entries(champions)) {
-          const uniqueChamps = new Set(champs.map(c => c.toLowerCase().trim()));
-          if (uniqueChamps.size !== champs.length) {
-            alert(`You cannot select the same champion multiple times in the ${category} category.`);
-            return;
+          const validChamps = champs.filter(c => c !== null && c !== '');
+          if (validChamps.length > 0) {
+            const uniqueChamps = new Set(validChamps.map(c => c.toLowerCase().trim()));
+            if (uniqueChamps.size !== validChamps.length) {
+              alert(`You cannot select the same champion multiple times in the ${category} category.`);
+              return;
+            }
           }
         }
 
-        // Validate tournament teams
+        // Validate tournament teams (only if fields are enabled)
         const winner = formData.get('tournament_winner');
         const runnerUp = formData.get('tournament_runner_up');
-        if (winner === runnerUp) {
+        if (winner && runnerUp && winner === runnerUp) {
           alert('Tournament winner and runner-up must be different teams.');
           return;
         }
