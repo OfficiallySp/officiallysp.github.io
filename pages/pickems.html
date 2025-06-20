@@ -390,74 +390,73 @@
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
         </p>
 
-        <div class="pickems-section">
+        <div class="pickems-section" style="display: none;">
           <h2>👤 Your Information</h2>
           <div class="form-grid">
             <div class="form-group">
               <label for="participantName">Your Name/Username *</label>
-              <input type="text" id="participantName" name="participant_name" required>
+              <input type="text" id="participantName" name="participant_name" required disabled>
             </div>
             <div class="form-group">
               <label for="discordTag">Discord Tag (optional)</label>
-              <input type="text" id="discordTag" name="discord_tag" placeholder="username#1234">
+              <input type="text" id="discordTag" name="discord_tag" placeholder="username#1234" disabled>
             </div>
           </div>
         </div>
 
-        <!--
-        <div class="pickems-section">
+        <div class="pickems-section" style="display: none;">
           <h2>⚔️ Champion Predictions</h2>
           <div class="champion-grid">
             <div class="form-group">
               <label for="mostPicked1">Most Picked Champion *</label>
-              <input type="text" id="mostPicked1" name="most_picked_1" placeholder="e.g., Jinx" required>
+              <input type="text" id="mostPicked1" name="most_picked_1" placeholder="e.g., Jinx" required disabled>
             </div>
             <div class="form-group">
               <label for="mostPicked2">2nd Most Picked Champion *</label>
-              <input type="text" id="mostPicked2" name="most_picked_2" placeholder="e.g., Thresh" required>
+              <input type="text" id="mostPicked2" name="most_picked_2" placeholder="e.g., Thresh" required disabled>
             </div>
             <div class="form-group">
               <label for="mostPicked3">3rd Most Picked Champion *</label>
-              <input type="text" id="mostPicked3" name="most_picked_3" placeholder="e.g., Lee Sin" required>
+              <input type="text" id="mostPicked3" name="most_picked_3" placeholder="e.g., Lee Sin" required disabled>
             </div>
           </div>
 
           <div class="champion-grid">
             <div class="form-group">
               <label for="mostBanned1">Most Banned Champion *</label>
-              <input type="text" id="mostBanned1" name="most_banned_1" placeholder="e.g., Zed" required>
+              <input type="text" id="mostBanned1" name="most_banned_1" placeholder="e.g., Zed" required disabled>
             </div>
             <div class="form-group">
               <label for="mostBanned2">2nd Most Banned Champion *</label>
-              <input type="text" id="mostBanned2" name="most_banned_2" placeholder="e.g., Yasuo" required>
+              <input type="text" id="mostBanned2" name="most_banned_2" placeholder="e.g., Yasuo" required disabled>
             </div>
             <div class="form-group">
               <label for="mostBanned3">3rd Most Banned Champion *</label>
-              <input type="text" id="mostBanned3" name="most_banned_3" placeholder="e.g., Akali" required>
+              <input type="text" id="mostBanned3" name="most_banned_3" placeholder="e.g., Akali" required disabled>
             </div>
           </div>
 
           <div class="champion-grid">
             <div class="form-group">
               <label for="bestWinrate1">Highest Winrate Champion *</label>
-              <input type="text" id="bestWinrate1" name="best_winrate_1" placeholder="e.g., Azir" required>
+              <input type="text" id="bestWinrate1" name="best_winrate_1" placeholder="e.g., Azir" required disabled>
             </div>
             <div class="form-group">
               <label for="bestWinrate2">2nd Highest Winrate Champion *</label>
-              <input type="text" id="bestWinrate2" name="best_winrate_2" placeholder="e.g., Orianna" required>
+              <input type="text" id="bestWinrate2" name="best_winrate_2" placeholder="e.g., Orianna" required disabled>
             </div>
             <div class="form-group">
               <label for="bestWinrate3">3rd Highest Winrate Champion *</label>
-              <input type="text" id="bestWinrate3" name="best_winrate_3" placeholder="e.g., Graves" required>
+              <input type="text" id="bestWinrate3" name="best_winrate_3" placeholder="e.g., Graves" required disabled>
             </div>
           </div>
         </div>
 
-        <div class="pickems-section">
+        <div class="pickems-section" style="display: none;">
           <h2>🐉 Dragon Predictions</h2>
           <div class="form-group">
             <label for="firstDragon">Most Killed Dragon *</label>
-            <select id="firstDragon" name="first_dragon" required>
+            <select id="firstDragon" name="first_dragon" required disabled>
               <option value="">Select a dragon type</option>
               <option value="Chemtech">Chemtech</option>
               <option value="Cloud">Cloud</option>
@@ -468,64 +467,62 @@
             </select>
           </div>
         </div>
-        -->
 
         <div class="pickems-section">
           <h2>🏆 Best KDA Players</h2>
           <p style="text-align: center; margin-bottom: 2rem; color: var(--primary-color); font-weight: bold;">
-            These predictions will open before the semifinals start
+            Make your predictions for the best KDA players in each role
           </p>
 
           <div class="form-grid">
             <div class="role-section">
               <h3>🛡️ Top Lane</h3>
               <div class="form-group">
-                <label for="bestTopKDA">Best KDA Top Laner</label>
-                <input type="text" id="bestTopKDA" name="best_top_kda" placeholder="Player name">
+                <label for="bestTopKDA">Best KDA Top Laner *</label>
+                <input type="text" id="bestTopKDA" name="best_top_kda" placeholder="Player name" required>
               </div>
             </div>
 
             <div class="role-section">
               <h3>🌲 Jungle</h3>
               <div class="form-group">
-                <label for="bestJungKDA">Best KDA Jungler</label>
-                <input type="text" id="bestJungKDA" name="best_jungle_kda" placeholder="Player name">
+                <label for="bestJungKDA">Best KDA Jungler *</label>
+                <input type="text" id="bestJungKDA" name="best_jungle_kda" placeholder="Player name" required>
               </div>
             </div>
 
             <div class="role-section">
               <h3>⚡ Mid Lane</h3>
               <div class="form-group">
-                <label for="bestMidKDA">Best KDA Mid Laner</label>
-                <input type="text" id="bestMidKDA" name="best_mid_kda" placeholder="Player name">
+                <label for="bestMidKDA">Best KDA Mid Laner *</label>
+                <input type="text" id="bestMidKDA" name="best_mid_kda" placeholder="Player name" required>
               </div>
             </div>
 
             <div class="role-section">
               <h3>🏹 ADC</h3>
               <div class="form-group">
-                <label for="bestAdcKDA">Best KDA ADC</label>
-                <input type="text" id="bestAdcKDA" name="best_adc_kda" placeholder="Player name">
+                <label for="bestAdcKDA">Best KDA ADC *</label>
+                <input type="text" id="bestAdcKDA" name="best_adc_kda" placeholder="Player name" required>
               </div>
             </div>
 
             <div class="role-section">
               <h3>🛡️ Support</h3>
               <div class="form-group">
-                <label for="bestSuppKDA">Best KDA Support</label>
-                <input type="text" id="bestSuppKDA" name="best_support_kda" placeholder="Player name">
+                <label for="bestSuppKDA">Best KDA Support *</label>
+                <input type="text" id="bestSuppKDA" name="best_support_kda" placeholder="Player name" required>
               </div>
             </div>
           </div>
         </div>
 
-        <!--
-        <div class="pickems-section">
+        <div class="pickems-section" style="display: none;">
           <h2>🏆 Tournament Predictions</h2>
           <div class="form-grid">
             <div class="form-group">
               <label for="tournamentWinner">Tournament Winner *</label>
-              <select id="tournamentWinner" name="tournament_winner" required>
+              <select id="tournamentWinner" name="tournament_winner" required disabled>
                 <option value="">Select a team</option>
                 <option value="Nah we'd win">Nah we'd win</option>
                 <option value="Noah's Training Arc">Noah's Training Arc</option>
@@ -542,7 +539,7 @@
             </div>
             <div class="form-group">
               <label for="tournamentRunnerUp">Tournament Runner-up *</label>
-              <select id="tournamentRunnerUp" name="tournament_runner_up" required>
+              <select id="tournamentRunnerUp" name="tournament_runner_up" required disabled>
                 <option value="">Select a team</option>
                 <option value="Nah we'd win">Nah we'd win</option>
                 <option value="Noah's Training Arc">Noah's Training Arc</option>
@@ -559,9 +556,8 @@
             </div>
           </div>
         </div>
-        -->
 
-<div class="submit-section">
+        <div class="submit-section">
           <h2>Submit Your Pickems</h2>
           <button type="submit" class="btn">Submit Predictions</button>
           <button type="button" id="downloadBtn" class="btn btn-secondary">Download as Backup</button>
@@ -602,13 +598,32 @@
           submission_date: new Date().toISOString(),
           participant_name: formData.get('participant_name'),
           discord_tag: formData.get('discord_tag'),
-
+          first_dragon: formData.get('first_dragon'),
+          most_picked_champions: [
+            formData.get('most_picked_1'),
+            formData.get('most_picked_2'),
+            formData.get('most_picked_3')
+          ],
+          most_banned_champions: [
+            formData.get('most_banned_1'),
+            formData.get('most_banned_2'),
+            formData.get('most_banned_3')
+          ],
+          best_winrate_champions: [
+            formData.get('best_winrate_1'),
+            formData.get('best_winrate_2'),
+            formData.get('best_winrate_3')
+          ],
           best_kda_players: {
             top: formData.get('best_top_kda'),
             jungle: formData.get('best_jungle_kda'),
             mid: formData.get('best_mid_kda'),
             adc: formData.get('best_adc_kda'),
             support: formData.get('best_support_kda')
+          },
+          tournament_predictions: {
+            winner: formData.get('tournament_winner'),
+            runner_up: formData.get('tournament_runner_up')
           }
         };
       }
