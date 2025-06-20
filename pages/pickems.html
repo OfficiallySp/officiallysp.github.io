@@ -390,16 +390,16 @@
           <label>Don't fill this out if you're human: <input name="bot-field" /></label>
         </p>
 
-        <div class="pickems-section" style="display: none;">
+        <div class="pickems-section"">
           <h2>👤 Your Information</h2>
           <div class="form-grid">
             <div class="form-group">
               <label for="participantName">Your Name/Username *</label>
-              <input type="text" id="participantName" name="participant_name" required disabled>
+              <input type="text" id="participantName" name="participant_name" required>
             </div>
             <div class="form-group">
               <label for="discordTag">Discord Tag (optional)</label>
-              <input type="text" id="discordTag" name="discord_tag" placeholder="username#1234" disabled>
+              <input type="text" id="discordTag" name="discord_tag" placeholder="username#1234">
             </div>
           </div>
         </div>
@@ -559,6 +559,7 @@
 
         <div class="submit-section">
           <h2>Submit Your Pickems</h2>
+
           <button type="submit" class="btn">Submit Predictions</button>
           <button type="button" id="downloadBtn" class="btn btn-secondary">Download as Backup</button>
           <a href="ss2025.html" class="btn btn-secondary">Back to Tournament</a>
