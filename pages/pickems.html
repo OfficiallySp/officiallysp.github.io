@@ -602,32 +602,13 @@
           submission_date: new Date().toISOString(),
           participant_name: formData.get('participant_name'),
           discord_tag: formData.get('discord_tag'),
-          first_dragon: formData.get('first_dragon'),
-          most_picked_champions: [
-            formData.get('most_picked_1'),
-            formData.get('most_picked_2'),
-            formData.get('most_picked_3')
-          ],
-          most_banned_champions: [
-            formData.get('most_banned_1'),
-            formData.get('most_banned_2'),
-            formData.get('most_banned_3')
-          ],
-          best_winrate_champions: [
-            formData.get('best_winrate_1'),
-            formData.get('best_winrate_2'),
-            formData.get('best_winrate_3')
-          ],
+
           best_kda_players: {
             top: formData.get('best_top_kda'),
             jungle: formData.get('best_jungle_kda'),
             mid: formData.get('best_mid_kda'),
             adc: formData.get('best_adc_kda'),
             support: formData.get('best_support_kda')
-          },
-          tournament_predictions: {
-            winner: formData.get('tournament_winner'),
-            runner_up: formData.get('tournament_runner_up')
           }
         };
       }
