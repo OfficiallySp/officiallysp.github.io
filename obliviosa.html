@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for liv</title>
+    <link rel="stylesheet" href="assets/css/obliviosa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="glitch-effect">
+            <div class="noise"></div>
+            <div class="scanlines"></div>
+            
+            <header class="title-section">
+                <h1 class="main-title glitch" data-text="obliviosa">Obliviosa</h1>
+                <p class="subtitle fade-in">In Due Time...</p>
+                <p class="subtitle-2 fade-in">Anticipation is building!</p>
+            </header>
+            
+            <div class="countdown-container">
+                <div class="countdown-wrapper">
+                    <h2 class="countdown-label flicker">time until the big day</h2>
+                    
+                    <div class="countdown-display">
+                        <div class="time-unit">
+                            <div class="time-value" id="days">000</div>
+                            <div class="time-label">days</div>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <div class="time-value" id="hours">00</div>
+                            <div class="time-label">hours</div>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <div class="time-value" id="minutes">00</div>
+                            <div class="time-label">minutes</div>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <div class="time-value" id="seconds">00</div>
+                            <div class="time-label">seconds</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mystery-text">
+                    <p class="whisper">december 6th, 2025</p>
+                    <p class="whisper-2">something amazing awaits...</p>
+                    <p class="whisper-3">the excitement is real!</p>
+                </div>
+            </div>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+                <div class="progress-label">Progress: <span id="progressPercent">0%</span></div>
+            </div>
+            
+            <div class="footer-message">
+                <p class="cryptic-message" id="crypticMessage"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/obliviosa.js"></script>
+</body>
+</html>
