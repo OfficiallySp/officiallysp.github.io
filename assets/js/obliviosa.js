@@ -5,17 +5,16 @@
 
 // Positive messages that cycle through
 const celebratoryMessages = [
-    "something wonderful is approaching...",
+    "something amazing is approaching...",
     "the excitement builds with each moment...",
-    "amazing things come to those who wait...",
-    "anticipation makes the heart grow fonder...",
+    "good things come to those who wait...",
     "the best is yet to come...",
     "dreams are about to become reality...",
-    "the stars are aligning perfectly...",
     "good things take time...",
     "adventure awaits on the horizon...",
     "the future looks incredibly bright...",
-    "something special is brewing..."
+    "something special is brewing...",
+    "the stars are align perfectly...",
 ];
 
 // Target date: December 6, 2025 at midnight
