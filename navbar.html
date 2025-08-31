@@ -424,44 +424,57 @@
       </div>
     </div>
   </div>
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/flatpickr.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
+  <!-- Load scripts asynchronously to avoid blocking -->
+  <script async src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/core/bootstrap.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/soft-design-system.js"></script>
+  <!-- Only load these scripts if needed by specific pages -->
+  <script async src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js" onload="initCounters()"></script>
+  <script async src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js" onload="initTyped()"></script>
   <script>
-    if (document.getElementById("state1")) {
-      const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
-      if (!countUp.error) countUp.start();
-      else console.error(countUp.error);
-    }
-    if (document.getElementById("state2")) {
-      const countUp1 = new CountUp("state2", document.getElementById("state2").getAttribute("countTo"));
-      if (!countUp1.error) countUp1.start();
-      else console.error(countUp1.error);
-    }
-    if (document.getElementById("state3")) {
-      const countUp2 = new CountUp("state3", document.getElementById("state3").getAttribute("countTo"));
-      if (!countUp2.error) countUp2.start();
-      else console.error(countUp2.error);
+    // Initialize counters when CountUp library is loaded
+    function initCounters() {
+      if (typeof CountUp !== 'undefined') {
+        ["state1", "state2", "state3"].forEach(id => {
+          const element = document.getElementById(id);
+          if (element) {
+            const countUp = new CountUp(id, element.getAttribute("countTo"));
+            if (!countUp.error) countUp.start();
+            else console.error(countUp.error);
+          }
+        });
+      }
     }
 
-    if (document.querySelector(".datepicker-1")) {
-      flatpickr(".datepicker-1", {});
+    // Initialize typed text when Typed.js library is loaded
+    function initTyped() {
+      if (typeof Typed !== 'undefined' && document.getElementById("typed")) {
+        new Typed("#typed", {
+          stringsElement: "#typed-strings",
+          typeSpeed: 70,
+          backSpeed: 50,
+          backDelay: 2000,
+          startDelay: 500,
+          loop: true,
+        });
+      }
     }
-    if (document.querySelector(".datepicker-2")) {
-      flatpickr(".datepicker-2", {});
+
+    // Initialize date pickers when flatpickr is loaded
+    function initDatePickers() {
+      if (typeof flatpickr !== 'undefined') {
+        const picker1 = document.querySelector(".datepicker-1");
+        const picker2 = document.querySelector(".datepicker-2");
+        if (picker1) flatpickr(".datepicker-1", {});
+        if (picker2) flatpickr(".datepicker-2", {});
+      }
     }
-    if (document.getElementById("typed")) {
-      var typed = new Typed("#typed", {
-        stringsElement: "#typed-strings",
-        typeSpeed: 70,
-        backSpeed: 50,
-        backDelay: 200,
-        startDelay: 500,
-        loop: true,
-      });
-    }
+
+    // Wait for DOM to be ready, then initialize components that don't require external libraries
+    document.addEventListener("DOMContentLoaded", function() {
+      // Try to initialize components in case libraries are already loaded
+      initCounters();
+      initTyped();
+      initDatePickers();
+    });
   </script>
 </body>

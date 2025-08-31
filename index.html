@@ -4,7 +4,6 @@
   <title>officiallysp.net</title>
   <link rel="stylesheet" href="./assets/css/theme.css" />
   <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
@@ -14,7 +13,7 @@
 
   <header class="flex-grow-1">
     <div class="page-header min-vh-65">
-      <video autoplay loop muted playsinline class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover nightowl-daylight">
+      <video autoplay loop muted playsinline preload="metadata" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover nightowl-daylight">
         <source src="assets/video/Background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -154,34 +153,26 @@
     loadComponent("navbar.html", "navbar-container");
     loadComponent("footer.html", "footer-container");
 
-    // Initialize other scripts after DOM is loaded
-    document.addEventListener("DOMContentLoaded", function () {
-      if (document.getElementById("state1")) {
-        const countUp = new CountUp("state1", document.getElementById("state1").getAttribute("countTo"));
-        if (!countUp.error) {
-          countUp.start();
-        } else {
-          console.error(countUp.error);
-        }
+    // Initialize scripts with performance optimizations
+    function initializeComponents() {
+      // Initialize counters if CountUp is available
+      if (typeof CountUp !== 'undefined') {
+        ["state1", "state2", "state3"].forEach(id => {
+          const element = document.getElementById(id);
+          if (element) {
+            const countUp = new CountUp(id, element.getAttribute("countTo"));
+            if (!countUp.error) {
+              countUp.start();
+            } else {
+              console.error(countUp.error);
+            }
+          }
+        });
       }
-      if (document.getElementById("state2")) {
-        const countUp1 = new CountUp("state2", document.getElementById("state2").getAttribute("countTo"));
-        if (!countUp1.error) {
-          countUp1.start();
-        } else {
-          console.error(countUp1.error);
-        }
-      }
-      if (document.getElementById("state3")) {
-        const countUp2 = new CountUp("state3", document.getElementById("state3").getAttribute("countTo"));
-        if (!countUp2.error) {
-          countUp2.start();
-        } else {
-          console.error(countUp2.error);
-        }
-      }
-      if (document.getElementById("typed")) {
-        var typed = new Typed("#typed", {
+      
+      // Initialize typed text if Typed is available
+      if (typeof Typed !== 'undefined' && document.getElementById("typed")) {
+        new Typed("#typed", {
           stringsElement: "#typed-strings",
           typeSpeed: 70,
           backSpeed: 50,
@@ -190,6 +181,14 @@
           loop: true,
         });
       }
+    }
+
+    // Wait for DOM and try to initialize immediately
+    document.addEventListener("DOMContentLoaded", function () {
+      initializeComponents();
+      
+      // If libraries aren't loaded yet, try again after a short delay
+      setTimeout(initializeComponents, 100);
     });
   </script>
 </body>
