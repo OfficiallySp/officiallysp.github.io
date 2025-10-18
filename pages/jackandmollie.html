@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Jack and Mollie - officiallysp.net</title>
+  <link rel="stylesheet" href="../assets/css/theme.css" />
+  <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+  <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <div id="navbar-container"></div>
+
+  <section class="mt-5">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <h2 class="text-primary">Jack and Mollie</h2>
+        </div>
+        <div class="col-md-6">
+          <iframe width="560" height="315" src="https://youtu.be/NuDFrsTkQq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container pb-4">
+      <h3 class="text-center mb-4">Secret Shit</h3>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <iframe width="560" height="315" src="https://youtu.be/zWacU5fZAC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <p class="mt-2">So idk what this is about but it mentioned Jack and Mollie so idk what waff liam is lying about this time</p>
+        </div>
+        <div class="col-md-6 mb-3">
+          <iframe width="560" height="315" src="https://youtu.be/Ze0OVlwJ26I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <p class="mt-2">hood classic just dance gameplay</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <iframe width="560" height="315" src="https://youtu.be/qELIfh2iCS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          <p class="mt-2">TWEET TWEET</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script>
+    function loadComponent(url, targetId) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(targetId).innerHTML = html;
+        })
+        .catch((error) => {
+          console.error(error);
+          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
+        });
+    }
+
+    loadComponent("../navbar.html", "navbar-container");
+    loadComponent("../footer.html", "footer-container");
+  </script>
+</body>
+</html>
+
