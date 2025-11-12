@@ -1,24 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>officiallysp.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destiny Tools - officiallysp.net</title>
   <link rel="stylesheet" href="../assets/css/theme.css" />
   <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
+  <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="flex flex-col min-h-screen">
   <div id="navbar-container"></div>
 
-  <section>
-    <div class="container py-4">
-      <div class="alert alert-warning" role="alert">
+  <section class="project-header">
+    <div class="container">
+      <div class="alert alert-warning mb-6">
         <span class="alert-text"><strong>Note:</strong> While this project still works, it's recommended to use your browser's native way to create shortcuts to web apps instead.</span>
       </div>
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4">
-          <h2 class="text-primary">Destiny Tools</h2>
-          <p>A collection of 6 essential Destiny 2 tools in one application:</p>
-          <ul>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">Destiny Tools</h1>
+          <p class="text-secondary mb-4">A collection of 6 essential Destiny 2 tools in one application:</p>
+          <ul class="text-secondary mb-6" style="list-style: disc; padding-left: 1.5rem;">
             <li>Destiny Item Manager (DIM)</li>
             <li>light.gg</li>
             <li>trials.report</li>
@@ -26,39 +29,39 @@
             <li>D2 Armor Picker</li>
             <li>D2 Checklist</li>
           </ul>
-          <p>Switch between tools using hotkeys or the menu bar.</p>
-          <div class="mt-3">
-            <a href="https://github.com/OfficiallySp/DestinyTools" class="btn btn-primary me-2">GitHub</a>
-            <a href="https://github.com/OfficiallySp/DestinyTools/releases/download/5.0/D2ToolsSetup.exe" class="btn btn-info me-2">Download Installer</a>
+          <p class="text-secondary mb-6">Switch between tools using hotkeys or the menu bar.</p>
+          <div class="flex gap-4 flex-wrap">
+            <a href="https://github.com/OfficiallySp/DestinyTools" class="btn btn-primary">GitHub</a>
+            <a href="https://github.com/OfficiallySp/DestinyTools/releases/download/5.0/D2ToolsSetup.exe" class="btn btn-secondary">Download Installer</a>
             <a href="https://github.com/OfficiallySp/DestinyTools/releases/download/5.0/DestinyTools.zip" class="btn btn-danger">Download Portable</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <img src="/assets/img/destiny.webp" alt="Destiny Tools" class="img-fluid rounded shadow" />
+        <div>
+          <img src="/assets/img/destiny.webp" alt="Destiny Tools" class="img-fluid rounded-lg shadow-lg w-full" />
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container pb-4">
-      <h3 class="text-center mb-4">Screenshots</h3>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/d2tools1.webp" alt="DIM Screenshot" />
-          <p class="mt-2">Destiny Item Manager Inventory Screen</p>
+  <section class="project-content">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots-grid">
+        <div class="screenshot-item">
+          <img src="/assets/img/d2tools1.webp" alt="DIM Screenshot" />
+          <p class="text-secondary mt-4">Destiny Item Manager Inventory Screen</p>
         </div>
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/d2tools2.webp" alt="Trials Report Screenshot" />
-          <p class="mt-2">Trials of Osiris lookup</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/d2tools2.webp" alt="Trials Report Screenshot" />
+          <p class="text-secondary mt-4">Trials of Osiris lookup</p>
         </div>
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/d2tools3.webp" alt="Light.gg Screenshot" />
-          <p class="mt-2">Light.gg item lookups with page switcher</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/d2tools3.webp" alt="Light.gg Screenshot" />
+          <p class="text-secondary mt-4">Light.gg item lookups with page switcher</p>
         </div>
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/d2tools4.webp" alt="DIM Loadouts" />
-          <p class="mt-2">Switchable loadouts in DIM</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/d2tools4.webp" alt="DIM Loadouts" />
+          <p class="text-secondary mt-4">Switchable loadouts in DIM</p>
         </div>
       </div>
     </div>
@@ -66,20 +69,10 @@
 
   <div id="footer-container"></div>
 
+  <script src="../assets/js/main.js"></script>
   <script>
-    function loadComponent(url, targetId) {
-      fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById(targetId).innerHTML = html;
-        })
-        .catch((error) => {
-          console.error(error);
-          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
-        });
-    }
-
-    loadComponent("../navbar.html", "navbar-container");
-    loadComponent("../footer.html", "footer-container");
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
   </script>
 </body>
+</html>

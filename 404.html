@@ -1,75 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>404 - Page Not Found | officiallysp.net</title>
-    <link rel="stylesheet" href="/assets/css/theme.css" />
-    <!-- Load JavaScript asynchronously -->
-    <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
-    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>404 - Page Not Found | officiallysp.net</title>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
+  <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+</head>
 
-  <body class="null d-flex flex-column min-vh-100">
-    <!-- Navbar placeholder -->
-    <div id="navbar-container"></div>
+<body class="d-flex flex-column min-vh-100">
+  <div id="navbar-container"></div>
 
-    <div class="container min-vh-50 d-flex align-items-center justify-content-center flex-grow-1">
-      <div class="text-center">
-        <h1 class="display-1 fw-bold">404</h1>
-        <h2 class="mb-4">Page Not Found</h2>
-        <p class="lead mb-5">Oops! The page you're looking for doesn't exist.</p>
+  <div class="container min-vh-100 d-flex align-items-center justify-content-center flex-grow-1">
+    <div class="text-center">
+      <h1 style="font-size: 8rem; font-weight: bold; margin-bottom: 1rem;">404</h1>
+      <h2 class="mb-4">Page Not Found</h2>
+      <p class="lead mb-5">Oops! The page you're looking for doesn't exist.</p>
 
-        <div class="alert alert-info mb-5">
-          <h5 class="alert-heading">Looking for these projects?</h5>
-          <p class="mb-3">If you're looking for TFT Mixer, Beedle, or DestinyGuessr, they've moved to their own domains:</p>
-          <div class="d-flex flex-column gap-2">
-            <a href="https://tftmixer.officiallysp.net" class="btn btn-outline-primary">
-              <i class="fa-solid fa-music me-2"></i>TFT Mixer
-            </a>
-            <a href="https://beedle.officiallysp.net" class="btn btn-outline-warning">
-              <i class="fa-solid fa-bug me-2"></i>Beedle
-            </a>
-            <a href="https://destinyguessr.officiallysp.net" class="btn btn-outline-success">
-              <i class="fa-solid fa-globe me-2"></i>DestinyGuessr
-            </a>
-          </div>
+      <div class="alert alert-info mb-5" style="background: rgba(23, 193, 232, 0.2); border-left-color: var(--color-info);">
+        <h5 style="margin-bottom: 1rem;">Looking for these projects?</h5>
+        <p class="mb-3">If you're looking for TFT Mixer, Beedle, or DestinyGuessr, they've moved to their own domains:</p>
+        <div class="d-flex flex-column gap-2" style="gap: 0.5rem;">
+          <a href="https://tftmixer.officiallysp.net" class="btn btn-info">
+            <i class="fa-solid fa-music me-2"></i>TFT Mixer
+          </a>
+          <a href="https://beedle.officiallysp.net" class="btn btn-warning">
+            <i class="fa-solid fa-bug me-2"></i>Beedle
+          </a>
+          <a href="https://destinyguessr.officiallysp.net" class="btn btn-success">
+            <i class="fa-solid fa-globe me-2"></i>DestinyGuessr
+          </a>
         </div>
-
-        <a href="/" class="btn btn-primary btn-lg">Go Back Home</a>
       </div>
+
+      <a href="/" class="btn btn-primary btn-lg">Go Back Home</a>
     </div>
+  </div>
 
-    <!-- Footer placeholder -->
-    <div id="footer-container"></div>
+  <div id="footer-container"></div>
 
-    <!-- Load non-critical scripts after content is displayed -->
-    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
-
-    <script>
-      // Function to load HTML components
-      function loadComponent(url, targetId) {
-        return fetch(url)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`Failed to load ${url}: ${response.status} ${response.statusText}`);
-            }
-            return response.text();
-          })
-          .then((html) => {
-            document.getElementById(targetId).innerHTML = html;
-          })
-          .catch((error) => {
-            console.error(error);
-            document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load ${url}. Please refresh the page.</div>`;
-          });
-      }
-
-      // Load navbar and footer immediately
-      loadComponent("navbar.html", "navbar-container");
-      loadComponent("footer.html", "footer-container");
-    </script>
-  </body>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    ComponentLoader.load("navbar.html", "navbar-container");
+    ComponentLoader.load("footer.html", "footer-container");
+  </script>
+</body>
 </html>

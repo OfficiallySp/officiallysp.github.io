@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -7,188 +9,339 @@
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="null d-flex flex-column min-vh-100">
-  <!-- Navbar placeholder -->
+<body class="flex flex-col min-h-screen">
   <div id="navbar-container"></div>
 
-  <header class="flex-grow-1">
-    <div class="page-header min-vh-65">
-      <video autoplay loop muted playsinline preload="metadata" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover nightowl-daylight">
-        <source src="assets/video/Background.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="container">
-        <div>
-          <div class="col-lg-5 text-center mx-auto nightowl-daylight">
-            <h1 class="text-white">Shane Pepperell</h1>
-            <h1 class="text-white">OfficiallySp</h1>
-            <h1 class="text-white">I make <span class="text-gradient text-info" id="typed"></span></h1>
-            <div id="typed-strings">
-              <h1>Games!</h1>
-              <h1>Apps!</h1>
-              <h1>Websites!</h1>
-              <h1>And more!!!</h1>
-            </div>
-            <p class="lead text-white">Welcome to my website. This is a central repository where you can find all of my projects, including apps, games, web projects and more. Find everything using the navigation at the top, or see my socials below.</p>
-            <p class="text-white h6 text-uppercase">Find me on these platforms</p>
-            <div>
-              <a href="https://youtube.com/officiallysp"><i class="fab fa-2x me-5 fa-brands fa-youtube text-white"></i></a>
-              <a href="https://twitter.com/officiallysp777"><i class="fab fa-2x text-white me-5 fa-brands fa-twitter"></i></a>
-              <a href="https://twitch.tv/officiallysp"><i class="fab fa-2x text-white me-5 fa-brands fa-twitch"></i></a>
-              <a href="https://github.com/officiallysp"><i class="fab fa-2x text-white fa-github"></i></a>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay loop muted playsinline preload="metadata" class="hero-video">
+      <source src="assets/video/Background.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Shane Pepperell<br />
+          <span style="font-size: 0.7em;">OfficiallySp</span>
+        </h1>
+        <p class="hero-subtitle">
+          I make <span id="typed"></span>
+        </p>
+        <div id="typed-strings" style="display: none;">
+          <span>Games!</span>
+          <span>Apps!</span>
+          <span>Websites!</span>
+          <span>And more!!!</span>
+        </div>
+        <p class="hero-subtitle" style="margin-top: var(--space-8);">
+          Welcome to my website. This is a central repository where you can find all of my projects, including apps, games, web projects and more.
+        </p>
+        <div class="flex gap-4 mt-8">
+          <a href="https://youtube.com/officiallysp" class="social-link" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://twitter.com/officiallysp777" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://twitch.tv/officiallysp" class="social-link" aria-label="Twitch">
+            <i class="fab fa-twitch"></i>
+          </a>
+          <a href="https://github.com/officiallysp" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Web Projects -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Web Projects</h2>
+      <p class="section-subtitle">Interactive web applications and tools built with modern web technologies.</p>
+      <div class="projects-grid">
+        <a href="https://tftmixer.officiallysp.net" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-music"></i>
           </div>
-        </div>
+          <h3 class="project-card-title">TFT Mixer</h3>
+          <p class="project-card-description">Teamfight Tactics Set 10 Music Maker</p>
+        </a>
+        <a href="https://beedle.officiallysp.net" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-bug"></i>
+          </div>
+          <h3 class="project-card-title">Beedle</h3>
+          <p class="project-card-description">Bee Swarm Simulator Wordle Clone</p>
+        </a>
+        <a href="https://destinyguessr.officiallysp.net" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3 class="project-card-title">DestinyGuessr</h3>
+          <p class="project-card-description">Destiny 2 Location Guessing Game</p>
+        </a>
+        <a href="https://discompress.officiallysp.net" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-file-zipper"></i>
+          </div>
+          <h3 class="project-card-title">Discompress</h3>
+          <p class="project-card-description">Fast, Private File Compression</p>
+        </a>
+        <a href="https://polymorph.officiallysp.net" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-atom"></i>
+          </div>
+          <h3 class="project-card-title">Polymorph</h3>
+          <p class="project-card-description">Offline File Conversion</p>
+        </a>
+        <a href="https://dismarkdown.officiallysp.net" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h3 class="project-card-title">DisMarkdown</h3>
+          <p class="project-card-description">Simple Discord Markdown Editor</p>
+        </a>
+        <a href="/pages/wowlevelling.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <h3 class="project-card-title">WoW Levelling Calculator</h3>
+          <p class="project-card-description">WoW Classic leveling calculator</p>
+        </a>
       </div>
     </div>
-  </header>
-  <section class="py-5 bg-gradient-dark nightowl-daylight" id="featured-projects">
+  </section>
+
+  <!-- Games -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
     <div class="container">
-      <h2 class="text-center text-white mb-4">Featured Projects</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-4 col-lg-3 mb-4">
-          <a href="https://tftmixer.officiallysp.net" class="card h-100 shadow border-0 text-decoration-none bg-gradient-info">
-            <div class="card-body text-center">
-              <i class="fa-solid fa-music fa-2x mb-3 text-white"></i>
-              <h5 class="card-title text-white">TFT Mixer</h5>
-              <p class="card-text text-white-50">Teamfight Tactics Set 10 Music Maker</p>
-            </div>
-          </a>
+      <h2 class="section-title">Games</h2>
+      <p class="section-subtitle">Games created with Unity Game Engine.</p>
+      <div class="projects-grid">
+        <a href="/pages/tankalot.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3 class="project-card-title">Tankalot Remastered</h3>
+          <p class="project-card-description">Remake of the 2017 Original</p>
+        </a>
+        <a href="/pages/unite.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3 class="project-card-title">Sonic Unite</h3>
+          <p class="project-card-description">Sonic Fangame For SAGE 22</p>
+        </a>
+        <a href="/pages/tpl.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-puzzle-piece"></i>
+          </div>
+          <h3 class="project-card-title">Tankalot Puzzle League</h3>
+          <p class="project-card-description">Fast Paced Puzzle Fun</p>
+        </a>
+        <a href="/pages/tanklegacy.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <h3 class="project-card-title">Tankalot Legacy Edition</h3>
+          <p class="project-card-description">Original Tankalot experience</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electron Apps -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Electron Apps</h2>
+      <p class="section-subtitle">Cross-platform desktop applications built with Electron.</p>
+      <div class="projects-grid">
+        <a href="https://dl.patchkit.net/d/1q4c72o1nqpvem9ugcz67/direct" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3 class="project-card-title">Firefly</h3>
+          <p class="project-card-description">Launcher For OfficiallySp Content</p>
+        </a>
+        <a href="/pages/feathercord.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-feather"></i>
+          </div>
+          <h3 class="project-card-title">Feathercord</h3>
+          <p class="project-card-description">Minimalist Discord client</p>
+        </a>
+        <a href="/pages/d2tools.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-ghost"></i>
+          </div>
+          <h3 class="project-card-title">DestinyTools</h3>
+          <p class="project-card-description">Utility for Destiny 2 players</p>
+        </a>
+        <a href="/pages/snapdesktop.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <h3 class="project-card-title">SnapDesktop</h3>
+          <p class="project-card-description">Crossplatform Snapchat Desktop Client</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Python Apps -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <h2 class="section-title">Python Apps</h2>
+      <p class="section-subtitle">Tools and utilities built with Python.</p>
+      <div class="projects-grid">
+        <a href="/pages/fpsickle.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="project-card-title">FPSickle</h3>
+          <p class="project-card-description">Video framerate analysis tool</p>
+        </a>
+        <a href="/pages/lolannouncer.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+          <h3 class="project-card-title">League Announcer</h3>
+          <p class="project-card-description">Custom announcer for League of Legends</p>
+        </a>
+        <a href="/pages/clipperino.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-film"></i>
+          </div>
+          <h3 class="project-card-title">Clipperino</h3>
+          <p class="project-card-description">Twitch clip compilations from a CLI</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- C# Apps -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">C# Apps</h2>
+      <p class="section-subtitle">Applications built with C# and .NET.</p>
+      <div class="projects-grid">
+        <a href="/pages/riftrandomizer.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-dice-d20"></i>
+          </div>
+          <h3 class="project-card-title">RiftRandomizer</h3>
+          <p class="project-card-description">League of Legends randomizer</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mods -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <h2 class="section-title">Mods</h2>
+      <p class="section-subtitle">Game modifications and enhancements.</p>
+      <div class="projects-grid">
+        <a href="/pages/f3nope.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-square"></i>
+          </div>
+          <h3 class="project-card-title">F3Nope</h3>
+          <p class="project-card-description">F3 menu customization</p>
+        </a>
+        <a href="/pages/ism.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-music"></i>
+          </div>
+          <h3 class="project-card-title">I Slay Mobs</h3>
+          <p class="project-card-description">The hit minecraft meme from 2015</p>
+        </a>
+        <a href="/pages/alchemical-excellence.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+          </div>
+          <h3 class="project-card-title">Alchemical Excellence</h3>
+          <p class="project-card-description">Endgame nether mod for Minecraft</p>
+        </a>
+        <a href="/pages/sa2-mod-installer.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <h3 class="project-card-title">SA2 Mod Installer</h3>
+          <p class="project-card-description">Mod installer for Sonic Adventure 2</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extras -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Extras</h2>
+      <p class="section-subtitle">Additional projects and experiments that don't fit into other categories.</p>
+      <div class="projects-grid">
+        <a href="/pages/mmrcharts.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-chart-bar"></i>
+          </div>
+          <h3 class="project-card-title">MMR Charts</h3>
+          <p class="project-card-description">League of Legends Rank Distribution</p>
+        </a>
+        <a href="/pages/tankalotnet.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="project-card-title">Tankalot.net</h3>
+          <p class="project-card-description">Online Backend for Tankalot Series</p>
+        </a>
+        <a href="/pages/cards.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <h3 class="project-card-title">Card Collector</h3>
+          <p class="project-card-description">Can you defeat Fate and break her curse?</p>
+        </a>
+        <a href="/pages/pyramid.html" class="project-card">
+          <div class="project-card-icon">
+            <i class="fa-solid fa-dice-d20"></i>
+          </div>
+          <h3 class="project-card-title">Pyramid Guessing Game</h3>
+          <p class="project-card-description">Can you beat the pyramid?</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="section" style="background-color: var(--color-bg-secondary);">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="state1" data-count="4">0</div>
+          <h3 class="stat-label">Games Created</h3>
+          <p class="stat-description">I create games using the Unity Game Engine. I self taught myself how to use the editor in late 2017. Since then i have gone to create the Tankalot game series and Sonic Unite for example.</p>
         </div>
-        <div class="col-md-4 col-lg-3 mb-4">
-          <a href="https://beedle.officiallysp.net" class="card h-100 shadow border-0 text-decoration-none bg-gradient-warning">
-            <div class="card-body text-center">
-              <i class="fa-solid fa-bug fa-2x mb-3 text-white"></i>
-              <h5 class="card-title text-white">Beedle</h5>
-              <p class="card-text text-white-50">Bee Swarm Simulator Wordle Clone</p>
-            </div>
-          </a>
+        <div class="stat-card">
+          <div class="stat-number" id="state2" data-count="5">0</div>
+          <h3 class="stat-label">Apps Coded</h3>
+          <p class="stat-description">I have made apps in C# and Python to improve Quality of life and providing extra utility to others. For example, my launcher to access many of my projects is made in Electron.</p>
         </div>
-        <div class="col-md-4 col-lg-3 mb-4">
-          <a href="https://destinyguessr.officiallysp.net" class="card h-100 shadow border-0 text-decoration-none bg-gradient-success">
-            <div class="card-body text-center">
-              <i class="fa-solid fa-globe fa-2x mb-3 text-white"></i>
-              <h5 class="card-title text-white">DestinyGuessr</h5>
-              <p class="card-text text-white-50">Destiny 2 Location Guessing Game</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-4">
-          <a href="https://discompress.officiallysp.net" class="card h-100 shadow border-0 text-decoration-none bg-gradient-danger">
-            <div class="card-body text-center">
-              <i class="fa-solid fa-file-zipper fa-2x mb-3 text-white"></i>
-              <h5 class="card-title text-white">Discompress</h5>
-              <p class="card-text text-white-50">Fast, Private File Compression</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-4">
-          <a href="https://polymorph.officiallysp.net" class="card h-100 shadow border-0 text-decoration-none bg-gradient-primary">
-            <div class="card-body text-center">
-              <i class="fa-solid fa-atom fa-2x mb-3 text-white"></i>
-              <h5 class="card-title text-white">Polymorph</h5>
-              <p class="card-text text-white-50">Offline File Conversion</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-lg-3 mb-4">
-          <a href="https://dismarkdown.officiallysp.net" class="card h-100 shadow border-0 text-decoration-none bg-gradient-light">
-            <div class="card-body text-center">
-              <i class="fa-solid fa-file-lines fa-2x mb-3 text-dark"></i>
-              <h5 class="card-title text-dark">DisMarkdown</h5>
-              <p class="card-text text-dark-50">Simple Discord Markdown Editor</p>
-            </div>
-          </a>
+        <div class="stat-card">
+          <div class="stat-number" id="state3" data-count="6">0</div>
+          <h3 class="stat-label">Extras Made</h3>
+          <p class="stat-description">Extra little things that i have come up with that don't fit into any of the other categories. Like web based sites / apps and other cool experiments too. Here be dragons, Tread carefully.</p>
         </div>
       </div>
     </div>
   </section>
-  <section class="py-3" id="count-stats">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-3">
-          <h1 class="text-gradient text-info" id="state1" countto="4"></h1>
-          <h5 class="">Games Created</h5>
-          <p>I create games using the Unity Game Engine. I self taught myself how to use the editor in late 2017. Since then i have gone to create the Tankalot game series and Sonic Unite for example.</p>
-        </div>
-        <div class="col-md-3">
-          <h1 class="text-gradient text-info" id="state2" countto="5"></h1>
-          <h5 class="">Apps Coded</h5>
-          <p>I have made apps in C# and Python to improve Quality of life and providing extra utility to others. For example, my launcher to access many of my projects is made in Electron.</p>
-        </div>
-        <div class="col-md-3">
-          <h1 class="text-gradient text-info" id="state3" countto="6"></h1>
-          <h5 class="">Extras Made</h5>
-          <p>Extra little things that i have come up with that don't fit into any of the other categories. Like web based sites / apps and other cool experiments too. Here be dragons, Tread carefully.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <div id="footer-container"></div>
 
-  <!-- Load non-critical scripts after content is displayed -->
-  <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/countup.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/gh/creativetimofficial/public-assets@master/soft-ui-design-system-builder/v1.0.7/assets/js/plugins/typedjs.js"></script>
-
+  <script src="./assets/js/main.js"></script>
   <script>
-    // Function to load HTML components
-    function loadComponent(url, targetId) {
-      return fetch(url)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`Failed to load ${url}: ${response.status} ${response.statusText}`);
-          }
-          return response.text();
-        })
-        .then((html) => {
-          document.getElementById(targetId).innerHTML = html;
-        })
-        .catch((error) => {
-          console.error(error);
-          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load ${url}. Please refresh the page.</div>`;
-        });
-    }
-
-    // Load navbar and footer immediately
-    loadComponent("navbar.html", "navbar-container");
-    loadComponent("footer.html", "footer-container");
-
-    // Initialize scripts with performance optimizations
-    function initializeComponents() {
-      // Initialize counters if CountUp is available
-      if (typeof CountUp !== 'undefined') {
-        ["state1", "state2", "state3"].forEach(id => {
-          const element = document.getElementById(id);
-          if (element) {
-            const countUp = new CountUp(id, element.getAttribute("countTo"));
-            if (!countUp.error) {
-              countUp.start();
-            } else {
-              console.error(countUp.error);
-            }
-          }
-        });
-      }
-      
-      // Initialize typed text if Typed is available
-      if (typeof Typed !== 'undefined' && document.getElementById("typed")) {
-        new Typed("#typed", {
-          stringsElement: "#typed-strings",
-          typeSpeed: 70,
-          backSpeed: 50,
-          backDelay: 2000,
-          startDelay: 500,
-          loop: true,
-        });
-      }
-    }
-
-    // Wait for DOM and try to initialize immediately
-    document.addEventListener("DOMContentLoaded", function () {
-      initializeComponents();
-      
-      // If libraries aren't loaded yet, try again after a short delay
-      setTimeout(initializeComponents, 100);
-    });
+    ComponentLoader.load("navbar.html", "navbar-container");
+    ComponentLoader.load("footer.html", "footer-container");
   </script>
 </body>
+</html>

@@ -1,34 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>officiallysp.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PedroMap - officiallysp.net</title>
   <link rel="stylesheet" href="../assets/css/theme.css" />
   <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="flex flex-col min-h-screen">
   <div id="navbar-container"></div>
 
-  <section class="mt-5">
-    <div class="container py-4">
-      <!--
-            <div class="alert alert-warning" role="alert">
-                <span class="alert-text"><strong>Note:</strong> Your alert message here.</span>
-            </div>
-            -->
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4">
-          <h2 class="text-primary">PedroMap</h2>
-          <p>PedroMap brings the infamous racoon dancing meme to your ingame minimap. pedro lives inside the minimap. he's just vibin. if he's blocking your minimap. tough luck this addon also comes with sound too. both the animation and sound can be turned off via a button on the minimap</p>
-          <div class="mt-3">
-            <a href="https://github.com/OfficiallySp/PedroMap" class="btn btn-primary me-2">GitHub</a>
-            <a href="https://www.curseforge.com/wow/addons/pedromap" class="btn btn-info me-2">Download On Curseforge</a>
+  <section class="project-header">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">PedroMap</h1>
+          <p class="text-secondary mb-6">
+            PedroMap brings the infamous racoon dancing meme to your ingame minimap. pedro lives inside the minimap. he's just vibin. if he's blocking your minimap. tough luck this addon also comes with sound too. both the animation and sound can be turned off via a button on the minimap
+          </p>
+          <div class="flex gap-4">
+            <a href="https://github.com/OfficiallySp/PedroMap" class="btn btn-primary">GitHub</a>
+            <a href="https://www.curseforge.com/wow/addons/pedromap" class="btn btn-secondary">Download On Curseforge</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <img src="/assets/img/pedromapgame.webp" alt="Project Image" class="img-fluid rounded shadow" style="max-width: 100%; max-height: 400px; object-fit: contain" />
+        <div>
+          <img src="/assets/img/pedromapgame.webp" alt="PedroMap" class="img-fluid rounded-lg shadow-lg w-full" />
         </div>
       </div>
     </div>
@@ -36,20 +34,10 @@
 
   <div id="footer-container"></div>
 
+  <script src="../assets/js/main.js"></script>
   <script>
-    function loadComponent(url, targetId) {
-      fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById(targetId).innerHTML = html;
-        })
-        .catch((error) => {
-          console.error(error);
-          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
-        });
-    }
-
-    loadComponent("../navbar.html", "navbar-container");
-    loadComponent("../footer.html", "footer-container");
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
   </script>
 </body>
+</html>

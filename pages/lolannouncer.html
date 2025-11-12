@@ -1,47 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>officiallysp.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoL Announcer - officiallysp.net</title>
   <link rel="stylesheet" href="../assets/css/theme.css" />
   <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="flex flex-col min-h-screen">
   <div id="navbar-container"></div>
 
-  <section class="mt-5">
-    <div class="container py-4">
-      <div class="alert alert-danger" role="alert">
+  <section class="project-header">
+    <div class="container">
+      <div class="alert alert-danger mb-6">
         <span class="alert-text"><strong>Warning:</strong> As of May 1st 2024, this project is no longer functional. This is due to Riot Vanguard and the changes it has made to the game. as well as the removal of the Live Events API in patch 14.1. This project will not be updated and is no longer functional.</span>
       </div>
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4">
-          <h2 class="text-primary">LoL Announcer</h2>
-          <p>The LoL Announcer project was a simple and easy way to use custom announcers in League Of Legends. It used the Live Client Data API to get the game state and then played a custom announcer based on the game state. Unfortunately, due to Riot Vanguard and the changes it has made to the game, this project is no longer functional.</p>
-          <div class="mt-3">
-            <a href="https://github.com/IHasPeks/peks-announcer" class="btn btn-primary me-2">GitHub</a>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">LoL Announcer</h1>
+          <p class="text-secondary mb-6">
+            The LoL Announcer project was a simple and easy way to use custom announcers in League Of Legends. It used the Live Client Data API to get the game state and then played a custom announcer based on the game state. Unfortunately, due to Riot Vanguard and the changes it has made to the game, this project is no longer functional.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://github.com/IHasPeks/peks-announcer" class="btn btn-primary">GitHub</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <img src="/assets/img/league.webp" alt="Project Image" class="img-fluid rounded shadow" style="max-width: 100%; max-height: 400px; object-fit: contain" />
+        <div>
+          <img src="/assets/img/league.webp" alt="LoL Announcer" class="img-fluid rounded-lg shadow-lg w-full" style="max-width: 100%; max-height: 400px; object-fit: contain" />
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container pb-4">
-      <h3 class="text-center mb-4">Screenshots</h3>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/announcer1.webp" alt="Screenshot 1" />
-          <p class="mt-2">The main menu of the announcer</p>
+  <section class="project-content">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots-grid">
+        <div class="screenshot-item">
+          <img src="/assets/img/announcer1.webp" alt="Main menu" />
+          <p class="text-secondary mt-4">The main menu of the announcer</p>
         </div>
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/announcer2.webp" alt="Screenshot 2" />
-          <p class="mt-2">settings menu</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/announcer2.webp" alt="Settings menu" />
+          <p class="text-secondary mt-4">Settings menu</p>
         </div>
       </div>
     </div>
@@ -49,20 +52,10 @@
 
   <div id="footer-container"></div>
 
+  <script src="../assets/js/main.js"></script>
   <script>
-    function loadComponent(url, targetId) {
-      fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById(targetId).innerHTML = html;
-        })
-        .catch((error) => {
-          console.error(error);
-          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
-        });
-    }
-
-    loadComponent("../navbar.html", "navbar-container");
-    loadComponent("../footer.html", "footer-container");
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
   </script>
 </body>
+</html>

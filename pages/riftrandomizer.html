@@ -1,60 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>officiallysp.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RiftRandomizer - officiallysp.net</title>
   <link rel="stylesheet" href="../assets/css/theme.css" />
   <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="flex flex-col min-h-screen">
   <div id="navbar-container"></div>
 
-  <section class="mt-5">
-    <div class="container py-4">
-      <!--
-            <div class="alert alert-warning" role="alert">
-                <span class="alert-text"><strong>Note:</strong> Your alert message here.</span>
-            </div>
-            -->
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4">
-          <h2 class="text-primary">RiftRandomizer</h2>
-          <p>RiftRandomizer is a tool used to randomly shuffle players and create unique gamemodes in both League Of Legends And VALORANT. A Custom version is used by the streamer BigCheeseGames with additional functionality, however a free version is available for the general public to use.</p>
-          <div class="mt-3">
-            <a href="https://github.com/OfficiallySp/RiftRandomizer" class="btn btn-primary me-2">GitHub</a>
-            <a href="https://officiallysp.net/riftrandomizer/" class="btn btn-info me-2">Open in Web</a>
+  <section class="project-header">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">RiftRandomizer</h1>
+          <p class="text-secondary mb-6">
+            RiftRandomizer is a tool used to randomly shuffle players and create unique gamemodes in both League Of Legends And VALORANT. A Custom version is used by the streamer BigCheeseGames with additional functionality, however a free version is available for the general public to use.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://github.com/OfficiallySp/RiftRandomizer" class="btn btn-primary">GitHub</a>
+            <a href="https://officiallysp.net/riftrandomizer/" class="btn btn-secondary">Open in Web</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <img src="/assets/img/rrlogo.webp" alt="Project Image" class="img-fluid rounded shadow" style="max-width: 100%; max-height: 400px; object-fit: contain" />
+        <div>
+          <img src="/assets/img/rrlogo.webp" alt="RiftRandomizer" class="img-fluid rounded-lg shadow-lg w-full" style="max-width: 100%; max-height: 400px; object-fit: contain" />
         </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="container pb-4">
-      <h3 class="text-center mb-4">Screenshots</h3>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/rr1.webp" alt="Screenshot 1" />
-          <p class="mt-2">Mirror matchup screenshot</p>
+  <section class="project-content">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots-grid">
+        <div class="screenshot-item">
+          <img src="/assets/img/rr1.webp" alt="Mirror matchup" />
+          <p class="text-secondary mt-4">Mirror matchup screenshot</p>
         </div>
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/rr2.webp" alt="Screenshot 2" />
-          <p class="mt-2">Name entry 1</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/rr2.webp" alt="Name entry 1" />
+          <p class="text-secondary mt-4">Name entry 1</p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/rr3.webp" alt="Screenshot 1" />
-          <p class="mt-2">Name entry 2</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/rr3.webp" alt="Name entry 2" />
+          <p class="text-secondary mt-4">Name entry 2</p>
         </div>
-        <div class="col-md-6 mb-3">
-          <img class="w-100 rounded" src="/assets/img/rr4.webp" alt="Screenshot 2" />
-          <p class="mt-2">Valorant Theme</p>
+        <div class="screenshot-item">
+          <img src="/assets/img/rr4.webp" alt="Valorant Theme" />
+          <p class="text-secondary mt-4">Valorant Theme</p>
         </div>
       </div>
     </div>
@@ -62,20 +58,10 @@
 
   <div id="footer-container"></div>
 
+  <script src="../assets/js/main.js"></script>
   <script>
-    function loadComponent(url, targetId) {
-      fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById(targetId).innerHTML = html;
-        })
-        .catch((error) => {
-          console.error(error);
-          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
-        });
-    }
-
-    loadComponent("../navbar.html", "navbar-container");
-    loadComponent("../footer.html", "footer-container");
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
   </script>
 </body>
+</html>

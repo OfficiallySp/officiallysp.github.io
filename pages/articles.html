@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles - officiallysp.net</title>
+  <link rel="stylesheet" href="../assets/css/theme.css" />
+  <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
+  <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <div id="navbar-container"></div>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Articles</h1>
+      <p class="section-subtitle">Thoughts, tutorials, and updates about my projects and development journey.</p>
+      
+      <div class="articles-grid">
+        <a href="/pages/article-example.html" class="article-card">
+          <img src="/assets/img/build.webp" alt="Article Image" class="article-card-image" />
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span><i class="fas fa-calendar"></i> January 15, 2025</span>
+              <span><i class="fas fa-tag"></i> Development</span>
+            </div>
+            <h2 class="article-card-title">Getting Started with Game Development</h2>
+            <p class="article-card-excerpt">Learn the basics of game development and how to get started with Unity. This article covers the fundamentals and provides resources for beginners.</p>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <img src="/assets/img/league.webp" alt="Article Image" class="article-card-image" />
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span><i class="fas fa-calendar"></i> January 10, 2025</span>
+              <span><i class="fas fa-tag"></i> Projects</span>
+            </div>
+            <h2 class="article-card-title">Building RiftRandomizer</h2>
+            <p class="article-card-excerpt">A deep dive into the development process of RiftRandomizer, a League of Legends randomizer tool built with C#.</p>
+          </div>
+        </a>
+
+        <a href="#" class="article-card">
+          <img src="/assets/img/destiny.webp" alt="Article Image" class="article-card-image" />
+          <div class="article-card-body">
+            <div class="article-card-meta">
+              <span><i class="fas fa-calendar"></i> January 5, 2025</span>
+              <span><i class="fas fa-tag"></i> Tools</span>
+            </div>
+            <h2 class="article-card-title">Creating DestinyGuessr</h2>
+            <p class="article-card-excerpt">How I built a location guessing game for Destiny 2 using web technologies and the game's API.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
+  </script>
+</body>
+</html>

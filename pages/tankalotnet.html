@@ -1,40 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>officiallysp.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tankalot.net - officiallysp.net</title>
   <link rel="stylesheet" href="../assets/css/theme.css" />
   <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
   <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
 </head>
 
-<body class="d-flex flex-column min-vh-100">
+<body class="flex flex-col min-h-screen">
   <div id="navbar-container"></div>
 
-  <section class="position-relative">
-    <div class="hero-image position-absolute w-100" style="background-image: url('/assets/img/remasterbig.webp'); background-size: cover; background-position: center; opacity: 0.3; z-index: -1; top: 0; bottom: 0"></div>
-    <div class="container py-4">
-      <!--
-            <div class="alert alert-warning" role="alert">
-                <span class="alert-text"><strong>Note:</strong> Your alert message here.</span>
-            </div>
-            -->
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4">
-          <h2 class="text-primary">Tankalot.net</h2>
-          <p>Live game services for the tankalot series of games</p>
+  <section class="project-header">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">Tankalot.net</h1>
+          <p class="text-secondary mb-6">
+            Live game services for the tankalot series of games
+          </p>
+        </div>
+        <div>
+          <img src="/assets/img/remasterbig.webp" alt="Tankalot.net" class="img-fluid rounded-lg shadow-lg w-full opacity-30" />
         </div>
       </div>
     </div>
-    <div class="container pb-4">
-      <h3 class="text-center mb-4">Tankalot Puzzle League Leaderboards</h3>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <p class="mt-2">TPL Classic Leaderboard</p>
+  </section>
+
+  <section class="project-content">
+    <div class="container">
+      <h2 class="section-title">Tankalot Puzzle League Leaderboards</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="mb-4">TPL Classic Leaderboard</h3>
           <script src="https://www.dreamlo.com/lb/5db8c058d1041303ecc5b182/js" type="text/javascript"></script>
         </div>
-        <div class="col-md-6 mb-3">
-          <p class="mt-2">TPL Marathon Leaderboard</p>
+        <div>
+          <h3 class="mb-4">TPL Marathon Leaderboard</h3>
           <script src="https://www.dreamlo.com/lb/5db99120d1041303ecc91368/js" type="text/javascript"></script>
         </div>
       </div>
@@ -43,20 +46,10 @@
 
   <div id="footer-container"></div>
 
+  <script src="../assets/js/main.js"></script>
   <script>
-    function loadComponent(url, targetId) {
-      fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById(targetId).innerHTML = html;
-        })
-        .catch((error) => {
-          console.error(error);
-          document.getElementById(targetId).innerHTML = `<div class="alert alert-danger">Failed to load component</div>`;
-        });
-    }
-
-    loadComponent("../navbar.html", "navbar-container");
-    loadComponent("../footer.html", "footer-container");
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
   </script>
 </body>
+</html>
