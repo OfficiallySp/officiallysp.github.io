@@ -1672,22 +1672,6 @@
     </style>
   </head>
   <body>
-    <div id="navbar-placeholder"></div>
-    <script>
-      function loadNavbar() {
-        const navbarPlaceholder = document.getElementById("navbar-placeholder");
-        const xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            navbarPlaceholder.innerHTML = this.responseText;
-          }
-        };
-        xhr.open("GET", "../navbar.html", true);
-        xhr.send();
-      }
-
-      window.onload = loadNavbar;
-    </script>
     <tw-story
       ><noscript><tw-noscript>JavaScript needs to be enabled to play Story.</tw-noscript></noscript></tw-story
     >
