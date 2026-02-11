@@ -1,9 +1,15 @@
 /* OfficiallySp Design System - Shared Tokens
  * Use this file to align design language across all OfficiallySp sites.
- * Override --color-accent and --color-bg-* for each site's visual identity.
+ * Override --os-accent for each site's visual identity.
+ * Link: <link rel="stylesheet" href="https://officiallysp.net/assets/css/design-tokens.css" />
  */
 
 :root {
+  /* OfficiallySp bar - override --os-accent per site */
+  --os-accent: #6366f1;
+  --os-bar-bg: rgba(10, 10, 10, 0.95);
+  --os-bar-text: #b3b3b3;
+  --os-bar-hover: #ffffff;
   /* Typography - Consistent across all sites */
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
@@ -76,4 +82,34 @@
 
 .officiallysp-footer a:hover {
   opacity: 0.8;
+}
+
+/* OfficiallySp top bar - cohesive branding across all sites */
+.officiallysp-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: var(--os-bar-bg);
+  color: var(--os-bar-text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+}
+
+.officiallysp-bar:hover {
+  color: var(--os-bar-hover);
+  background: rgba(20, 20, 20, 0.98);
+}
+
+.officiallysp-bar .os-icon {
+  opacity: 0.8;
+}
+
+.officiallysp-bar .os-accent {
+  color: var(--os-accent);
+  font-weight: 600;
 }
