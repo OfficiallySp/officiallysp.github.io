@@ -2,17 +2,17 @@
 
 Consistent design language across all OfficiallySp sites while preserving each site's visual identity. Every site is linked to officiallysp.net for a cohesive experience.
 
-## OfficiallySp Bar with Quickswitcher
+## OfficiallySp Bar
 
-Every standalone site loads the bar (with project quickswitcher) via script:
+Every standalone site includes a top branding bar:
 
 ```html
-<script src="https://officiallysp.net/assets/js/officiallysp-bar.js" data-accent="#6366f1"></script>
+<a href="https://officiallysp.net" class="officiallysp-bar" aria-label="Part of OfficiallySp - More projects" style="--os-accent: #6366f1;">
+  <span class="os-icon">◀</span><span class="os-accent">OfficiallySp.net</span><span>— More projects</span>
+</a>
 ```
 
-- **data-accent**: Each site's brand color (e.g. `#5ea5c2` for DestinyGuessr)
-- **Quickswitcher**: Click "Projects ▼" to jump to any project without visiting officiallysp.net
-- **Keyboard**: `Ctrl+K` / `Cmd+K` opens the quickswitcher
+Override `--os-accent` with each site's brand color for visual identity.
 
 ## Design Tokens
 
