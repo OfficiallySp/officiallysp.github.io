@@ -113,3 +113,99 @@
   color: var(--os-accent);
   font-weight: 600;
 }
+
+/* Quickswitcher */
+.os-bar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: var(--os-bar-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0;
+}
+
+.os-bar-wrapper .os-bar-home {
+  flex: 1;
+  min-width: 0;
+  border-radius: 0;
+}
+
+.os-quickswitcher {
+  position: relative;
+}
+
+.os-qs-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--os-bar-text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s, background 0.2s;
+}
+
+.os-qs-trigger:hover {
+  color: var(--os-bar-hover);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.os-qs-chevron {
+  font-size: 0.6rem;
+  opacity: 0.8;
+  transition: transform 0.2s;
+}
+
+.os-quickswitcher.os-qs-open .os-qs-chevron {
+  transform: rotate(180deg);
+}
+
+.os-qs-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  min-width: 200px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--os-bar-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 0.5rem);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  padding: 0.25rem;
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+}
+
+.os-quickswitcher.os-qs-open .os-qs-dropdown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(4px);
+}
+
+.os-qs-dropdown a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--os-bar-text);
+  text-decoration: none;
+  border-radius: var(--radius-sm, 0.375rem);
+  transition: background 0.15s, color 0.15s;
+}
+
+.os-qs-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--os-bar-hover);
+}
+
+.os-qs-dropdown a:first-child {
+  color: var(--os-accent);
+  font-weight: 600;
+}
