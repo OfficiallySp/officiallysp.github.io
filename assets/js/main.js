@@ -121,13 +121,16 @@ class ComponentLoader {
       if (target) {
         target.innerHTML = html;
         
-        // Initialize or reinitialize dropdowns after loading navbar
+        // Initialize or reinitialize navbar components after loading
         if (targetId === 'navbar-container') {
           setTimeout(() => {
+            // Initialize or reinitialize mobile menu
+            window.mobileMenu = new MobileMenu();
+
+            // Initialize or reinitialize dropdowns
             if (window.dropdownMenu) {
               window.dropdownMenu.reinit();
             } else {
-              // If DropdownMenu hasn't been initialized yet, create it
               window.dropdownMenu = new DropdownMenu();
             }
           }, 10);
@@ -164,7 +167,7 @@ class MobileMenu {
       const links = this.nav.querySelectorAll('.nav-link');
       links.forEach(link => {
         link.addEventListener('click', () => {
-          if (window.innerWidth < 992) {
+          if (window.innerWidth < 1024) {
             this.closeMenu();
           }
         });
@@ -254,7 +257,15 @@ class DropdownMenu {
   }
   
   reinit() {
-    // Clear existing handlers and reinitialize
+    // Remove existing event listeners before reinitializing
+    this.dropdowns.forEach((handlers, dropdown) => {
+      const link = dropdown.querySelector('.nav-link');
+      dropdown.removeEventListener('mouseenter', handlers.mouseenter);
+      dropdown.removeEventListener('mouseleave', handlers.mouseleave);
+      if (link) {
+        link.removeEventListener('click', handlers.click);
+      }
+    });
     this.dropdowns.clear();
     this.initDropdowns();
   }
