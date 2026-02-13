@@ -124,6 +124,11 @@ class ComponentLoader {
         // Initialize or reinitialize dropdowns after loading navbar
         if (targetId === 'navbar-container') {
           setTimeout(() => {
+            if (window.mobileMenu && typeof window.mobileMenu.destroy === 'function') {
+              window.mobileMenu.destroy();
+            }
+            window.mobileMenu = new MobileMenu();
+
             if (window.dropdownMenu) {
               window.dropdownMenu.reinit();
             } else {
@@ -149,53 +154,76 @@ class MobileMenu {
   constructor() {
     this.toggle = document.querySelector('.navbar-toggle');
     this.nav = document.querySelector('.navbar-nav');
+    this.linkHandlers = new Map();
+    this.handleToggleClick = () => this.toggleMenu();
+    this.handleDocumentClick = (e) => {
+      if (!this.nav || !this.toggle) return;
+      if (!this.nav.contains(e.target) && !this.toggle.contains(e.target)) {
+        this.closeMenu();
+      }
+    };
     
     if (this.toggle && this.nav) {
-      this.toggle.addEventListener('click', () => this.toggleMenu());
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!this.nav.contains(e.target) && !this.toggle.contains(e.target)) {
-          this.closeMenu();
-        }
-      });
+      this.toggle.addEventListener('click', this.handleToggleClick);
+      document.addEventListener('click', this.handleDocumentClick);
       
       // Close menu when clicking a link
       const links = this.nav.querySelectorAll('.nav-link');
       links.forEach(link => {
-        link.addEventListener('click', () => {
+        const handler = () => {
           if (window.innerWidth < 992) {
             this.closeMenu();
           }
-        });
+        };
+        link.addEventListener('click', handler);
+        this.linkHandlers.set(link, handler);
       });
     }
   }
 
   toggleMenu() {
+    if (!this.nav || !this.toggle) return;
+
     this.nav.classList.toggle('active');
     const isOpen = this.nav.classList.contains('active');
     this.toggle.setAttribute('aria-expanded', isOpen);
     
     const spans = this.toggle.querySelectorAll('span');
-    if (isOpen) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-    } else {
+    if (spans.length >= 3) {
+      if (isOpen) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+      } else {
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = '';
+      }
+    }
+  }
+
+  closeMenu() {
+    if (!this.nav || !this.toggle) return;
+
+    this.nav.classList.remove('active');
+    this.toggle.setAttribute('aria-expanded', 'false');
+    const spans = this.toggle.querySelectorAll('span');
+    if (spans.length >= 3) {
       spans[0].style.transform = '';
       spans[1].style.opacity = '1';
       spans[2].style.transform = '';
     }
   }
 
-  closeMenu() {
-    this.nav.classList.remove('active');
-    this.toggle.setAttribute('aria-expanded', 'false');
-    const spans = this.toggle.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '1';
-    spans[2].style.transform = '';
+  destroy() {
+    if (!this.toggle || !this.nav) return;
+
+    this.toggle.removeEventListener('click', this.handleToggleClick);
+    document.removeEventListener('click', this.handleDocumentClick);
+    this.linkHandlers.forEach((handler, link) => {
+      link.removeEventListener('click', handler);
+    });
+    this.linkHandlers.clear();
   }
 }
 
@@ -248,22 +276,31 @@ class DropdownMenu {
         link.addEventListener('click', handlers.click);
         
         // Store handlers for potential cleanup
-        this.dropdowns.set(dropdown, handlers);
+        this.dropdowns.set(dropdown, { link, handlers });
       }
     });
   }
+
+  destroy() {
+    this.dropdowns.forEach(({ link, handlers }, dropdown) => {
+      dropdown.removeEventListener('mouseenter', handlers.mouseenter);
+      dropdown.removeEventListener('mouseleave', handlers.mouseleave);
+      link.removeEventListener('click', handlers.click);
+    });
+    this.dropdowns.clear();
+  }
   
   reinit() {
-    // Clear existing handlers and reinitialize
-    this.dropdowns.clear();
+    // Remove existing handlers and reinitialize
+    this.destroy();
     this.initDropdowns();
   }
 }
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize mobile menu
-  new MobileMenu();
+  // Initialize mobile menu (for pages with inline navbar)
+  window.mobileMenu = new MobileMenu();
   
   // Initialize dropdown menu
   window.dropdownMenu = new DropdownMenu();

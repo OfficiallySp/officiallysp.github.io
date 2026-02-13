@@ -163,7 +163,6 @@
     }
   </style>
 
-  <body>
     <div class="start-container">
       <h2>Welcome to the Card Collector</h2>
       <p>In this game, you start by choosing a card, I then take every card whose number can divide your chosen card.</p>
@@ -288,7 +287,7 @@
             });
             rightContainer.textContent = `Opponent: ${rightSum}`;
           }
-          end = true;
+          let end = true;
           clickAllowedCards.forEach((cardToCheck) => {
             const number = parseInt(cardToCheck.getAttribute("data-number"));
             clickAllowedCards.forEach((c) => {
@@ -325,7 +324,6 @@
               pElement.textContent = "Congratulations! You won!";
               divElement.replaceWith(pElement);
             }
-            document.head.appendChild(style);
           }
         });
       });
@@ -337,8 +335,9 @@
         });
       }
       const restartButton = document.getElementById("restart-button");
-
-      restartButton.addEventListener("click", restartGame);
+      if (restartButton) {
+        restartButton.addEventListener("click", restartGame);
+      }
 
       function restartGame() {
         // Reset variables and states
