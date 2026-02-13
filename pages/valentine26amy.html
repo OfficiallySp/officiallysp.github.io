@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@bufferhead/nightowl@0.0.14/dist/nightowl.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will you be my Valentine?</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff8fb1, #ff5d8f, #ff8fb1);
+      background-size: 400% 400%;
+      animation: bgShift 12s ease infinite;
+      font-family: "Georgia", "Times New Roman", serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes bgShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    #navbar-placeholder,
+    #footer-placeholder {
+      width: 100%;
+    }
+
+    #footer-placeholder { margin-top: auto; }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    .heart {
+      font-size: 56px;
+      animation: pulse 1.8s ease-in-out infinite;
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    h1 {
+      color: #c41e5a;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+
+    .hint {
+      color: #ff6b8a;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      min-height: 1.4em;
+    }
+
+    .target-phrase {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #c41e5a;
+      margin-bottom: 1rem;
+      padding: 10px 14px;
+      background: rgba(255, 93, 143, 0.1);
+      border-radius: 10px;
+      border-left: 4px solid #ff5d8f;
+    }
+
+    .input-wrap {
+      position: relative;
+      margin-top: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 1.1rem;
+      font-family: inherit;
+      border: 2px solid #ffb8c9;
+      border-radius: 12px;
+      background: #fff;
+      color: #333;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #ff5d8f;
+      box-shadow: 0 0 0 3px rgba(255, 93, 143, 0.2);
+    }
+
+    input::placeholder {
+      color: #d4a5b0;
+    }
+
+    .success {
+      display: none;
+    }
+
+    .success.show {
+      display: block;
+    }
+
+    .success .heart-burst {
+      font-size: 64px;
+      animation: burst 0.6s ease-out;
+    }
+
+    @keyframes burst {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .success h2 {
+      color: #c41e5a;
+      font-size: 1.6rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .success p {
+      color: #ff6b8a;
+      font-size: 1rem;
+    }
+
+    .floating-hearts {
+      position: fixed;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .typing-area { display: block; }
+    .typing-area.hide { display: none; }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="main">
+    <div class="card">
+      <div class="typing-area" id="typingArea">
+        <div class="heart">❤️</div>
+        <h1>Will you be my Valentine?</h1>
+        <p class="hint" id="hint">Type exactly what you see below:</p>
+        <div class="target-phrase" id="targetPhrase"></div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            id="answer"
+            placeholder="Start typing..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      </div>
+
+      <div class="success" id="success">
+        <div class="heart-burst">💕</div>
+        <h2>You said yes!</h2>
+        <p>You've made my day. Happy Valentine's! 💝</p>
+      </div>
+    </div>
+  </div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    const PHRASES = [
+      "yes",
+      "yes i will",
+      "yes i will be",
+      "yes i will be your valentine",
+      "yes i will be your valentine shane",
+      "yes i amy will be your valentine shane",
+      "yes i aimzies will be your valentine shane",
+      "yes i aimzies also known as amy will be your valentine shane",
+      "yes i gamezies rhymes with aimzies also known as amy will be your valentine shane",
+      "yes i gamezies rhymes with aimzies also known as amy will be your valentine shane because you are the best",
+      "yes i gamezies rhymes with aimzies also known as amy will be your valentine shane because you are the best and definately not annoyed me by typing this all out"
+    ];
+
+    let step = 0;
+    const input = document.getElementById("answer");
+    const hint = document.getElementById("hint");
+    const targetPhrase = document.getElementById("targetPhrase");
+    const typingArea = document.getElementById("typingArea");
+    const successArea = document.getElementById("success");
+
+    function updateTargetDisplay() {
+      targetPhrase.textContent = `"${PHRASES[step]}"`;
+    }
+
+    function normalize(s) {
+      return s.trim().toLowerCase().replace(/\s+/g, " ");
+    }
+
+    function checkAnswer() {
+      const val = normalize(input.value);
+      const target = PHRASES[step];
+
+      if (val === target) {
+        step++;
+        input.value = "";
+        input.placeholder = step < PHRASES.length ? "Keep going..." : "";
+
+        if (step >= PHRASES.length) {
+          typingArea.classList.add("hide");
+          successArea.classList.add("show");
+          celebrate();
+        } else {
+          updateTargetDisplay();
+          hint.textContent = `Nice! (${step}/${PHRASES.length})`;
+          hint.style.color = "#10b981";
+          setTimeout(() => {
+            hint.textContent = "Type exactly what you see below:";
+            hint.style.color = "#ff6b8a";
+          }, 1500);
+        }
+      }
+    }
+
+    updateTargetDisplay();
+
+    input.addEventListener("paste", (e) => {
+      e.preventDefault();
+      input.value = "nice try nerd";
+      checkAnswer();
+    });
+
+    input.addEventListener("input", checkAnswer);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") checkAnswer();
+    });
+
+    function celebrate() {
+      const emojis = ["❤️", "💖", "💝", "💗", "💓", "🌸"];
+      const colors = ["#ff6b6b", "#ff4b8d", "#ff8fb1"];
+
+      for (let i = 0; i < 25; i++) {
+        setTimeout(() => {
+          const el = document.createElement("div");
+          el.className = "floating-hearts";
+          el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          el.style.left = Math.random() * window.innerWidth + "px";
+          el.style.top = "-40px";
+          el.style.fontSize = (Math.random() * 18 + 14) + "px";
+          el.style.opacity = Math.random() * 0.5 + 0.5;
+          el.style.color = colors[Math.floor(Math.random() * colors.length)];
+          document.body.appendChild(el);
+
+          el.animate(
+            [
+              { transform: "translateY(0) rotate(0deg)", opacity: parseFloat(el.style.opacity) },
+              { transform: `translateY(${window.innerHeight + 60}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ],
+            { duration: 2500 + Math.random() * 1500, easing: "cubic-bezier(0.37, 0, 0.63, 1)" }
+          ).onfinish = () => el.remove();
+        }, i * 120);
+      }
+    }
+  </script>
+  <script src="../assets/js/footer.js"></script>
+</body>
+</html>
