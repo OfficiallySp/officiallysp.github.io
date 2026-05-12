@@ -1,0 +1,185 @@
+# Primary Netlify site for https://officiallysp.net — routes /app-id paths to each app’s Netlify URL.
+# Publish directory is the repo root (static HTML).
+[build]
+  publish = "."
+
+# --- Legacy subdomain → canonical path (301) ---
+# These rules run only when Netlify receives the request on THIS site. To handle traffic that
+# still hits a subdomain on a child site, deploy the _redirects file from each app repo (see clones)
+# or move the subdomain under Domain management on this site instead of the child site.
+
+[[redirects]]
+  from = "https://tftmixer.officiallysp.net/*"
+  to = "https://officiallysp.net/tftmixer/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://beedle.officiallysp.net/*"
+  to = "https://officiallysp.net/beedle/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://destinyguessr.officiallysp.net/*"
+  to = "https://officiallysp.net/destinyguessr/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://discordtools.officiallysp.net/*"
+  to = "https://officiallysp.net/discordtools/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://discompress.officiallysp.net/*"
+  to = "https://officiallysp.net/discompress/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://polymorph.officiallysp.net/*"
+  to = "https://officiallysp.net/polymorph/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://wowlevelling.officiallysp.net/*"
+  to = "https://officiallysp.net/wowlevelling/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://promptimizer.officiallysp.net/*"
+  to = "https://officiallysp.net/promptimizer/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://scranorban.officiallysp.net/*"
+  to = "https://officiallysp.net/scranorban/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://4oever.officiallysp.net/*"
+  to = "https://officiallysp.net/4oever/:splat"
+  status = 301
+  force = true
+
+# --- Trailing slash for path mount points ---
+
+[[redirects]]
+  from = "/tftmixer"
+  to = "/tftmixer/"
+  status = 301
+
+[[redirects]]
+  from = "/beedle"
+  to = "/beedle/"
+  status = 301
+
+[[redirects]]
+  from = "/destinyguessr"
+  to = "/destinyguessr/"
+  status = 301
+
+[[redirects]]
+  from = "/discordtools"
+  to = "/discordtools/"
+  status = 301
+
+[[redirects]]
+  from = "/discompress"
+  to = "/discompress/"
+  status = 301
+
+[[redirects]]
+  from = "/polymorph"
+  to = "/polymorph/"
+  status = 301
+
+[[redirects]]
+  from = "/wowlevelling"
+  to = "/wowlevelling/"
+  status = 301
+
+[[redirects]]
+  from = "/promptimizer"
+  to = "/promptimizer/"
+  status = 301
+
+[[redirects]]
+  from = "/scranorban"
+  to = "/scranorban/"
+  status = 301
+
+[[redirects]]
+  from = "/4oever"
+  to = "/4oever/"
+  status = 301
+
+# --- Reverse proxy (200) to each app’s default Netlify hostname ---
+# :splat is the path after /app-id/
+
+[[redirects]]
+  from = "/tftmixer/*"
+  to = "https://tftmixer.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/beedle/*"
+  to = "https://beedle.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/destinyguessr/*"
+  to = "https://destinyguessr.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/discordtools/*"
+  to = "https://discordtools.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/discompress/*"
+  to = "https://discompress.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/polymorph/*"
+  to = "https://polymorph.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/wowlevelling/*"
+  to = "https://wowlevelling.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/promptimizer/*"
+  to = "https://promptimizer.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/scranorban/*"
+  to = "https://scranorban.netlify.app/:splat"
+  status = 200
+  force = true
+
+# 4oever: if the target 404s, set `to` to that site’s default *.netlify.app URL from Netlify → Domain settings.
+[[redirects]]
+  from = "/4oever/*"
+  to = "https://4oever.netlify.app/:splat"
+  status = 200
+  force = true
