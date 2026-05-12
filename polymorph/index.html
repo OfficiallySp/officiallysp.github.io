@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorph - Offline File Converter</title>
+    <meta name="description" content="Transform files in your browser - images, documents, spreadsheets, audio. Convert JPG, PNG, PDF, DOCX, MP3 and more. Completely offline, private." />
+    <meta name="keywords" content="file converter, offline converter, image converter, PDF converter, document converter, format conversion" />
+    <meta name="author" content="OfficiallySp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://officiallysp.net/polymorph/" />
+    <meta property="og:title" content="Polymorph - Offline File Converter" />
+    <meta property="og:description" content="Transform almost any file in your browser. Completely offline, private, fast." />
+    <meta property="og:site_name" content="Polymorph" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Polymorph - Offline File Converter" />
+    <meta name="twitter:description" content="Transform files in your browser. Completely offline and private." />
+    <link rel="canonical" href="https://officiallysp.net/polymorph/" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://unpkg.com/turndown/dist/turndown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://officiallysp.net/assets/css/design-tokens.css" />
+</head>
+<body>
+    <a href="https://officiallysp.net" class="officiallysp-bar" aria-label="Part of OfficiallySp - More projects" style="--os-accent: #00ff9d;">
+        <span class="os-icon">◀</span><span class="os-accent">OfficiallySp.net</span><span>— More projects</span>
+    </a>
+    <div class="container">
+        <h1>
+            Polymorph
+            <div class="morph-background"></div>BETA
+        </h1>
+        <p class="subtitle">Transform (almost) Any File • Completely Offline • At The Speed Of Light</p>
+        <p class="subtitle">Made with ❤️ by <a href="https://officiallysp.net">OfficiallySp</a></p>
+        
+        <div class="converter-box">
+            <div class="file-input">
+                <div class="drag-icon">📁</div>
+                <input type="file" id="inputFile" class="hidden">
+                <label for="inputFile" class="upload-btn">Choose File to Transform</label>
+                <h3>Or drag and drop your file here</h3>
+                <span id="fileName">No file selected</span>
+            </div>
+
+            <div class="conversion-options">
+                <div id="formatButtons" class="format-buttons">
+                    <!-- Format buttons will be added here dynamically -->
+                </div>
+            </div>
+
+            <button id="convertBtn" disabled>Transform File</button>
+        </div>
+
+        <div id="status" class="status"></div>
+        <div id="loadingLibraries" class="status">Loading transformation engines...</div>
+        <div class="supported-formats">
+            <details>
+                <summary>✨ Supported Transformations</summary>
+                <ul>
+                    <li>Images: JPG, PNG, WebP, GIF</li>
+                    <li>Documents: PDF, DOCX, TXT</li>
+                    <li>Spreadsheets: XLSX, CSV, JSON</li>
+                    <li>Text: HTML, Markdown, Plain Text</li>
+                    <li>Audio: MP3, WAV, OGG</li>
+                </ul>
+            </details>
+        </div>
+        <p class="footer-text">All conversions happen locally in the browser. Your files never leave the device.</p>
+    </div>
+    <script src="converter.js"></script>
+    <style>
+    .drop-ripple {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+        pointer-events: none;
+        transform-origin: center;
+    }
+    </style>
+</body>
+</html> 

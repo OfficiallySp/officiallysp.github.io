@@ -30,6 +30,14 @@ Why remove child custom domains?
 - Cloudflare redirect rules send old subdomain requests to the apex path before
   they need to hit Netlify (recommended), or you rely on Rules only.
 
+Verify proxy targets (subdomain vs real Netlify site name)
+-----------------------------------------------------------
+The public URL slug (e.g. /discordtools/) can differ from the deploy’s default
+*.netlify.app subdomain (e.g. discompress.netlify.app). Using the wrong
+*.netlify.app (or a name taken by someone else’s site) causes 500s or wrong
+content. Open Site settings → Domain management on each child site and use
+the site’s Netlify subdomain shown there in netlify.toml.
+
 Optional cleanup in child repos
 -------------------------------
 Some projects still have _redirects rules that 301 old Netlify hosts like

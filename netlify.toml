@@ -37,16 +37,17 @@
   status = 200
   force = true
 
-# --- discordtools (discompress repo)
+# --- discordtools (discompress repo) — targets discompress.netlify.app (the real deploy).
+# discordtools.netlify.app is a different unrelated site and will 500 when proxied from here.
 [[redirects]]
   from = "/discordtools/*"
-  to = "https://discordtools.netlify.app/:splat"
+  to = "https://discompress.netlify.app/:splat"
   status = 200
   force = true
 
 [[redirects]]
   from = "/discordtools"
-  to = "https://discordtools.netlify.app/"
+  to = "https://discompress.netlify.app/"
   status = 200
   force = true
 
@@ -76,18 +77,8 @@
   status = 200
   force = true
 
-# --- polymorph
-[[redirects]]
-  from = "/polymorph/*"
-  to = "https://polymorph.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/polymorph"
-  to = "https://polymorph.netlify.app/"
-  status = 200
-  force = true
+# --- polymorph: served as static files from /polymorph/ in this repo (no proxy).
+# polymorph.netlify.app is a different site; internal proxy to another team’s deploy returns 500.
 
 # --- promptimizer
 [[redirects]]

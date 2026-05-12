@@ -1,0 +1,4 @@
+Polymorph is shipped here as static files under officiallysp.net/polymorph/ because
+the hostname polymorph.netlify.app points at a different unrelated Netlify site.
+
+Source repo for edits: https://github.com/OfficiallySp/polymorph (mirror these files when you change the app).
