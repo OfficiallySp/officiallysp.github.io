@@ -20,6 +20,10 @@
 [build]
   publish = "."
 
+# Avoid Pretty URL trailing-slash redirects fighting path proxies for /app/ (seen as 301 → /app/ loops).
+[build.processing.html]
+  pretty_urls = false
+
 # --- Legacy subdomain → canonical path (301) ---
 # Runs when Netlify receives the request on this site (or use child-site _redirects).
 
@@ -89,9 +93,6 @@
   status = 301
   force = true
 
-# --- Trailing slash: use _redirects with exact paths only (netlify.toml /path → /path/
-# can match /path/ too and causes ERR_TOO_MANY_REDIRECTS / -310).
-
 # Old portfolio path /discompress/* → Discord Tools
 [[redirects]]
   from = "/discompress"
@@ -105,14 +106,13 @@
   force = true
 
 # --- Reverse proxy (200) ---
-# Exact "/app/" + "/app/*": Netlify's splat pattern does not match the bare directory path,
-# so "/app/" alone must be proxied explicitly (otherwise browsers hit a redirect loop or 404).
+# Directory URL /app/ is 302 → /app/index.html (internal), then /app/* proxies — avoids Netlify
+# Pretty URL / trailing-slash handling returning 301 Location: /app/ loops on /app/ alone.
 
 [[redirects]]
   from = "/tftmixer/"
-  to = "https://tftmixer.netlify.app/"
-  status = 200
-  force = true
+  to = "/tftmixer/index.html"
+  status = 302
 
 [[redirects]]
   from = "/tftmixer/*"
@@ -122,9 +122,8 @@
 
 [[redirects]]
   from = "/beedle/"
-  to = "https://beedle.netlify.app/"
-  status = 200
-  force = true
+  to = "/beedle/index.html"
+  status = 302
 
 [[redirects]]
   from = "/beedle/*"
@@ -134,9 +133,8 @@
 
 [[redirects]]
   from = "/destinyguessr/"
-  to = "https://destinyguessr.netlify.app/"
-  status = 200
-  force = true
+  to = "/destinyguessr/index.html"
+  status = 302
 
 [[redirects]]
   from = "/destinyguessr/*"
@@ -146,9 +144,8 @@
 
 [[redirects]]
   from = "/discordtools/"
-  to = "https://discordtools.netlify.app/"
-  status = 200
-  force = true
+  to = "/discordtools/index.html"
+  status = 302
 
 [[redirects]]
   from = "/discordtools/*"
@@ -158,9 +155,8 @@
 
 [[redirects]]
   from = "/polymorph/"
-  to = "https://polymorph.netlify.app/"
-  status = 200
-  force = true
+  to = "/polymorph/index.html"
+  status = 302
 
 [[redirects]]
   from = "/polymorph/*"
@@ -170,9 +166,8 @@
 
 [[redirects]]
   from = "/wowlevelling/"
-  to = "https://wowlevelling.netlify.app/"
-  status = 200
-  force = true
+  to = "/wowlevelling/index.html"
+  status = 302
 
 [[redirects]]
   from = "/wowlevelling/*"
@@ -182,9 +177,8 @@
 
 [[redirects]]
   from = "/promptimizer/"
-  to = "https://promptimizer.netlify.app/"
-  status = 200
-  force = true
+  to = "/promptimizer/index.html"
+  status = 302
 
 [[redirects]]
   from = "/promptimizer/*"
@@ -194,9 +188,8 @@
 
 [[redirects]]
   from = "/scranorban/"
-  to = "https://scranorban.netlify.app/"
-  status = 200
-  force = true
+  to = "/scranorban/index.html"
+  status = 302
 
 [[redirects]]
   from = "/scranorban/*"
@@ -206,9 +199,8 @@
 
 [[redirects]]
   from = "/sonicopus/"
-  to = "https://sonicopus.netlify.app/"
-  status = 200
-  force = true
+  to = "/sonicopus/index.html"
+  status = 302
 
 [[redirects]]
   from = "/sonicopus/*"
@@ -218,9 +210,8 @@
 
 [[redirects]]
   from = "/lightledger/"
-  to = "https://lightledger.netlify.app/"
-  status = 200
-  force = true
+  to = "/lightledger/index.html"
+  status = 302
 
 [[redirects]]
   from = "/lightledger/*"

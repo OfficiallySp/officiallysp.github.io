@@ -1,13 +1,2 @@
-# Exact paths only (no trailing slash → add slash). Do not use netlify.toml 301 for /app → /app/
-# on Netlify: those rules can also match /app/ and cause an infinite 301 loop (browser error -310).
-
-/tftmixer /tftmixer/ 301
-/beedle /beedle/ 301
-/destinyguessr /destinyguessr/ 301
-/discordtools /discordtools/ 301
-/polymorph /polymorph/ 301
-/wowlevelling /wowlevelling/ 301
-/promptimizer /promptimizer/ 301
-/scranorban /scranorban/ 301
-/sonicopus /sonicopus/ 301
-/lightledger /lightledger/ 301
+# Do not add /app → /app/ redirects: Netlify can normalize paths so /app matches /app/,
+# producing an infinite 301 Location: /app/ (Chromium -310).
