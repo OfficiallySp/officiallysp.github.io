@@ -1,12 +1,9 @@
 # Primary Netlify site for https://officiallysp.net — routes /app-id paths to each app’s Netlify URL.
-# Publish directory is the repo root (static HTML).
 [build]
   publish = "."
 
 # --- Legacy subdomain → canonical path (301) ---
-# These rules run only when Netlify receives the request on THIS site. To handle traffic that
-# still hits a subdomain on a child site, deploy the _redirects file from each app repo (see clones)
-# or move the subdomain under Domain management on this site instead of the child site.
+# Runs when Netlify receives the request on this site (or use child-site _redirects).
 
 [[redirects]]
   from = "https://tftmixer.officiallysp.net/*"
@@ -34,7 +31,7 @@
 
 [[redirects]]
   from = "https://discompress.officiallysp.net/*"
-  to = "https://officiallysp.net/discompress/:splat"
+  to = "https://officiallysp.net/discordtools/:splat"
   status = 301
   force = true
 
@@ -63,12 +60,36 @@
   force = true
 
 [[redirects]]
-  from = "https://4oever.officiallysp.net/*"
-  to = "https://officiallysp.net/4oever/:splat"
+  from = "https://sonicopus.officiallysp.net/*"
+  to = "https://officiallysp.net/sonicopus/:splat"
   status = 301
   force = true
 
-# --- Trailing slash for path mount points ---
+[[redirects]]
+  from = "https://obliviarchive.officiallysp.net/*"
+  to = "https://officiallysp.net/obliviarchive/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lightledger.officiallysp.net/*"
+  to = "https://officiallysp.net/lightledger/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://hasliamwood101beendefeated.officiallysp.net/*"
+  to = "https://officiallysp.net/hasliamwood101beendefeated/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim.officiallysp.net/*"
+  to = "https://officiallysp.net/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/:splat"
+  status = 301
+  force = true
+
+# --- Trailing slash for path roots ---
 
 [[redirects]]
   from = "/tftmixer"
@@ -88,11 +109,6 @@
 [[redirects]]
   from = "/discordtools"
   to = "/discordtools/"
-  status = 301
-
-[[redirects]]
-  from = "/discompress"
-  to = "/discompress/"
   status = 301
 
 [[redirects]]
@@ -116,12 +132,53 @@
   status = 301
 
 [[redirects]]
-  from = "/4oever"
-  to = "/4oever/"
+  from = "/sonicopus"
+  to = "/sonicopus/"
   status = 301
 
-# --- Reverse proxy (200) to each app’s default Netlify hostname ---
-# :splat is the path after /app-id/
+[[redirects]]
+  from = "/obliviarchive"
+  to = "/obliviarchive/"
+  status = 301
+
+[[redirects]]
+  from = "/lightledger"
+  to = "/lightledger/"
+  status = 301
+
+[[redirects]]
+  from = "/chatstats"
+  to = "/chatstats/"
+  status = 301
+
+[[redirects]]
+  from = "/summershowdown"
+  to = "/summershowdown/"
+  status = 301
+
+[[redirects]]
+  from = "/hasliamwood101beendefeated"
+  to = "/hasliamwood101beendefeated/"
+  status = 301
+
+[[redirects]]
+  from = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim"
+  to = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/"
+  status = 301
+
+# Old portfolio path /discompress/* → Discord Tools
+[[redirects]]
+  from = "/discompress"
+  to = "/discordtools/"
+  status = 301
+
+[[redirects]]
+  from = "/discompress/*"
+  to = "/discordtools/:splat"
+  status = 301
+  force = true
+
+# --- Reverse proxy (200) ---
 
 [[redirects]]
   from = "/tftmixer/*"
@@ -144,12 +201,6 @@
 [[redirects]]
   from = "/discordtools/*"
   to = "https://discordtools.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/discompress/*"
-  to = "https://discompress.netlify.app/:splat"
   status = 200
   force = true
 
@@ -177,9 +228,44 @@
   status = 200
   force = true
 
-# 4oever: if the target 404s, set `to` to that site’s default *.netlify.app URL from Netlify → Domain settings.
 [[redirects]]
-  from = "/4oever/*"
-  to = "https://4oever.netlify.app/:splat"
+  from = "/sonicopus/*"
+  to = "https://sonicopus.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/obliviarchive/*"
+  to = "https://obliviarchive.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/lightledger/*"
+  to = "https://lightledger.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/chatstats/*"
+  to = "https://chatstats.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/summershowdown/*"
+  to = "https://summershowdown.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/hasliamwood101beendefeated/*"
+  to = "https://hasliamwood101beendefeated.officiallysp.net/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/*"
+  to = "https://issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim.officiallysp.net/:splat"
   status = 200
   force = true
