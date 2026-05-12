@@ -43,3 +43,10 @@ Smoke test
 1. https://officiallysp.net/tftmixer/ (and a few others) load assets (Network tab).
 2. curl -sI https://tftmixer.officiallysp.net/ → 301 to https://officiallysp.net/tftmixer/
    (once Cloudflare rules + DNS are live).
+
+Redirect loop (Chrome -310 / ERR_TOO_MANY_REDIRECTS) on /app/
+-------------------------------------------------------------
+Netlify’s pattern from = "/app/*" does not match the bare trailing-slash URL
+/app/ (nothing after the final slash). netlify.toml therefore includes an
+explicit from = "/app/" → https://<app>.netlify.app/ proxy (status 200) before
+the /app/* rule.

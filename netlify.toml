@@ -1,5 +1,9 @@
 # OfficiallySp main site — static publish + reverse proxy to separate Netlify deploys
 # Each /appname/* path is served from the matching *.netlify.app site (same naming as repo).
+#
+# Netlify's "/app/*" pattern does not match "/app/" alone (no splat segment). Without an
+# explicit "/app/" → proxy rule, trailing-slash URLs can fall through to Netlify's slash
+# handling and 301 to themselves → redirect loop (Chrome -310 ERR_TOO_MANY_REDIRECTS).
 
 [build]
   publish = "."
@@ -9,6 +13,12 @@
   from = "/beedle"
   to = "/beedle/"
   status = 301
+
+[[redirects]]
+  from = "/beedle/"
+  to = "https://beedle.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/beedle/*"
@@ -23,6 +33,12 @@
   status = 301
 
 [[redirects]]
+  from = "/destinyguessr/"
+  to = "https://destinyguessr.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/destinyguessr/*"
   to = "https://destinyguessr.netlify.app/:splat"
   status = 200
@@ -33,6 +49,12 @@
   from = "/discordtools"
   to = "/discordtools/"
   status = 301
+
+[[redirects]]
+  from = "/discordtools/"
+  to = "https://discordtools.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/discordtools/*"
@@ -47,6 +69,12 @@
   status = 301
 
 [[redirects]]
+  from = "/lightledger/"
+  to = "https://lightledger.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/lightledger/*"
   to = "https://lightledger.netlify.app/:splat"
   status = 200
@@ -57,6 +85,12 @@
   from = "/obliviarchive"
   to = "/obliviarchive/"
   status = 301
+
+[[redirects]]
+  from = "/obliviarchive/"
+  to = "https://obliviarchive.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/obliviarchive/*"
@@ -71,6 +105,12 @@
   status = 301
 
 [[redirects]]
+  from = "/polymorph/"
+  to = "https://polymorph.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/polymorph/*"
   to = "https://polymorph.netlify.app/:splat"
   status = 200
@@ -81,6 +121,12 @@
   from = "/promptimizer"
   to = "/promptimizer/"
   status = 301
+
+[[redirects]]
+  from = "/promptimizer/"
+  to = "https://promptimizer.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/promptimizer/*"
@@ -95,6 +141,12 @@
   status = 301
 
 [[redirects]]
+  from = "/scranorban/"
+  to = "https://scranorban.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/scranorban/*"
   to = "https://scranorban.netlify.app/:splat"
   status = 200
@@ -105,6 +157,12 @@
   from = "/sonicopus"
   to = "/sonicopus/"
   status = 301
+
+[[redirects]]
+  from = "/sonicopus/"
+  to = "https://sonicopus.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/sonicopus/*"
@@ -119,6 +177,12 @@
   status = 301
 
 [[redirects]]
+  from = "/tftmixer/"
+  to = "https://tftmixer.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/tftmixer/*"
   to = "https://tftmixer.netlify.app/:splat"
   status = 200
@@ -129,6 +193,12 @@
   from = "/wowlevelling"
   to = "/wowlevelling/"
   status = 301
+
+[[redirects]]
+  from = "/wowlevelling/"
+  to = "https://wowlevelling.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/wowlevelling/*"
