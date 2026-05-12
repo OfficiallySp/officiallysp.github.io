@@ -12,6 +12,9 @@
 # Child sites: in _redirects use only https://<app>.officiallysp.net/* → apex path. Never use a
 # bare /* rule — the main site proxies via *.netlify.app and would hit a 301 loop (browser -310).
 #
+# Trailing slash: avoid netlify.toml [[redirects]] from = "/app" → "/app/" — Netlify may match /app/
+# too and emit an infinite 301. Use exact-root lines in _redirects instead.
+#
 # Standalone products on their own apex (e.g. chatstats.live) should not be path-mounted here;
 # link directly to those domains from the site.
 [build]
@@ -86,57 +89,8 @@
   status = 301
   force = true
 
-# --- Trailing slash for path roots ---
-
-[[redirects]]
-  from = "/tftmixer"
-  to = "/tftmixer/"
-  status = 301
-
-[[redirects]]
-  from = "/beedle"
-  to = "/beedle/"
-  status = 301
-
-[[redirects]]
-  from = "/destinyguessr"
-  to = "/destinyguessr/"
-  status = 301
-
-[[redirects]]
-  from = "/discordtools"
-  to = "/discordtools/"
-  status = 301
-
-[[redirects]]
-  from = "/polymorph"
-  to = "/polymorph/"
-  status = 301
-
-[[redirects]]
-  from = "/wowlevelling"
-  to = "/wowlevelling/"
-  status = 301
-
-[[redirects]]
-  from = "/promptimizer"
-  to = "/promptimizer/"
-  status = 301
-
-[[redirects]]
-  from = "/scranorban"
-  to = "/scranorban/"
-  status = 301
-
-[[redirects]]
-  from = "/sonicopus"
-  to = "/sonicopus/"
-  status = 301
-
-[[redirects]]
-  from = "/lightledger"
-  to = "/lightledger/"
-  status = 301
+# --- Trailing slash: use _redirects with exact paths only (netlify.toml /path → /path/
+# can match /path/ too and causes ERR_TOO_MANY_REDIRECTS / -310).
 
 # Old portfolio path /discompress/* → Discord Tools
 [[redirects]]
