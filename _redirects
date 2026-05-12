@@ -1,2 +1,0 @@
-# Path routing lives in netlify.toml (not here). Do not add /app → /app/ rules that duplicate TOML:
-# ordering must be 301 /app → /app/ before the /app/* proxy.

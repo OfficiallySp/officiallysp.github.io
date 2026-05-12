@@ -1,0 +1,61 @@
+Cloudflare: send legacy *.officiallysp.net hosts to path URLs on the apex
+============================================================================
+
+When: After the main Netlify site (officiallysp.net) deploys netlify.toml so
+      /appname/* proxies correctly.
+
+Requirement: Subdomain DNS records must be proxied (orange cloud) so Redirect
+             Rules run on Cloudflare’s edge.
+
+Option A — One Redirect Rule per app (easiest to reason about)
+--------------------------------------------------------------
+Rules → Redirect Rules → Create rule
+
+For each row below:
+  - If: Custom filter expression
+        (http.host eq "<hostname>")
+  - Then: Dynamic redirect
+        Type: Dynamic
+        Expression: concat("https://officiallysp.net<path>", http.request.uri.path)
+        Status: 301
+        Preserve query string: on
+
+Replace <hostname> and <path> using the table (path includes a leading slash).
+
+Example for TFT Mixer only:
+  If: (http.host eq "tftmixer.officiallysp.net")
+  Expression: concat("https://officiallysp.net/tftmixer", http.request.uri.path)
+
+Hostname                              Path (prefix after net)
+--------------------------------------------------------------------
+beedle.officiallysp.net               /beedle
+destinyguessr.officiallysp.net        /destinyguessr
+discordtools.officiallysp.net         /discordtools
+discompress.officiallysp.net          /discordtools
+lightledger.officiallysp.net          /lightledger
+obliviarchive.officiallysp.net        /obliviarchive
+polymorph.officiallysp.net            /polymorph
+promptimizer.officiallysp.net         /promptimizer
+scranorban.officiallysp.net           /scranorban
+sonicopus.officiallysp.net            /sonicopus
+tftmixer.officiallysp.net             /tftmixer
+wowlevelling.officiallysp.net         /wowlevelling
+
+Add any other subdomains you still have in DNS the same way.
+
+Option B — Bulk Redirect List (single list, many URLs)
+------------------------------------------------------
+Dashboard → Bulk Redirects → Create Bulk Redirect List
+
+Import-ready file (no header row; matches Cloudflare CSV format):
+  infra/cloudflare-bulk-redirects.csv
+
+Use separate entries for apex + wildcard where supported, for example:
+  https://tftmixer.officiallysp.net       https://officiallysp.net/tftmixer       301
+  https://tftmixer.officiallysp.net/*    https://officiallysp.net/tftmixer/:splat 301
+
+(Exact UI fields depend on your Cloudflare plan; wildcard rows may require
+ Enterprise. Option A works on typical Pro/Business setups.)
+
+After traffic is off subdomains, you may delete the old CNAME/A records or
+leave them proxied; the redirect rule is what matters.

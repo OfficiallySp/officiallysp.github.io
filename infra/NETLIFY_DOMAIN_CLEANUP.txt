@@ -1,0 +1,45 @@
+Netlify: domains after moving to officiallysp.net/<app>
+=========================================================
+
+SPA / build “base path” (per-app repos)
+---------------------------------------
+The sites proxied in netlify.toml were checked: they load scripts, CSS, and
+assets with relative URLs (e.g. styles.css, js/engine.js), which work under
+officiallysp.net/<app>/ without changing Vite/CRA base or router basename.
+
+If you add a new app that emits root-absolute URLs (/assets/...), configure
+its build so the public path matches the mount point (e.g. Vite base:
+'/myapp/') before adding a proxy rule here.
+
+Main site (this repo → officiallysp.net)
+----------------------------------------
+- Domain management should keep: officiallysp.net (and www only if you use it).
+- Deploy previews: unchanged.
+
+Each child site (separate Netlify site + git repo)
+---------------------------------------------------
+1. Open the site in Netlify → Domain management.
+2. Remove custom entries such as appname.officiallysp.net / wildcard subdomains
+   you no longer want bound to that project.
+3. Keep the default https://<sitename>.netlify.app hostname — that URL is the
+   proxy target in netlify.toml.
+
+Why remove child custom domains?
+- Avoid SSL/host ambiguity: the browser should only see officiallysp.net for
+  public URLs.
+- Cloudflare redirect rules send old subdomain requests to the apex path before
+  they need to hit Netlify (recommended), or you rely on Rules only.
+
+Optional cleanup in child repos
+-------------------------------
+Some projects still have _redirects rules that 301 old Netlify hosts like
+https://beedle.officiallysp.net/ → https://officiallysp.net/beedle/
+Those only run when the request hits that Netlify site with that host. After
+you remove the custom domain from the child site, those lines do nothing—you
+can delete them to avoid confusion (Cloudflare becomes the single redirect).
+
+Smoke test
+----------
+1. https://officiallysp.net/tftmixer/ (and a few others) load assets (Network tab).
+2. curl -sI https://tftmixer.officiallysp.net/ → 301 to https://officiallysp.net/tftmixer/
+   (once Cloudflare rules + DNS are live).

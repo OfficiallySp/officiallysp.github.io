@@ -1,208 +1,14 @@
-# Primary Netlify site for https://officiallysp.net — routes /app-id paths to each app’s Netlify URL.
-#
-# With Cloudflare in front (orange-cloud DNS): requests still reach Netlify as origin unless you
-# intercept them. These redirects run on Netlify after Cloudflare forwards the request.
-# If you want a single routing layer: use a Cloudflare Worker (or Snippets) to proxy paths like
-# /tftmixer/* to each *.netlify.app origin and keep this file only for the static portfolio—or leave
-# routing here and use Cloudflare only for DNS/WAF/cache (simplest).
-#
-# Cloudflare: disable any Bulk Redirects / Page Rules that send officiallysp.net/<app> to
-# <app>.officiallysp.net — that bypasses these proxies and breaks path URLs.
-#
-# Child sites: in _redirects use only https://<app>.officiallysp.net/* → apex path. Never use a
-# bare /* rule — the main site proxies via *.netlify.app and would hit a 301 loop (browser -310).
-#
-# Trailing slash: 301 /app → /app/ must run before the /app/* proxy (Netlify can treat /app as splat).
-# Otherwise the URL bar stays /app, and relative links resolve under the apex (broken multi-page apps).
-#
-# Standalone products on their own apex (e.g. chatstats.live) should not be path-mounted here;
-# link directly to those domains from the site.
+# OfficiallySp main site — static publish + reverse proxy to separate Netlify deploys
+# Each /appname/* path is served from the matching *.netlify.app site (same naming as repo).
+
 [build]
   publish = "."
 
-# Avoid Pretty URL trailing-slash redirects fighting path proxies for /app/ (seen as 301 → /app/ loops).
-[build.processing.html]
-  pretty_urls = false
-
-# --- Legacy subdomain → canonical path (301) ---
-# Runs when Netlify receives the request on this site (or use child-site _redirects).
-
-[[redirects]]
-  from = "https://tftmixer.officiallysp.net/"
-  to = "https://officiallysp.net/tftmixer/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://tftmixer.officiallysp.net/*"
-  to = "https://officiallysp.net/tftmixer/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://beedle.officiallysp.net/"
-  to = "https://officiallysp.net/beedle/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://beedle.officiallysp.net/*"
-  to = "https://officiallysp.net/beedle/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://destinyguessr.officiallysp.net/"
-  to = "https://officiallysp.net/destinyguessr/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://destinyguessr.officiallysp.net/*"
-  to = "https://officiallysp.net/destinyguessr/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://discordtools.officiallysp.net/"
-  to = "https://officiallysp.net/discordtools/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://discordtools.officiallysp.net/*"
-  to = "https://officiallysp.net/discordtools/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://discompress.officiallysp.net/"
-  to = "https://officiallysp.net/discordtools/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://discompress.officiallysp.net/*"
-  to = "https://officiallysp.net/discordtools/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://polymorph.officiallysp.net/"
-  to = "https://officiallysp.net/polymorph/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://polymorph.officiallysp.net/*"
-  to = "https://officiallysp.net/polymorph/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://wowlevelling.officiallysp.net/"
-  to = "https://officiallysp.net/wowlevelling/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://wowlevelling.officiallysp.net/*"
-  to = "https://officiallysp.net/wowlevelling/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://promptimizer.officiallysp.net/"
-  to = "https://officiallysp.net/promptimizer/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://promptimizer.officiallysp.net/*"
-  to = "https://officiallysp.net/promptimizer/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://scranorban.officiallysp.net/"
-  to = "https://officiallysp.net/scranorban/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://scranorban.officiallysp.net/*"
-  to = "https://officiallysp.net/scranorban/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://sonicopus.officiallysp.net/"
-  to = "https://officiallysp.net/sonicopus/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://sonicopus.officiallysp.net/*"
-  to = "https://officiallysp.net/sonicopus/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://lightledger.officiallysp.net/"
-  to = "https://officiallysp.net/lightledger/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://lightledger.officiallysp.net/*"
-  to = "https://officiallysp.net/lightledger/:splat"
-  status = 301
-  force = true
-
-# Old portfolio path /discompress/* → Discord Tools
-[[redirects]]
-  from = "/discompress"
-  to = "/discordtools/"
-  status = 301
-
-[[redirects]]
-  from = "/discompress/*"
-  to = "/discordtools/:splat"
-  status = 301
-  force = true
-
-# --- Reverse proxy (200) ---
-# /app/ must proxy to the app origin’s root. A local rewrite to /app/index.html 404s here (no file in
-# this repo). /app/* matches /app alone unless we 301 first — without a slash, relative URLs in HTML
-# break (e.g. sticker-guess.html → /sticker-guess.html). Order: /app → /app/ 301, then /app/, then /app/*.
-
-[[redirects]]
-  from = "/tftmixer"
-  to = "/tftmixer/"
-  status = 301
-
-[[redirects]]
-  from = "/tftmixer/"
-  to = "https://tftmixer.netlify.app/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/tftmixer/*"
-  to = "https://tftmixer.netlify.app/:splat"
-  status = 200
-  force = true
-
+# --- beedle → https://beedle.netlify.app
 [[redirects]]
   from = "/beedle"
   to = "/beedle/"
   status = 301
-
-[[redirects]]
-  from = "/beedle/"
-  to = "https://beedle.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/beedle/*"
@@ -210,16 +16,11 @@
   status = 200
   force = true
 
+# --- destinyguessr → https://destinyguessr.netlify.app
 [[redirects]]
   from = "/destinyguessr"
   to = "/destinyguessr/"
   status = 301
-
-[[redirects]]
-  from = "/destinyguessr/"
-  to = "https://destinyguessr.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/destinyguessr/*"
@@ -227,16 +28,11 @@
   status = 200
   force = true
 
+# --- discordtools (discompress repo) → https://discordtools.netlify.app
 [[redirects]]
   from = "/discordtools"
   to = "/discordtools/"
   status = 301
-
-[[redirects]]
-  from = "/discordtools/"
-  to = "https://discordtools.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/discordtools/*"
@@ -244,16 +40,35 @@
   status = 200
   force = true
 
+# --- lightledger → https://lightledger.netlify.app
+[[redirects]]
+  from = "/lightledger"
+  to = "/lightledger/"
+  status = 301
+
+[[redirects]]
+  from = "/lightledger/*"
+  to = "https://lightledger.netlify.app/:splat"
+  status = 200
+  force = true
+
+# --- obliviarchive → https://obliviarchive.netlify.app
+[[redirects]]
+  from = "/obliviarchive"
+  to = "/obliviarchive/"
+  status = 301
+
+[[redirects]]
+  from = "/obliviarchive/*"
+  to = "https://obliviarchive.netlify.app/:splat"
+  status = 200
+  force = true
+
+# --- polymorph → https://polymorph.netlify.app
 [[redirects]]
   from = "/polymorph"
   to = "/polymorph/"
   status = 301
-
-[[redirects]]
-  from = "/polymorph/"
-  to = "https://polymorph.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/polymorph/*"
@@ -261,33 +76,11 @@
   status = 200
   force = true
 
-[[redirects]]
-  from = "/wowlevelling"
-  to = "/wowlevelling/"
-  status = 301
-
-[[redirects]]
-  from = "/wowlevelling/"
-  to = "https://wowlevelling.netlify.app/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/wowlevelling/*"
-  to = "https://wowlevelling.netlify.app/:splat"
-  status = 200
-  force = true
-
+# --- promptimizer → https://promptimizer.netlify.app
 [[redirects]]
   from = "/promptimizer"
   to = "/promptimizer/"
   status = 301
-
-[[redirects]]
-  from = "/promptimizer/"
-  to = "https://promptimizer.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/promptimizer/*"
@@ -295,16 +88,11 @@
   status = 200
   force = true
 
+# --- scranorban → https://scranorban.netlify.app
 [[redirects]]
   from = "/scranorban"
   to = "/scranorban/"
   status = 301
-
-[[redirects]]
-  from = "/scranorban/"
-  to = "https://scranorban.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/scranorban/*"
@@ -312,16 +100,11 @@
   status = 200
   force = true
 
+# --- sonicopus → https://sonicopus.netlify.app
 [[redirects]]
   from = "/sonicopus"
   to = "/sonicopus/"
   status = 301
-
-[[redirects]]
-  from = "/sonicopus/"
-  to = "https://sonicopus.netlify.app/"
-  status = 200
-  force = true
 
 [[redirects]]
   from = "/sonicopus/*"
@@ -329,19 +112,26 @@
   status = 200
   force = true
 
+# --- tftmixer → https://tftmixer.netlify.app
 [[redirects]]
-  from = "/lightledger"
-  to = "/lightledger/"
+  from = "/tftmixer"
+  to = "/tftmixer/"
   status = 301
 
 [[redirects]]
-  from = "/lightledger/"
-  to = "https://lightledger.netlify.app/"
+  from = "/tftmixer/*"
+  to = "https://tftmixer.netlify.app/:splat"
   status = 200
   force = true
 
+# --- wowlevelling → https://wowlevelling.netlify.app
 [[redirects]]
-  from = "/lightledger/*"
-  to = "https://lightledger.netlify.app/:splat"
+  from = "/wowlevelling"
+  to = "/wowlevelling/"
+  status = 301
+
+[[redirects]]
+  from = "/wowlevelling/*"
+  to = "https://wowlevelling.netlify.app/:splat"
   status = 200
   force = true
