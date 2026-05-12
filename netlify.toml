@@ -9,6 +9,9 @@
 # Cloudflare: disable any Bulk Redirects / Page Rules that send officiallysp.net/<app> to
 # <app>.officiallysp.net — that bypasses these proxies and breaks path URLs.
 #
+# Child sites: in _redirects use only https://<app>.officiallysp.net/* → apex path. Never use a
+# bare /* rule — the main site proxies via *.netlify.app and would hit a 301 loop (browser -310).
+#
 # Standalone products on their own apex (e.g. chatstats.live) should not be path-mounted here;
 # link directly to those domains from the site.
 [build]
