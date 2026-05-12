@@ -1,207 +1,155 @@
-# OfficiallySp main site — static publish + reverse proxy to separate Netlify deploys
-# Each /appname/* path is served from the matching *.netlify.app site (same naming as repo).
+# OfficiallySp main site — reverse proxy to separate Netlify deploys (*.netlify.app).
 #
-# Netlify's "/app/*" pattern does not match "/app/" alone (no splat segment). Without an
-# explicit "/app/" → proxy rule, trailing-slash URLs can fall through to Netlify's slash
-# handling and 301 to themselves → redirect loop (Chrome -310 ERR_TOO_MANY_REDIRECTS).
+# Do NOT use "from = /app" -> "to = /app/" with status 301. Netlify normalizes
+# trailing slashes before matching, so that pair is treated as the same path and
+# causes an infinite 301 loop (Chrome -310). See:
+# https://docs.netlify.com/manage/routing/redirects/redirect-options/#trailing-slash
+#
+# Pattern: list /app/* before /app so deep paths use :splat; bare /app and /app/
+# both match the final /app rule and proxy to the child site root.
 
 [build]
   publish = "."
 
-# --- beedle → https://beedle.netlify.app
-[[redirects]]
-  from = "/beedle"
-  to = "/beedle/"
-  status = 301
-
-[[redirects]]
-  from = "/beedle/"
-  to = "https://beedle.netlify.app/"
-  status = 200
-  force = true
-
+# --- beedle
 [[redirects]]
   from = "/beedle/*"
   to = "https://beedle.netlify.app/:splat"
   status = 200
   force = true
 
-# --- destinyguessr → https://destinyguessr.netlify.app
 [[redirects]]
-  from = "/destinyguessr"
-  to = "/destinyguessr/"
-  status = 301
-
-[[redirects]]
-  from = "/destinyguessr/"
-  to = "https://destinyguessr.netlify.app/"
+  from = "/beedle"
+  to = "https://beedle.netlify.app/"
   status = 200
   force = true
 
+# --- destinyguessr
 [[redirects]]
   from = "/destinyguessr/*"
   to = "https://destinyguessr.netlify.app/:splat"
   status = 200
   force = true
 
-# --- discordtools (discompress repo) → https://discordtools.netlify.app
 [[redirects]]
-  from = "/discordtools"
-  to = "/discordtools/"
-  status = 301
-
-[[redirects]]
-  from = "/discordtools/"
-  to = "https://discordtools.netlify.app/"
+  from = "/destinyguessr"
+  to = "https://destinyguessr.netlify.app/"
   status = 200
   force = true
 
+# --- discordtools (discompress repo)
 [[redirects]]
   from = "/discordtools/*"
   to = "https://discordtools.netlify.app/:splat"
   status = 200
   force = true
 
-# --- lightledger → https://lightledger.netlify.app
 [[redirects]]
-  from = "/lightledger"
-  to = "/lightledger/"
-  status = 301
-
-[[redirects]]
-  from = "/lightledger/"
-  to = "https://lightledger.netlify.app/"
+  from = "/discordtools"
+  to = "https://discordtools.netlify.app/"
   status = 200
   force = true
 
+# --- lightledger
 [[redirects]]
   from = "/lightledger/*"
   to = "https://lightledger.netlify.app/:splat"
   status = 200
   force = true
 
-# --- obliviarchive → https://obliviarchive.netlify.app
 [[redirects]]
-  from = "/obliviarchive"
-  to = "/obliviarchive/"
-  status = 301
-
-[[redirects]]
-  from = "/obliviarchive/"
-  to = "https://obliviarchive.netlify.app/"
+  from = "/lightledger"
+  to = "https://lightledger.netlify.app/"
   status = 200
   force = true
 
+# --- obliviarchive
 [[redirects]]
   from = "/obliviarchive/*"
   to = "https://obliviarchive.netlify.app/:splat"
   status = 200
   force = true
 
-# --- polymorph → https://polymorph.netlify.app
 [[redirects]]
-  from = "/polymorph"
-  to = "/polymorph/"
-  status = 301
-
-[[redirects]]
-  from = "/polymorph/"
-  to = "https://polymorph.netlify.app/"
+  from = "/obliviarchive"
+  to = "https://obliviarchive.netlify.app/"
   status = 200
   force = true
 
+# --- polymorph
 [[redirects]]
   from = "/polymorph/*"
   to = "https://polymorph.netlify.app/:splat"
   status = 200
   force = true
 
-# --- promptimizer → https://promptimizer.netlify.app
 [[redirects]]
-  from = "/promptimizer"
-  to = "/promptimizer/"
-  status = 301
-
-[[redirects]]
-  from = "/promptimizer/"
-  to = "https://promptimizer.netlify.app/"
+  from = "/polymorph"
+  to = "https://polymorph.netlify.app/"
   status = 200
   force = true
 
+# --- promptimizer
 [[redirects]]
   from = "/promptimizer/*"
   to = "https://promptimizer.netlify.app/:splat"
   status = 200
   force = true
 
-# --- scranorban → https://scranorban.netlify.app
 [[redirects]]
-  from = "/scranorban"
-  to = "/scranorban/"
-  status = 301
-
-[[redirects]]
-  from = "/scranorban/"
-  to = "https://scranorban.netlify.app/"
+  from = "/promptimizer"
+  to = "https://promptimizer.netlify.app/"
   status = 200
   force = true
 
+# --- scranorban
 [[redirects]]
   from = "/scranorban/*"
   to = "https://scranorban.netlify.app/:splat"
   status = 200
   force = true
 
-# --- sonicopus → https://sonicopus.netlify.app
 [[redirects]]
-  from = "/sonicopus"
-  to = "/sonicopus/"
-  status = 301
-
-[[redirects]]
-  from = "/sonicopus/"
-  to = "https://sonicopus.netlify.app/"
+  from = "/scranorban"
+  to = "https://scranorban.netlify.app/"
   status = 200
   force = true
 
+# --- sonicopus
 [[redirects]]
   from = "/sonicopus/*"
   to = "https://sonicopus.netlify.app/:splat"
   status = 200
   force = true
 
-# --- tftmixer → https://tftmixer.netlify.app
 [[redirects]]
-  from = "/tftmixer"
-  to = "/tftmixer/"
-  status = 301
-
-[[redirects]]
-  from = "/tftmixer/"
-  to = "https://tftmixer.netlify.app/"
+  from = "/sonicopus"
+  to = "https://sonicopus.netlify.app/"
   status = 200
   force = true
 
+# --- tftmixer
 [[redirects]]
   from = "/tftmixer/*"
   to = "https://tftmixer.netlify.app/:splat"
   status = 200
   force = true
 
-# --- wowlevelling → https://wowlevelling.netlify.app
 [[redirects]]
-  from = "/wowlevelling"
-  to = "/wowlevelling/"
-  status = 301
+  from = "/tftmixer"
+  to = "https://tftmixer.netlify.app/"
+  status = 200
+  force = true
 
+# --- wowlevelling
 [[redirects]]
-  from = "/wowlevelling/"
-  to = "https://wowlevelling.netlify.app/"
+  from = "/wowlevelling/*"
+  to = "https://wowlevelling.netlify.app/:splat"
   status = 200
   force = true
 
 [[redirects]]
-  from = "/wowlevelling/*"
-  to = "https://wowlevelling.netlify.app/:splat"
+  from = "/wowlevelling"
+  to = "https://wowlevelling.netlify.app/"
   status = 200
   force = true

@@ -46,7 +46,10 @@ Smoke test
 
 Redirect loop (Chrome -310 / ERR_TOO_MANY_REDIRECTS) on /app/
 -------------------------------------------------------------
-Netlify’s pattern from = "/app/*" does not match the bare trailing-slash URL
-/app/ (nothing after the final slash). netlify.toml therefore includes an
-explicit from = "/app/" → https://<app>.netlify.app/ proxy (status 200) before
-the /app/* rule.
+Netlify normalizes paths with and without a trailing slash before it matches
+redirect rules. A 301 from from = /app to to = /app/ therefore treats both URLs
+as the same and can infinite-loop (see Netlify docs: Trailing slash).
+
+Use only 200 proxies in netlify.toml: /app/* first (with :splat), then
+from = /app to https://<app>.netlify.app/ with force = true. Do not add 301
+slash-canonicalization rules for these paths.
