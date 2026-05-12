@@ -81,26 +81,8 @@
   force = true
 
 [[redirects]]
-  from = "https://obliviarchive.officiallysp.net/*"
-  to = "https://officiallysp.net/obliviarchive/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "https://lightledger.officiallysp.net/*"
   to = "https://officiallysp.net/lightledger/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://hasliamwood101beendefeated.officiallysp.net/*"
-  to = "https://officiallysp.net/hasliamwood101beendefeated/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "https://issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim.officiallysp.net/*"
-  to = "https://officiallysp.net/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/:splat"
   status = 301
   force = true
 
@@ -152,23 +134,8 @@
   status = 301
 
 [[redirects]]
-  from = "/obliviarchive"
-  to = "/obliviarchive/"
-  status = 301
-
-[[redirects]]
   from = "/lightledger"
   to = "/lightledger/"
-  status = 301
-
-[[redirects]]
-  from = "/hasliamwood101beendefeated"
-  to = "/hasliamwood101beendefeated/"
-  status = 301
-
-[[redirects]]
-  from = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim"
-  to = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/"
   status = 301
 
 # Old portfolio path /discompress/* → Discord Tools
@@ -296,18 +263,6 @@
   force = true
 
 [[redirects]]
-  from = "/obliviarchive/"
-  to = "https://obliviarchive.netlify.app/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/obliviarchive/*"
-  to = "https://obliviarchive.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/lightledger/"
   to = "https://lightledger.netlify.app/"
   status = 200
@@ -316,29 +271,5 @@
 [[redirects]]
   from = "/lightledger/*"
   to = "https://lightledger.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/hasliamwood101beendefeated/"
-  to = "https://hasliamwood101beendefeated.officiallysp.net/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/hasliamwood101beendefeated/*"
-  to = "https://hasliamwood101beendefeated.officiallysp.net/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/"
-  to = "https://issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim.officiallysp.net/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/*"
-  to = "https://issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim.officiallysp.net/:splat"
   status = 200
   force = true
