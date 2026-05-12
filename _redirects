@@ -1,2 +1,2 @@
-# Do not add /app → /app/ redirects: Netlify can normalize paths so /app matches /app/,
-# producing an infinite 301 Location: /app/ (Chromium -310).
+# Path routing lives in netlify.toml (not here). Do not add /app → /app/ rules that duplicate TOML:
+# ordering must be 301 /app → /app/ before the /app/* proxy.
