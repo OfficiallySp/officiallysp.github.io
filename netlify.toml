@@ -12,8 +12,8 @@
 # Child sites: in _redirects use only https://<app>.officiallysp.net/* → apex path. Never use a
 # bare /* rule — the main site proxies via *.netlify.app and would hit a 301 loop (browser -310).
 #
-# Trailing slash: avoid netlify.toml [[redirects]] from = "/app" → "/app/" — Netlify may match /app/
-# too and emit an infinite 301. Use exact-root lines in _redirects instead.
+# Trailing slash: use exact from = "/app" → "/app/" 301 only for the no-slash URL; do not use a
+# pattern that also matches "/app/". Proxies list "/app/" and "/app/*" separately so "/" is not a static miss.
 #
 # Standalone products on their own apex (e.g. chatstats.live) should not be path-mounted here;
 # link directly to those domains from the site.
@@ -106,12 +106,12 @@
   force = true
 
 # --- Reverse proxy (200) ---
-# Directory URL /app/ is 200 → /app/index.html (internal rewrite), then /app/* proxies — avoids Netlify
-# Pretty URL / trailing-slash handling returning 301 Location: /app/ loops on /app/ alone.
+# /app/ must proxy to the app origin’s root. A local rewrite to /app/index.html 404s here (no file in
+# this repo). /app/* covers deep paths; list /app/ explicitly so the bare directory URL works.
 
 [[redirects]]
   from = "/tftmixer/"
-  to = "/tftmixer/index.html"
+  to = "https://tftmixer.netlify.app/"
   status = 200
   force = true
 
@@ -122,8 +122,13 @@
   force = true
 
 [[redirects]]
+  from = "/tftmixer"
+  to = "/tftmixer/"
+  status = 301
+
+[[redirects]]
   from = "/beedle/"
-  to = "/beedle/index.html"
+  to = "https://beedle.netlify.app/"
   status = 200
   force = true
 
@@ -134,8 +139,13 @@
   force = true
 
 [[redirects]]
+  from = "/beedle"
+  to = "/beedle/"
+  status = 301
+
+[[redirects]]
   from = "/destinyguessr/"
-  to = "/destinyguessr/index.html"
+  to = "https://destinyguessr.netlify.app/"
   status = 200
   force = true
 
@@ -146,8 +156,13 @@
   force = true
 
 [[redirects]]
+  from = "/destinyguessr"
+  to = "/destinyguessr/"
+  status = 301
+
+[[redirects]]
   from = "/discordtools/"
-  to = "/discordtools/index.html"
+  to = "https://discordtools.netlify.app/"
   status = 200
   force = true
 
@@ -158,8 +173,13 @@
   force = true
 
 [[redirects]]
+  from = "/discordtools"
+  to = "/discordtools/"
+  status = 301
+
+[[redirects]]
   from = "/polymorph/"
-  to = "/polymorph/index.html"
+  to = "https://polymorph.netlify.app/"
   status = 200
   force = true
 
@@ -170,8 +190,13 @@
   force = true
 
 [[redirects]]
+  from = "/polymorph"
+  to = "/polymorph/"
+  status = 301
+
+[[redirects]]
   from = "/wowlevelling/"
-  to = "/wowlevelling/index.html"
+  to = "https://wowlevelling.netlify.app/"
   status = 200
   force = true
 
@@ -182,8 +207,13 @@
   force = true
 
 [[redirects]]
+  from = "/wowlevelling"
+  to = "/wowlevelling/"
+  status = 301
+
+[[redirects]]
   from = "/promptimizer/"
-  to = "/promptimizer/index.html"
+  to = "https://promptimizer.netlify.app/"
   status = 200
   force = true
 
@@ -194,8 +224,13 @@
   force = true
 
 [[redirects]]
+  from = "/promptimizer"
+  to = "/promptimizer/"
+  status = 301
+
+[[redirects]]
   from = "/scranorban/"
-  to = "/scranorban/index.html"
+  to = "https://scranorban.netlify.app/"
   status = 200
   force = true
 
@@ -206,8 +241,13 @@
   force = true
 
 [[redirects]]
+  from = "/scranorban"
+  to = "/scranorban/"
+  status = 301
+
+[[redirects]]
   from = "/sonicopus/"
-  to = "/sonicopus/index.html"
+  to = "https://sonicopus.netlify.app/"
   status = 200
   force = true
 
@@ -218,8 +258,13 @@
   force = true
 
 [[redirects]]
+  from = "/sonicopus"
+  to = "/sonicopus/"
+  status = 301
+
+[[redirects]]
   from = "/lightledger/"
-  to = "/lightledger/index.html"
+  to = "https://lightledger.netlify.app/"
   status = 200
   force = true
 
@@ -228,3 +273,8 @@
   to = "https://lightledger.netlify.app/:splat"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/lightledger"
+  to = "/lightledger/"
+  status = 301
