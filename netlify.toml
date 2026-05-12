@@ -1,4 +1,13 @@
 # Primary Netlify site for https://officiallysp.net — routes /app-id paths to each app’s Netlify URL.
+#
+# With Cloudflare in front (orange-cloud DNS): requests still reach Netlify as origin unless you
+# intercept them. These redirects run on Netlify after Cloudflare forwards the request.
+# If you want a single routing layer: use a Cloudflare Worker (or Snippets) to proxy paths like
+# /tftmixer/* to each *.netlify.app origin and keep this file only for the static portfolio—or leave
+# routing here and use Cloudflare only for DNS/WAF/cache (simplest).
+#
+# Standalone products on their own apex (e.g. chatstats.live) should not be path-mounted here;
+# link directly to those domains from the site.
 [build]
   publish = "."
 
@@ -147,16 +156,6 @@
   status = 301
 
 [[redirects]]
-  from = "/chatstats"
-  to = "/chatstats/"
-  status = 301
-
-[[redirects]]
-  from = "/summershowdown"
-  to = "/summershowdown/"
-  status = 301
-
-[[redirects]]
   from = "/hasliamwood101beendefeated"
   to = "/hasliamwood101beendefeated/"
   status = 301
@@ -243,18 +242,6 @@
 [[redirects]]
   from = "/lightledger/*"
   to = "https://lightledger.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/chatstats/*"
-  to = "https://chatstats.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/summershowdown/*"
-  to = "https://summershowdown.netlify.app/:splat"
   status = 200
   force = true
 
