@@ -6,6 +6,9 @@
 # /tftmixer/* to each *.netlify.app origin and keep this file only for the static portfolio—or leave
 # routing here and use Cloudflare only for DNS/WAF/cache (simplest).
 #
+# Cloudflare: disable any Bulk Redirects / Page Rules that send officiallysp.net/<app> to
+# <app>.officiallysp.net — that bypasses these proxies and breaks path URLs.
+#
 # Standalone products on their own apex (e.g. chatstats.live) should not be path-mounted here;
 # link directly to those domains from the site.
 [build]
@@ -178,10 +181,24 @@
   force = true
 
 # --- Reverse proxy (200) ---
+# Exact "/app/" + "/app/*": Netlify's splat pattern does not match the bare directory path,
+# so "/app/" alone must be proxied explicitly (otherwise browsers hit a redirect loop or 404).
+
+[[redirects]]
+  from = "/tftmixer/"
+  to = "https://tftmixer.netlify.app/"
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/tftmixer/*"
   to = "https://tftmixer.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/beedle/"
+  to = "https://beedle.netlify.app/"
   status = 200
   force = true
 
@@ -192,8 +209,20 @@
   force = true
 
 [[redirects]]
+  from = "/destinyguessr/"
+  to = "https://destinyguessr.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/destinyguessr/*"
   to = "https://destinyguessr.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/discordtools/"
+  to = "https://discordtools.netlify.app/"
   status = 200
   force = true
 
@@ -204,8 +233,20 @@
   force = true
 
 [[redirects]]
+  from = "/polymorph/"
+  to = "https://polymorph.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/polymorph/*"
   to = "https://polymorph.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/wowlevelling/"
+  to = "https://wowlevelling.netlify.app/"
   status = 200
   force = true
 
@@ -216,8 +257,20 @@
   force = true
 
 [[redirects]]
+  from = "/promptimizer/"
+  to = "https://promptimizer.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/promptimizer/*"
   to = "https://promptimizer.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/scranorban/"
+  to = "https://scranorban.netlify.app/"
   status = 200
   force = true
 
@@ -228,8 +281,20 @@
   force = true
 
 [[redirects]]
+  from = "/sonicopus/"
+  to = "https://sonicopus.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/sonicopus/*"
   to = "https://sonicopus.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/obliviarchive/"
+  to = "https://obliviarchive.netlify.app/"
   status = 200
   force = true
 
@@ -240,14 +305,32 @@
   force = true
 
 [[redirects]]
+  from = "/lightledger/"
+  to = "https://lightledger.netlify.app/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/lightledger/*"
   to = "https://lightledger.netlify.app/:splat"
   status = 200
   force = true
 
 [[redirects]]
+  from = "/hasliamwood101beendefeated/"
+  to = "https://hasliamwood101beendefeated.officiallysp.net/"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/hasliamwood101beendefeated/*"
   to = "https://hasliamwood101beendefeated.officiallysp.net/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim/"
+  to = "https://issmylesabouttocrashoutatthefacthatlewisdoesmoredpsthanhim.officiallysp.net/"
   status = 200
   force = true
 
