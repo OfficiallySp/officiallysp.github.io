@@ -106,13 +106,14 @@
   force = true
 
 # --- Reverse proxy (200) ---
-# Directory URL /app/ is 302 → /app/index.html (internal), then /app/* proxies — avoids Netlify
+# Directory URL /app/ is 200 → /app/index.html (internal rewrite), then /app/* proxies — avoids Netlify
 # Pretty URL / trailing-slash handling returning 301 Location: /app/ loops on /app/ alone.
 
 [[redirects]]
   from = "/tftmixer/"
   to = "/tftmixer/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/tftmixer/*"
@@ -123,7 +124,8 @@
 [[redirects]]
   from = "/beedle/"
   to = "/beedle/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/beedle/*"
@@ -134,7 +136,8 @@
 [[redirects]]
   from = "/destinyguessr/"
   to = "/destinyguessr/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/destinyguessr/*"
@@ -145,7 +148,8 @@
 [[redirects]]
   from = "/discordtools/"
   to = "/discordtools/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/discordtools/*"
@@ -156,7 +160,8 @@
 [[redirects]]
   from = "/polymorph/"
   to = "/polymorph/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/polymorph/*"
@@ -167,7 +172,8 @@
 [[redirects]]
   from = "/wowlevelling/"
   to = "/wowlevelling/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/wowlevelling/*"
@@ -178,7 +184,8 @@
 [[redirects]]
   from = "/promptimizer/"
   to = "/promptimizer/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/promptimizer/*"
@@ -189,7 +196,8 @@
 [[redirects]]
   from = "/scranorban/"
   to = "/scranorban/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/scranorban/*"
@@ -200,7 +208,8 @@
 [[redirects]]
   from = "/sonicopus/"
   to = "/sonicopus/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/sonicopus/*"
@@ -211,7 +220,8 @@
 [[redirects]]
   from = "/lightledger/"
   to = "/lightledger/index.html"
-  status = 302
+  status = 200
+  force = true
 
 [[redirects]]
   from = "/lightledger/*"
