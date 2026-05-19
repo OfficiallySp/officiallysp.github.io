@@ -64,19 +64,6 @@
   status = 200
   force = true
 
-# --- obliviarchive
-[[redirects]]
-  from = "/obliviarchive/*"
-  to = "https://obliviarchive.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/obliviarchive"
-  to = "https://obliviarchive.netlify.app/"
-  status = 200
-  force = true
-
 # --- polymorph: served as static files from /polymorph/ in this repo (no proxy).
 # polymorph.netlify.app is a different site; internal proxy to another team’s deploy returns 500.
 
@@ -142,18 +129,5 @@
 [[redirects]]
   from = "/wowlevelling"
   to = "https://wowlevelling.netlify.app/"
-  status = 200
-  force = true
-
-# --- obliviosasubathon
-[[redirects]]
-  from = "/obliviosasubathon/*"
-  to = "https://obliviosasubathon.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/obliviosasubathon"
-  to = "https://obliviosasubathon.netlify.app/"
   status = 200
   force = true
