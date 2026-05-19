@@ -144,3 +144,16 @@
   to = "https://wowlevelling.netlify.app/"
   status = 200
   force = true
+
+# --- obliviosasubathon
+[[redirects]]
+  from = "/obliviosasubathon/*"
+  to = "https://obliviosasubathon.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/obliviosasubathon"
+  to = "https://obliviosasubathon.netlify.app/"
+  status = 200
+  force = true
