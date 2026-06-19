@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UnboundMC - officiallysp.net</title>
+  <meta name="description" content="UnboundMC - a one-click installer for the No Chat Restrictions mod that restores blocked Minecraft chat and multiplayer. Official launcher, Windows/macOS/Linux. Built with Avalonia and .NET." />
+  <link rel="stylesheet" href="../assets/css/theme.css" />
+  <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
+  <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <div id="navbar-container"></div>
+
+  <section class="project-header">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">UnboundMC</h1>
+          <p class="text-secondary mb-6">
+            UnboundMC is a one-click installer that sets up the <a href="https://modrinth.com/mod/no-chat-restrictions">No Chat Restrictions</a> mod on a stock Minecraft install. Since 1.16.4, Minecraft can lock flagged and child accounts out of chat and the multiplayer menu &mdash; UnboundMC restores that access for non-technical players. Just double-click, pick your Minecraft version, and play: no command line, no Java setup, working with the official launcher and vanilla client on Windows, macOS, and Linux. It's client-side only, safe to re-run, and fully reversible. Built with Avalonia and .NET, and developed end-to-end with AI.
+          </p>
+          <p class="text-secondary mb-6" style="font-size: var(--text-sm);">
+            UnboundMC is an installer, not the mod, and is not affiliated with Aizistral. All credit for No Chat Restrictions goes to <a href="https://github.com/Aizistral-Studios/No-Chat-Restrictions">Aizistral</a>.
+          </p>
+          <div class="flex gap-4 flex-wrap">
+            <a href="https://github.com/OfficiallySp/UnboundMC/releases/latest" class="btn btn-primary">Download</a>
+            <a href="https://github.com/OfficiallySp/UnboundMC" class="btn btn-secondary">GitHub</a>
+          </div>
+        </div>
+        <div>
+          <div class="project-placeholder">
+            <i class="fa-solid fa-comments" style="font-size: 8rem; color: var(--color-accent);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
+  </script>
+</body>
+</html>
