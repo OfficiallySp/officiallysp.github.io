@@ -19,7 +19,7 @@
   force = true
 
 [[redirects]]
-  from = "/"
+  from = "/d2godrolls"
   to = "https://d2godrolls.netlify.app/"
   status = 200
   force = true
