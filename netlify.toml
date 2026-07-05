@@ -11,6 +11,19 @@
 [build]
   publish = "."
 
+# --- d2godrolls
+[[redirects]]
+  from = "/d2godrolls/*"
+  to = "https://d2godrolls.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/"
+  to = "https://d2godrolls.netlify.app/"
+  status = 200
+  force = true
+
 # --- beedle
 [[redirects]]
   from = "/beedle/*"
