@@ -382,6 +382,7 @@ const PROJECT_AI_LEVELS = {
   clipperino: "none",
   // C# Apps
   riftrandomizer: "none",
+  unboundmc: "autonomous", // built end-to-end with AI (Avalonia)
   // Mods
   f3nope: "none",
   ism: "none",
