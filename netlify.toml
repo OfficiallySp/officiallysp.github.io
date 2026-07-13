@@ -11,6 +11,19 @@
 [build]
   publish = "."
 
+# --- pyoro
+[[redirects]]
+  from = "/pyoro/*"
+  to = "https://pyoro.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/pyoro"
+  to = "https://pyoro.netlify.app/"
+  status = 200
+  force = true
+
 # --- d2godrolls
 [[redirects]]
   from = "/d2godrolls/*"
