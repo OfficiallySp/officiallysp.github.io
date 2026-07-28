@@ -11,6 +11,19 @@
 [build]
   publish = "."
 
+# --- ascensionsims
+[[redirects]]
+  from = "/ascensionsims/*"
+  to = "https://ascensionsims.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ascensionsims"
+  to = "https://ascensionsims.netlify.app/"
+  status = 200
+  force = true
+
 # --- pyoro
 [[redirects]]
   from = "/pyoro/*"
