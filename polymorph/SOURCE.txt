@@ -1,4 +1,10 @@
-Polymorph is shipped here as static files under officiallysp.net/polymorph/ because
-the hostname polymorph.netlify.app points at a different unrelated Netlify site.
+SUPERSEDED — this directory is a stale mirror and is no longer reachable.
 
-Source repo for edits: https://github.com/OfficiallySp/polymorph (mirror these files when you change the app).
+Polymorph used to be shipped here as static files because the subdomain could not
+be pointed at its own deploy. It now has one: https://polymorph.officiallysp.net
+(Netlify project "polymorphconvert"), and netlify.toml in the repo root forces a
+301 from /polymorph/* to that subdomain, so nothing in this directory is served.
+
+These files are kept only as a fallback and will drift from the real app. Edit the
+source repo instead: https://github.com/OfficiallySp/polymorph
+This directory can be deleted once you are happy the subdomain is stable.
