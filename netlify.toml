@@ -124,9 +124,7 @@
   status = 301
   force = true
 
-# --- polymorph. A static copy of the app still sits in /polymorph/ in this repo
-# from when the subdomain was unavailable; these forced redirects take priority
-# over it so the live deploy at polymorph.officiallysp.net is what visitors get.
+# --- polymorph. Live app is on the subdomain; keep redirects for old path URLs.
 [[redirects]]
   from = "/polymorph/*"
   to = "https://polymorph.officiallysp.net/:splat"
