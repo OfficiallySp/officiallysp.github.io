@@ -137,19 +137,6 @@
   status = 301
   force = true
 
-# --- promptimizer
-[[redirects]]
-  from = "/promptimizer/*"
-  to = "https://promptimizer.officiallysp.net/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/promptimizer"
-  to = "https://promptimizer.officiallysp.net/"
-  status = 301
-  force = true
-
 # --- pyoro
 [[redirects]]
   from = "/pyoro/*"
