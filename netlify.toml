@@ -202,6 +202,44 @@
   status = 301
   force = true
 
+# --- obliviosasubathon
+[[redirects]]
+  from = "/obliviosasubathon/*"
+  to = "https://obliviosasubathon.officiallysp.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/obliviosasubathon"
+  to = "https://obliviosasubathon.officiallysp.net/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/subathon/*"
+  to = "https://obliviosasubathon.officiallysp.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/subathon"
+  to = "https://obliviosasubathon.officiallysp.net/"
+  status = 301
+  force = true
+
+# --- godrolls (also /godrolls spelling)
+[[redirects]]
+  from = "/godrolls/*"
+  to = "https://godrolls.officiallysp.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/godrolls"
+  to = "https://godrolls.officiallysp.net/"
+  status = 301
+  force = true
+
 # --- riftrandomizer
 # Still path-hosted on this site (Unity WebGL under /riftrandomizer/). Unlike the
 # apps above it has no subdomain yet, so do not 301 /riftrandomizer away until
