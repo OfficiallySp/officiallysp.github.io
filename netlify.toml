@@ -214,3 +214,8 @@
   to = "https://wowlevelling.officiallysp.net/"
   status = 301
   force = true
+
+# --- riftrandomizer
+# Still path-hosted on this site (Unity WebGL under /riftrandomizer/). Unlike the
+# apps above it has no subdomain yet, so do not 301 /riftrandomizer away until
+# riftrandomizer.officiallysp.net is live.
