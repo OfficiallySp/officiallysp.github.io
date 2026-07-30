@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dropzone - officiallysp.net</title>
+  <meta name="description" content="Dropzone - a lightweight desktop app that watches for screenshots and recordings, compresses them, and uploads to Cloudflare R2 with a shareable URL on your clipboard." />
+  <link rel="stylesheet" href="../assets/css/theme.css" />
+  <script src="https://kit.fontawesome.com/8fc60a4d79.js" crossorigin="anonymous"></script>
+  <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1548903334937961" crossorigin="anonymous"></script>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <div id="navbar-container"></div>
+
+  <section class="project-header">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="mb-6">Dropzone</h1>
+          <p class="text-secondary mb-6">
+            A lightweight, cross-platform desktop app that watches for new screenshots and screen recordings, compresses them, and uploads them to your Cloudflare R2 bucket. After each upload a public URL is copied to your clipboard. Screenshots become lossless WebP; recordings upload immediately then get replaced with an H.265 encode. Watches OS capture folders and the clipboard so Win+Shift+S works. Built in Go with Fyne.
+          </p>
+          <div class="flex gap-4 flex-wrap">
+            <a href="https://github.com/OfficiallySp/dropzone" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+        <div>
+          <div class="project-placeholder">
+            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 8rem; color: var(--color-accent);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    ComponentLoader.load("../navbar.html", "navbar-container");
+    ComponentLoader.load("../footer.html", "footer-container");
+  </script>
+</body>
+</html>

@@ -376,6 +376,7 @@ const PROJECT_AI_LEVELS = {
   d2tools: "none",
   snapdesktop: "none",
   "sa2-mod-installer": "complementary",
+  leagueredisplayed: "none",
   // Python Apps
   fpsickle: "none",
   lolannouncer: "none",
@@ -387,13 +388,18 @@ const PROJECT_AI_LEVELS = {
   f3nope: "none",
   ism: "none",
   "alchemical-excellence": "none",
+  comfirmations: "complementary",
+  // WoW Addons
+  pedromap: "assisted",
+  wowapm: "complementary",
+  talentswapper: "autonomous",
   // Extras
+  dropzone: "complementary",
   mmrcharts: "none",
   tankalotnet: "none",
   cards: "none",
   pyramid: "none",
   // Other detail pages (not currently on the homepage)
-  pedromap: "assisted",
   pekspuzzle: "none",
   potato: "none",
   shadestories: "none",
