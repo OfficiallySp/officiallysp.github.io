@@ -203,7 +203,6 @@ const PROJECT_AI_LEVELS = {
   unite: "none",
   tpl: "none",
   tanklegacy: "none",
-  ratathonrpg: "none",
   legendofpeks: "none",
   jumpking: "none",
   subathon: "none",

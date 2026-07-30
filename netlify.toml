@@ -85,7 +85,7 @@
   status = 301
   force = true
 
-# --- godrolls (d2godrolls repo — the subdomain drops the d2 prefix)
+# --- godrolls (d2godrolls repo; subdomain drops the d2 prefix)
 [[redirects]]
   from = "/d2godrolls/*"
   to = "https://godrolls.officiallysp.net/:splat"
@@ -94,6 +94,18 @@
 
 [[redirects]]
   from = "/d2godrolls"
+  to = "https://godrolls.officiallysp.net/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/godrolls/*"
+  to = "https://godrolls.officiallysp.net/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/godrolls"
   to = "https://godrolls.officiallysp.net/"
   status = 301
   force = true
@@ -224,19 +236,6 @@
 [[redirects]]
   from = "/subathon"
   to = "https://obliviosasubathon.officiallysp.net/"
-  status = 301
-  force = true
-
-# --- godrolls (also /godrolls spelling)
-[[redirects]]
-  from = "/godrolls/*"
-  to = "https://godrolls.officiallysp.net/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/godrolls"
-  to = "https://godrolls.officiallysp.net/"
   status = 301
   force = true
 
